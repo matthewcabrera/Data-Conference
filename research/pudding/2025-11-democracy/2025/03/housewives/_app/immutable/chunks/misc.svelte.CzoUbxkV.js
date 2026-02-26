@@ -1,0 +1,1 @@
+import{p as s}from"./proxy.GLEor7LG.js";const a=s({section:0,slide:0,subslide:0,slideInSection:0}),n=s({id:void 0}),t=s({ccOn:!1,soundOn:!0}),o=s({open:!1}),d=s({ready:!1});export{n as a,a as c,d as l,o as m,t as v};

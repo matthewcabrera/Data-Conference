@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang='en' data-version='1501690346367'>
+
+<head>
+
+	<title>Making Internet Things, part 3: Storytelling</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='Making Internet Things, Part 3: Storytelling.' />
+	<meta name='news_keywords' content='introduction data visualization' />
+
+	<meta property='og:title' content='Making Internet Things, Part 3: Storytelling' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/process/how-to-make-dope-shit-part-3/' />
+	<meta property='og:description'
+		content='This is the third installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.' />
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+
+	<meta property='og:image'
+		content='https://pudding.cool/process/how-to-make-dope-shit-part-3/assets/social-facebook.jpg' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='628' />
+
+	<meta name='twitter:card' content='summary_large_image'>
+	<meta name='twitter:site' content='https://pudding.cool'>
+	<meta name='twitter:creator' content='@puddingviz'>
+	<meta name='twitter:title' content='Making Internet Things, Part 3: Storytelling'>
+	<meta name='twitter:description'
+		content='This is the third installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.'>
+	<meta name='twitter:image:src'
+		content='https://pudding.cool/process/how-to-make-dope-shit-part-3/assets/social-twitter.jpg'>
+
+	<!-- smoosh -->
+
+	<!-- endsmoosh -->
+
+
+	<link rel="stylesheet" href="critical.css" />
+	<link rel="stylesheet" href="bundle.css" />
+
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+
+	        You may not modify the font software, use it on another website, or install it on a computer.
+
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK
+	*/
+		/* Canela */
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		/* Publico Text */
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+			font-stretch: normal;
+		}
+
+		/* Atlast Grotesk */
+		/*
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		*/
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	</style>
+	<!-- smoosh -->
+	<script src='critical.js'></script>
+	<!-- endsmoosh -->
+
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class='tk-publico'>
+
+	<a href='#content' class='skip-to-main'>Skip to main content</a>
+	<header>
+		<a href='https://pudding.cool' target='_blank' class='logo'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="296.91" height="47.52" viewBox="0 0 192.6 50"
+				aria-labelledby="logo-title" role="img">
+				<title id="logo-title">The Pudding</title>
+				<g>
+					<path class="st0"
+						d="M150.1,9.5c1.5,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8s-2.8-1.3-2.8-2.8S148.6,9.5,150.1,9.5z" />
+					<path class="st0" d="M147.2,17.3h5.6v18.2h-5.6V17.3z" />
+					<path class="st0" d="M77.1,9.5h-1.9h-7v19.3v6.7h5.6v-6.7v-1.4h1.4h1.9c4.9,0,8.9-4,8.9-8.9S82.1,9.5,77.1,9.5z M77.1,21.8h-1.9
+                h-1.4v-1.4v-3.8v-1.4h1.4h1.9c1.8,0,3.3,1.5,3.3,3.3S79,21.8,77.1,21.8z" />
+					<path class="st0" d="M105.7,17.6h-5.6v8.9c0,1.8-1.5,3.3-3.3,3.3s-3.3-1.5-3.3-3.3v-8.9h-5.6v8.9c0,4.9,4,8.9,8.9,8.9
+                s8.9-4,8.9-8.9V17.6z" />
+					<path class="st0" d="M164.1,17.6c-4.9,0-8.9,4-8.9,8.9v8.9h5.6v-8.9c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3v8.9h5.6v-8.9
+                C173,21.6,169,17.6,164.1,17.6z" />
+					<path class="st0"
+						d="M119.7,16.2v1.4h-1.4h-1.9c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3
+                C119.7,12.8,119.7,16.2,119.7,16.2z M119.8,24.6v3.8v1.4h-1.4h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4V24.6z" />
+					<path class="st0" d="M139.3,16.2v1.4h-1.4H136c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3V16.2z M139.4,24.6v3.8
+                v1.4h-1.5H136c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4v1.4H139.4z" />
+					<path class="st0" d="M183.7,17.6c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h1.4v1.4v0.9v1.4v1.4c0,1.8-1.5,3.3-3.3,3.3
+                s-3.3-1.5-3.3-3.3V38l-5.6,3.3c0.4,4.5,4.2,8.1,8.9,8.1c4.9,0,8.9-4,8.9-8.9v-1.4v-2.3V17.6h-7H183.7z M187,23.4v1.4v3.8V30h-1.4
+                h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9C185.6,23.4,187,23.4,187,23.4z" />
+					<path class="st0" d="M28.6,17.6c-1.2,0-2.3,0.2-3.3,0.6V9.5l-5.6,3.3v13.7v2v6.9h5.6v-6.9l0,0v-2c0-1.8,1.5-3.3,3.3-3.3
+                s3.3,1.5,3.3,3.3v8.9h5.6v-8.9C37.5,21.6,33.5,17.6,28.6,17.6z" />
+					<path class="st0" d="M17.8,9.5H0v5.6h6.1v20.3h5.6V15.1h6.1V9.5z" />
+					<path class="st0" d="M48.3,30.2c-0.4,0-1.2-0.1-1.8-0.4l5.2-2.1l5.6-2.3l-1-2.3l-0.1-0.2c-0.1-0.3-0.3-0.6-0.5-1
+                c-0.1-0.1-0.1-0.2-0.2-0.3c0,0,0-0.1-0.1-0.1l-0.1-0.1l-0.1-0.1c-1.6-2.2-4-3.5-6.7-3.7l0,0h-0.6c-4.9,0-8.9,4-8.9,8.9
+                c0,0.4,0,0.9,0.1,1.4l0,0V28c0,0,0,0,0,0.1c0,0,0,0,0,0.1c0,0.3,0.1,0.5,0.2,0.8v0.1v0.1c0.1,0.3,0.2,0.7,0.4,1v0.1v0.1
+                c0.1,0.3,0.3,0.5,0.4,0.8c0,0.1,0.1,0.1,0.1,0.2l0,0c0.1,0.2,0.3,0.4,0.4,0.6c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1l0.1,0.1
+                c1.7,2.1,4.4,3.4,7.2,3.4h6.1v-5.2C54.5,30.2,50.6,30.2,48.3,30.2L48.3,30.2z M56.2,22.9L56.2,22.9L56.2,22.9z M44.6,25.7
+                L44.6,25.7l-0.2,0.1c0.2-1.9,1.8-3.5,3.7-3.5c0.9,0,1.8,0.4,2.4,0.9L46.2,25L44.6,25.7L44.6,25.7z" />
+				</g>
+			</svg>
+
+		</a>
+	</header>
+	<main id='content'>
+
+		<div class='intro'>
+			<p class='intro__overline tk-atlas'>How to Make Dope Shit</p>
+			<h1 class='intro__hed tk-atlas'>Part 3: Storytelling</h1>
+
+
+			<p class='intro__dek tk-atlas'>This is the third installment of a multi-part series designed to help you
+				familiarize yourself with the tools used to
+				make visual, data-driven essays.</p>
+
+			<img class='intro__image' src='assets/crushing-code-dog.gif'>
+
+			<p class='intro__byline tk-atlas'>By <a href='https://twitter.com/iliablinderman' target='_blank'><strong>Ilia
+						Blinderman</strong></a></p>
+		</div>
+
+		<!-- PUT ALL YOUR HTML HERE-->
+		<div class='post'>
+			<h2 class='post__hed tk-atlas'>Introduction</h2>
+			<p>
+				In 2017, I began compiling a three-part guide, intended for beginners with next to no technical knowledge, on
+				how to create the sorts of data-driven, visual stories that we publish at The Pudding. This was going to consist
+				of introductions and surveys of <a href='https://pudding.cool/process/how-to-make-dope-shit-part-1/'>data
+					analysis</a>,
+				<a href='https://pudding.cool/process/how-to-make-dope-shit-part-2/'>design</a>, and writing, and while I
+				thought that the first two
+				sections would be all that our readers <i>really</i> wanted to see, we've consistently received word that there
+				remains a substantial
+				interest in the writing guide.
+
+				I'd tried to compile this third section, which had maintained its "On Writing" heading in my mind, with little
+				success, until I realized that the impasse lay in the fact that I was fixated on precisely that: writing.
+				Compiling resources on how to write within the form of a visual essay while omitting the discussion of
+				<i>storytelling</i>, in both visual and written terms, as well as the importance of story structure, is of next
+				to no
+				help. Thus, I decided to retroactively make good and compile a primer on storytelling with data.
+
+			</p>
+
+
+			<h2 class='post__hed tk-atlas'>What is storytelling, and why is it complicated?</h2>
+			<p>
+				In the first two guides, I'd provided a sort of survey of the tools we use for the data analysis and design of
+				our projects. The aim was to give someone with relatively little experience a sense of the most useful tools
+				involved in visual essays, and point them towards accessible tutorials that would explain these tools without
+				the technical <a href='https://www.youtube.com/watch?v=_jl4iL6hCqs'>mumbo-jumbo</a>. My reasoning was simple:
+				anxiety about insufficient technical skills, and the
+				difficulties in finding beginner-appropriate resources , has always seemed to me to be the biggest hurdle to
+				getting more people involved in writing code and working on digital art and analysis. Pointing readers towards
+				learning content that required no prior knowledge — as opposed to the countless tutorials that presumed anyone
+				reading already had a grasp of the ecosystem they're working in — would alleviate those worries, and help them
+				get over that initial hump of frustration involved in learning to use unfamiliar tools.
+			</p>
+
+			<p>
+				Storytelling, however, is much more abstract — it's not merely a technical matter of creating an image of a map,
+				or designing the right chart; rather, it refers to the broader universe of considerations that impact nearly
+				every decision you make in the way you frame and present a project. The focus is much less on the technical
+				"how," like in the first two installments of these guides, but on the "why" of designing the narrative. It
+				certainly doesn't help that technical tools are inherently more concrete: they're ways of solving specific
+				problems (e.g., "how do I show the locations where people are concentrated on a map?" or "how do get this visual
+				element to move through this specific path?"), while storytelling is much more of a nebulous concept. Thus, in
+				this guide, I'll be focusing on the relevant questions and considerations that we, at The Pudding, tend to
+				consider when creating data-driven projects.
+
+			</p>
+
+
+			<h2 class='post__hed tk-atlas'>1. Who is your audience?</h2>
+			<p class='list-title'><strong>Yourself: The passion project</strong></p>
+			<p>
+				Before you begin, consider whom you aim to reach with your project. If you're building for yourself, passion
+				projects tend to allow for the greatest degree of creativity and experimentation.
+			</p>
+
+			<p>
+				I'd initially worked on one of my first data-driven projects, an <a
+					href='http://iliablinderman.com/connections/'>exploration</a> of Craigslist's Missed Connections,
+				because I was curious about the topic — something about people yearning for intimate connection in the most
+				public of settings resonated with me. Furthermore, I had lots of editorial opinions about how I wanted to
+				present the story, and while I may have reconsidered some of my choices several years after having published it,
+				I wanted to publish it myself because I didn't want to make the sort of piece an editor would usually want. I
+				wanted to build a personal story in the way that I saw fit, and I'm content to own those choices. I can't
+				imagine a single editor that would have been completely aligned with my initial vision.
+			</p>
+
+			<figure>
+				<img src="assets/missed-connections.png">
+				<figcaption class="small">
+					<em><a href='http://iliablinderman.com/connections/'>All The Lonely People</a>, Ilia Blinderman
+					</em>
+				</figcaption>
+			</figure>
+
+
+			<p>
+				That I worked on this outside of any sort of journalistic relationship with a larger outlet meant that I also
+				had the opportunity to learn about many tools at my leisure: front-end development (JavaScript, HTML, and CSS,
+				as well as web technologies like Amazon's cloud computing servers), data analysis in R, geospatial analysis
+				using QGIS, typography, etc. (you can scroll down to the bottom of the piece for an in-depth explanation of the
+				tools I used).
+
+			</p>
+
+			<p>
+				Oftentimes, personal projects are more exciting than commissioned published work, in large part because the
+				author puts so much of themselves into their creation. Take, for example, one of my favorite pieces from
+				friend-of-the-show
+				<a href='https://www.rileyhoonan.com/'>Riley Hoonan</a>, chronicling the <a
+					href='http://hellofthenorth.info'>Paris-Roubaix cycling race</a>; one would struggle to read it and fail to
+				experience
+				at least some measure of awestruck excitement. Or take <a href='https://jackielgu.github.io/'>Jackie
+					Gu</a>'s melancholy <a href='https://jackielgu.github.io/projects/digital-portrait/index.html'>please will
+					anyone speak
+					to me</a>, wherein she meditates on the character of digital relationships. I first saw these projects years
+				ago,
+				but they remain top of mind whenever I think of personal, non-traditional visual work.
+			</p>
+
+			<figure>
+				<img src="assets/preview.gif">
+				<figcaption class="small">
+					<em><a href='https://jackielgu.github.io/please-talk-to-me/'>please will anyone speak to me</a>, Jackie Gu
+					</em>
+				</figcaption>
+			</figure>
+			<p class='list-title'><strong>Others: Work, work</strong></p>
+			<p>
+				Building for others, meanwhile, can help if you benefit from working with constraints. Somewhat
+				counterintuitively, constraints can often lead to even better work quality, since they force you to eliminate
+				irrelevant aesthetic or technical choices that you may otherwise agonize over (e.g., obsessing over the visual
+				attributes of the box shadow you're using on your buttons? Trying to reimplement mapping for the browser using a
+				first-of-its kind approach? No time — default to whatever is least obtrusive and, in the words of my colleague
+				Matt, <a href='https://lifehacker.com/f-k-it-ship-it-5934647'>ship it</a>).
+			</p>
+
+			<p>
+				From the standpoint of story structure, building for others also prevents your story from meandering too much,
+				and helps you prioritize working on the key takeaways. In this scenario, you've got a limited amount of time to
+				do good work, and need to ensure that you use it as effectively as possible to create the best possible story;
+				the bells and whistles are secondary. If you're a journalist, you may want to create a magnum opus that
+				encompasses myriad data sources, coupled with video interviews and shoe-leather reporting about the opioid
+				epidemic in America, but if you're working on a deadline and your editor needs you to crunch some numbers about
+				the geographic concentrations of overdoses in your state, you'll have to prioritize those components and publish
+				the story on deadline.
+			</p>
+
+
+			<p>Adopting a "<a href='https://en.wikipedia.org/wiki/Minimum_viable_product'>minimum viable product</a>
+				first, everything else later" conception of storytelling with
+				data is doubly useful: honing the core skills used in your work will allow you to fulfill the basic requirements
+				of each project faster with every piece that you complete. This will afford you more time to iterate on the
+				story
+				if it doesn't quite come together on first attempt (check out the bottom of our <a
+					href='https://pudding.cool/process/how-to-make-dope-shit-part-2/'>guide to design</a> for some
+				examples of iterating on visual work), and will provide you greater room to experiment; it's this time that you
+				can then use towards truly novel and innovative storytelling, be it in the form of analyses or visual
+				representation of data.</p>
+
+			<p>
+				There is one final benefit to working on a story aimed for someone else's eyes: writing and structuring
+				information with others in mind
+				forces you to create work that is clearer and more accessible than if you were taking notes for yourself. If
+				you're creating work meant for consumption by multiple stakeholders — let's abandon the journalistic
+				landscape for a moment and set this in the business world, with marketing managers, product managers, data
+				scientists, and engineers — you owe your audience the courtesy of communicating your message in a way that each
+				can understand sufficiently for their particular use cases. Any instances of mysterious black-box analyses do
+				your readers a disservice, and while you may be unable to communicate all the nuances involved in your
+				number-crunching, your audience should feel like you've given them sufficient context to understand your
+				reasoning and conclusions after consuming your work. Journalists, writing for a lay audience, are often better
+				than others at this exercise, as adduced by occasional mentions of "...President of the United States, Donald
+				Trump..." in newspaper articles: most people know that he happens to be president at the time of writing, but
+				mentioning his title is, nevertheless, good practice. Adopting this level of redundancy in other contexts is, on
+				balance, beneficial to the readers.
+			</p>
+
+			<p><strong>Takeaway:</strong>
+			<ul>
+				<li>Passion projects/work done for yourself allow for more room to be highly original and can allow you to
+					take much greater risks.
+				</li>
+				<li>Projects for others have constraints, and these can help you create clearer, more focused work.</li>
+			</ul>
+			</p>
+
+
+
+
+
+
+			<h2 class='post__hed tk-atlas'>2. Is your focus broad, or narrow?</h2>
+			<p class='list-title'><strong>Broad</strong></p>
+			<p>
+				The next question worth considering
+				is what you're looking for in the data throughout the course of your analysis. At first glance this may seem
+				self-evident — in what world would you put together a data-driven story without having a central thesis? And
+				yet, this isn't quite as uncommon as it would seem: consider someone who comes across a data set, analyzes it in
+				countless ways, and is left with endless charts, snippets of analysis, semi-intriguing conclusions, all tacked
+				into a single document.
+			</p>
+
+			<p>These sorts of explorations are essential to getting a good sense of data, but should be thought of as no more
+				than that:
+				exploratory forays into a complicated topic, which help you situate yourself within the data set and give you a
+				sense of some of the trends and relationships contained therein. The output of this exercise is not a story, but
+				data and insights that you can then incorporate into the story you'll create.
+			</p>
+
+			<p>I'll admit, I'll occasionally encounter (or compile) a set of data that are inherently interesting to me, like
+				our 2018
+				project that highlighted <a href='https://pudding.cool/2018/11/dearabby/'>30 years' worth of data from Dear
+					Abby advice columns</a>, or our <a href='https://pudding.cool/2018/12/brief-history/'>2019 analysis of 100
+					years' worth of American news</a>. I was less interested in any highly specific question than in what I could
+				learn
+				from each of these corpuses. There's something deeply compelling about the prospect
+				of looking at the worries of countless Americans reaching out to a single person for advice; likewise, I think
+				that the thought of spotlighting the focus of the largest newspaper in the nation across the span of a century
+				is thoroughly intriguing, particularly when it comes to comparing the historical record to our era. In such
+				cases —
+				and these, I think, tend to be more rare — I'm less interested in a particular question, and derive a lot of
+				satisfaction from the exploratory process I outlined earlier. The exploration itself, however, is never the
+				final project: it's useful only insofar as it helps identify the most interesting insights in the data, which I
+				then proceed to examine further, and craft a story around it.
+			</p>
+
+			<figure>
+				<img src="assets/dear-abby.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2018/11/dearabby/'>30 Years of American Anxieties</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p>
+				The danger in this sort of approach is the almost inevitable moment where you've boiled the ocean, and, after
+				many days of analysis, realize that there's nothing particularly interseting in the data. If there are no
+				insights that
+				capture your curiosity, you can rest assured that it will be a struggle to capture that of your reader.
+			</p>
+
+			<p class='list-title'><strong>Narrow</strong></p>
+			<p>
+				Instead, the tried and true method we usually <a
+					href='https://pudding.cool/process/pivot-continue-down/'>favour</a> is to begin the work with a central
+				question, and then
+				harness various data sets to answer it. Take, for instance, Amber's <a
+					href='https://pudding.cool/2020/02/rain/'>recent
+					investigation</a> into whether or not
+				Seattle really is as rainy a city as it's purported to be: it's much easier to conceive of a way to answer this
+				question using data, even though you may not quite be sure of which specific data sets to use, than to figure
+				out which question to ask by examining seasonal weather data for America's cities (another example of this is
+				our team-wide <a href='https://pudding.cool/2019/03/pop-music/'>Biggest Pop
+					Star</a> project). Having a question that
+				excites you, or that elicits spirited debate among your friends and colleagues, is often a good signal that your
+				idea is worth investing some work in — one that is almost always less risky than sinking many hours of your time
+				into a data set that may not yield anything remotely curious.
+			</p>
+
+			<figure>
+				<img src="assets/rain.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2020/02/rain/'>Where Will You Need Your Umbrella?</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p>Moreover, it's easy enough to garner your audience's interest by framing your story as a data-driven reply to a
+				question, and roll out this solution by answering portions of this question, one point at a time. In my <a
+					href='https://pudding.cool/2017/07/jobs/'>analysis</a>
+				of the political impact of automation, I first showed the occupations that were most likely to be affected,
+				followed by the geographic impacts of job loss, and finally explained how this form of economic shock may lead
+				to swing states drifting to the right. Creating a coherent story structure for a data set-driven approach,
+				meanwhile, would have been significantly more difficult.</p>
+
+
+
+			<p><strong>Takeaway:</strong>
+			<ul>
+				<li>If your data set is inherently interesting, feel free to explore and take a more free-form approach to
+					your
+					story, letting the most intriguing insights rise to the top during your analysis.
+				</li>
+				<li>Oftentimes, it's easier to tackle an interesting question than to explore a data set in hopes of finding a
+					key insight.</li>
+			</ul>
+			</p>
+
+
+
+
+			<h2 class='post__hed tk-atlas'>3. How complex is the idea you're most excited by after your analysis?</h2>
+			<p class='list-title'><strong>Simple</strong></p>
+			<p>
+				Once you've analyzed your data and have found the conclusions you're most interested in, it's helpful to
+				consider the complexity of the main takeaway as a way to help you structure your story.
+			</p>
+
+			<p>
+				Let's say that the world has returned to a more sensible place, and you're at a long-overdue evening of drinks
+				with friends. For weeks, you've been busy working on your data-driven project. When your friend asks you what
+				you've been up to, there are generally two types of responses: In the first, you clearly and succinctly explain
+				what you've done and what you've found. In the second, you take a beat, and issue a "well, it's kind of
+				complicated, but" disclaimer before you begin.
+			</p>
+
+
+			<p>
+				In the former case, the insight that you've found is fairly accessible. Think, for example, of Matt's
+				<a href='https://pudding.cool/projects/vocabulary/'>investigation</a> of which rappers have the richest
+				vocabularies: its description provides a reader all they need
+				to know to pique their curiosity. The piece begins by providing precisely that: a chart at the very start of the
+				story
+				that gives the audience an immediate sense of who the most lexically-diverse rapper is, as well as where others
+				lie in relation. Another example of this sort of easy-to-digest project is Russell's <a
+					href='https://pudding.cool/projects/newsletter/'>Winning the Internet</a> newsletter, which aggregates
+				the most popular content from other newsletters.
+			</p>
+
+			<figure>
+				<img src="assets/rappers.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/projects/vocabulary/'>The Largest Vocabulary in Hip Hop</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p>
+				If the central idea that you're investigating is relatively straightforward, you can often begin
+				your project with a "sledgehammer" stat: your central, most interesting finding. Presenting your most exciting
+				insight to a reader quickly may seem like it obviates the need to rest of the piece, but in fact, tends to make
+				tangential and related points more intriguing to your audience. Several years ago, Matt explored <a
+					href='https://pudding.cool/2017/03/punk/'>which artists
+					define the punk music genre</a>, and found that Blink-182 topped the list; after presenting this finding to
+				the
+				readers at the opening of the story, he delved into punk's subgenres, as well as the effects of one's age on
+				which bands one considers to be punk. It's unlikely that these subsequent questions, as interesting as they are,
+				would've been capable of capturing a reader's attention quite as well if they would've been served as
+				lead-ins to the larger focus of the piece; nevertheless, each was rendered much more compelling by drawing
+				attention to the
+				topic of punk music in an accessible and surprising way through the opening point.
+			</p>
+
+			<figure>
+				<img src="assets/punk.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2017/03/punk/'>Crowdsourcing The Definition of Punk</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+
+			<p class='list-title'><strong>Complex</strong></p>
+			<p>
+				If, however, the key insights you've unearthed through your data analyses are somewhat more difficult to
+				communicate, and require some contextualization, there's another approach that often helps readers get
+				acquainted with the necessary background.
+			</p>
+
+			<p>I was a religious reader of The New Yorker for some 15 years, and at that time, few publications rivaled its
+				consistent ability to deliver a steady drumbeat of thoroughly-reported stories that drew one in, regardless of
+				subject matter. Among my favorites of long form journalism remain Atul Gawande's <a
+					href='https://www.newyorker.com/magazine/2008/06/30/the-itch'>The Itch</a>, Nick Paumgarten's
+				<a href='https://www.newyorker.com/magazine/2007/04/16/there-and-back-again'>There And Back Again</a>, or Rachel
+				Aviv's <a href='https://www.newyorker.com/magazine/2011/05/30/god-knows-where-i-am'>God Knows Where I Am</a>. I
+				would wager that most people would balk at the
+				prospect of consuming tens of thousands of words to learn about about itching, or commuting patterns, or mental
+				health in America, but these articles provide not just a primer in these issues, but an engrossing read.
+			</p>
+
+
+			<p>Read any of these pieces and you'll find that they begin with a character. While they contain statistics and
+				analyses,
+				the single easiest way to draw a reader in is to produce a human experience to relate to. Statistics, when
+				presented with little context, tend to have only a fraction the power that an individual has, so the use of a
+				character's experiences as the engine used to move the reader through a story is paramount in long form writing,
+				particularly when expounding on a complex and wide-ranging issue like mental health. </p>
+
+
+			<p>In visual storytelling, we tend to omit a focus on individual experience, but we nevertheless need a way to
+				subtly provide sufficient context, while drawing reader interest to the work. The simplest way to translate
+				character-driven prose narratives to the requirements of a visual story is to begin the story with a single data
+				point. In our project about retraining workers from jobs that are likely to disappear due to automation, <a
+					href='https://www.jordandworkin.com/'>Jordan
+					Dworkin</a> and I began the <a href='https://pudding.cool/2018/08/retraining/'>story</a> by discussing truck
+				drivers, and which careers were most suitable to them,
+				considering the skills they already possessed. Rather than discussing the idea of retraining in a more abstract
+				sense, giving readers a specific data point to follow made it much easier to understand the larger point that we
+				sought to make. </p>
+
+
+			<p>This approach doesn't require that you follow that individual data point throughout the course of the story —
+				it merely serves as a convenient way to draw your audience in to begin dealing with a complex topic (this is
+				similar to the inverted pyramid model of journalism, which Jan mentions in Module 6 of the Knight Foundation's
+				<a href='https://journalismcourses.org/course/data-journalism-and-visualization-with-free-tools/'>Data
+					Journalism and Visualization with Free Tools</a> online course). Russell, in
+				a similar way, began his exploration of <a href='https://pudding.cool/2018/08/wiki-death/'>cultural figures'
+					Wikipedia popularity following their deaths</a> by first
+				looking at Beyoncé's popularity, and then using it to set the context of just how much interest in celebrities
+				grows following their passing.
+			</p>
+
+
+			<figure>
+				<img src="assets/wiki-death.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2018/08/wiki-death/'>Life After Death on Wikipedia</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+
+
+			<p><strong>Takeaway:</strong>
+			<ul>
+				<li>If your key insights are simple, you can state them at the opening of your piece and add relevant points
+					afterwards.
+				</li>
+				<li>If your takeaways require contextualization, use individual data points to draw your reader in and explain
+					the complexity on a small scale before tackling the larger conclusion.
+				</li>
+			</ul>
+			</p>
+
+
+
+			<h2 class='post__hed tk-atlas'>4. Progressing through your argument</h2>
+			<p>Once you've identified the data-driven insights that you'd like your project to communicate, you'll begin to
+				think of how to split your message between charts and text. As a rule of thumb, we shy away from overly
+				text-heavy approaches, and the key insights in our essays tend to be supported by charts. While we don't use
+				codified templates for thinking of how we structure our stories, here are a few approaches that we use, as well
+				as their specific benefits (notably absent from this list is video; we've used it in <a
+					href='https://pudding.cool/2019/11/big-hair/'>a</a> <a href='https://pudding.cool/2019/12/real-mvp'>number</a>
+				<a href='https://pudding.cool/projects/votes-for-women/'>of</a> stories, but it's not our bread and butter).
+			</p>
+			<p class='list-title'><strong>a. One point, one chart, stacked</strong></p>
+			<p>Oftentimes, stories have multiple takeaways that are best represented using multiple types of charts, using a
+				single chart for each section of your story. An example of this would be Russell and Amber's <a
+					href='https://pudding.cool/2017/12/hater/'>dive into the
+					things that dating app users love and hate</a>. Each of the sections — things we all love and hate; things we
+				hate
+				as we get older; most-hated and most-loved things, by US city; and most contentious topics — has its own chart,
+				and the reader scrolls down the stack of charts, from one section to the other.
+			</p>
+
+
+			<figure>
+				<img src="assets/hater.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2017/12/hater/'>10 Things Everyone Hates About You</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p><strong>Benefits:</strong>
+			<ul>
+				<li>These charts are relatively easy to code, and while they contain some interaction in this story, static
+					charts both work well (e.g., Matt's <a href='https://pudding.cool/2017/03/outkast/'>dive into Outkast's
+						music</a>), and are easier to create using whichever
+					tools you're most comfortable with (e.g., PowerPoint, Excel, Keynote, Flourish, Plotly, ggplot, D3, etc.)
+
+				</li>
+				<li>This structure is relatively intuitive. Each of your key takeaways has an accompanying chart, with some
+					editorializing in the text to help readers focus on the appropriate insight.
+
+				</li>
+			</ul>
+			</p>
+
+			<p class='list-title'><strong>b. Scrollytelling</strong></p>
+			<p>
+				<a href='https://pudding.cool/2018/06/gayborhoods/'>Much</a> <a
+					href='https://pudding.cool/2020/05/travel-local/'>of</a> <a
+					href='https://pudding.cool/2019/04/eu-regions/'>the</a> <a
+					href='https://pudding.cool/2018/12/3d-cities-story/'>work</a> on The Pudding relies on letting the reader
+				scroll through a page, and triggering changes to
+				the visual elements once they reach a certain point. Hell, Russell's even created <a
+					href='https://russellsamora.github.io/enter-view/'>multiple</a> <a
+					href='https://pudding.cool/process/introducing-scrollama'>libraries</a> to make it
+				simpler, and has <a href='https://pudding.cool/process/responsive-scrollytelling'>written</a> <a
+					href='https://pudding.cool/process/scrollytelling-sticky/'>extensively</a> <a
+					href='https://pudding.cool/process/how-to-implement-scrollytelling/'>about</a> working with this approach.
+				Scrollytelling works particularly well
+				when users scroll through a single chart, triggering certain animations or changes within as they progress down
+				the site.
+			</p>
+
+			<figure>
+				<img src="assets/film-digital.gif">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2018/08/filmordigital/'>Film or Digital</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p><strong>Benefits:</strong>
+			<ul>
+				<li>The reader's experience is highly fluid and enjoyable.
+				</li>
+				<li>The promise of discovering a new animation at each step helps users progress through your project
+					without your needing to be highly prescriptive about what they see at each moment, and ensures they can
+					navigate the length of
+					your story with ease.
+				</li>
+			</ul>
+			</p>
+			<p>While there are clear benefits, I should note that implementing scrollytelling is not without its drawbacks:
+				you'll need to account for both mobile and desktop screen heights (Russell's got a great guide <a
+					href='https://pudding.cool/process/responsive-scrollytelling'>here</a>, as well as
+				a discussion of when scrollytelling is useful), be highly explicit about the state of your visuals at each step
+				in your code (users often scroll through multiple sections quickly, so you'll need to ensure that all necessary
+				animations trigger at the beginning of each step, rather than relying on these having taken place where they
+				were initially meant to), be difficult for the browser to render due to the many transitions, and be prepared
+				for the process to take longer than you're used to, since iterating on this story format invariably means
+				editing code in many different sections.</p>
+
+			<p class='list-title'><strong>c. Tapping/stepping</strong></p>
+			<p>Since scrollytelling can be somewhat more time-consuming, we've also <a
+					href='https://pudding.cool/2019/05/science_etc_1/'>embraced</a> <a
+					href='https://pudding.cool/2019/08/register'>using</a> a step-by-step approach on
+				somewhat smaller stories.
+			</p>
+
+			<figure>
+				<img src="assets/falsetto.png">
+				<figcaption class="small">
+					<em><a href='https://pudding.cool/2019/08/register/'>Are Men Singing Higher in Pop Music</a>, The Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p>You don't even necessarily need to do this through a web page — we've published multiple stories on <a
+					href='https://www.instagram.com/the.pudding/'>Instagram</a> alone, using still images and its in-built
+				carousel mode.
+			</p>
+
+
+			<figure>
+				<img src="assets/milk.png">
+				<figcaption class="small">
+					<em><a href='https://www.instagram.com/p/B5IdkN4hjS6/'>Why It's Worth Crying Over Spilled Milk</a>, The
+						Pudding
+					</em>
+				</figcaption>
+			</figure>
+
+			<p><strong>Benefits:</strong>
+			<ul>
+				<li>relatively simple to create, either through code or a platform like Instagram.
+				</li>
+				<li>allows you to take the reader through a highly structured set of arguments.
+				</li>
+				<li>ensures brevity in your writing (you can only fit so much on a mobile screen) for each of your points, and
+					helps organize your thoughts into bite-sized chunks when storyboarding the project.
+				</li>
+			</ul>
+			</p>
+
+
+			<p>Although the reader experience on desktop is somewhat less enjoyable than it is on mobile (clicking to advance
+				through a story is slightly more annoying than tapping, at least for myself), this is a great way to move
+				readers through a structured narrative without spending too much time on developing a project.</p>
+
+
+			<h2 class='post__hed tk-atlas'>5. How did you arrive at your conclusion?
+			</h2>
+			<p>While it's important for your readers to understand the rough method you used to arrive at your conclusions as
+				they're reading
+				your work, it's often helpful to provide an additional, more detailed look at your process and reasoning.
+				Readers are often sufficiently savvy to consider our work critically, and those that may have reservations about
+				our findings will have more faith in our analyses if they have a clear sense of where we sourced our data and
+				how we crunched the numbers. Most of our projects contain a Method section following the conclusion to deal with
+				these
+				questions, where we link to data sources (when available) and explain the calculations we performed in order to
+				arrive at our conclusions.
+			</p>
+
+			<p>
+				Perhaps the most impressive version of this I've seen is The Markup's explanation of their <a
+					href='https://themarkup.org/google-the-giant/2020/07/28/how-we-analyzed-google-search-results-web-assay-parsing-tool'>Google
+					The Giant project</a>, which goes into great depths to provide a highly transparent play-by-play of their
+				investigations.
+			</p>
+
+
+
+
+			<figure>
+				<img src="assets/markup.png">
+				<figcaption class="small">
+					<em><a
+							href='https://themarkup.org/google-the-giant/2020/07/28/how-we-analyzed-google-search-results-web-assay-parsing-tool/'>How
+							We Analyzed Google's Search Results</a>, The
+						Markup
+					</em>
+				</figcaption>
+			</figure>
+
+
+
+			<h2 class='post__hed tk-atlas'>Conclusion
+			</h2>
+			<p>In this final guide to creating visual essays, I've done my best to highlight the many considerations that play
+				a part in the way that we structure our projects. Considering questions of audience, aims, the complexity of
+				your
+				conclusions, the best ways to visually structure your story, and clarity surrounding your analyses will help you
+				present your work in the most straight-forward and compelling manner. And if you're struggling, get in touch —
+				we love to sound off on projects, and are happy to weigh in on ideas (you can email us at <a
+					href='mailto:sup@pudding.cool'>sup@pudding.cool</a>, send a message over
+				<a href='https://twitter.com/puddingviz?lang=en'>Twitter</a>, or if you're a <a
+					href='https://www.patreon.com/thepudding'>Patreon supporter</a>, chat to us real-time via slack).
+			</p>
+			<p>
+				I hope the things you've picked up in this guide help, whether in your job as a data analyst/scientist,
+				journalist, or simply help bring an idea you had to life.
+			</p>
+
+
+
+
+
+	</main>
+
+
+	<!-- <script src='assets/scripts/d3.v4.9.1.min.js'></script>
+	<script src='bundle.js?version=1501690346367'></script> -->
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
+</body>
+
+</html>

@@ -1,0 +1,2980 @@
+<!doctype html>
+<html lang='en' data-version='1526389545314'>
+
+<meta property='hide-footer-company' content='true'>
+<meta property='append-footer-to' content='#inject-footer'>
+
+<head>
+
+	<title>The Structure of Stand-Up Comedy</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='The genius of Ali Wong’s Netflix special.' />
+	<meta name='news_keywords' content='ali wong, stand-up, comedy, structure, data viz, data, visualization' />
+
+	<meta property='og:title' content='The Structure of Stand-Up Comedy' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/2018/02/stand-up/' />
+	<meta property='og:description' content='The genius of Ali Wong’s Netflix special.' />
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+
+	<meta property='og:image' content='https://pudding.cool/2018/02/stand-up/assets/social/social-facebook.jpg' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='600' />
+
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='https://pudding.cool' />
+	<meta name='twitter:creator' content='@russellviz' />
+	<meta name='twitter:title' content='The Structure of Stand-Up Comedy' />
+	<meta name='twitter:description' content='The genius of Ali Wong’s Netflix special.' />
+	<meta name='twitter:image:src' content='https://pudding.cool/2018/02/stand-up/assets/social/social-twitter.jpg' />
+
+	<link rel='canonical' href='https://pudding.cool/2018/02/stand-up/' />
+	<style>
+		* {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		a,
+		abbr,
+		acronym,
+		address,
+		applet,
+		article,
+		aside,
+		audio,
+		b,
+		big,
+		blockquote,
+		body,
+		canvas,
+		caption,
+		center,
+		cite,
+		code,
+		dd,
+		del,
+		details,
+		dfn,
+		div,
+		dl,
+		dt,
+		em,
+		embed,
+		fieldset,
+		figcaption,
+		figure,
+		footer,
+		form,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		header,
+		hgroup,
+		html,
+		i,
+		iframe,
+		img,
+		ins,
+		kbd,
+		label,
+		legend,
+		li,
+		mark,
+		menu,
+		nav,
+		object,
+		ol,
+		output,
+		p,
+		pre,
+		q,
+		ruby,
+		s,
+		samp,
+		section,
+		small,
+		span,
+		strike,
+		strong,
+		sub,
+		summary,
+		sup,
+		table,
+		tbody,
+		td,
+		tfoot,
+		th,
+		thead,
+		time,
+		tr,
+		tt,
+		u,
+		ul,
+		var,
+		video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline
+		}
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section {
+			display: block
+		}
+
+		a img {
+			border: none
+		}
+
+		blockquote {
+			quotes: none
+		}
+
+		blockquote:after,
+		blockquote:before {
+			content: '';
+			content: none
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		caption,
+		td,
+		th {
+			text-align: left;
+			font-weight: 400;
+			vertical-align: middle
+		}
+
+		.hide-accessible {
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			position: absolute
+		}
+
+		.hide-invisible {
+			visibility: hidden
+		}
+
+		.hide-display {
+			display: none
+		}
+
+		.skip-to-main {
+			border: none;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			position: absolute
+		}
+
+		.skip-to-main:focus {
+			width: auto;
+			height: auto;
+			background-color: #f4f4f4;
+			padding: .5em;
+			z-index: 1
+		}
+
+		.prose {
+			max-width: 40rem;
+			margin: 0 auto;
+			padding: 0 1rem
+		}
+
+		.prose__hed {
+			font-weight: 700
+		}
+
+		.graphic__hed {
+			font-weight: 500
+		}
+
+		.graphic__dek {
+			margin: 0;
+			margin-bottom: 1.5rem
+		}
+
+		.graphic__chart {
+			width: 100%
+		}
+
+		.graphic__key {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-bottom: .5rem;
+			-webkit-box-pack: end;
+			-ms-flex-pack: end;
+			justify-content: flex-end
+		}
+
+		.graphic__key li {
+			padding: 0;
+			margin-left: .75em;
+			letter-spacing: .05em;
+			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 1
+		}
+
+		.graphic__key li:before {
+			content: '';
+			display: inline-block;
+			width: .8em;
+			height: .8em;
+			background-color: #282828;
+			margin-right: .25em
+		}
+
+		.tk-canela {
+			font-family: 'Times New Roman', serif
+		}
+
+		.loaded-canela .tk-canela {
+			font-family: 'Canela Web', 'Times New Roman', serif
+		}
+
+		.tk-publico {
+			font-family: Georgia, Times, serif
+		}
+
+		.loaded-publico .tk-publico {
+			font-family: 'Publico Text Web', Georgia, Times, serif
+		}
+
+		.tk-atlas {
+			font-family: Helvetica, Arial, sans-serif
+		}
+
+		.loaded-atlas .tk-atlas {
+			font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif
+		}
+
+		.xxx-small {
+			font-size: 10px;
+			line-height: 1.5
+		}
+
+		.xx-small {
+			font-size: 11px;
+			line-height: 1.5
+		}
+
+		.x-small {
+			font-size: 12px;
+			line-height: 1.5
+		}
+
+		.small {
+			font-size: 14px;
+			line-height: 1.5
+		}
+
+		.root {
+			font-size: 16px;
+			line-height: 1.7
+		}
+
+		.medium {
+			font-size: 17px;
+			line-height: 1.7
+		}
+
+		.mlarge {
+			font-size: 20px;
+			line-height: 1.7
+		}
+
+		.large {
+			font-size: 24px;
+			line-height: 1.5
+		}
+
+		.x-large {
+			font-size: 32px;
+			line-height: 1.5
+		}
+
+		.xx-large {
+			font-size: 40px;
+			line-height: 1.2
+		}
+
+		.xxx-large {
+			font-size: 48px;
+			line-height: 1.2
+		}
+
+		.xxxx-large {
+			font-size: 64px;
+			line-height: 1.2
+		}
+
+		body {
+			-webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1;
+			font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-tap-highlight-color: transparent;
+			background-color: #fffaf0;
+			color: #4a3d3e;
+			font-size: 16px
+		}
+
+		h1 {
+			font-size: 40px;
+			line-height: 1.2;
+			margin-top: 1.5rem
+		}
+
+		h2 {
+			font-size: 32px;
+			line-height: 1.5;
+			margin-top: 1.5rem
+		}
+
+		h3 {
+			font-size: 24px;
+			line-height: 1.5;
+			margin-top: 1.5rem
+		}
+
+		h4 {
+			font-size: 17px;
+			line-height: 1.7;
+			margin-top: 1.5rem
+		}
+
+		h5 {
+			font-size: 16px;
+			line-height: 1.7;
+			margin-top: 1.5rem
+		}
+
+		h6 {
+			font-size: 14px;
+			line-height: 1.5;
+			margin-top: 1.5rem
+		}
+
+		p {
+			margin: 1.5rem 0;
+			font-size: 16px;
+			line-height: 1.7
+		}
+
+		a {
+			text-decoration: none;
+			border-bottom: 1px solid #282828;
+			color: #282828
+		}
+
+		a:hover,
+		a:visited {
+			color: #282828
+		}
+
+		b,
+		strong {
+			font-weight: 700
+		}
+
+		em,
+		i {
+			font-style: italic
+		}
+
+		ul {
+			list-style-type: none
+		}
+
+		li {
+			font-size: 16px
+		}
+
+		img,
+		video {
+			display: block;
+			width: 100%
+		}
+
+		button {
+			cursor: pointer;
+			border: none;
+			outline: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 1rem;
+			font-size: 16px
+		}
+
+		sub,
+		sup {
+			font-size: .75rem;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		.about-btn {
+			position: absolute;
+			bottom: .5rem;
+			right: .5rem
+		}
+
+		#about {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #fffaf0;
+			z-index: 1000;
+			display: none;
+			pointer-events: none
+		}
+
+		#about.is-visible {
+			display: block;
+			pointer-events: auto
+		}
+
+		.about__content {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding: 1rem
+		}
+
+		.about__close {
+			position: absolute;
+			top: .5rem;
+			right: .5em;
+			opacity: .7;
+			cursor: pointer;
+			transtion: opacity 250ms
+		}
+
+		.about__close:hover {
+			opacity: 1
+		}
+
+		.about__close svg {
+			width: 2.5rem;
+			height: 2.5em;
+			stroke: #4a3d3e
+		}
+
+		p.about__who {
+			text-align: center;
+			margin: 0;
+			font-weight: 500
+		}
+
+		p.about__methodology {
+			max-width: 35rem;
+			margin: 0 auto;
+			font-weight: 400;
+			text-align: left;
+			margin-bottom: 3rem
+		}
+
+		.about__content .pudding-footer {
+			background-color: #fffaf0;
+			padding-top: 0
+		}
+
+		#act-1 p.graphic__transcript {
+			font-weight: 500;
+			margin: 0;
+			padding: .5rem;
+			padding-top: 3rem;
+			-webkit-transition: all 2s ease-in-out;
+			-o-transition: all 2s ease-in-out;
+			transition: all 2s ease-in-out;
+			text-align: justify;
+			-webkit-transform-origin: 50% 0;
+			-ms-transform-origin: 50% 0;
+			transform-origin: 50% 0;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			position: relative;
+			display: none;
+			font-size: 11px;
+			line-height: 1.5
+		}
+
+		#act-1 p.graphic__transcript.is-visible {
+			display: block
+		}
+
+		#act-1 p.graphic__transcript.is-faded {
+			opacity: 0
+		}
+
+		#act-1 span.caption {
+			padding: .1em .2em;
+			color: rgba(155, 133, 135, .33)
+		}
+
+		#act-1 span.laughter-mark {
+			position: relative;
+			width: 0;
+			display: inline-block
+		}
+
+		#act-1 .laughter {
+			display: block;
+			position: absolute;
+			left: 0;
+			border-radius: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			background-color: transparent;
+			border-style: solid;
+			border-color: rgba(92, 179, 181, .5);
+			border-width: 3px;
+			z-index: 100
+		}
+
+		#act-1 .laughter.behind {
+			z-index: -100
+		}
+
+		#act-1 .laughter.is-highlight {
+			border-color: rgba(252, 122, 119, .75);
+			background-color: rgba(252, 122, 119, .25)
+		}
+
+		#act-1 .laughter.is-highlight .duration {
+			display: block
+		}
+
+		#act-1 .laughter .duration {
+			margin: 0;
+			text-align: center;
+			width: 7rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-weight: 600;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			color: #4a3d3e;
+			text-shadow: 0 0 3px #fffaf0;
+			display: none
+		}
+
+		#act-1 span.subtitle {
+			-webkit-transition: color 150ms ease-in-out;
+			-o-transition: color 150ms ease-in-out;
+			transition: color 150ms ease-in-out
+		}
+
+		#act-1 span.subtitle.is-visible {
+			color: #f4f4f4
+		}
+
+		#act-1 .graphic__video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			-webkit-transition: 250ms ease-in-out;
+			-o-transition: 250ms ease-in-out;
+			transition: 250ms ease-in-out;
+			background-color: #282828;
+			opacity: 0
+		}
+
+		#act-1 .graphic__video.is-visible {
+			opacity: 1
+		}
+
+		#act-1 .graphic__video video {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			-ms-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			opacity: 1
+		}
+
+		#act-1 .video--hello video {
+			left: 0
+		}
+
+		#act-1 .video--nectar video {
+			left: 67%
+		}
+
+		#act-1 .chart {
+			position: absolute;
+			z-index: 100;
+			opacity: 0;
+			-webkit-transition: opacity .5s;
+			-o-transition: opacity .5s;
+			transition: opacity .5s
+		}
+
+		#act-1 .chart.is-visible {
+			opacity: 1
+		}
+
+		#act-1 .chart .annotation path {
+			stroke: #fc7a77
+		}
+
+		#act-1 .chart .annotation text {
+			fill: #fc7a77
+		}
+
+		#act-1 .chart .annotation .annotation-note-title {
+			fill: #fc7a77
+		}
+
+		#act-1 .chart .annotation .connector-arrow {
+			fill: #fc7a77
+		}
+
+		#act-2 svg {
+			display: block
+		}
+
+		#act-2 .g-laugh circle {
+			fill: none;
+			stroke: #b2a1a3;
+			stroke-width: 1px;
+			stroke-opacity: .25
+		}
+
+		#act-2 .g-laugh circle.is-highlight {
+			stroke: #fc7a77;
+			stroke-width: 2px;
+			stroke-opacity: 1
+		}
+
+		#act-2 .g-laugh line {
+			stroke: #826b6d;
+			stroke-width: 2px
+		}
+
+		#act-2 .g-laugh text {
+			fill: #4a3d3e;
+			font-size: 12px;
+			font-weight: 600
+		}
+
+		#act-3 {
+			margin-top: 3.5rem
+		}
+
+		#act-3 .part {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			-webkit-transition: opacity 250ms ease-in-out;
+			-o-transition: opacity 250ms ease-in-out;
+			transition: opacity 250ms ease-in-out;
+			width: 100%;
+			pointer-events: none
+		}
+
+		#act-3 .part.is-visible {
+			opacity: 1;
+			pointer-events: auto
+		}
+
+		#act-3 .part__container {
+			height: 100%;
+			width: 95%;
+			margin-left: 2.5%;
+			position: relative;
+			overflow: hidden
+		}
+
+		#act-3 .part__favorite .vid-placeholder {
+			margin: 0 auto;
+			max-width: 30rem;
+			max-height: 30rem
+		}
+
+		#act-3 .part__favorite video {
+			height: 100%
+		}
+
+		#act-3 .part__favorite p {
+			margin: 0;
+			text-align: center
+		}
+
+		#act-3 .part__script {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-webkit-transform-origin: 0 0;
+			-ms-transform-origin: 0 0;
+			transform-origin: 0 0;
+			-webkit-transition: -webkit-transform .5s ease-in-out;
+			transition: -webkit-transform .5s ease-in-out;
+			-o-transition: transform .5s ease-in-out;
+			transition: transform .5s ease-in-out;
+			transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out
+		}
+
+		#act-3 .part__script--labels {
+			height: 100%
+		}
+
+		#act-3 .sub {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			visibility: hidden
+		}
+
+		#act-3 .sub.is-visible {
+			visibility: visible
+		}
+
+		#act-3 .s1 {
+			text-align: center;
+			width: 100%
+		}
+
+		#act-3 .s1 .example {
+			text-align: center;
+			width: 11rem;
+			background-color: #f5ebe0;
+			font-size: 14px;
+			font-weight: 600;
+			margin: 0 auto;
+			padding: .25em
+		}
+
+		#act-3 .s2 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%)
+		}
+
+		#act-3 .s2 .overlay {
+			margin: 0 auto;
+			width: 10rem;
+			text-align: center;
+			padding: 0;
+			font-size: 32px;
+			font-weight: 600;
+			background-color: rgba(245, 235, 224, .5);
+			text-shadow: 0 0 5px #fffaf0
+		}
+
+		#act-3 .s3 {
+			width: 100%;
+			margin: 0 auto
+		}
+
+		#act-3 .s3 .overline {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			text-transform: uppercase;
+			color: #826b6d;
+			font-size: 14px
+		}
+
+		#act-3 .s3 .outer {
+			margin: 0 auto;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			justify-content: space-around
+		}
+
+		#act-3 .s3 .inner {
+			width: 10rem
+		}
+
+		#act-3 .s3 .inner p {
+			margin: 0;
+			text-align: center
+		}
+
+		#act-3 .s3 .inner__hed {
+			font-weight: 600;
+			font-size: 16px
+		}
+
+		#act-3 .s3 .inner__dek {
+			color: #826b6d;
+			font-size: 14px
+		}
+
+		#act-3 .act {
+			width: 100%;
+			-webkit-box-shadow: 0 0 1.5rem 1.5rem #fffaf0;
+			box-shadow: 0 0 1.5rem 1.5rem #fffaf0
+		}
+
+		#act-3 .act__hed {
+			text-align: center;
+			margin: 0;
+			font-weight: 600;
+			font-size: 17px
+		}
+
+		#act-3 .act__dek {
+			text-align: center;
+			margin: 0;
+			font-weight: 400;
+			text-transform: capitalize;
+			font-size: 12px
+		}
+
+		#act-3 .act__images {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-webkit-box-align: start;
+			-ms-flex-align: start;
+			align-items: flex-start
+		}
+
+		#act-3 .act__images .img-container {
+			margin: 0;
+			opacity: 0;
+			-webkit-transition: .5s opacity ease-in-out;
+			-o-transition: .5s opacity ease-in-out;
+			transition: .5s opacity ease-in-out;
+			position: relative;
+			border: 1px solid #f5ebe0;
+			border-radius: 3px
+		}
+
+		#act-3 .act__images .img-container.is-visible {
+			opacity: 1
+		}
+
+		#act-3 .act__images img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			-webkit-transition: opacity .5s ease-in-out;
+			-o-transition: opacity .5s ease-in-out;
+			transition: opacity .5s ease-in-out
+		}
+
+		#act-3 .act__images img.is-hidden {
+			opacity: 0
+		}
+
+		#act-3 .part__spectrum {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 24rem;
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			transform: translateY(-100%)
+		}
+
+		#act-3 .part__spectrum .timeline {
+			max-width: 50rem;
+			margin: 0 auto
+		}
+
+		#act-3 .part__spectrum .timeline__title {
+			text-align: center;
+			font-weight: 600;
+			color: #826b6d;
+			opacity: 0;
+			-webkit-transition: opacity .5s;
+			-o-transition: opacity .5s;
+			transition: opacity .5s
+		}
+
+		#act-3 .part__spectrum .timeline__title.is-visible {
+			opacity: 1
+		}
+
+		#act-3 .part__spectrum .timeline__title svg {
+			display: inline-block;
+			height: 1em;
+			vertical-align: middle;
+			-webkit-transform: translateY(-5%);
+			-ms-transform: translateY(-5%);
+			transform: translateY(-5%);
+			-webkit-animation: bounce 1s ease-in-out infinite;
+			animation: bounce 1s ease-in-out infinite
+		}
+
+		#act-3 .part__spectrum .timeline__chart {
+			position: relative
+		}
+
+		#act-3 .part__spectrum .chart__bar {
+			width: 100%;
+			height: 2px;
+			background-color: #4a3d3e;
+			position: relative
+		}
+
+		#act-3 .part__spectrum .chart__bar:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1rem;
+			width: 2px;
+			background-color: #4a3d3e;
+			-webkit-transform: translateY(-48%);
+			-ms-transform: translateY(-48%);
+			transform: translateY(-48%)
+		}
+
+		#act-3 .part__spectrum .chart__bar:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 1rem;
+			width: 2px;
+			background-color: #4a3d3e;
+			-webkit-transform: translateY(-48%);
+			-ms-transform: translateY(-48%);
+			transform: translateY(-48%)
+		}
+
+		#act-3 .part__spectrum .chart__label {
+			position: absolute;
+			top: 1rem;
+			margin: 0;
+			width: 8rem;
+			line-height: 1.4;
+			z-index: 100;
+			background-color: #fffaf0;
+			font-weight: 600
+		}
+
+		#act-3 .part__spectrum .chart__label span {
+			font-size: 12px;
+			font-weight: 400
+		}
+
+		#act-3 .part__spectrum .label--left {
+			left: 0
+		}
+
+		#act-3 .part__spectrum .label--right {
+			right: 0;
+			text-align: right
+		}
+
+		#act-3 .part__spectrum .item {
+			max-width: 10rem;
+			width: 25%;
+			position: absolute;
+			opacity: 0
+		}
+
+		#act-3 .part__spectrum .item:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -4rem;
+			height: 4rem;
+			width: 0;
+			border-left: 2px dotted #826b6d
+		}
+
+		#act-3 .part__spectrum .item:nth-child(1) {
+			left: 0;
+			top: 4rem
+		}
+
+		#act-3 .part__spectrum .item:nth-child(2) {
+			left: 50%;
+			top: 8rem;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+
+		#act-3 .part__spectrum .item:nth-child(2):before {
+			top: -8rem;
+			height: 8rem
+		}
+
+		#act-3 .part__spectrum .item:nth-child(3) {
+			right: 0;
+			top: 4rem
+		}
+
+		#act-3 .part__spectrum .item p {
+			margin: 0;
+			text-align: center;
+			font-size: 12px
+		}
+
+		#act-4 svg {
+			visibility: hidden
+		}
+
+		#act-4 svg.is-visible {
+			visibility: visible
+		}
+
+		#act-4 .excerpt {
+			position: absolute;
+			top: 2.5rem;
+			left: 50%;
+			width: 100%;
+			margin: 0 auto;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			opacity: 0;
+			-webkit-transition: 250ms opacity ease-in-out;
+			-o-transition: 250ms opacity ease-in-out;
+			transition: 250ms opacity ease-in-out
+		}
+
+		#act-4 .excerpt.is-visible {
+			opacity: 1
+		}
+
+		#act-4 .excerpt .excerpt__inner {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			padding: 1rem 2rem;
+			font-weight: 500;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		#act-4 .excerpt p {
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: 600;
+			margin-bottom: .5rem
+		}
+
+		#act-4 .excerpt blockquote {
+			font-size: 11px;
+			line-height: 1.5;
+			line-height: 1.7;
+			color: #4a3d3e
+		}
+
+		#act-4 .excerpt blockquote span {
+			color: #4a3d3e
+		}
+
+		#act-5 .part {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			-webkit-transition: opacity 250ms ease-in-out;
+			-o-transition: opacity 250ms ease-in-out;
+			transition: opacity 250ms ease-in-out;
+			width: 100%;
+			pointer-events: none
+		}
+
+		#act-5 .part.is-visible {
+			opacity: 1;
+			pointer-events: auto
+		}
+
+		#act-5 .part__container {
+			height: 100%;
+			position: relative
+		}
+
+		#act-5 .part__robert {
+			height: 100%;
+			width: 95%;
+			margin-left: 2.5%
+		}
+
+		#act-5 .part__robert svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			width: 90%;
+			margin: 0 auto;
+			height: auto;
+			max-width: 25rem
+		}
+
+		#act-5 .part__quote {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-color: #282828
+		}
+
+		#act-5 .part__quote video {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			-ms-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			opacity: 1
+		}
+
+		#act-5 .part__system {
+			height: 100%;
+			width: 95%;
+			margin-left: 2.5%
+		}
+
+		#act-5 .part__system svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			width: 90%;
+			margin: 0 auto;
+			height: auto;
+			max-width: 25rem
+		}
+
+		#act-5 .part__spectrum {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 24rem;
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			transform: translateY(-100%);
+			margin-top: 3.5rem;
+			width: 95%;
+			margin-left: 2.5%
+		}
+
+		#act-5 .part__spectrum .timeline {
+			max-width: 50rem;
+			margin: 0 auto
+		}
+
+		#act-5 .part__spectrum .timeline__title {
+			text-align: center;
+			font-weight: 600;
+			color: #826b6d;
+			opacity: 1;
+			-webkit-transition: opacity .5s;
+			-o-transition: opacity .5s;
+			transition: opacity .5s
+		}
+
+		#act-5 .part__spectrum .timeline__title.is-visible {
+			opacity: 1
+		}
+
+		#act-5 .part__spectrum .timeline__title svg {
+			display: inline-block;
+			height: 1em;
+			vertical-align: middle;
+			-webkit-transform: translateY(-5%);
+			-ms-transform: translateY(-5%);
+			transform: translateY(-5%);
+			-webkit-animation: bounce 1s ease-in-out infinite;
+			animation: bounce 1s ease-in-out infinite
+		}
+
+		#act-5 .part__spectrum .timeline__chart {
+			position: relative
+		}
+
+		#act-5 .part__spectrum .chart__bar {
+			width: 100%;
+			height: 2px;
+			background-color: #4a3d3e;
+			position: relative
+		}
+
+		#act-5 .part__spectrum .chart__bar:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1rem;
+			width: 2px;
+			background-color: #4a3d3e;
+			-webkit-transform: translateY(-48%);
+			-ms-transform: translateY(-48%);
+			transform: translateY(-48%)
+		}
+
+		#act-5 .part__spectrum .chart__bar:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 1rem;
+			width: 2px;
+			background-color: #4a3d3e;
+			-webkit-transform: translateY(-48%);
+			-ms-transform: translateY(-48%);
+			transform: translateY(-48%)
+		}
+
+		#act-5 .part__spectrum .chart__label {
+			position: absolute;
+			top: 1rem;
+			margin: 0;
+			width: 8rem;
+			line-height: 1.4;
+			z-index: 100;
+			background-color: #fffaf0;
+			font-weight: 600
+		}
+
+		#act-5 .part__spectrum .chart__label span {
+			font-size: 12px;
+			font-weight: 400
+		}
+
+		#act-5 .part__spectrum .label--left {
+			left: 0
+		}
+
+		#act-5 .part__spectrum .label--right {
+			right: 0;
+			text-align: right
+		}
+
+		#act-5 .part__spectrum .item {
+			max-width: 10rem;
+			width: 25%;
+			position: absolute
+		}
+
+		#act-5 .part__spectrum .item:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -8rem;
+			height: 8rem;
+			width: 0;
+			border-left: 2px dotted #826b6d
+		}
+
+		#act-5 .part__spectrum .item:nth-child(1) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 8rem
+		}
+
+		header {
+			display: block;
+			z-index: 1000;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			visibility: hidden
+		}
+
+		header.is-visible {
+			visibility: visible
+		}
+
+		header a.logo {
+			display: block;
+			border: none;
+			width: 2rem;
+			margin: .75rem .5rem
+		}
+
+		header a.logo svg {
+			fill: #4a3d3e;
+			display: block;
+			width: 100%
+		}
+
+		header .progress__bar {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 4px;
+			border-radius: 1px
+		}
+
+		header .progress__bar--bg {
+			background-color: rgba(178, 161, 163, .25)
+		}
+
+		header .progress__bar--fg {
+			background-color: rgba(252, 122, 119, .5);
+			width: 0
+		}
+
+		header .control {
+			position: absolute;
+			top: .75rem;
+			right: .75rem;
+			opacity: .5;
+			-webkit-transition: 250ms opacity;
+			-o-transition: 250ms opacity;
+			transition: 250ms opacity;
+			cursor: pointer
+		}
+
+		header .control:hover {
+			opacity: 1
+		}
+
+		header .control span {
+			width: 1.75rem;
+			height: 1.75rem;
+			background-color: rgba(178, 161, 163, .5);
+			display: none;
+			border-radius: 50%;
+			text-align: center
+		}
+
+		header .control span svg {
+			height: 1.75rem;
+			width: 1rem;
+			stroke: #b2a1a3;
+			fill: #b2a1a3
+		}
+
+		header .control span .feather-play {
+			-webkit-transform: translateX(.125em);
+			-ms-transform: translateX(.125em);
+			transform: translateX(.125em)
+		}
+
+		header .control span.is-visible {
+			display: block
+		}
+
+		#story .intro {
+			background-color: #fffaf0;
+			width: 100%;
+			padding: 1rem;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+			opacity: 0;
+			-webkit-transition: opacity 250ms ease-in-out;
+			-o-transition: opacity 250ms ease-in-out;
+			transition: opacity 250ms ease-in-out
+		}
+
+		#story .intro.is-visible {
+			opacity: 1
+		}
+
+		#story .intro__content {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		#story .intro__presents {
+			text-align: center;
+			margin-bottom: 2rem
+		}
+
+		#story .intro__presents a {
+			display: block;
+			border: none
+		}
+
+		#story .intro__presents svg {
+			width: 9rem;
+			margin: 0 auto;
+			fill: #4a3d3e
+		}
+
+		#story .intro__presents p.presents__text {
+			margin: 0 auto;
+			padding: 0;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 12px
+		}
+
+		#story .intro__title {
+			margin: 0 auto
+		}
+
+		#story .intro__title svg {
+			width: 90%;
+			height: 50vh;
+			margin: 0 auto;
+			width: auto;
+			max-width: 90%
+		}
+
+		#story .intro p.intro__overline {
+			font-size: 17px;
+			line-height: 1.7;
+			line-height: 1
+		}
+
+		#story .intro p.intro__overline span {
+			line-height: 1;
+			background-color: #4a3d3e;
+			color: #fc7a77;
+			display: inline-block;
+			padding: .5rem 1rem;
+			text-transform: uppercase;
+			font-weight: 600
+		}
+
+		#story .intro__hed {
+			max-width: 60rem;
+			margin: 0 auto;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 1.5
+		}
+
+		#story .intro p.intro__byline {
+			max-width: 40rem;
+			margin: 0 auto;
+			text-align: center;
+			padding: 0;
+			padding-bottom: .5rem;
+			font-size: 12px;
+			line-height: 1.5;
+			color: #b2a1a3;
+			pointer-events: auto;
+			margin-top: 2rem
+		}
+
+		#story .intro p.intro__byline a {
+			color: currentColor;
+			border: none;
+			-webkit-transition: color 250ms;
+			-o-transition: color 250ms;
+			transition: color 250ms
+		}
+
+		#story .intro p.intro__byline a:hover {
+			color: #4a3d3e
+		}
+
+		#story .intro p.overview__instructions {
+			margin: 0 auto;
+			padding: 0;
+			font-weight: 500;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 17px;
+			line-height: 1.7
+		}
+
+		#story .intro p.overview__instructions span {
+			display: none
+		}
+
+		#story .intro p.overview__instructions span.is-visible {
+			display: block
+		}
+
+		#story .intro p.overview__ps {
+			margin: 0 auto;
+			padding: 0;
+			font-size: 12px;
+			line-height: 1.5;
+			font-weight: 500;
+			text-align: center;
+			color: #fc7a77
+		}
+
+		#story .intro p.overview__ps svg {
+			width: 1rem;
+			height: 1rem;
+			vertical-align: middle;
+			display: inline-block;
+			-webkit-transform: translateY(-12.5%);
+			-ms-transform: translateY(-12.5%);
+			transform: translateY(-12.5%)
+		}
+
+		#story {
+			position: relative;
+			width: 100%
+		}
+
+		#story svg {
+			display: block;
+			margin: 0 auto
+		}
+
+		#story .primary {
+			color: #fc7a77;
+			text-shadow: -1px -1px 5px #4a3d3e, -1px 1px 5px #4a3d3e, 1px -1px 5px #4a3d3e, 1px 1px 5px #4a3d3e
+		}
+
+		#story .story__tap {
+			height: 100%;
+			width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			cursor: pointer
+		}
+
+		#story .story__tap.is-end {
+			pointer-events: none
+		}
+
+		#story .story__tap.is-end .tap {
+			height: 25%;
+			position: absolute;
+			bottom: 0;
+			left: 0
+		}
+
+		#story .story__tap.is-end .tap--right {
+			display: none
+		}
+
+		#story .story__tap.is-end .tap--left {
+			pointer-events: auto;
+			opacity: 1;
+			width: 5rem
+		}
+
+		#story .story__tap .tap {
+			height: 100%;
+			-webkit-transition: all 1s ease-in-out;
+			-o-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out;
+			opacity: 0;
+			padding: .5rem;
+			cursor: pointer
+		}
+
+		#story .story__tap .tap .inner {
+			width: 100%;
+			height: 100%;
+			position: relative
+		}
+
+		#story .story__tap .tap .inner p {
+			margin: 0;
+			position: absolute;
+			bottom: 4rem;
+			color: #710503;
+			line-height: 1;
+			text-transform: uppercase;
+			font-weight: 600;
+			opacity: 1;
+			-webkit-transition: opacity 250ms;
+			-o-transition: opacity 250ms;
+			transition: opacity 250ms
+		}
+
+		#story .story__tap .tap .inner p.is-hidden {
+			opacity: 0
+		}
+
+		#story .story__tap .tap.is-reveal {
+			opacity: 1
+		}
+
+		#story .story__tap .tap.is-reveal .inner {
+			background-color: rgba(253, 146, 144, .67);
+			border: 2px solid #fc7a77;
+			color: #fc7a77
+		}
+
+		#story .story__tap .tap.is-selected .inner {
+			color: #5cb3b5;
+			background-color: rgba(110, 187, 189, .67);
+			border: 2px solid #5cb3b5
+		}
+
+		#story .story__tap .tap.is-selected .inner p {
+			color: #060c0c
+		}
+
+		#story .story__tap .tap--left {
+			width: 25%;
+			padding-right: .25em
+		}
+
+		#story .story__tap .tap--left p {
+			left: 1rem
+		}
+
+		#story .story__tap .tap--left p:last-child {
+			-webkit-transform: translateY(150%);
+			-ms-transform: translateY(150%);
+			transform: translateY(150%)
+		}
+
+		#story .story__tap .tap--right {
+			width: 75%;
+			padding-left: .25em
+		}
+
+		#story .story__tap .tap--right p {
+			right: 1rem
+		}
+
+		#story .story__tap .tap--right p:last-child {
+			-webkit-transform: translateY(150%);
+			-ms-transform: translateY(150%);
+			transform: translateY(150%)
+		}
+
+		#story .story__graphics {
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0
+		}
+
+		#story .story__graphics.is-raised {
+			z-index: 100
+		}
+
+		#story .graphic {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none
+		}
+
+		#story .graphic.is-visible {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto
+		}
+
+		#story .story__steps {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 2
+		}
+
+		#story .step {
+			opacity: 0;
+			-webkit-transition: opacity 250ms ease-in-out;
+			-o-transition: opacity 250ms ease-in-out;
+			transition: opacity 250ms ease-in-out;
+			position: absolute;
+			bottom: 0;
+			left: 2.5%;
+			width: 95%;
+			pointer-events: none
+		}
+
+		#story .step.center {
+			text-align: center
+		}
+
+		#story .step.middle {
+			bottom: 50%;
+			-webkit-transform: translateY(50%);
+			-ms-transform: translateY(50%);
+			transform: translateY(50%);
+			pointer-events: none
+		}
+
+		#story .step.big {
+			pointer-events: none
+		}
+
+		#story .step.big p {
+			font-size: 24px
+		}
+
+		#story .step.is-visible {
+			opacity: 1;
+			cursor: default
+		}
+
+		#story .step.is-visible .step__text {
+			pointer-events: auto
+		}
+
+		#story .step.hide {
+			display: none
+		}
+
+		#story .step p {
+			max-width: 50rem;
+			margin: 1rem auto;
+			padding: .5rem 1rem;
+			font-weight: 600;
+			line-height: 1.7;
+			font-size: 16px
+		}
+
+		#story .step p:empty {
+			opacity: 0
+		}
+
+		#story .step p span.step__text {
+			background-color: #f5ebe0;
+			-webkit-box-shadow: -6px 0 0 0 #f5ebe0, 6px 0 0 0 #f5ebe0;
+			box-shadow: -6px 0 0 0 #f5ebe0, 6px 0 0 0 #f5ebe0;
+			padding: 1.5px 0;
+			margin: 0
+		}
+
+		#story .step p .spacer {
+			display: block;
+			height: 1.5rem
+		}
+
+		#story .step mark {
+			background-color: #4a3d3e;
+			color: #fc7a77;
+			padding: 1.5px;
+			margin: 0 7.5px;
+			background-color: #4a3d3e;
+			-webkit-box-shadow: -6px 0 0 0 #4a3d3e, 6px 0 0 0 #4a3d3e;
+			box-shadow: -6px 0 0 0 #4a3d3e, 6px 0 0 0 #4a3d3e
+		}
+
+		#story .step span.circle {
+			line-height: 1;
+			display: inline-block;
+			width: .9em;
+			height: .9em;
+			margin: 0 3px;
+			vertical-align: middle;
+			border-radius: 50%;
+			border: 3px solid #fc7a77;
+			-webkit-transform: translateY(-12.5%);
+			-ms-transform: translateY(-12.5%);
+			transform: translateY(-12.5%)
+		}
+
+		#story .annotation path {
+			stroke: #826b6d
+		}
+
+		#story .annotation text {
+			font-size: 10px;
+			text-transform: uppercase;
+			font-weight: 400;
+			text-anchor: middle
+		}
+
+		#story .annotation .annotation-note-title {
+			fill: none;
+			font-weight: 600
+		}
+
+		#story .annotation .annotation-note-label {
+			font-family: Menlo, Consolas, Monaco, 'Courier New', monospace
+		}
+
+		#story .annotation .connector-dot {
+			fill: #826b6d
+		}
+
+		#story .is-top .annotation path {
+			display: none;
+			stroke: none
+		}
+
+		#story .is-top .annotation .annotation-note-title {
+			fill: #826b6d
+		}
+
+		#story .is-top .annotation .annotation-note-bg {
+			fill-opacity: 1;
+			fill: #fffaf0
+		}
+
+		#story svg .g-routine .topic rect {
+			fill: #fc7a77
+		}
+
+		#story svg .g-routine .topic circle {
+			fill: #fc7a77;
+			fill-opacity: .8
+		}
+
+		#story svg .g-routine .topic line {
+			stroke: #4a3d3e;
+			stroke-width: 3px;
+			fill: none;
+			stroke-dasharray: 6px 3px
+		}
+
+		#story svg .g-routine .topic text {
+			font-size: 12px;
+			font-family: Menlo, Consolas, Monaco, 'Courier New', monospace
+		}
+
+		#story svg .g-routine .g-bg rect {
+			fill: #f5ebe0;
+			stroke: none
+		}
+
+		#story svg .g-routine .g-levels path.inner {
+			fill-opacity: .2;
+			stroke: none
+		}
+
+		#story svg .g-routine .g-levels path.outer {
+			fill: none;
+			stroke-width: 3px
+		}
+
+		#story svg .g-routine .g-levels text {
+			font-size: 11px;
+			text-transform: uppercase;
+			font-weight: 600
+		}
+
+		#story svg .g-routine .g-levels text.bg {
+			fill: none;
+			stroke: #fffaf0;
+			stroke-width: 3px
+		}
+
+		#story svg .g-routine .g-levels text.fg {
+			fill: #4a3d3e;
+			stroke: none
+		}
+
+		#story .map {
+			padding: 1.5px 3px 1.5px 3px;
+			margin: 0 9px;
+			cursor: pointer
+		}
+
+		#story .map:empty {
+			display: none
+		}
+
+		#story .map:nth-child(1) {
+			background-color: rgba(252, 122, 119, .8);
+			-webkit-box-shadow: -6px 0 0 0 rgba(252, 122, 119, .8), 6px 0 0 0 rgba(252, 122, 119, .8);
+			box-shadow: -6px 0 0 0 rgba(252, 122, 119, .8), 6px 0 0 0 rgba(252, 122, 119, .8)
+		}
+
+		#story .map:nth-child(2) {
+			background-color: rgba(92, 179, 181, .8);
+			-webkit-box-shadow: -6px 0 0 0 rgba(92, 179, 181, .8), 6px 0 0 0 rgba(92, 179, 181, .8);
+			box-shadow: -6px 0 0 0 rgba(92, 179, 181, .8), 6px 0 0 0 rgba(92, 179, 181, .8)
+		}
+
+		#story .map:nth-child(3) {
+			background-color: rgba(164, 108, 186, .8);
+			-webkit-box-shadow: -6px 0 0 0 rgba(164, 108, 186, .8), 6px 0 0 0 rgba(164, 108, 186, .8);
+			box-shadow: -6px 0 0 0 rgba(164, 108, 186, .8), 6px 0 0 0 rgba(164, 108, 186, .8)
+		}
+
+		#story .map svg {
+			display: inline-block;
+			margin: 0;
+			width: 1em;
+			height: 1em;
+			stroke: currentColor;
+			vertical-align: middle;
+			-webkit-transform: translateY(-12.5%);
+			-ms-transform: translateY(-12.5%);
+			transform: translateY(-12.5%)
+		}
+
+		#story .map.is-playing svg {
+			stroke: #f5ebe0
+		}
+
+		#story audio {
+			display: none
+		}
+
+		#story .dot {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url(assets/media/dot.png);
+			opacity: .75
+		}
+
+		.switch {
+			opacity: .5;
+			-webkit-transition: 250ms opacity;
+			-o-transition: 250ms opacity;
+			transition: 250ms opacity;
+			cursor: pointer;
+			z-index: 1000
+		}
+
+		.switch:hover {
+			opacity: 1
+		}
+
+		.switch__btn {
+			width: 1.75rem;
+			height: 1.75rem;
+			background-color: rgba(178, 161, 163, .5);
+			color: #826b6d;
+			display: none;
+			border-radius: 50%;
+			text-align: center;
+			display: inline-block;
+			line-height: 1.75rem;
+			font-weight: 600
+		}
+
+		.switch__btn svg {
+			height: 1.75rem;
+			width: 1rem;
+			stroke: #b2a1a3;
+			fill: #b2a1a3
+		}
+
+		.switch__btn .feather-play {
+			-webkit-transform: translateX(.125em);
+			-ms-transform: translateX(.125em);
+			transform: translateX(.125em)
+		}
+
+		.switch__btn.is-visible {
+			display: block
+		}
+
+		.mobile {
+			display: none
+		}
+
+		.is-mobile .mobile {
+			display: inline
+		}
+
+		.is-mobile .desktop {
+			display: none
+		}
+
+		.keyboard {
+			display: inline-block;
+			margin-left: .25em;
+			width: 1em;
+			height: 1.1em;
+			border: 1px solid #4a3d3e;
+			border-radius: 5px;
+			border-top: .5px solid #b2a1a3;
+			border-left: 1px solid #826b6d;
+			border-right: 1px solid #826b6d;
+			border-bottom: 3px solid #4a3d3e;
+			line-height: .8;
+			vertical-align: middle;
+			text-align: center;
+			-webkit-transform: translateY(-12.5%);
+			-ms-transform: translateY(-12.5%);
+			transform: translateY(-12.5%)
+		}
+
+		.keyboard:last-child {
+			background-color: #fdaba9
+		}
+
+		main .pudding-footer .footer-recirc {
+			display: none
+		}
+
+		main .pudding-footer .footer-social {
+			margin-top: 2rem
+		}
+
+		main .pudding-footer .footer-recirc__hed {
+			display: none
+		}
+
+		main .pudding-footer .footer-support .support__item {
+			margin-bottom: .5rem
+		}
+
+		@media only screen and (min-width:40em) {
+			body {
+				font-size: 17px
+			}
+
+			p {
+				font-size: 17px;
+				line-height: 1.7
+			}
+
+			li {
+				font-size: 17px
+			}
+
+			button {
+				font-size: 17px
+			}
+
+			#act-1 p.graphic__transcript {
+				font-size: 12px;
+				line-height: 1.5
+			}
+
+			#act-1 .video--hello video {
+				left: 25%
+			}
+
+			#act-4 .excerpt blockquote {
+				line-height: 1.7;
+				font-size: 12px;
+				line-height: 1.5
+			}
+
+			#story .intro p.intro__overline {
+				font-size: 16px;
+				line-height: 1.7
+			}
+
+			#story .intro__hed {
+				font-size: 32px;
+				line-height: 1.5
+			}
+		}
+
+		@media only screen and (min-width:50em) {
+			#act-1 .video--hello video {
+				left: 50%
+			}
+
+			#act-1 .video--nectar video {
+				left: 50%
+			}
+
+			#story .story__tap .tap .inner p {
+				bottom: 50%
+			}
+
+			#story .step p {
+				font-size: 20px;
+				padding: .5rem 2rem
+			}
+
+			#story .annotation text {
+				font-size: 11px
+			}
+
+			.keyboard {
+				line-height: .9
+			}
+		}
+
+		@media only screen and (min-width:60em) {
+			#act-1 p.graphic__transcript {
+				padding: 3rem;
+				font-size: 14px;
+				line-height: 1.5
+			}
+
+			#act-4 .excerpt blockquote {
+				line-height: 1.7;
+				font-size: 14px;
+				line-height: 1.5
+			}
+
+			#act-5 .part__robert svg {
+				max-width: 30rem
+			}
+
+			#act-5 .part__system svg {
+				max-width: 30rem
+			}
+
+			#story .intro__title svg {
+				max-width: 30rem
+			}
+
+			#story .story__tap.is-end .tap {
+				height: 100%;
+				position: relative;
+				bottom: auto;
+				left: auto
+			}
+
+			main .pudding-footer .footer-recirc {
+				display: block
+			}
+		}
+
+		@-webkit-keyframes bounce {
+			0% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+
+			50% {
+				-webkit-transform: translateX(25%);
+				transform: translateX(25%)
+			}
+
+			100% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+		}
+
+		@keyframes bounce {
+			0% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+
+			50% {
+				-webkit-transform: translateX(25%);
+				transform: translateX(25%)
+			}
+
+			100% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+		}
+
+		@-webkit-keyframes bounce {
+			0% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+
+			50% {
+				-webkit-transform: translateX(25%);
+				transform: translateX(25%)
+			}
+
+			100% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+		}
+
+		@keyframes bounce {
+			0% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+
+			50% {
+				-webkit-transform: translateX(25%);
+				transform: translateX(25%)
+			}
+
+			100% {
+				-webkit-transform: translateX(0);
+				transform: translateX(0)
+			}
+		}
+	</style>
+
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+	
+	        You may not modify the font software, use it on another website, or install it on a computer.
+	
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+	
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK     
+	*/
+
+		/* Canela */
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	</style>
+	<script>!function (t) { function e(o) { if (n[o]) return n[o].exports; var i = n[o] = { i: o, l: !1, exports: {} }; return t[o].call(i.exports, i, i.exports, e), i.l = !0, i.exports } var n = {}; e.m = t, e.c = n, e.d = function (t, n, o) { e.o(t, n) || Object.defineProperty(t, n, { configurable: !1, enumerable: !0, get: o }) }, e.n = function (t) { var n = t && t.__esModule ? function () { return t.default } : function () { return t }; return e.d(n, "a", n), n }, e.o = function (t, e) { return Object.prototype.hasOwnProperty.call(t, e) }, e.p = "", e(e.s = 0) }([function (t, e, n) { "use strict"; var o = n(1), i = function (t) { return t && t.__esModule ? t : { default: t } }(o); n(6), n(7), n(8), n(9), n(10), n(11); var r = n(12), a = [{ family: "Atlas Grotesk Web", weight: 400 }, { family: "Atlas Grotesk Web", weight: 500 }, { family: "Atlas Grotesk Web", weight: 600 }]; window.Promise || (window.Promise = i.default), (0, r.loadFontGroup)(a) }, function (t, e, n) { (function (e) { !function (n) { function o() { } function i(t, e) { return function () { t.apply(e, arguments) } } function r(t) { if (!(this instanceof r)) throw new TypeError("Promises must be constructed via new"); if ("function" != typeof t) throw new TypeError("not a function"); this._state = 0, this._handled = !1, this._value = void 0, this._deferreds = [], f(t, this) } function a(t, e) { for (; 3 === t._state;)t = t._value; if (0 === t._state) return void t._deferreds.push(e); t._handled = !0, r._immediateFn(function () { var n = 1 === t._state ? e.onFulfilled : e.onRejected; if (null === n) return void (1 === t._state ? c : u)(e.promise, t._value); var o; try { o = n(t._value) } catch (t) { return void u(e.promise, t) } c(e.promise, o) }) } function c(t, e) { try { if (e === t) throw new TypeError("A promise cannot be resolved with itself."); if (e && ("object" == typeof e || "function" == typeof e)) { var n = e.then; if (e instanceof r) return t._state = 3, t._value = e, void s(t); if ("function" == typeof n) return void f(i(n, e), t) } t._state = 1, t._value = e, s(t) } catch (e) { u(t, e) } } function u(t, e) { t._state = 2, t._value = e, s(t) } function s(t) { 2 === t._state && 0 === t._deferreds.length && r._immediateFn(function () { t._handled || r._unhandledRejectionFn(t._value) }); for (var e = 0, n = t._deferreds.length; e < n; e++)a(t, t._deferreds[e]); t._deferreds = null } function l(t, e, n) { this.onFulfilled = "function" == typeof t ? t : null, this.onRejected = "function" == typeof e ? e : null, this.promise = n } function f(t, e) { var n = !1; try { t(function (t) { n || (n = !0, c(e, t)) }, function (t) { n || (n = !0, u(e, t)) }) } catch (t) { if (n) return; n = !0, u(e, t) } } var d = setTimeout; r.prototype.catch = function (t) { return this.then(null, t) }, r.prototype.then = function (t, e) { var n = new this.constructor(o); return a(this, new l(t, e, n)), n }, r.all = function (t) { return new r(function (e, n) { function o(t, a) { try { if (a && ("object" == typeof a || "function" == typeof a)) { var c = a.then; if ("function" == typeof c) return void c.call(a, function (e) { o(t, e) }, n) } i[t] = a, 0 == --r && e(i) } catch (t) { n(t) } } if (!t || void 0 === t.length) throw new TypeError("Promise.all accepts an array"); var i = Array.prototype.slice.call(t); if (0 === i.length) return e([]); for (var r = i.length, a = 0; a < i.length; a++)o(a, i[a]) }) }, r.resolve = function (t) { return t && "object" == typeof t && t.constructor === r ? t : new r(function (e) { e(t) }) }, r.reject = function (t) { return new r(function (e, n) { n(t) }) }, r.race = function (t) { return new r(function (e, n) { for (var o = 0, i = t.length; o < i; o++)t[o].then(e, n) }) }, r._immediateFn = "function" == typeof e && function (t) { e(t) } || function (t) { d(t, 0) }, r._unhandledRejectionFn = function (t) { "undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", t) }, r._setImmediateFn = function (t) { r._immediateFn = t }, r._setUnhandledRejectionFn = function (t) { r._unhandledRejectionFn = t }, void 0 !== t && t.exports ? t.exports = r : n.Promise || (n.Promise = r) }(this) }).call(e, n(2).setImmediate) }, function (t, e, n) { function o(t, e) { this._id = t, this._clearFn = e } var i = Function.prototype.apply; e.setTimeout = function () { return new o(i.call(setTimeout, window, arguments), clearTimeout) }, e.setInterval = function () { return new o(i.call(setInterval, window, arguments), clearInterval) }, e.clearTimeout = e.clearInterval = function (t) { t && t.close() }, o.prototype.unref = o.prototype.ref = function () { }, o.prototype.close = function () { this._clearFn.call(window, this._id) }, e.enroll = function (t, e) { clearTimeout(t._idleTimeoutId), t._idleTimeout = e }, e.unenroll = function (t) { clearTimeout(t._idleTimeoutId), t._idleTimeout = -1 }, e._unrefActive = e.active = function (t) { clearTimeout(t._idleTimeoutId); var e = t._idleTimeout; e >= 0 && (t._idleTimeoutId = setTimeout(function () { t._onTimeout && t._onTimeout() }, e)) }, n(3), e.setImmediate = setImmediate, e.clearImmediate = clearImmediate }, function (t, e, n) { (function (t, e) { !function (t, n) { "use strict"; function o(t) { "function" != typeof t && (t = new Function("" + t)); for (var e = new Array(arguments.length - 1), n = 0; n < e.length; n++)e[n] = arguments[n + 1]; var o = { callback: t, args: e }; return s[u] = o, c(u), u++ } function i(t) { delete s[t] } function r(t) { var e = t.callback, o = t.args; switch (o.length) { case 0: e(); break; case 1: e(o[0]); break; case 2: e(o[0], o[1]); break; case 3: e(o[0], o[1], o[2]); break; default: e.apply(n, o) } } function a(t) { if (l) setTimeout(a, 0, t); else { var e = s[t]; if (e) { l = !0; try { r(e) } finally { i(t), l = !1 } } } } if (!t.setImmediate) { var c, u = 1, s = {}, l = !1, f = t.document, d = Object.getPrototypeOf && Object.getPrototypeOf(t); d = d && d.setTimeout ? d : t, "[object process]" === {}.toString.call(t.process) ? function () { c = function (t) { e.nextTick(function () { a(t) }) } }() : function () { if (t.postMessage && !t.importScripts) { var e = !0, n = t.onmessage; return t.onmessage = function () { e = !1 }, t.postMessage("", "*"), t.onmessage = n, e } }() ? function () { var e = "setImmediate$" + Math.random() + "$", n = function (n) { n.source === t && "string" == typeof n.data && 0 === n.data.indexOf(e) && a(+n.data.slice(e.length)) }; t.addEventListener ? t.addEventListener("message", n, !1) : t.attachEvent("onmessage", n), c = function (n) { t.postMessage(e + n, "*") } }() : t.MessageChannel ? function () { var t = new MessageChannel; t.port1.onmessage = function (t) { a(t.data) }, c = function (e) { t.port2.postMessage(e) } }() : f && "onreadystatechange" in f.createElement("script") ? function () { var t = f.documentElement; c = function (e) { var n = f.createElement("script"); n.onreadystatechange = function () { a(e), n.onreadystatechange = null, t.removeChild(n), n = null }, t.appendChild(n) } }() : function () { c = function (t) { setTimeout(a, 0, t) } }(), d.setImmediate = o, d.clearImmediate = i } }("undefined" == typeof self ? void 0 === t ? this : t : self) }).call(e, n(4), n(5)) }, function (t, e) { var n; n = function () { return this }(); try { n = n || Function("return this")() || (0, eval)("this") } catch (t) { "object" == typeof window && (n = window) } t.exports = n }, function (t, e) { function n() { throw new Error("setTimeout has not been defined") } function o() { throw new Error("clearTimeout has not been defined") } function i(t) { if (l === setTimeout) return setTimeout(t, 0); if ((l === n || !l) && setTimeout) return l = setTimeout, setTimeout(t, 0); try { return l(t, 0) } catch (e) { try { return l.call(null, t, 0) } catch (e) { return l.call(this, t, 0) } } } function r(t) { if (f === clearTimeout) return clearTimeout(t); if ((f === o || !f) && clearTimeout) return f = clearTimeout, clearTimeout(t); try { return f(t) } catch (e) { try { return f.call(null, t) } catch (e) { return f.call(this, t) } } } function a() { m && h && (m = !1, h.length ? p = h.concat(p) : y = -1, p.length && c()) } function c() { if (!m) { var t = i(a); m = !0; for (var e = p.length; e;) { for (h = p, p = []; ++y < e;)h && h[y].run(); y = -1, e = p.length } h = null, m = !1, r(t) } } function u(t, e) { this.fun = t, this.array = e } function s() { } var l, f, d = t.exports = {}; !function () { try { l = "function" == typeof setTimeout ? setTimeout : n } catch (t) { l = n } try { f = "function" == typeof clearTimeout ? clearTimeout : o } catch (t) { f = o } }(); var h, p = [], m = !1, y = -1; d.nextTick = function (t) { var e = new Array(arguments.length - 1); if (arguments.length > 1) for (var n = 1; n < arguments.length; n++)e[n - 1] = arguments[n]; p.push(new u(t, e)), 1 !== p.length || m || i(c) }, u.prototype.run = function () { this.fun.apply(null, this.array) }, d.title = "browser", d.browser = !0, d.env = {}, d.argv = [], d.version = "", d.versions = {}, d.on = s, d.addListener = s, d.once = s, d.off = s, d.removeListener = s, d.removeAllListeners = s, d.emit = s, d.prependListener = s, d.prependOnceListener = s, d.listeners = function (t) { return [] }, d.binding = function (t) { throw new Error("process.binding is not supported") }, d.cwd = function () { return "/" }, d.chdir = function (t) { throw new Error("process.chdir is not supported") }, d.umask = function () { return 0 } }, function (t, e, n) { "use strict"; String.prototype.startsWith || (String.prototype.startsWith = function (t, e) { return this.substr(e || 0, t.length) === t }) }, function (t, e, n) { "use strict"; String.prototype.endsWith || (String.prototype.endsWith = function (t, e) { var n = this.toString(); ("number" != typeof e || !isFinite(e) || Math.floor(e) !== e || e > n.length) && (e = n.length), e -= t.length; var o = n.lastIndexOf(t, e); return -1 !== o && o === e }) }, function (t, e, n) { "use strict"; Array.prototype.findIndex || Object.defineProperty(Array.prototype, "findIndex", { value: function (t) { if (null == this) throw new TypeError("Array.prototype.findIndex called on null or undefined"); if ("function" != typeof t) throw new TypeError("predicate must be a function"); for (var e, n = Object(this), o = n.length >>> 0, i = arguments[1], r = 0; r < o; r++)if (e = n[r], t.call(i, e, r, n)) return r; return -1 }, enumerable: !1, configurable: !1, writable: !1 }) }, function (t, e, n) { "use strict"; Array.prototype.find || Object.defineProperty(Array.prototype, "find", { value: function (t) { if (null == this) throw new TypeError("Array.prototype.find called on null or undefined"); if ("function" != typeof t) throw new TypeError("predicate must be a function"); for (var e, n = Object(this), o = n.length >>> 0, i = arguments[1], r = 0; r < o; r++)if (e = n[r], t.call(i, e, r, n)) return e } }) }, function (t, e, n) { "use strict"; Array.prototype.includes || Object.defineProperty(Array.prototype, "includes", { value: function (t, e) { if (null == this) throw new TypeError('"this" is null or not defined'); var n = Object(this), o = n.length >>> 0; if (0 === o) return !1; for (var i = 0 | e, r = Math.max(i >= 0 ? i : o - Math.abs(i), 0); r < o;) { if (n[r] === t) return !0; r++ } return !1 } }) }, function (t, e, n) { "use strict"; Array.prototype.lastIndexOf || (Array.prototype.lastIndexOf = function (t) { if (void 0 === this || null === this) throw new TypeError; var e = void 0, n = void 0, o = Object(this), i = o.length >>> 0; if (0 === i) return -1; for (e = i - 1, arguments.length > 1 && (e = Number(arguments[1]), e != e ? e = 0 : 0 != e && e != 1 / 0 && e != -1 / 0 && (e = (e > 0 || -1) * Math.floor(Math.abs(e)))), n = e >= 0 ? Math.min(e, i - 1) : i - Math.abs(e); n >= 0; n--)if (n in o && o[n] === t) return n; return -1 }) }, function (t, e, n) { "use strict"; function o(t) { var e = t.split(" ")[0], n = e.toLowerCase().replace(/ /g, "-"), o = "loaded-" + n; (0, s.addClass)(l, o) } function i(t) { console.error(t) } function r(t) { var e = t.family, n = t.weight, r = void 0 === n ? "normal" : n; new u.default(e, { weight: r }).load(null, f).then(function () { return o(t) }).catch(i) } function a(t) { var e = t.map(function (t) { return new Promise(function (e, n) { var o = t.family, i = t.weight, r = t.style, a = void 0 === r ? "normal" : r; return new u.default(o, { weight: i, style: a }).load(null, f).then(function () { return e(o) }).catch(function (t) { return n(t) }) }) }); Promise.all(e).then(function (t) { return o(t[0]) }).catch(i) } Object.defineProperty(e, "__esModule", { value: !0 }), e.loadFontGroup = e.loadFont = void 0; var c = n(13), u = function (t) { return t && t.__esModule ? t : { default: t } }(c), s = n(14), l = document.documentElement, f = 5e3; e.loadFont = r, e.loadFontGroup = a }, function (t, e, n) { !function () { function e(t, e) { document.addEventListener ? t.addEventListener("scroll", e, !1) : t.attachEvent("scroll", e) } function n(t) { document.body ? t() : document.addEventListener ? document.addEventListener("DOMContentLoaded", function e() { document.removeEventListener("DOMContentLoaded", e), t() }) : document.attachEvent("onreadystatechange", function e() { "interactive" != document.readyState && "complete" != document.readyState || (document.detachEvent("onreadystatechange", e), t()) }) } function o(t) { this.a = document.createElement("div"), this.a.setAttribute("aria-hidden", "true"), this.a.appendChild(document.createTextNode(t)), this.b = document.createElement("span"), this.c = document.createElement("span"), this.h = document.createElement("span"), this.f = document.createElement("span"), this.g = -1, this.b.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.c.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.f.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.h.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;", this.b.appendChild(this.h), this.c.appendChild(this.f), this.a.appendChild(this.b), this.a.appendChild(this.c) } function i(t, e) { t.a.style.cssText = "max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:" + e + ";" } function r(t) { var e = t.a.offsetWidth, n = e + 100; return t.f.style.width = n + "px", t.c.scrollLeft = n, t.b.scrollLeft = t.b.scrollWidth + 100, t.g !== e && (t.g = e, !0) } function a(t, n) { function o() { var t = i; r(t) && t.a.parentNode && n(t.g) } var i = t; e(t.b, o), e(t.c, o), r(t) } function c(t, e) { var n = e || {}; this.family = t, this.style = n.style || "normal", this.weight = n.weight || "normal", this.stretch = n.stretch || "normal" } function u() { if (null === h) if (s() && /Apple/.test(window.navigator.vendor)) { var t = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent); h = !!t && 603 > parseInt(t[1], 10) } else h = !1; return h } function s() { return null === m && (m = !!document.fonts), m } function l() { if (null === p) { var t = document.createElement("div"); try { t.style.font = "condensed 100px sans-serif" } catch (t) { } p = "" !== t.style.font } return p } function f(t, e) { return [t.style, t.weight, l() ? t.stretch : "", "100px", e].join(" ") } var d = null, h = null, p = null, m = null; c.prototype.load = function (t, e) { var r = this, c = t || "BESbswy", l = 0, h = e || 3e3, p = (new Date).getTime(); return new Promise(function (t, e) { if (s() && !u()) { var m = new Promise(function (t, e) { function n() { (new Date).getTime() - p >= h ? e() : document.fonts.load(f(r, '"' + r.family + '"'), c).then(function (e) { 1 <= e.length ? t() : setTimeout(n, 25) }, function () { e() }) } n() }), y = new Promise(function (t, e) { l = setTimeout(e, h) }); Promise.race([y, m]).then(function () { clearTimeout(l), t(r) }, function () { e(r) }) } else n(function () { function n() { var e; (e = -1 != v && -1 != w || -1 != v && -1 != g || -1 != w && -1 != g) && ((e = v != w && v != g && w != g) || (null === d && (e = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent), d = !!e && (536 > parseInt(e[1], 10) || 536 === parseInt(e[1], 10) && 11 >= parseInt(e[2], 10))), e = d && (v == b && w == b && g == b || v == T && w == T && g == T || v == _ && w == _ && g == _)), e = !e), e && (x.parentNode && x.parentNode.removeChild(x), clearTimeout(l), t(r)) } function u() { if ((new Date).getTime() - p >= h) x.parentNode && x.parentNode.removeChild(x), e(r); else { var t = document.hidden; !0 !== t && void 0 !== t || (v = s.a.offsetWidth, w = m.a.offsetWidth, g = y.a.offsetWidth, n()), l = setTimeout(u, 50) } } var s = new o(c), m = new o(c), y = new o(c), v = -1, w = -1, g = -1, b = -1, T = -1, _ = -1, x = document.createElement("div"); x.dir = "ltr", i(s, f(r, "sans-serif")), i(m, f(r, "serif")), i(y, f(r, "monospace")), x.appendChild(s.a), x.appendChild(m.a), x.appendChild(y.a), document.body.appendChild(x), b = s.a.offsetWidth, T = m.a.offsetWidth, _ = y.a.offsetWidth, u(), a(s, function (t) { v = t, n() }), i(s, f(r, '"' + r.family + '",sans-serif')), a(m, function (t) { w = t, n() }), i(m, f(r, '"' + r.family + '",serif')), a(y, function (t) { g = t, n() }), i(y, f(r, '"' + r.family + '",monospace')) }) }) }, t.exports = c }() }, function (t, e, n) { "use strict"; function o(t) { if (Array.isArray(t)) { for (var e = 0, n = Array(t.length); e < t.length; e++)n[e] = t[e]; return n } return Array.from(t) } function i(t) { return document.querySelector(t) } function r(t) { return [].concat(o((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : document).querySelectorAll(t))) } function a(t, e) { return [].concat(o(t.querySelectorAll(e))) } function c(t, e) { t.classList ? t.classList.remove(e) : t.className = t.className.replace(new RegExp("(^|\\b)" + e.split(" ").join("|") + "(\\b|$)", "gi"), " ") } function u(t, e) { t.classList ? t.classList.add(e) : t.className = t.className + " " + e } function s(t, e) { return t.classList ? t.classList.contains(e) : new RegExp("(^| )" + e + "( |$)", "gi").test(t.className) } function l(t, e) { e = e || 0; var n = t.getBoundingClientRect().top + e, o = window.pageYOffset || document.documentElement.scrollTop, i = o + n; window.scrollTo(0, i) } Object.defineProperty(e, "__esModule", { value: !0 }), e.select = i, e.selectAll = r, e.find = a, e.removeClass = c, e.addClass = u, e.hasClass = s, e.jumpTo = l }]);</script>
+
+
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class='tk-atlas'>
+
+	<main id='content'>
+		<a href='#content' class='skip-to-main'>Skip to main content</a>
+		<header>
+			<a href='https://pudding.cool' target='_blank' class='logo'>
+				<svg width="26" height="30" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>
+						Group
+					</title>
+					<g style="mix-blend-mode:multiply">
+						<use xlink:href="#path0_fill" transform="translate(0 .031)" fill="#DDDCDC" />
+						<use xlink:href="#path1_fill" transform="translate(.001 .198)" fill="url(#paint1_linear)" />
+						<use xlink:href="#path2_fill" transform="translate(10.516 .198)" fill="#DDDCDC" />
+						<use xlink:href="#path3_fill" transform="translate(11.567 .198)" fill="url(#paint3_linear)" />
+						<g>
+							<use xlink:href="#path4_fill" transform="translate(10.562 14.014)" fill="#B4B4B5" />
+							<use xlink:href="#path5_fill" transform="translate(.128 25.468)" fill="#B4B4B5" />
+						</g>
+						<g>
+							<use xlink:href="#path6_fill" transform="translate(3.575)" />
+						</g>
+						<g>
+							<use xlink:href="#path7_fill" transform="translate(10.749 .791)" fill="#323232" />
+						</g>
+					</g>
+					<defs>
+						<linearGradient id="paint1_linear" x2="1" gradientUnits="userSpaceOnUse"
+							gradientTransform="matrix(3.68671 3.71335 -3.6867 3.71336 3.956 -.445)">
+							<stop offset="0" stop-color="#B4B4B5" />
+							<stop offset=".277" stop-color="#B9B9B9" />
+							<stop offset=".638" stop-color="#C7C7C7" />
+							<stop offset="1" stop-color="#DDDCDC" />
+						</linearGradient>
+						<linearGradient id="paint3_linear" x2="1" gradientUnits="userSpaceOnUse"
+							gradientTransform="scale(8.25327 8.31293) rotate(45 .596 .242)">
+							<stop offset="0" stop-color="#B4B4B5" />
+							<stop offset=".394" stop-color="#B6B7B7" />
+							<stop offset=".631" stop-color="#BEBDBD" />
+							<stop offset=".825" stop-color="#CACAC9" />
+							<stop offset=".997" stop-color="#DCDCDB" />
+							<stop offset="1" stop-color="#DDDCDC" />
+						</linearGradient>
+						<path id="path0_fill"
+							d="M7.01.442L3.575 0 0 3.53v.185l.939.185c1.163.216 1.398 1.017 1.398 6.594v12.51c0 1.98.085 3.357-.027 4.32L0 29.784v.185c2.103-.154 10.33-.185 12.625-.03l3.522-3.532-9.136-.97V.442z" />
+						<path id="path1_fill" d="M2.183 8.648l5.644-5.566V0H3.575L0 3.54l2.183 5.108z" />
+						<path id="path2_fill"
+							d="M1.052 0h5.976l6.524 13.768-3.604 3.593c-1.698 1.696-4.56 2.635-8.47 2.635-.183 0-1.244.007-1.478-.054v-.38l3.737-3.583.599.108c.16-.926.104-2.056.104-3.418v-2.033c0-4.993-.935-6.893-3.388-6.893V0z" />
+						<path id="path3_fill" d="M2.87 8.763l4.831-4.945L5.655 0H0v3.766l2.87 4.997z" />
+						<path id="path4_fill"
+							d="M7.223 2.207l-3.5.388L0 6.125c.234.062 1.271.062 1.455.062 3.91 0 6.749-.932 8.447-2.628l.03.002L13.48 0 7.223 2.207z" />
+						<path id="path5_fill"
+							d="M12.561 4.501l3.5-3.53L6.929 0 3.48 1.002 0 4.532c2.278-.154 10.267-.185 12.561-.03z" />
+						<path id="path6_fill"
+							d="M2.6 19.505c0 5.578-.367 6.379-1.53 6.594L0 26.284v.185c2.294-.154 10.28-.185 12.574-.03v-.216l-1.377-.185c-1.162-.154-1.958-.925-1.958-6.533V.493c.887-.03 2.142-.061 2.447-.061 2.417 0 3.457 1.879 3.457 6.871v2.034c0 4.992-1.04 6.902-3.395 6.902-.214 0-.734 0-1.071-.062v.432c.367.061 1.162.061 1.346.061 7.006 0 10.402-2.988 10.402-8.011v-.647C22.425 2.989 18.998 0 11.93 0 10.77 0 6.853.154 5.568.154 4.467.154 1.254.124 0 .031v.185L1.07.4C2.234.616 2.6 1.417 2.6 6.995v12.51" />
+						<path id="path7_fill"
+							d="M1.168 0v18.714c0 3.19.348 5.087.973 6.138l-1.278-.01C.242 23.79 0 21.896 0 18.715V.034C.467.024.701.012 1.168 0zm6.989.242c2.78.96 4.93 3.086 4.93 6.978v.648c0 2.32-.654 4.114-2.185 5.335-.816.65-1.78 1.3-3.017 1.734 1.787-.3 3.22-.878 4.293-1.734 1.531-1.22 2.31-3.016 2.31-5.335V7.22c0-4.45-3.014-6.308-6.331-6.978z" />
+					</defs>
+				</svg>
+
+			</a>
+			<div class='progress'>
+				<div class='progress__bar progress__bar--bg'>
+
+				</div>
+				<div class='progress__bar progress__bar--fg'>
+
+				</div>
+			</div>
+			<div class='control switch'>
+				<span class='pause is-visible switch__btn'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" class="feather feather-pause">
+						<rect x="6" y="4" width="4" height="16"></rect>
+						<rect x="14" y="4" width="4" height="16"></rect>
+					</svg></span>
+				<span class='play switch__btn'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" class="feather feather-play">
+						<polygon points="5 3 19 12 5 21 5 3"></polygon>
+					</svg></span>
+			</div>
+		</header>
+		<section id='story'>
+			<div class='story__graphics'>
+				<div id='act-1' class='graphic is-visible'>
+					<div class='graphic__video video--hello is-visible'>
+						<video playsinline placeholder='assets/media/ali-hello.jpg' src='assets/media/ali-hello.mp4' preload
+							muted></video>
+						<div class='dot'></div>
+					</div>
+
+
+					<div class='graphic__video video--nectar'>
+						<video playsinline placeholder='assets/media/ali-nectar.jpg' src='assets/media/ali-nectar.mp4' preload
+							muted></video>
+						<div class='dot'></div>
+					</div>
+
+					<p class='graphic__transcript'></p>
+					<div class='intro is-visible'>
+						<div class='intro__content'>
+							<div class='intro__presents'>
+								<a href='https://pudding.cool' target='_blank' class='presents__logo'><svg
+										xmlns="http://www.w3.org/2000/svg" width="296.91" height="47.52"
+										viewBox="19.42 11.31 296.911 47.518" aria-labelledby="logo-title" role="img">
+										<title id="logo-title">The Pudding</title>
+										<path
+											d="M47.77 56.8c-2.5-.2-15.5-.2-18 0v-.44l2.05-.3c1.8-.25 2.5-1.35 2.5-9.35V15.1h-1.9c-3.6 0-5.5 1.75-9.7 9.4l-2.8 5.25h-.5c.3-3.2 1-13.24 1.1-16.6l.1-.04c1.8.2 9.3.5 11.1.5h17.5c2.3 0 11.1-1.4 13.2-2.1l.1.1v15.8h.27l1-1.1c2.9-3.3 5.3-4.4 8-4.4 4.4 0 7 2.4 7 7.5v11.5c0 7.7.7 8.9 2.6 9.2l1.1.2v.5c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.6-.4 2.3-1.3 2.3-9.2v-11c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.7l-1.8.6v12.9c0 7.9.6 8.8 2.2 9.3l.56.2v.5c-2.38-.2-12.4-.2-14.78 0v-.4l1.03-.2c1.97-.3 2.7-1.5 2.7-9.2V21c-2.43-4.6-5.13-5.75-8.63-5.75h-2.1v31.6c0 8 .6 9.07 2.4 9.37l1.9.3v.46l-.1-.18zm3.25-.64h55.7v.65H51v-.6zm45-5.1c-8.5 0-12.3-4.55-12.3-13.8v-1.7c0-8.86 4.3-13.76 13.28-13.76 7.66 0 11.1 3.26 11.1 12.36v1.8H92.97v3.2c0 7.1 1.9 9 6 9 2.45 0 5-1.25 7.4-2.9l2-1.35.1 1.4-1.6 1.5c-2.95 2.7-6.75 4.4-10.85 4.4v-.1zm-3-16.6h7.4v-2.7c0-6.75-1-7.95-3.7-7.95-2.6 0-3.7 1.2-3.7 9.3v1.4zm35.2 22.35c-2.5-.2-15.7-.2-18.2 0v-.4l1.9-.3c1.8-.3 2.4-1.3 2.4-9.3V23.5c0-8.04-.6-9.14-2.4-9.4l-1.8-.24v-.45c1.36.1 7.8.2 9 .2 1.46 0 8.06-.1 9.3-.1 10.36 0 14.96 5.1 14.96 12.8v1.5c0 7.8-4.55 12.8-14.9 12.8h-2.2V39c.55.04 1.1.04 1.5.04 3.8 0 5.35-2.9 5.35-10.44v-3.3c0-7.54-1.54-10.44-5.44-10.44-.4 0-2.6 0-4.1.05v31.8c0 8 .7 9.1 2.5 9.4l2.3.3v.5l-.3-.1zm3.3-.6H282.3v.7H131.5v-.7zm22.6-5c-4.4 0-7-2.4-7-7.5V33.2c0-7-.4-8.56-1.8-9l-.6-.2v-.4c1.8-.2 8.4-1.1 10.7-1.66v20.9c0 2.5.9 3.4 3.1 3.4.74 0 1.7-.24 3.1-.64l1.84-.5V33.2c0-6.9-.8-8.2-2.7-8.86l-1.1-.34v-.4c2.1-.2 9.7-1.1 12-1.66v17.9c0 6.86.75 8.2 2.65 8.8l1.1.36v.45c-2.1.16-9.2 1.06-11.5 1.66l-.3-5.4h-.2l-1 1.1c-2.9 3.3-5.3 4.4-8.1 4.4zm32 0c-5.4 0-9-4.4-9-13.6v-2.2c0-9.5 4.3-13.6 11.1-13.6 2.4 0 4.24.5 6.14 2.2l.8.7h.24v-2.6c0-6.5-.76-7.7-2.66-8.3l-1.1-.3v-.4c2.14-.2 9.44-1.1 11.74-1.6v28.2c0 7 .8 8.5 2.7 9.1l1.05.4v.5c-2.1.2-8.95 1.1-11.25 1.7l-.35-5.4h-.27l-1 1.1c-2.95 3.3-5.4 4.4-8.1 4.4l-.05-.2zm7.7-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.6-8.8-3.3 0-4.66 2.6-4.66 9.54v3.7c0 6.2 1.44 7.9 4.5 7.9.84 0 1.84-.2 3.2-.64h-.05zm24.1 5.6c-5.46 0-9-4.4-9-13.6v-2.2c0-9.5 4.2-13.6 11-13.6 2.44 0 4.2.6 6.14 2.2l.84.7h.24v-2.6c0-6.5-.8-7.6-2.7-8.3l-1.06-.3v-.4c2.1-.2 9.45-1.1 11.75-1.6v28.2c0 7 .75 8.5 2.65 9.1l1.1.4v.5c-2.15.2-9 1.1-11.3 1.7l-.36-5.4h-.27l-1 1.1c-2.95 3.3-5.35 4.4-8.1 4.4l.06-.2zm7.64-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.66-8.8-3.26 0-4.6 2.6-4.6 9.54v3.7c0 6.2 1.4 7.9 4.44 7.9.84 0 1.84-.2 3.2-.64h.02zm28.1 5.1c-2.16-.2-11.56-.2-13.76 0v-.4l.54-.1c1.6-.4 2.2-1.3 2.2-9.2v-7.7c0-6.9-.76-8.2-2.66-8.8l-1.1-.3v-.4c2.15-.2 9.7-1.1 12-1.6V41c0 7.9.7 8.8 2.24 9.27l.5.14v.5l.03-.1zm-12.1-35.3c0-2.6 1.6-4.1 5.1-4.1 3.54 0 5.1 1.5 5.1 4.1 0 2.6-1.56 4.1-5.1 4.1-3.5 0-5.1-1.5-5.1-4.1zm45.13 35.3c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.5-.4 2.2-1.3 2.2-9.2V30.1c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.66l-1.8.55v12.9c0 7.9.6 8.8 2.2 9.3l.53.2v.5c-2.35-.2-12.4-.2-14.75 0v-.4l1.07-.2c1.92-.3 2.7-1.5 2.7-9.2v-7.7c0-6.9-.8-8.2-2.7-8.8l-1.1-.3v-.4c2.1-.2 9.2-1.1 11.5-1.6l.33 5.4h.28l1-1.1c2.94-3.2 5.4-4.4 8.1-4.4 4.44 0 7.04 2.4 7.04 7.5V41c0 7.7.77 8.9 2.67 9.2l1.1.2v.5l.1-.15zm15.6 7.9h-4.7c-10.5 0-12.3-1.3-12.3-3.4V55c0-1.85 2.5-4.35 7.3-4.35h.2V54c0 1.8 1 2.6 4.7 2.6h4.6c5.02 0 6.82-1.3 6.82-3.2V53c0-1.8-.85-3.2-3.5-3.2h-13.3c-2.75 0-4.2-1.3-4.2-3.7v-.16c0-1.94 1.2-3.54 4.75-5.4l3-1.54v-.5c-5.64-1-8.2-3.46-8.2-7.86v-.24c0-5.55 4.16-8.55 13.1-8.55 2.46 0 4.46.26 6.46.8l.16-.34c1.7-3.4 3.93-5 8-5h.9v5.4h-5.6c-.5 0-1.9.1-2.27.2l-.36.1v.5c3.8 1.1 5.76 3.6 5.76 7.1v.3c0 5.6-4.13 8.6-13.03 8.6-1.3 0-2.5-.1-3.7-.2l-.9 1.1c-.85 1-1.05 1.5-1.05 1.8 0 .4.2.5.6.5h11.62c5.8 0 8.9 3 8.9 7.4v.4c0 5.28-5.9 8.5-14 8.5l.1-.2zm2.5-27.7v-.7c0-4.7-.9-6.3-4.1-6.3-3.3 0-4.1 1.6-4.1 6.3v.8c0 4.7.9 6.3 4.1 6.3 3.2 0 4-1.6 4-6.3v-.1z" />
+									</svg>
+								</a>
+								<p class='presents__text'>Presents</p>
+							</div>
+
+							<div class='intro__title'>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 780.8" aria-labelledby="header--title"
+									role="img">
+									<title id="header--title">The Structure of Standup Comedy</title>
+
+									<path fill="#5cb3b5"
+										d="M980.1 688.7l-7.1-16.8-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2zM883.7 688.3l-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8zM794.3 704.7l-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8zM704.9 721l-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8zM550.5 642.6l7.1 16.8-5.2-2.2v43.2c0 1.1-.9 1.9-1.9 1.9s-1.9-.9-1.9-1.9v-43.2l-5.2 2.2 7.1-16.8zM609.2 689.6l7.1 16.8-5.2-2.2v43.2c0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9v-43.2l-5.2 2.2 7.1-16.8zM234.2 137.7l-1.1 1.6 21.1 16.2c0-.8.1-1.5.1-2.3l-20.1-15.5zm21.6 5.6l-16.7-12.8-1.1 1.5 17.3 13.3c.2-.6.4-1.3.5-2zm3.7-10.7l-14.3-11-1.1 1.6 14.6 11.2c.3-.6.5-1.2.8-1.8zm-32.2-.2c0-2.7.3-5.4.7-8l3.9 3 1.1-1.6-4.6-3.6c.6-3.1 1.5-6.1 2.7-9.1l6.9 5.3 1.1-1.6-7.3-5.6c1.5-3.5 3.2-6.8 5.3-10l8.3 6.4.1-.2c.3-.5.6-.9.9-1.4l-8.2-6.3c2.9-4.1 6.2-7.9 9.9-11.3l7.7 5.9c.4-.5.9-.9 1.4-1.4l-7.6-5.9c3.1-2.6 6.5-5 10-6.9l6.7 5.1c.5-.4 1.1-.8 1.6-1.1l-6.5-5c3.4-1.7 7-3.1 10.7-4.1l4.9 4c.6-.3 1.3-.6 1.9-.9l-4.4-3.4c.6-.1 1.1-.3 1.7-.4 1.7-.3 3.3-.5 4.9-.6l2.9 2.2c.7-.3 1.4-.5 2.2-.7l-2.1-1.6h.6c1.6 0 3.1.1 4.6.2l.4.3c1.7-.5 3.4-.9 5.2-1.2 2.4-.4 4.7-.7 7-.9-5.2-2.2-11-3.3-17.2-3.3H282.8c-1.5.1-2.9.2-4.4.4-.4.1-.8.1-1.2.2-.3 0-.5.1-.8.1-.3.1-.7.1-1 .2-7 1.3-13.7 3.9-19.8 7.5-3.5 2.1-6.7 4.4-9.8 7.1h-.1c-4.4 3.9-8.4 8.3-11.7 13.2-.2.3-.4.6-.7 1-2.4 3.7-4.5 7.6-6.2 11.7-1.5 3.5-2.6 7.2-3.4 10.9-.8 4-1.3 8-1.3 12.1 0 2.4.2 4.8.5 7.1v.3l5.1-7.5-.7-.6zm1.9 12.6l25.4 19.5c-.1-.8-.2-1.7-.2-2.6l-24.1-18.5-1.1 1.6zm36.7-23.9l-13.4-10.3-.6.9-.5.7 13.4 10.3c.4-.5.8-1.1 1.1-1.6zM317.5 93l-17-13.1c-.9.1-1.8.2-2.7.4L314.3 93c1.1-.1 2.1-.1 3.2 0zm28.9 11.3l-10-7.7V166.6c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.2v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1-.1.1v.1l-.2.2-.1.1-.3.3-.1.1c-.1.1-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1 0 0-.1 0-.1.1-.1 0-.2.1-.2.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.2-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.3-5.6c-2.8 2.5-6.2 4.4-10 5-9.5 1.7-17.2-4.7-17.2-14.4s7.7-18.9 17.2-20.6c7-1.3 13.1 1.9 15.8 7.6v-50l-13.4-10.3c-3-.6-6.1-.9-9.2-.9.7.5 1.4.9 2.1 1.4l20.5 15.7c-5.6-1-11.6-1-17.8.1-29.2 5.3-52.9 33.8-52.9 63.5 0 7.7 1.6 14.7 4.4 20.8l-19.6-15.1-.1-.1-.1-.1c-4.6-3.4-8.2-7.8-10.7-12.8l24 18.5c-.2-1-.5-1.9-.7-2.9l-25-19.2c-.5-1.3-.9-2.6-1.3-4l-3.4 5c2.9 7.9 7.8 14.6 14.2 19.3l.1.1s.1 0 .1.1l34.4 26.5c9.5 7.5 22.4 10.9 36.6 8.3 29.2-5.3 52.9-33.8 52.9-63.5-.4-16-7.1-29-17.8-37zm-45.3 86.8l1-3c-16.1-1.2-27.6-14-27.6-31.1 0-7.9 2.4-15.9 7-23.1.4-.7 1.3-.9 2-.4.7.4.9 1.3.4 2-4.3 6.7-6.6 14.2-6.6 21.6 0 15.3 10.2 26.8 24.4 28.2l-1.3-2.6 10.3 3.6-9.6 4.8zm-23.9-82.7l-13.9-10.6c-.5.4-.9.9-1.4 1.3l13.8 10.6c.6-.4 1-.8 1.5-1.3zm32.6-15.2L293.9 81l-2.4.6 15.7 12c.8-.1 1.7-.3 2.6-.4zm18.9 61.6c-.3.8-.7 1.6-1.1 2.3l1.1.8v-3.1zm-39.9-54.5l-14.4-11.1c-.6.4-1.1.7-1.7 1.1l14.3 11c.6-.3 1.2-.7 1.8-1zm12.3-5.2l-15.2-11.6c-.7.3-1.4.5-2.1.8l15 11.5c.8-.3 1.5-.5 2.3-.7zM399.9 295.9c.8.7 1.8 1.3 2.8 1.6 1.1.3 2.2.3 3.4.1 1.2-.2 2.4-.7 3.4-1.3 1.1-.7 2-1.5 2.9-2.6.8-1 1.5-2.2 2-3.5.5-1.3.7-2.6.7-4.1 0-1.4-.2-2.7-.7-3.8-.5-1.1-1.1-2-2-2.8-.8-.7-1.8-1.2-2.9-1.5-1.1-.3-2.2-.3-3.4-.1-1.2.2-2.3.7-3.4 1.4s-2 1.5-2.8 2.6c-.8 1-1.5 2.2-1.9 3.5-.5 1.3-.7 2.6-.7 4.1 0 1.4.2 2.7.7 3.8.4.9 1 1.8 1.9 2.6zm126 312.6l.8.6-.5-1.9-.3 1.3zm19.9-111.8L543 512l39 139.7 5 3.9-42.5-152.1 1.3-6.8zm-5.8 32.6L572 644l-2.5-1.9 7.5 5.8-35.5-127.1-1.5 8.5zm-3.1 17.3l25 89.6 5 3.9L538.4 538l-1.5 8.6zM236.7 355.9l-28.9-103.5 5 3.9L241 356.8v2.3l267.4-48.7v-81.3L241 277.8l-1.7-1.3 1.6 1.2.1.4v14.2l-5.1-18.4-6.8-5.2 2.5 1.9 9.4 33.8v14.2l-14.5-51.8-1.4-1-2.9-2.2 18.8 67.2V345l-23.8-85.2 3.4 2.6-17-13 28.9 103.5 4.2 3zm226.8-86.2c.8-2.5 1.9-4.7 3.4-6.6 1.5-1.9 3.2-3.5 5.3-4.8 2.1-1.3 4.4-2.2 6.9-2.6 3.3-.6 6.2-.3 8.7.9 2.5 1.2 4.5 3.3 5.9 6.4l-7.7 5c-.7-1.8-1.7-3.1-2.8-3.7-1.2-.6-2.5-.8-4-.6-1.2.2-2.4.7-3.4 1.4s-1.9 1.6-2.6 2.7c-.7 1.1-1.3 2.4-1.7 3.8-.4 1.4-.6 3-.6 4.7 0 1.5.2 2.9.5 4.1.4 1.2.9 2.3 1.6 3.1.7.8 1.6 1.4 2.6 1.7 1 .3 2.2.4 3.6.1.8-.1 1.6-.4 2.4-.7.8-.3 1.4-.8 2-1.4.6-.6 1.1-1.3 1.5-2 .4-.8.7-1.7.8-2.8l-6.8 1.2v-7.2l16.4-2.9c0 1.9-.1 3.6-.2 5.2s-.4 3.1-.8 4.5c-.6 2-1.4 3.8-2.4 5.4-1 1.6-2.2 3-3.6 4.2-1.4 1.2-2.9 2.2-4.5 3-1.6.8-3.3 1.4-5.1 1.7-2.5.4-4.7.4-6.7-.2-2-.6-3.8-1.5-5.2-2.9-1.5-1.4-2.6-3.2-3.4-5.4-.8-2.2-1.2-4.7-1.2-7.5-.1-2.7.3-5.3 1.1-7.8zm-34.8-4l8.2-1.5L449 284v-21.9l8.2-1.5v35.8l-8.2 1.5-12-19.7V300l-8.2 1.5v-35.8zm-38.8 17.5c.9-2.4 2.1-4.7 3.6-6.6 1.5-2 3.4-3.7 5.5-5 2.1-1.4 4.5-2.3 7.1-2.7 2.6-.5 4.9-.4 7.1.2 2.2.6 4 1.6 5.6 3 1.6 1.4 2.8 3.2 3.6 5.3.9 2.1 1.3 4.5 1.3 7.2s-.4 5.2-1.3 7.7c-.9 2.4-2.1 4.7-3.6 6.7-1.6 2-3.4 3.7-5.6 5-2.2 1.4-4.5 2.3-7.1 2.7-2.6.5-4.9.4-7.1-.2-2.1-.6-4-1.6-5.5-3s-2.7-3.2-3.6-5.3c-.9-2.1-1.3-4.5-1.3-7.2 0-2.8.4-5.4 1.3-7.8zm-41.7-3l5.5 22.1 6.7-24.3 6.6-1.2 6.7 21.9 5.5-24.1 8.6-1.6-9.5 37.5-8.4 1.5-6.2-19.6-6.2 21.8-8.4 1.5-9.5-34.1 8.6-1.4zm-33.6 6l8.2-1.5v35.8l-8.2 1.5v-35.8zm-21.7 3.9l8.2-1.5v27.9l9.9-1.8v7.9l-18.1 3.3v-35.8zm-24.4 4.4l9-1.6 12.1 33.6-8.8 1.6-1.9-5.9-11.8 2.1-1.9 6.6-8.8 1.6 12.1-38zM110 438.7l30.4 109-5.1-3.9-25.3-90.9v12l21.1 75.6-5.1-3.9-16-57.4v12l11.8 42.2-5-3.9-6.7-24.1v12l2.5 8.8-2.5-1.9 34.7 26.7L110 426.7v12zm163-134.4l-3.7 12.6 7.4-1.3-3.7-11.3zm-52.5 39.1l6.9 5.3-28.9-103.5-3.3-2.5v2.9l27.9 99.8-2.6-2zm-25.2-83.6v12l18.5 66.4-5-3.9-13.5-48.3v12l9.2 33-5-3.9-4.2-14.9V324l22.8 17.5-22.8-81.7zm340 295.5l.1-.5-7.8 43.7 4 14.5-3-2.3 8 6.2-7.5-27 1.5-8.7 11 39.5 16 12.3-.9-.7-21.4-77zm11.5 69.3l-14.5-52 1.5-8.7 18 64.6-5-3.9zm50.7-172.5L661 679.3l.8-11.2L597.5 438v14.1zm0 28.3l61.8 221.4-.6 8.8 1.5-20-62.7-224.3v14.1zm251-161.7l-68 12.4c.2 1.2.4 2.4.4 3.7 0 2.7-.6 5.2-1.6 7.4 8.8 11.3 9.4 27.3 9.4 43.3 5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10.1-8.2 0-14.1-.5-27.4-6.7-36.8-3.1 2.6-7.1 4.1-11.4 4.1-3.8 0-7.3-1.2-10.2-3.2-.3 2.1-.6 4.6-.7 7.6 5.7 1 9.8 4.3 9.8 8.1 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.3-7.3 10.2-8.3.3-6.1 1-11.1 2.2-15-.6-1.4-1.1-2.9-1.3-4.5l-159.9 29.1-42.2-32.6-9.8 1.8c-1.8 6.1-3.6 12.3-5.5 18.5l.5-.1c5.1-.9 13.2 1.4 18.1 5.1 4.9 3.8 4.8 7.6-.3 8.5l-134.7 24.6c-.6.1-1.3.2-2 .2-5 .1-11.8-2-16.1-5.3-4.9-3.8-4.8-7.6.3-8.5L515 356.9l-4.7 14.6 4.5-.7 4.4-14.6 5.5-18.5L357.5 368v18.4c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-17L110 413.1l.2.2L149.8 555l-2.9-2.3 17.7 13.6-1.1-.9-39.6-141.7 5.1 3.9 35.6 127.6v-12L133.3 431l5 3.9 26.3 94.2v-12l-22-78.8 5.1 3.9 17 60.8v-12L152 445.6l5.1 3.9 7.6 27.3v-12l-3.4-12 3.4 2.6 433-78.9v19.4l66.7 238.9-.8 11.3-65.9-236v14.1l65.1 233.1-.2 3 2.7-36.7-63.7-228.1 5 3.9 59.5 212.9 1.1-14.9-.3 3.7-55.3-197.9 5.1 3.9 51 182.7 1.3-17.4-.4 6.2-46.8-167.7 5.1 3.9L669.1 567l.8-11.2-38.4-137.5 5.1 3.9 34.2 122.3 4.1-56.1-13.1-46.8 5 3.9 8.8 31.7 1.7-23.6 24.4-4.4 255.8-46.6-109-83.9zM159.1 562.1l-5.1-3.9-39.6-141.7 5 3.9 39.7 141.7zm512.5-28.8l-30-107.2 5.1 3.9 25.7 92.1-.8 11.2zm2.4-33.7l-.8 11.3-21.5-77 5 3.9 17.3 61.8zm2.5-33.7l-4.6-16.6 5.1 3.9.4 1.5-.9 11.2zm-84.7 22.5l60.8 217.5 5 3.9-62-222.1-3.8.7zm79 56.1l-.1 1.8.1-1.8zm-86.5-54.8l58.2 208.4 5 3.9L588 489l-3.7.7zm-37.7 6.9l45.5 162.8-1.9-1.5 7 5.3-46.8-167.4-3.8.8zm7.6-1.4l48 172 5 3.9-49.3-176.5-3.7.6zm7.5-1.4l50.6 181.1 5 3.9-51.8-185.6-3.8.6zm15-2.7l55.7 199.3-5.1-3.9L573 491.8l-3.8.7 53.1 190.2 15.1 11.6-56.9-203.8-3.8.6zm75.8 214.8l-5.1-3.9 5.1 3.9z" />
+
+									<path fill="#5cb3b5"
+										d="M707.1 568.2l46.9-8.4.2 10.7-46.8 8.4-.3-10.7zM903.5 532.8l46.9-8.4.2 10.7-46.9 8.4-.2-10.7zM357.5 576.4l33.3 25.6c.1-.7.3-1.4.5-2.1L357.5 574v2.4zm32.6 31.1l-32.6-25v2.4l32.4 24.9c.1-.8.1-1.5.2-2.3zm0 6.7l-32.5-24.9c0 .9.1 1.7.2 2.5l32.6 25c-.2-.8-.3-1.7-.3-2.6zm70.8-44L402 525l-.5-.4-.1-.1c-.4-.3-.7-.5-1.1-.8-.2-.1-.3-.2-.5-.3 0 0-.1 0-.1-.1l-7.7 1.4c2.4.9 4.6 2.1 6.6 3.6l43.5 33.4 2.9 2.2c-3.6-.4-7.5-.3-11.4.4-22.5 4.1-40.7 26-40.7 48.9 0 5.1.9 9.7 2.5 13.9l-3.3-2.5-33.1-25.3c.8 3 1.9 5.9 3.3 8.6l40.9 31.4 2.9 2.2c7.2 5.4 16.9 7.8 27.4 5.8 22.5-4.1 40.7-26 40.7-48.9.1-12.1-5.1-22.1-13.3-28.2zM440 616.4c-.4 2.1-1.2 4.2-2.3 6.2-1.2 2-2.7 3.7-4.6 5.2-1.9 1.5-3.9 2.6-5.9 3.1-2 .6-4 .7-5.9.4-1.9-.3-3.7-1.1-5.4-2.2-1.7-1.1-3.1-2.7-4.3-4.6-1.2-1.9-2-4-2.4-6.1-.4-2.2-.4-4.3 0-6.5.4-2.1 1.1-4.2 2.3-6.2 1.2-2 2.7-3.7 4.6-5.2 1.9-1.5 3.8-2.5 5.9-3.1 2-.6 4-.7 5.9-.4 1.9.3 3.7 1 5.4 2.2 1.7 1.1 3.1 2.7 4.3 4.6 1.2 1.9 2 4 2.4 6.1.4 2.2.4 4.3 0 6.5zm15.3-7.4l-6.1 4.9-16-25.8 13.4-10.7 3.5 5.7-7.3 5.9 2.7 4.3 6.7-5.3 3.5 5.7-6.7 5.3 6.3 10zm-29-46l-46.8-36-2.5.5 47.2 36.2c.6-.2 1.4-.5 2.1-.7zm12.7-1.5l-47.7-36.6-2.5.5 47 36.1c1.1-.1 2.2-.1 3.2 0zm-48.3 57.8L358 594.2c.1.9.3 1.9.5 2.8l32.9 25.2c-.3-.9-.5-1.9-.7-2.9zm40-57.3c.8-.1 1.6-.2 2.3-.3l-46.7-35.8-2.5.5 46.6 35.8c.1-.2.2-.2.3-.2zm-80.8-29.3l7.1-1.2c.2-.1.4-.3.6-.4l-9.2 1.7-.2.2c-.5.5-1.1 1.1-1.6 1.7-.2.2-.3.4-.5.6-.3.4-.7.8-1 1.2-.2.2-.4.5-.6.7-.3.4-.6.7-.9 1.1-.2.3-.4.5-.6.8-.1.2-.3.4-.4.6-.1.2-.2.3-.3.5-.2.3-.4.5-.6.8-.1.1-.1.2-.2.3-.1.2-.2.4-.3.5-.2.4-.5.8-.7 1.1-.1.2-.2.3-.3.5-.9 1.6-1.8 3.2-2.5 4.9 0 0 0 .1-.1.1-.2.5-.5 1.1-.7 1.6 0 .1-.1.1-.1.2s0 .1-.1.2c-.2.5-.4.9-.5 1.4v.1l-.9 2.7c-.1.2-.1.4-.2.6-.1.4-.2.8-.3 1.3v.2c0 .1 0 .2-.1.3-.1.6-.3 1.1-.4 1.7-.1.5-.2.9-.3 1.4-.1.4-.1.8-.2 1.2 0 .2-.1.4-.1.7-.1.7-.2 1.3-.2 2v.5c-.1.7-.1 1.3-.1 2v3.1c.1 2.8.5 5.4 1.1 7.9 0 .1.1.2.1.3.7 2.6 1.6 5.1 2.8 7.4 0 .1.1.1.1.2.2.3.4.7.6 1 .1.1.1.2.2.4.3.5.6 1 1 1.5.1.2.2.4.4.5.2.2.3.5.5.7.2.2.4.5.6.7.2.3.4.5.6.8.2.3.5.6.7.8.1.2.3.3.4.5.3.3.6.7 1 1l.3.3c.4.3.7.7 1.1 1 .1.1.3.2.4.3.4.3.8.7 1.2 1l.1.1.1.1h.1l.6.5 3.9 3c-.5-2.2-.8-4.5-1-6.8l-.5-.4c-.1 0-.1-.1-.2-.1-2.5-1.9-4.7-4.2-6.4-6.8l7 5.3c0-.8-.1-1.6-.1-2.5l-9.1-7c-.4-1-.8-2-1.2-3.1l10.3 7.9v-2.4l-11-8.5c-.3-1.6-.5-3.2-.6-4.8l11.7 9V577l-11.8-9c0-1.9.1-3.8.4-5.7l11.4 8.7v-2.4l-11-8.4c.4-2.2 1.1-4.4 1.9-6.6l9.1 7v-2.4l-8.4-6.4c1.1-2.5 2.3-5 3.8-7.3l4.6 3.5v-2.4l-3.5-2.7c1.1-1.5 2.2-3 3.5-4.4l-.3-5.8zm44.3 59l-36.6-28.1v2.4l35.8 27.5c.2-.5.5-1.2.8-1.8zm22.6-24.7l-49.2-37.8-2.5.5 50 38.4c.5-.4 1.1-.8 1.7-1.1zm14.5 41.8c-.6-1-1.4-1.8-2.3-2.4-.9-.6-1.8-1-2.8-1.1-1-.2-2-.1-3 .2-1 .3-2 .8-2.9 1.5-.9.7-1.6 1.6-2.2 2.6-.6 1-1 2-1.2 3.2-.2 1.1-.2 2.2 0 3.4.2 1.1.6 2.2 1.2 3.3.6 1 1.4 1.8 2.3 2.4.9.6 1.8 1 2.8 1.1 1 .2 2 .1 3-.2 1-.3 2-.8 2.9-1.5.9-.7 1.6-1.6 2.2-2.6.6-1 1-2 1.2-3.2.2-1.1.2-2.3 0-3.4-.1-1.1-.5-2.2-1.2-3.3zm-23.4-35.6l-50.3-38.6v2.4l48.9 37.5c.4-.4.9-.8 1.4-1.3zm-8.7 9.7l-41.6-32v2.4l40.5 31.1c.3-.4.7-.9 1.1-1.5z" />
+
+									<path fill="#fc7a77"
+										d="M582.6 176.9c-.2.4-.4.9-.7 1.3-.1.1-.1.3-.2.4l26.3 20.2c.2-.6.4-1.3.7-1.9l-26.1-20zm10.3-16.4l24.3 18.7c.3-.6.7-1.1 1-1.6L594 159c-.4.5-.8 1-1.1 1.5zm-16.8 31.1c-.2.6-.4 1.2-.6 1.7v.1l28.6 21.9.3-2.1-28.3-21.6zm83.9-76.8c-.1 0-.1 0 0 0l21.7 16.7c.8-.2 1.7-.3 2.5-.5l-21.8-16.7c-.9.1-1.6.3-2.4.5zm-50.7 27.5l22.7 17.5c.4-.5.9-.9 1.3-1.4L610.7 141c-.5.4-.9.9-1.4 1.3zm-47.6 70.2l-.6-.5c-1.4-4.4-2.4-9.1-3-13.9l6.4 4.9.5-1.7.1-.3-7.2-5.5c-.1-1.9-.2-3.9-.2-5.9 0-3.2.2-6.4.6-9.5l10.8 8.3c.2-.6.5-1.2.7-1.9l-11.3-8.6c.7-5 1.8-9.8 3.3-14.6l13.7 10.5c.3-.6.6-1.1.9-1.7l-13.9-10.7c2.1-6.2 4.9-12.2 8.3-17.9l16.1 12.3c0-.1.1-.1.1-.2.3-.4.7-.9 1-1.3l-16.2-12.5c3.9-6.4 8.6-12.4 13.8-17.8l17.6 13.5.2-.2c.4-.4.8-.7 1.2-1.1l.1-.1-17.7-13.6c5.4-5.4 11.4-10.1 17.8-14.1l18 13.8s.1 0 .1-.1l1.5-.9.1-.1-18-13.8c4.9-2.9 10.1-5.3 15.5-7.2l17.3 13.3c.1-.1.2-.1.4-.2.5-.2 1.1-.5 1.6-.7h.1l-17.2-13.2c3.5-1.2 7.1-2.1 10.8-2.7.4-.1.9-.2 1.3-.2l16 12.3 2.1-.6h.1l-15.7-12c3.2-.4 6.4-.6 9.6-.6h2.3l13.6 10.4h.1c.8-.1 1.6-.3 2.5-.4l-12.8-9.8c3.6.3 7 .9 10.4 1.7l9.5 7.3c.9-.1 1.8-.1 2.7-.2h.2l-7.3-5.6c4.1 1.4 8 3.2 11.7 5.5h.1c2.9 0 5.8.1 8.7.4h.1l-1.4-1.1c-8.2-6.1-17.9-10.3-28.6-12h-.2c-.3 0-.6-.1-.9-.1-.5-.1-1-.1-1.5-.2-.4 0-.7-.1-1.1-.1h-.2c-2.6-.3-5.2-.4-7.9-.4h-2.3c-3.9.1-8 .5-12.1 1.3-44.9 8.2-81.2 51.8-81.2 97.5 0 11.4 2.3 21.9 6.4 31l2.5-8.2zM199.4 327.2l5 3.9-9.2-33v14.2l4.2 14.9zm28 21.5l5 3.9-28.9-103.5 6.9 5.3-2.6-2 28.9 103.5 4.2 3.2v-2.3l-28.1-100.6 8.4 6.5-4.1-3.2 23.8 85.2v-14.2l-18.8-67.2 4.3 3.3 14.5 51.8v-14.2l-9.4-33.8-2.5-1.9 6.8 5.2 5.1 18.4v-14.2l-.1-.4-1.8-1.4 1.9 1.4 267.4-48.7-45.7-34.8-105.1 19.1V227c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-12.4l-154.6 28.2 3.3 2.5 29 103.3zm-13.6-10.4l-18.5-66.4v14.2l13.5 48.3 5 3.9zM709.4 222c-.4 1.1-1 2.1-1.5 3.1l1.5 1.2V222zM571 208.1l32.1 24.6c0-.8-.1-1.6-.1-2.5l-31.4-24.1c-.2.6-.4 1.3-.6 2zm-3.4 11.4l37.3 28.7c-.2-.9-.4-1.9-.6-2.9l-36.2-27.8c-.1.6-.3 1.3-.5 2zm108.9 246.4l.8-11.3-.4-1.5-5.1-3.9 4.7 16.7zm-2.5 33.7l-17.3-61.9-5-3.9 21.5 77 .8-11.2zm-32.4-73.5l30 107.2.8-11.3-25.7-92.1-5.1-3.8zm49-188.4c-11.4 2.1-20.6-5.7-20.6-17.2 0-11.6 9.2-22.7 20.6-24.8 8.3-1.5 15.5 2.2 18.7 8.9V133c-6.7-.6-13.6-.3-20.9 1-44.8 8.2-81.2 51.8-81.2 97.5 0 14.1 3.5 26.8 9.6 37.3l-34.4-26.5s-.1 0-.1-.1c-.1-.1-.2-.1-.2-.2-5.3-4-9.8-8.8-13.5-14.3l39.3 30.2-1.2-3.3-40.3-31c-.1.4-.3.9-.4 1.3-.5 1.7-1 3.4-1.5 5.2 4 6.1 9 11.4 14.8 15.7l.2.1.1.1 52.8 40.6c14.6 11.6 34.4 16.7 56.1 12.7 44.9-8.2 81.2-51.8 81.2-97.5 0-24.3-10.3-44.3-26.7-56.4l-26.1-20v6l4.8 3.7c-1.6-.4-3.2-.8-4.8-1.1V234.8c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.3v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1-.1.1v.1l-.2.2-.1.1-.3.3s-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.2.1-.2.1-.1 0-.1.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.1-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.7-5.9c-3.5 3-7.8 5.4-12.5 6.3zm21.8 25.8l-8.5 8.9.4-3.7c-3 1.1-6.1 1.9-9.2 2.5-3.3.6-6.6.9-9.9.9-11 0-21.2-3.5-29.4-10.3-10.5-8.8-16.3-21.9-16.3-37 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 14.2 5.4 26.6 15.3 34.8 9.8 8.2 22.9 11.3 36.9 8.8 2.8-.5 5.7-1.3 8.5-2.3l-3-2.2 12.4-.4zm84 39c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-72.4l5.2 2.2-7.1-16.8-7.1 16.8 5.2-2.2v72.4zM675.5 112.4c-.9.1-1.7.1-2.6.2l22.2 17.1c1 0 2-.1 3-.1l-22.4-17.2h-.2zm33.9 17.9v-.8L687 112.4c-.4 0-.9 0-1.3-.1-.7 0-1.3-.1-2-.1l23.2 17.8c.8.1 1.6.2 2.5.3zm0-10.7l-5.9-4.5c-.9-.2-1.7-.5-2.6-.7-2.6-.6-5.3-1.1-8-1.5l16.5 12.7v-6zm-61-1.3c-.7.3-1.4.5-2.1.8l21.6 16.6c.7-.3 1.4-.5 2.1-.8l-21.6-16.6zm-19.2 9.1l21.8 16.8c.6-.4 1.2-.7 1.7-1.1L631 126.4c-.6.3-1.2.7-1.8 1zM288.1 472.3c-1.4-.9-3.4-1.2-5.9-.7l-2.5.4v13.6l2.5-.4c2.6-.5 4.6-1.4 5.9-2.8 1.4-1.4 2.1-3.2 2.1-5.4s-.7-3.8-2.1-4.7zm253.4 48.4L577 647.8l5.1 3.9L543 512l-1.5 8.7zm223.7 100.1c-1.3-1.1-2.7-1.9-4.3-2.3-1.6-.4-3.3-.5-5.1-.2-1.8.3-3.5 1-5.1 2-1.6 1-3 2.3-4.2 3.9-1.2 1.5-2.1 3.3-2.8 5.2-.7 1.9-1 4-1 6.1 0 2.1.4 4 1.2 5.7.7 1.7 1.7 3.1 3 4.2 1.2 1.1 2.7 1.9 4.3 2.3 1.6.5 3.3.5 5.2.2 1.8-.3 3.5-1 5.1-2 1.6-1 3-2.3 4.2-3.9 1.2-1.6 2.2-3.3 2.8-5.2.7-1.9 1-4 1-6.1 0-2.1-.4-4-1.2-5.7-.8-1.7-1.8-3.1-3.1-4.2zm-229.9-65.5l21.5 77 5.1 3.9-25-89.6-1.6 8.7zm325.9-19.5c-.1-4.5-2.4-6.3-6.9-5.5l-4.1.7.2 13.4 4.1-.7c4.6-.8 6.8-3.5 6.7-7.9zM538.4 538l28.5 102.1 5.1 3.9-32-114.6-1.6 8.6zm-6.1 34.6l14.5 52 5.1 3.9-18-64.6-1.6 8.7zm-10.1-142.2c-1.4-.9-3.4-1.2-5.9-.7l-2.5.4v13.6l2.5-.4c2.6-.5 4.6-1.4 5.9-2.8 1.4-1.4 2.1-3.2 2.1-5.4s-.7-3.8-2.1-4.7zm386.4 51.3c2.1-.4 4-1.1 5.7-2.2 1.7-1.1 3.1-2.4 4.2-3.9s2-3.3 2.6-5.2c.6-1.9.8-4 .8-6.2 0-2.1-.4-4.1-1-5.8-.7-1.7-1.6-3.2-2.8-4.3-1.2-1.1-2.6-1.9-4.3-2.4-1.7-.5-3.6-.5-5.7-.1l-2.8.5.5 30 2.8-.4zM660.1 690.6l-1.5 20 341.3-62.2-42.5-245.9-280.2 51.1-1.7 23.6-8.8-31.7-5-3.9 13.1 46.8-4.1 56.1-34.2-122.3-5.1-3.9 38.4 137.5-.8 11.2-42.6-152.5-5.1-3.9 46.8 167.7.4-6.2-1.3 17.4-51-182.7-5.1-3.9 55.3 197.9.3-3.7-1.1 14.9-59.2-213-5-3.9L665 623.2l-.8 11.2-66.7-238.9v-19.4l-433 78.9-3.4-2.6 3.4 12v12l-7.6-27.3-5.1-3.9 12.7 45.4v12l-17-60.8-5.1-3.9 22 78.8v12l-26.3-94.2-5-3.9 31.3 112.2v12l-35.6-127.6-5.1-3.9L163.3 565l1.1.9 381.3-69.5-1.2 6.7L587 655.2l5.1 3.9-45.5-162.8 3.8-.7L597.2 663l5.1 3.9-48-172 3.8-.7L607.2 671l5.1 3.9-50.6-181.1 3.8-.7 51.8 185.6 5.1 3.9-53.1-190.2 3.8-.7 54.4 194.7 5.1 3.9L576.9 491l3.8-.7 56.9 203.8 5.1 3.9-58.2-208.4 3.8-.7L647.5 702l5.1 3.9-60.8-217.5 3.7-.7 62 222.1 1.1.9.6-8.8-61.8-221.4v-14.1l62.7 224.2zm120.5-50.7c-1.2 3.7-3 7-5.3 10s-5 5.5-8.2 7.5c-3.2 2-6.7 3.4-10.5 4.1-3.9.7-7.4.6-10.6-.3-3.2-.9-6-2.4-8.4-4.5-2.4-2.1-4.2-4.8-5.6-8-1.4-3.2-2.1-6.8-2.2-10.8-.1-4 .5-7.8 1.8-11.5 1.2-3.7 3-7 5.3-10s5-5.5 8.2-7.5c3.2-2 6.7-3.4 10.6-4.1 3.8-.7 7.4-.6 10.6.3 3.3.9 6.1 2.4 8.4 4.5 2.4 2.1 4.2 4.8 5.6 8 1.4 3.2 2.1 6.8 2.1 10.8 0 4-.6 7.8-1.8 11.5zm52.2 6.3l-4.6-30.2-10.7 33-4.9.9-11.2-29-3.5 31.6-12.3 2.2 7.1-55.1 12.2-2.2 10 26.9 8.9-30.3 12.2-2.2 9 52.2-12.2 2.2zm-17-91l-.5-29.2 12.3-2.2.6 31.1c.1 8.3-1.4 14.7-4.7 19.2-3.3 4.4-8.5 7.3-15.5 8.6-7 1.3-12.2.3-15.7-3-3.5-3.2-5.3-9-5.4-17.4l-.6-31.1 12.3-2.2.5 29.2c0 1.6.1 3.2.2 4.8.1 1.6.5 3 1 4.3.5 1.2 1.4 2.2 2.5 2.8 1.1.6 2.8.8 4.8.4 2.1-.4 3.6-1.1 4.7-2.1s1.9-2.3 2.4-3.7c.5-1.4.8-3 .9-4.6.2-1.7.2-3.3.2-4.9zm35.2 18.2l-12.3 2.2-1-53.7 19.6-3.5c5.3-1 9.4-.1 12.3 2.5 2.9 2.6 4.4 6.8 4.5 12.5.1 5.7-1.2 10.4-4 14-2.8 3.6-6.8 5.9-12.2 6.9l-7.3 1.3.4 17.8zm-.1 69.5l-1-53.7 27-4.9.2 11.8-14.7 2.6.2 9 13.8-2.5.2 11.8-13.8 2.5.2 9.3 14.7-2.6.2 11.8-27 4.9zm118.8-75.2l-16.9 31 .5 25.8-12.3 2.2-.5-25.8-17.8-24.8 14.7-2.7 9.1 13.1 8.5-16.2 14.7-2.6zm-19.2-32.6l-46.9 8.4-.2-10.7 46.9-8.4.2 10.7zm-39.6-95.8c3.2-.6 6.3-.4 9.1.6 2.9 1 5.4 2.5 7.5 4.5 2.2 2.1 3.9 4.6 5.2 7.6 1.3 3 1.9 6.3 2 9.9.1 3.5-.5 7-1.6 10.5s-2.7 6.6-4.8 9.5c-2.1 2.9-4.5 5.3-7.3 7.2-2.8 2-5.9 3.3-9.1 3.9l-18.2 3.3-1-53.7 18.2-3.3zm-8 140.4c3.2-.6 6.3-.4 9.1.6 2.9 1 5.4 2.5 7.5 4.5 2.2 2.1 3.9 4.6 5.2 7.6 1.3 3 1.9 6.3 2 9.9.1 3.5-.5 7-1.6 10.5s-2.7 6.6-4.8 9.5c-2.1 2.8-4.5 5.3-7.3 7.2-2.8 2-5.8 3.3-9.1 3.9l-18.2 3.3-1-53.7 18.2-3.3zM848 450.6l23.4 28.7-.6-32.8 12.3-2.2 1 53.7-12.3 2.2-23.4-28.7.6 32.8-12.3 2.2-1-53.7 12.3-2.2zm-35.1 6.4l19 50.4-13.1 2.4-3-8.8-17.6 3.2-2.7 9.8-13.1 2.4 17.1-56.9 13.4-2.5zm-29 5.2l.2 11.8-10.1 1.8.7 41.8-12.3 2.2-.7-41.9-10.1 1.8-.2-11.8 32.5-5.7zm-48 44.9c-.3-.6-.7-1-1.3-1.4-.6-.4-1.4-.7-2.3-1-1-.3-2.1-.5-3.5-.8-1.6-.3-3.2-.6-4.7-1s-2.9-1.1-4.1-2c-1.2-.9-2.2-2.2-3-3.8-.8-1.6-1.2-3.7-1.2-6.4s.3-5.1 1-7.4c.7-2.3 1.8-4.3 3.2-6.1 1.4-1.8 3.1-3.3 5.1-4.5 2-1.2 4.3-2.1 6.8-2.5 2.4-.4 4.8-.5 7.4-.2 2.6.3 5 .9 7.4 1.9l-4.7 11.8c-1.4-1-2.7-1.7-4.1-2-1.4-.4-2.7-.4-3.9-.2-1.6.3-2.9.9-3.9 2-1 1-1.5 2.2-1.5 3.6 0 1 .3 1.7.8 2.2.5.5 1.2.9 2 1.2.8.3 1.8.5 2.8.7 1 .1 2.1.3 3.1.5 4.1.8 7 2.3 9 4.5 1.9 2.2 2.9 5.3 3 9.4 0 2.8-.3 5.3-1.1 7.7-.8 2.4-1.9 4.5-3.5 6.4-1.5 1.9-3.5 3.5-5.7 4.7-2.3 1.3-4.8 2.2-7.7 2.7-6 1.1-11.6.1-16.8-3l5.1-12.2c1.9 1.5 3.7 2.6 5.5 3.1 1.8.6 3.6.7 5.4.4 2-.4 3.5-1.2 4.5-2.4s1.4-2.5 1.4-3.8c-.1-.9-.2-1.6-.5-2.1zm18 52.7l.2 10.7-46.8 8.4-.2-10.7 46.8-8.4zm-62.6 73.4c1.3-3.7 3.1-7 5.3-9.9 2.2-2.9 4.9-5.3 7.9-7.3 3-1.9 6.1-3.2 9.5-3.8 1.9-.3 3.7-.4 5.6-.3 1.8.1 3.8.5 5.8 1.1l.3 16.7c-2.9-3.4-6.5-4.8-10.7-4-1.8.3-3.5 1-5.1 2.1-1.6 1-2.9 2.3-4 3.8s-2 3.2-2.6 5.1c-.6 1.9-.9 3.9-.9 6s.4 4 1.1 5.7c.7 1.7 1.6 3.1 2.8 4.2 1.2 1.1 2.5 1.9 4.1 2.4 1.6.5 3.3.6 5.1.2 3.9-.7 7.5-3.2 10.5-7.6l.3 16.5-1.3.7c-1.9 1.1-3.6 2-5.3 2.6-1.6.7-3.2 1.1-4.8 1.4-3.3.6-6.4.4-9.4-.4-3-.9-5.7-2.3-8-4.5-2.3-2.1-4.2-4.8-5.7-8-1.4-3.2-2.2-6.9-2.3-11-.1-4.1.5-8 1.8-11.7zM661 679.3L597.5 452v-14l64.3 230.2-.8 11.1zm-63.5-269.6l65.9 236-.8 11.2-65.1-233.1v-14.1zM222.9 516.9c-.9 2.5-2.1 4.6-3.8 6.6-1.7 1.9-3.7 3.6-6.1 4.9-2.4 1.3-5.2 2.3-8.2 2.8-6.4 1.1-12.2.1-17.7-3.1l5.6-12.6c2 1.6 3.9 2.6 5.8 3.2 1.9.6 3.8.7 5.7.4 2.1-.4 3.7-1.2 4.8-2.5 1-1.3 1.6-2.6 1.6-3.9 0-.8-.1-1.5-.4-2.1-.3-.6-.7-1-1.3-1.4-.6-.4-1.4-.7-2.4-1-1-.3-2.2-.5-3.6-.8-1.7-.3-3.3-.6-5-1.1-1.6-.4-3.1-1.1-4.3-2-1.3-.9-2.3-2.2-3.1-3.9-.8-1.6-1.2-3.8-1.2-6.6 0-2.7.4-5.3 1.2-7.7.8-2.4 2-4.5 3.5-6.3 1.5-1.9 3.3-3.4 5.5-4.7 2.2-1.3 4.6-2.1 7.2-2.6 2.5-.4 5.1-.5 7.8-.3 2.7.3 5.3.9 7.8 1.9l-5.2 12.1c-1.4-1-2.8-1.7-4.3-2.1-1.4-.4-2.8-.4-4.1-.2-1.7.3-3.1 1-4.1 2.1-1.1 1.1-1.6 2.3-1.6 3.7 0 1 .3 1.7.8 2.3.5.5 1.2 1 2.1 1.3.9.3 1.8.5 2.9.7 1.1.1 2.2.3 3.2.5 4.3.8 7.4 2.3 9.4 4.6s3 5.5 3 9.7c-.2 3-.6 5.6-1.5 8.1zm38.7-40.5l-10.7 1.9v43.1l-13.1 2.3v-43.1l-10.7 1.9v-12.2l34.5-6.2v12.3zm30.6 37.6l-12.5-19v21.2l-13.1 2.3v-55.2l20.3-3.6c2.8-.5 5.2-.5 7.3 0 2.1.5 3.8 1.5 5.2 2.8 1.4 1.3 2.4 2.9 3.1 4.9.7 1.9 1 4.1 1 6.4 0 4.2-.9 7.8-2.8 10.7-1.8 2.9-4.6 5.2-8.2 6.8l15.8 19.8-16.1 2.9zm63.8-34.7c0 8.6-1.8 15.2-5.4 19.8-3.6 4.6-9.1 7.6-16.5 8.9-7.4 1.3-12.9.3-16.5-3-3.6-3.3-5.4-9.3-5.4-17.8v-32l13.1-2.3v30c0 1.6.1 3.3.2 4.9.1 1.7.4 3.1 1 4.4.6 1.3 1.4 2.2 2.6 2.9 1.2.6 2.9.8 5.1.4 2.2-.4 3.9-1.1 5-2.2 1.2-1.1 2.1-2.3 2.6-3.8.6-1.5.9-3.1 1-4.8.1-1.7.2-3.4.2-5v-30l13-2.3v31.9zm45.9-21.8c-3-3.5-6.8-4.9-11.2-4.1-2 .3-3.8 1.1-5.4 2.1-1.7 1.1-3.1 2.4-4.3 4-1.2 1.6-2.1 3.3-2.8 5.3-.7 2-1 4-1 6.2s.3 4.2 1 5.9c.7 1.7 1.6 3.2 2.9 4.3 1.2 1.2 2.7 2 4.3 2.5 1.6.5 3.4.6 5.3.2 4.2-.7 7.9-3.4 11.3-7.9v17l-1.3.8c-2 1.1-3.9 2-5.6 2.7-1.7.7-3.4 1.2-5.1 1.5-3.5.6-6.8.5-10-.4s-6-2.4-8.4-4.6c-2.4-2.2-4.4-4.9-5.8-8.3-1.5-3.3-2.2-7.1-2.2-11.4 0-4.2.7-8.3 2.2-12.1 1.4-3.8 3.4-7.2 5.8-10.2 2.4-3 5.2-5.5 8.4-7.5s6.6-3.3 10.1-4c2-.4 4-.5 5.9-.4 1.9.1 4 .5 6.1 1.1l-.2 17.3zm40-13.3l-10.7 1.9v43.1l-13.1 2.3v-43.1l-10.7 1.9v-12.2l34.5-6.2v12.3zm48.8 11.1c0 8.6-1.8 15.2-5.4 19.8-3.6 4.6-9.1 7.6-16.5 8.9-7.4 1.3-12.9.3-16.5-3-3.6-3.3-5.4-9.3-5.4-17.8v-32l13.1-2.3v30c0 1.6.1 3.2.2 4.9.1 1.7.4 3.1 1 4.4.6 1.3 1.4 2.2 2.6 2.9 1.2.6 2.9.8 5.1.4 2.2-.4 3.9-1.1 5-2.2 1.2-1.1 2.1-2.3 2.6-3.8.6-1.5.9-3.1 1-4.8.1-1.7.2-3.4.2-5v-30l13-2.3v31.9zm35.6 16.8l-12.5-19v21.2l-13.1 2.3v-55.2l20.3-3.6c2.8-.5 5.2-.5 7.3 0 2.1.5 3.8 1.5 5.2 2.8 1.4 1.3 2.4 2.9 3.1 4.9.7 1.9 1 4.1 1 6.4 0 4.2-.9 7.8-2.8 10.7-1.8 2.9-4.6 5.2-8.2 6.8l15.8 19.8-16.1 2.9zm49.7-52l-15.5 2.8v9.2l14.7-2.6v12.2l-14.7 2.6v9.5L576 451v12.2l-28.6 5.1v-55.2L576 408v12.1zm230.4 54l-5.2 18.9 11.1-2-5.9-16.9zm94.1 148.1c2.1-.4 4-1.1 5.7-2.2 1.7-1.1 3.1-2.4 4.2-3.9s2-3.3 2.6-5.2c.6-1.9.8-4 .8-6.2 0-2.1-.4-4.1-1.1-5.8-.7-1.7-1.6-3.2-2.8-4.3-1.2-1.1-2.6-1.9-4.3-2.4-1.7-.5-3.6-.5-5.7-.1l-2.8.5.5 30 2.9-.4zM110 452.9l25.4 90.9 5.1 3.9-30.4-109v14.2zm85.3-193.1l22.8 81.7 5 3.9-27.9-99.8.1 14.2zM110 505.4l6.7 24.1 5 3.9-11.7-42.2v14.2zm0-26.2l16.1 57.5 5.1 3.9L110 465v14.2zm31.7-261.3c.6-.9.4-2.1-.5-2.7-.9-.6-2.1-.4-2.7.5l-44.6 65.7-3-4.7-3.6 17.9 15.3-9.9-5.5-1.1 44.6-65.7zM110 524.3l2.5 1.9-2.5-8.8v6.9zm0-111.2v13.6L144.7 551l5.1 3.9-39.6-141.7-.2-.1zm419.2 176.8l7.5 27 5.1 3.9-11-39.5-1.6 8.6zm-122.6 68.7c-19.9 3.6-38.9-.3-53.7-11-13.5-9.8-22.6-24.7-25.8-42.2l5.3 1.7-8.5-16.1-5.6 17.3 5-2.6c3.3 18.6 12.9 34.5 27.3 45 11.8 8.6 26.2 13 41.6 13 4.9 0 9.9-.5 15-1.4 1-.2 1.7-1.2 1.5-2.2 0-.9-1-1.6-2.1-1.5zm119.5-51.4l.5 1.9 5.1 3.9-4-14.5-1.6 8.7zM114.5 416.5L154 558.2l5.1 3.9-39.6-141.7-5-3.9z" />
+
+									<path fill="#4a3d3e"
+										d="M788.7 385.4c0-16-.6-32-9.4-43.3 1-2.3 1.6-4.8 1.6-7.4 0-8.6-6.1-15.8-14.1-17.5V232c-2.2 6.1-4.9 11.8-7.6 16.9v68.3c-8.1 1.8-14.1 9-14.1 17.6 0 2.6.5 5 1.5 7.2-1.1 3.9-1.8 8.9-2.2 15-5.9 1-10.2 4.3-10.2 8.3 0 4.7 6.2 8.5 13.9 8.5s13.9-3.8 13.9-8.6c0-3.8-4.1-7.1-9.8-8.1.2-2.9.4-5.4.7-7.6 2.9 2 6.4 3.2 10.2 3.2 4.3 0 8.3-1.6 11.4-4.1 6.2 9.4 6.7 22.7 6.7 36.8-5.8 1-10.1 4.3-10.1 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c-.2-3.8-4.4-7-10.2-8.1zM342.4 98.5c4.6 3.4 9.3 7.2 13.3 11.7-2.7-10.6-8.4-19.8-16.6-26.6-.9-.8-1.8-1.5-2.8-2.1V70.1v-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2V68c0-.1-.1-.1-.2-.2 0 0 0-.1-.1-.1 0-.1-.1-.1-.2-.2l-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-30.4-23.3V1H297v36.9l-25.7-19.8-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1s-.1-.1-.2-.1-.1-.1-.2-.1-.1-.1-.2-.1-.1 0-.2-.1c-.1 0-.1 0-.2-.1h-.8-.1-.1H268.6h-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1l-.1.1-.2.2-.1.1-.2.2v.1c-.1.1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1 0 .1-.1.2v47.7c2.4-.9 5.4-1.6 7.6-1.9v-37L328.7 72v85.9l-6.1-4.7c.6-1.4.9-3 .9-4.5 0-6-4.7-9.9-10.6-8.9-5.9 1.1-10.6 6.8-10.6 12.7 0 6 4.7 9.9 10.6 8.9 1.8-.3 3.5-1.1 5-2.2l12.3 9.4h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2-.1.3-.1h.1c.1 0 .2-.1.2-.1s.1 0 .1-.1c.1 0 .1-.1.2-.1l.1-.1c.1 0 .1-.1.2-.1l.1-.1.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.1.1-.2v-.1c0-.1.1-.2.1-.2v-.1c0-.1 0-.2.1-.3v-.1-.3-.1-.3V91.3c2.6 2.2 4.6 4.6 6.4 7.2zM457.6 564.9c2.4 1.9 4.5 3.7 6.4 5.4 4-13.6 10.3-34.9 17.9-60.6l-8.4 1.5-15.9 53.7z" />
+
+									<path fill="#4a3d3e"
+										d="M325.9 84v-8.4c-9.3-3.7-19.9-4.7-30.9-2.7-19.6 3.6-38.1 16.5-49.5 34.6L0 466.5h9.3L252 111.7c10.3-16.4 26.9-28.1 44.4-31.3 10.6-1.9 20.8-.6 29.5 3.6zM741.9 140.2c7 5.4 14.1 12.1 19.8 20.8-5-14.7-13.6-27.5-25.4-37.4-5.9-4.9-12.4-8.9-19.4-12v-11.5-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.2-.3v-.1l-.2-.2s0-.1-.1-.1l-.2-.2-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-35.2-27.1V0h-7.6v64.3l-30.6-23.5-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-.1-.1c-.1 0-.1-.1-.2-.1 0 0-.1 0-.1-.1-.1 0-.1-.1-.2-.1h-.1c-.1 0-.2 0-.2-.1h-.4-.4-.4-.4-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1h-.1c-.1 0-.1.1-.2.2 0 0-.1 0-.1.1l-.2.2-.1.1s-.1.1-.1.2l-.1.1v.1s0 .1-.1.1l-.1.1c0 .1-.1.1-.1.2l-.1.1c0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2v.1c0 .1 0 .2-.1.2V87.4c2-.6 5.4-.9 7.6-.7V51.6l65.8 50.6v124.2l-8.9-6.9c.6-1.5 1-3.1 1-4.7 0-6-4.8-10.1-10.8-9-5.9 1.1-10.8 6.9-10.8 12.9 0 6.1 4.8 10.1 10.8 9 1.8-.3 3.6-1.1 5.1-2.2l15.2 11.6h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2 0 .3-.1 0 0 .1 0 .1-.1.1 0 .2-.1.2-.1.1 0 .1 0 .2-.1.1 0 .1-.1.2-.1s.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1l.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.2.1-.2v-.1c0-.1.1-.2.1-.3v-.1c0-.1.1-.2.1-.3v-.1-.3-.1-113.9c5.2 2.5 10 5.7 14.5 9.4 3.8 3.2 7.2 6.8 10.3 10.6z" />
+
+									<path fill="#4a3d3e"
+										d="M706.2 115.8l.1-8c-13.3-3.8-27.8-4.4-42.7-1.6-44.9 8.2-85.1 46.1-97.7 92.1L519.3 356l-4.4 14.6-4.5.7 4.7-14.6L393.6 379c-5.1.9-5.2 4.7-.3 8.5 4.3 3.3 11 5.5 16.1 5.3.7 0 1.4-.1 2-.2L546.1 368c5.1-.9 5.2-4.7.3-8.5s-13.1-6.1-18.1-5.1l-.5.1c23.9-81 45-152.4 45.5-154.1 11.9-43.3 49.6-79 91.7-86.7 14.5-2.6 28.6-1.8 41.2 2.1zM349.9 183.6V227c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c0-3.9-4.2-7.2-10-8.2v-53.6c-2.4 3.6-5 7.1-7.8 10.3zM371.5 619.3c-9-7.5-14-18.8-14-31.9v-56l-7.6 1.3v54.7c0 15.4 5.9 28.8 16.7 37.8 8.3 6.9 18.7 10.6 30 10.6h.7l-13-9.5c-4.7-1.5-9-3.8-12.8-7zM367.6 394.5c0-3.9-4.2-7.2-10-8.2V341l-7.6 1.4v44c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5 7.5 0 13.7-3.8 13.7-8.6z" />
+								</svg>
+							</div>
+
+							<p class='intro__byline'>By
+								<a href='https://twitter.com/russellviz' target='_blank'>
+									<strong>Russell Samora</strong>
+								</a> &amp;
+								<a href='https://twitter.com/matthew_daniels' target='_blank'>
+									<strong>Matt Daniels</strong>
+								</a>
+							</p>
+
+							<div class='intro__overview'>
+								<p class='overview__instructions'><span class=is-visible>Loading...</span><span class=is-loaded></span>
+								</p>
+								<p class='overview__ps'>ps. there’s explicit content &amp; audio <svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-2">
+										<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+										<path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+									</svg></p>
+							</div>
+						</div>
+
+					</div>
+					<svg class='chart'></svg>
+				</div>
+				<div id='act-2' class='graphic'>
+					<svg>
+						<g>
+							<g class='g-laugh'></g>
+							<g class='g-routine'></g>
+						</g>
+					</svg>
+				</div>
+				<div id='act-3' class='graphic'>
+					<div class='part__container'>
+
+						<div class='part part__script'></div>
+						<div class='part part__script--labels'></div>
+						<div class='part part__favorite'>
+
+						</div>
+						<div class='part part__spectrum'>
+							<div class='timeline'>
+								<p class='timeline__title small'>More story structure <svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+										<line x1="4" y1="12" x2="20" y2="12"></line>
+										<polyline points="14 6 20 12 14 18"></polyline>
+									</svg></p>
+								<div class='timeline__chart'>
+									<div class='chart__bar'></div>
+									<p class='chart__label label--left small'>One-liner jokes
+										<span>
+											<em>Setup &amp; Punchline</em>
+										</span>
+									</p>
+									<p class='chart__label label--right small'>Film / TV Show</p>
+									<div class='chart__items'>
+										<div class='item'>
+											<img data-src='assets/media/mitch.jpg' alt='mitch hedberg'>
+											<p>Mitch Hedberg</p>
+										</div>
+										<div class='item'>
+											<img data-src='assets/media/bridesmaids.jpg' alt='bridesmaids'>
+											<p>
+												<em>Bridesmaids</em>
+											</p>
+										</div>
+										<div class='item'>
+											<img data-src='assets/media/maisel.jpg' alt='the marvelous mrs. maisel'>
+											<p>
+												<em>The Marvelous Mrs. Maisel</em>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div clas='part part__ali'></div>
+					</div>
+				</div>
+				<div id='act-4' class='graphic'>
+					<div class='excerpt'>
+						<div class='excerpt__inner'>
+							<p>Laughter Climax</p>
+							<blockquote>
+								And then,
+								<span class='map'>because we're hippies,</span> I'd be like, "Hey, hey! Please look me in the eye and
+								remember to come with intention, OK?"
+								And then, I would jump on him, and hold onto his neck, and I would just twerk, twerk, twerk, the shit
+								out of him...and
+								do some of this shit that I learned in Atlanta. [grunting] And then I would turn upside down immediately
+								afterwards...to
+								make sure all of that
+								<span class='map'>Harvard nectar</span> would just drain inside of me. That's right,
+								<span class='map'>'Cause I don't wanna work anymore.</span>
+							</blockquote>
+						</div>
+					</div>
+
+					<svg>
+						<g>
+							<g class='g-routine'></g>
+						</g>
+					</svg>
+				</div>
+				<div id='act-5' class='graphic'>
+					<div class='part__container'>
+						<div class='part part__robert'>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 780.8" aria-labelledby="blockset1--title"
+								role="img">
+								<title id="blockset1--title">Pattern, Structure, Order</title>
+
+								<path fill="#a46cba"
+									d="M349.9 532.7l7.1-1.2c.2-.1.4-.3.6-.4l-9.2 1.7-.2.2c-.5.5-1.1 1.1-1.6 1.7-.2.2-.3.4-.5.6-.3.4-.7.8-1 1.2-.2.2-.4.5-.6.7-.3.4-.6.7-.9 1.1-.2.3-.4.5-.6.8-.1.2-.3.4-.4.6-.1.2-.2.3-.3.5-.2.3-.4.5-.6.8-.1.1-.1.2-.2.3-.1.2-.2.4-.3.5-.2.4-.5.8-.7 1.1-.1.2-.2.3-.3.5-.9 1.6-1.8 3.2-2.5 4.9 0 0 0 .1-.1.1-.2.5-.5 1.1-.7 1.6 0 .1-.1.1-.1.2s0 .1-.1.2c-.2.5-.4.9-.5 1.4v.1l-.9 2.7c-.1.2-.1.4-.2.6-.1.4-.2.8-.3 1.3v.2c0 .1 0 .2-.1.3-.1.6-.3 1.1-.4 1.7-.1.5-.2.9-.3 1.4-.1.4-.1.8-.2 1.2 0 .2-.1.4-.1.7-.1.7-.2 1.3-.2 2v.5c-.1.7-.1 1.3-.1 2v3.1c.1 2.8.5 5.4 1.1 7.9 0 .1.1.2.1.3.7 2.6 1.6 5.1 2.8 7.4 0 .1.1.1.1.2.2.3.4.7.6 1 .1.1.1.2.2.4.3.5.6 1 1 1.5.1.2.2.4.4.5.2.2.3.5.5.7.2.2.4.5.6.7.2.3.4.5.6.8.2.3.5.6.7.8.1.2.3.3.4.5.3.3.6.7 1 1l.3.3c.4.3.7.7 1.1 1 .1.1.3.2.4.3.4.3.8.7 1.2 1l.1.1.1.1h.1l.6.5 3.9 3c-.5-2.2-.8-4.5-1-6.8l-.5-.4c-.1 0-.1-.1-.2-.1-2.5-1.9-4.7-4.2-6.4-6.8l7 5.3c0-.8-.1-1.6-.1-2.5l-9.1-7c-.4-1-.8-2-1.2-3.1l10.3 7.9v-2.4l-11-8.5c-.3-1.6-.5-3.2-.6-4.8l11.7 9V577l-11.8-9c0-1.9.1-3.8.4-5.7l11.4 8.7v-2.4l-11-8.4c.4-2.2 1.1-4.4 1.9-6.6l9.1 7v-2.4l-8.4-6.4c1.1-2.5 2.3-5 3.8-7.3l4.6 3.5v-2.4l-3.5-2.7c1.1-1.5 2.2-3 3.5-4.4l-.3-5.8zm-239.9-94l30.4 109-5.1-3.9-25.3-90.9v12l21.1 75.6-5.1-3.9-16-57.4v12l11.8 42.2-5-3.9-6.7-24.1v12l2.5 8.8-2.5-1.9 34.7 26.7L110 426.7v12zm176.2-135.9c0-3.3-1.8-4.6-5.4-4l-3.3.6v9.9l3.3-.6c3.6-.6 5.4-2.6 5.4-5.9zm-49.5 53.1l-28.9-103.5 5 3.9L241 356.8v2.3l267.4-48.7v-81.3L241 277.8l-1.7-1.3 1.6 1.2.1.4v14.2l-5.1-18.4-6.8-5.2 2.5 1.9 9.4 33.8v14.2l-14.5-51.8-1.4-1-2.9-2.2 18.8 67.2V345l-23.8-85.2 3.4 2.6-17-13 28.9 103.5 4.2 3zm218-96.7l9.8-1.8 12.7 22.1v-24.3l9.8-1.8v39.8l-9.8 1.8-12.7-22.1v24.3l-9.8 1.8v-39.8zm-34.2 6.1l15.3-2.7c2.1-.4 3.9-.4 5.5 0s2.9 1 3.9 2c1 .9 1.8 2.1 2.3 3.5.5 1.4.8 2.9.8 4.6 0 3-.7 5.6-2.1 7.7-1.4 2.1-3.4 3.8-6.1 4.9l11.9 14.2-12.2 2.2-9.4-13.6v15.3l-9.8 1.8-.1-39.9zm-27.2 4.9l21.5-3.9v8.8l-11.7 2.1v6.7l11-2v8.8l-11 2v6.9l11.7-2.1v8.8l-21.5 3.9v-40zm-31.3 5.7l25.9-4.7v8.8l-8.1 1.4v31l-9.8 1.8v-31l-8.1 1.4.1-8.7zm-30 5.4l25.9-4.7v8.8l-8.1 1.4v31l-9.8 1.8v-31l-8.1 1.4.1-8.7zm-12.2 2.2l14.4 37.2-10.5 1.9-2.3-6.5-14 2.5-2.3 7.3-10.5 1.9 14.4-42.4 10.8-1.9zm-52.1 9.3l15.6-2.8c4.2-.8 7.5-.2 9.7 1.7 2.2 1.9 3.4 5 3.4 9.2 0 4.2-1.1 7.7-3.4 10.4s-5.5 4.5-9.7 5.2l-5.8 1v13.2l-9.8 1.8v-39.7zm-47.2 50.6l6.9 5.3-28.9-103.5-3.3-2.5v2.9l27.9 99.8-2.6-2zm-25.2-83.6v12l18.5 66.4-5-3.9-13.5-48.3v12l9.2 33-5-3.9-4.2-14.9V324l22.8 17.5-22.8-81.7zM357.5 537l48.9 37.5c.5-.4 1-.9 1.4-1.3l-50.3-38.6v2.4zm36.7 54.7l-36.6-28.1v2.4l35.8 27.5c.2-.5.5-1.2.8-1.8zm44.8-30.2l-47.7-36.6-2.5.5 47 36.1c1.1-.1 2.2-.1 3.2 0zm-81.5 14.9l33.3 25.6c.1-.7.3-1.4.5-2.1L357.5 574v2.4zm26.3-50.1l46.6 35.8c.1 0 .2 0 .3-.1.8-.1 1.6-.2 2.3-.3l-46.7-35.8-2.5.4zm-6.9 1.2l47.2 36.2c.7-.3 1.5-.5 2.2-.7l-46.8-36-2.6.5zm-93-443.3l15 11.5c.7-.2 1.5-.5 2.2-.7l-15.2-11.6c-.7.3-1.3.6-2 .8zm30.5 212l-4.4 14 8.8-1.6-4.4-12.4zM317.5 93l-17-13.1c-.9.1-1.8.2-2.7.4L314.3 93c1.1-.1 2.1-.1 3.2 0zM262 99.1l13.8 10.6c.5-.4 1-.9 1.4-1.3l-13.9-10.6-1.3 1.3zm29.5-17.5l15.7 12c.9-.2 1.8-.3 2.6-.4L293.9 81l-2.4.6zm37.1 15.1c-5.6-1-11.6-1-17.8.1-29.2 5.3-52.9 33.8-52.9 63.5 0 7.7 1.6 14.7 4.4 20.8L242.7 166l-.1-.1-.1-.1c-4.6-3.4-8.2-7.8-10.7-12.8l24 18.5c-.2-1-.5-1.9-.7-2.9l-25-19.2c-.5-1.3-.9-2.6-1.3-4l-3.4 5c2.9 7.9 7.8 14.6 14.2 19.3l.1.1s.1 0 .1.1l34.4 26.5c9.5 7.5 22.4 10.9 36.6 8.3 29.2-5.3 52.9-33.8 52.9-63.5 0-15.8-6.7-28.8-17.4-36.8l-10-7.7V166.7c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.2v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1-.1.1v.1l-.2.2-.1.1-.3.3-.1.1c-.1.1-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1 0 0-.1 0-.1.1-.1 0-.2.1-.2.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.2-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.3-5.6c-2.8 2.5-6.2 4.4-10 5-9.5 1.7-17.2-4.7-17.2-14.4s7.7-18.9 17.2-20.6c7-1.3 13.1 1.9 15.8 7.6V91l-13.4-10.3c-3-.6-6.1-.9-9.2-.9.7.5 1.4.9 2.1 1.4l20.1 15.5zm-26.8 88.5l-1.3-2.6 10.3 3.6-9.8 4.9 1-3c-16.1-1.2-27.6-14-27.6-31.1 0-7.9 2.4-15.9 7-23.1.4-.7 1.3-.9 2-.4.7.4.9 1.3.4 2-4.3 6.7-6.6 14.2-6.6 21.6.2 15.2 10.3 26.7 24.6 28.1zm26.9-30.4c-.3.8-.7 1.6-1.1 2.3l1.1.8v-3.1zm-56-64.5l14.3 11c.6-.4 1.2-.7 1.8-1l-14.4-11.1c-.6.4-1.2.7-1.7 1.1zM229.2 145l25.4 19.5c-.1-.8-.2-1.7-.2-2.6l-24.1-18.5-1.1 1.6zm22.7-33.3l-.5.7 13.4 10.3c.4-.5.7-1.1 1.1-1.6l-13.4-10.3-.6.9zM436.6 279c1-1 1.6-2.3 1.6-3.9s-.5-2.7-1.6-3.4c-1-.7-2.5-.8-4.5-.5l-1.8.3v9.8l1.8-.3c2-.3 3.5-1 4.5-2zM223 140.2v.3l5.1-7.5-.8-.6c0-2.7.3-5.4.7-8l3.9 3 1.1-1.6-4.6-3.6c.6-3.1 1.5-6.1 2.7-9.1l6.9 5.3 1.1-1.6-7.3-5.6c1.5-3.5 3.2-6.8 5.3-10l8.3 6.4.1-.2c.3-.5.6-.9.9-1.4l-8.2-6.3c2.9-4.1 6.2-7.9 9.9-11.3l7.7 5.9c.4-.5.9-.9 1.4-1.4l-7.6-5.9c3.1-2.6 6.5-5 10-6.9l6.7 5.1c.5-.4 1.1-.8 1.6-1.1l-6.5-5c3.4-1.7 7-3.1 10.7-4.1l4.9 4c.6-.3 1.3-.6 1.9-.9l-4.4-3.4c.6-.1 1.1-.3 1.7-.4 1.7-.3 3.3-.5 4.9-.6l2.9 2.2c.7-.3 1.4-.5 2.2-.7l-2.1-1.6h.6c1.6 0 3.1.1 4.6.2l.4.3c1.7-.5 3.4-.9 5.2-1.2 2.4-.4 4.7-.7 7-.9-5.2-2.2-11-3.3-17.2-3.3H282.8c-1.5.1-2.9.2-4.4.4-.4.1-.8.1-1.2.2-.3 0-.5.1-.8.1-.3.1-.7.1-1 .2-7 1.3-13.7 3.9-19.8 7.5-3.5 2.1-6.7 4.4-9.8 7.1h-.1c-4.4 3.9-8.4 8.3-11.7 13.2-.2.3-.4.6-.7 1-2.4 3.7-4.5 7.6-6.2 11.7-1.5 3.5-2.6 7.2-3.4 10.9-.8 4-1.3 8-1.3 12.1.1 2.5.3 4.8.6 7.1zm10.1-.9l21.1 16.2c0-.8.1-1.5.1-2.3l-20.1-15.5-1.1 1.6zm11-16.1l14.6 11.2c.2-.6.5-1.2.8-1.8l-14.3-11-1.1 1.6zM238 132l17.3 13.3c.1-.7.3-1.4.5-2.1l-16.7-12.8-1.1 1.6zm127 397.7l50 38.4c.6-.4 1.2-.7 1.8-1l-49.2-37.8-2.6.4zm196.7-35.9l50.6 181.1 5 3.9-51.8-185.6-3.8.6zm15-2.7l55.7 199.3-5.1-3.9L573 491.8l-3.8.7 53.1 190.2 15.1 11.6-56.9-203.8-3.8.6zm210.5 230.3l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-388-138.5l-41.6-32v2.4l40.5 31.1c.3-.4.7-.9 1.1-1.5zm271.6-38.4l-.1 1.8.1-1.8zm205.8 160.6l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-117.3-92.2l.2 10.7 150.6-27.4-.2-10.7-150.6 27.4zm-157.1 93.5l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-4.7-254.3L661 679.3l.8-11.2L597.5 438v14.1zm100.3 285.7l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-45.3-31.9l-5.1-3.9 5.1 3.9zm-55-225.5l61.8 221.4-.6 8.8 1.5-20-62.7-224.3v14.1zm-13.2 9.3l58.2 208.4 5 3.9L588 489l-3.7.7zm7.5-1.3l60.8 217.5 5 3.9-62-222.1-3.8.7zm315.4-10.2l-150.6 27.4.2 10.7L907.4 489l-.2-10.8zm-371.9 77.1l.1-.5-7.8 43.7 4 14.5-3-2.3 8 6.2-7.5-27 1.5-8.7 11 39.5 16 12.3-.9-.7-21.4-77zm11.5 69.3l-14.5-52 1.5-8.7 18 64.6-5-3.9zm-20.9-16.1l.8.6-.5-1.9-.3 1.3zm17.5 50.9l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-82.5-89.2L402 525l-.5-.4-.1-.1c-.4-.3-.7-.5-1.1-.8-.2-.1-.3-.2-.5-.3 0 0-.1 0-.1-.1l-7.7 1.4c2.4.9 4.6 2.1 6.6 3.6l43.5 33.4 2.9 2.2c-3.6-.4-7.5-.3-11.4.4-22.5 4.1-40.7 26-40.7 48.9 0 5.1.9 9.7 2.5 13.9l-3.3-2.5-33.1-25.3c.8 3 1.9 5.9 3.3 8.6l40.9 31.4 2.9 2.2c7.2 5.4 16.9 7.8 27.4 5.8 22.5-4.1 40.7-26 40.7-48.9.1-12.1-5.1-22.1-13.3-28.2zM433.6 592c1.3-.2 2.6-.3 3.8-.1 2 .2 3.8 1 5.3 2.1 2.7 2 4.5 5.4 4.5 9.5 0 7.7-6.1 15-13.6 16.4-3.5.6-6.8-.1-9.2-2-1.6-1.2-2.8-2.8-3.6-4.8-.5-1.4-.8-3-.8-4.7-.1-7.7 6-15 13.6-16.4zm1.8 42.7c-1.6.3-3.1.4-4.7.4-1.2 0-2.3-.1-3.4-.2l.6 4.4-9.6-9.4h13.5l-3.4 2.6c2.1.2 4.3.2 6.6-.3 13.2-2.4 24-15.3 24-28.8 0-6.8-2.8-12.7-7.7-16.4-.6-.4-.7-1.2-.3-1.8.4-.6 1.2-.7 1.8-.3 5.5 4.1 8.7 10.8 8.7 18.4-.1 14.8-11.8 28.8-26.1 31.4zm-45.3-27.2l-32.6-25v2.4l32.4 24.9c.1-.8.1-1.5.2-2.3zm.6 11.8L358 594.2c.1.9.3 1.9.5 2.8l32.9 25.2c-.3-.9-.5-1.9-.7-2.9zm-.6-5.1l-32.5-24.9c0 .9.1 1.7.2 2.5l32.6 25c-.2-.8-.3-1.7-.3-2.6zM540 529.3L572 644l-2.5-1.9 7.5 5.8-35.5-127.1-1.5 8.5zm-3.1 17.3l25 89.6 5 3.9L538.4 538l-1.5 8.6zm436.2 125.3l-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8zm-365.9-.9l-49.3-176.5-3.8.7 48 172 5.1 3.8zm-60.6-174.4l45.5 162.8-1.9-1.5 7 5.3-46.8-167.4-3.8.8zm233.9-165.5c.2 1.2.4 2.4.4 3.7 0 2.7-.6 5.2-1.6 7.4 8.8 11.3 9.4 27.3 9.4 43.3 5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10.1-8.2 0-14.1-.5-27.4-6.7-36.8-3.1 2.6-7.1 4.1-11.4 4.1-3.8 0-7.3-1.2-10.2-3.2-.3 2.1-.6 4.6-.7 7.6 5.7 1 9.8 4.3 9.8 8.1 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.3-7.3 10.2-8.3.3-6.1 1-11.1 2.2-15-.6-1.4-1.1-2.9-1.3-4.5l-159.9 29.1-42.2-32.6-9.8 1.8c-1.8 6.1-3.6 12.3-5.5 18.5l.5-.1c5.1-.9 13.2 1.4 18.1 5.1 4.9 3.8 4.8 7.6-.3 8.5l-134.7 24.6c-.6.1-1.3.2-2 .2-5 .1-11.8-2-16.1-5.3-4.9-3.8-4.8-7.6.3-8.5L515 356.9l-4.7 14.6 4.5-.7 4.4-14.6 5.5-18.5L357.5 368v18.4c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-17L110 413.1l.2.2L149.8 555l-2.9-2.3 17.7 13.6-1.1-.9-39.6-141.7 5.1 3.9 35.6 127.6v-12L133.3 431l5 3.9 26.3 94.2v-12l-22-78.8 5.1 3.9 17 60.8v-12L152 445.6l5.1 3.9 7.6 27.3v-12l-3.4-12 3.4 2.6 433-78.9v19.4l66.7 238.9-.8 11.3-65.9-236v14.1l65.1 233.1-.2 3 2.7-36.7-63.7-228.1 5 3.9 59.5 212.9 1.1-14.9-.3 3.7-55.3-197.9 5.1 3.9 51 182.7 1.3-17.4-.4 6.2-46.8-167.7 5.1 3.9L669.1 567l.8-11.2-38.4-137.5 5.1 3.9 34.2 122.3 4.1-56.1-13.1-46.8 5 3.9 8.8 31.7 1.7-23.6 24.4-4.4 255.8-46.6-109-83.8-68 12.3zm-621.4 231l-5.1-3.9-39.6-141.7 5 3.9 39.7 141.7zm512.5-28.8l-30-107.2 5.1 3.9 25.7 92.1-.8 11.2zm2.4-33.7l-.8 11.3-21.5-77 5 3.9 17.3 61.8zm2.5-33.7l-4.6-16.6 5.1 3.9.4 1.5-.9 11.2zm-130.7 30.8L543 512l39 139.7 5 3.9-42.5-152.1 1.3-6.8z" />
+
+								<path fill="#5cb3b5"
+									d="M571 208.1l32.1 24.6c0-.8-.1-1.6-.1-2.5l-31.4-24.1c-.2.6-.4 1.3-.6 2zm5.1-16.5l-.6 1.8 28.6 21.9.3-2.1-28.3-21.6zm100.4 274.3l.8-11.3-.4-1.5-5.1-3.9 4.7 16.7zm-93.9-289c-.2.5-.5.9-.7 1.4-.1.1-.1.2-.2.3l26.3 20.2c.2-.6.4-1.3.7-1.9l-26.1-20zm10.3-16.5s0 .1 0 0l24.3 18.8c.3-.5.7-1.1 1-1.6L594 159c-.4.5-.7.9-1.1 1.4zM213.8 338.3l-18.5-66.4v14.2l13.5 48.3 5 3.9zm347.9-125.8l-.6-.5c-1.4-4.4-2.4-9.1-3-13.9l6.4 4.9.3-1.1.2-.8-7.2-5.5c-.1-1.9-.2-3.9-.2-5.9 0-3.2.2-6.4.6-9.5l10.8 8.3c.2-.6.5-1.2.7-1.9l-11.3-8.6c.7-5 1.8-9.8 3.3-14.6l13.7 10.5c.3-.6.6-1.1.9-1.7l-13.9-10.7c2.1-6.2 4.9-12.2 8.3-17.9l16.1 12.3.1-.1c.4-.5.7-1 1.1-1.4l-16.2-12.5c3.9-6.4 8.6-12.4 13.8-17.8l17.6 13.5.1-.1c.4-.4.9-.8 1.3-1.2l-17.7-13.6c5.4-5.4 11.4-10.1 17.8-14.1l18 13.8c.5-.3 1.1-.7 1.6-1 0 0 .1 0 .1-.1l-18-13.8c4.9-2.9 10.1-5.3 15.5-7.2l17.3 13.3c.1 0 .2-.1.2-.1.6-.3 1.2-.5 1.8-.7L624 99.6c3.5-1.2 7.1-2.1 10.8-2.7.4-.1.9-.2 1.3-.2l16 12.3c.7-.2 1.5-.4 2.2-.6h.1l-15.7-12c3.2-.4 6.4-.6 9.6-.6h2.3l13.6 10.4c.9-.1 1.7-.3 2.6-.4L654 96c3.6.3 7 .9 10.4 1.7l9.5 7.3c1-.1 1.9-.1 2.8-.2l-7.3-5.6c4.1 1.4 8 3.2 11.7 5.5 3 0 6 .1 8.9.4l-1.4-1.1c-8.2-6.1-17.9-10.3-28.6-12h-.2c-.3 0-.6-.1-.9-.1-.5-.1-1-.1-1.5-.2-.4 0-.7-.1-1.1-.1h-.2c-2.6-.3-5.2-.4-7.9-.4h-2.3c-3.9.1-8 .5-12.1 1.3-44.9 8.2-81.2 51.8-81.2 97.5 0 11.4 2.3 21.9 6.4 31l2.7-8.5zm-335.2 54.2l14.5 51.8v-14.2l-9.4-33.8-5.1-3.8zm382.8-124.4l22.7 17.5c.4-.5.9-.9 1.3-1.4L610.7 141c-.5.4-.9.9-1.4 1.3zM227.4 348.7l5 3.9-28.9-103.5 6.9 5.3-2.6-2 28.9 103.5 4.2 3.2v-2.3l-28.1-100.6 8.4 6.5-4.1-3.2 23.8 85.2v-14.2l-18.8-67.2 13.6 10.4 5.1 18.4v-14.2l-.1-.4-1.8-1.4 1.9 1.4 267.4-48.7-45.6-34.8-105.1 19.1V227c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-12.4l-154.6 28.2 3.3 2.5 29 103.3zm340.2-129.2l37.3 28.7c-.2-.9-.4-1.9-.6-2.9l-36.2-27.8c-.1.6-.3 1.3-.5 2zm61.6-92.1l21.8 16.8c.6-.4 1.1-.7 1.7-1.1L631 126.4c-.6.3-1.2.7-1.8 1zm167.2 175.1c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-72.4l5.2 2.2-7.1-16.8-7.1 16.8 5.2-2.2v72.4zm-105.8-64.8c-11.4 2.1-20.6-5.7-20.6-17.2 0-11.6 9.2-22.7 20.6-24.8 8.3-1.5 15.5 2.2 18.7 8.9V133c-6.7-.6-13.6-.3-20.9 1-44.8 8.2-81.2 51.8-81.2 97.5 0 14.1 3.5 26.8 9.6 37.3l-34.4-26.5s-.1 0-.1-.1c-.1-.1-.2-.1-.2-.2-5.3-4-9.8-8.8-13.5-14.3l39.3 30.2-1.2-3.3-40.3-31c-.6 2.1-1.3 4.2-1.9 6.5 4 6.1 9 11.4 14.8 15.7l.2.1.1.1 52.8 40.6c14.6 11.6 34.4 16.7 56.1 12.7 44.9-8.2 81.2-51.8 81.2-97.5 0-24.3-10.3-44.3-26.7-56.4l-26.1-20v6l4.8 3.7c-1.6-.4-3.2-.8-4.8-1.1V234.8c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.3v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1s0 .1-.1.1v.1l-.2.2-.1.1-.3.3s-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.2.1-.2.1-.1 0-.1.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.1-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.7-5.9c-3.5 3.1-7.8 5.4-12.5 6.3zm21.8 25.8l-8.5 8.9.4-3.7c-3 1.1-6.1 1.9-9.2 2.5-3.3.6-6.6.9-9.9.9-11 0-21.2-3.5-29.4-10.3-10.5-8.8-16.3-21.9-16.3-37 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 14.2 5.4 26.6 15.3 34.8 9.8 8.2 22.9 11.3 36.9 8.8 2.8-.5 5.7-1.3 8.5-2.3l-3-2.2 12.4-.4zm-513 63.7l5 3.9-9.2-33v14.2l4.2 14.9zM660 114.8c-.1 0-.1 0 0 0l21.7 16.7c.8-.2 1.7-.3 2.5-.5l-21.8-16.7c-.9.1-1.6.3-2.4.5zm14 384.8l-17.3-61.9-5-3.9 21.5 77 .8-11.2zm35.4-369.3v-.8L687 112.4c-.4 0-.9 0-1.3-.1-.7 0-1.3-.1-2-.1l23.2 17.8c.8.1 1.6.2 2.5.3zm0 91.7c-.4 1.1-1 2.1-1.5 3.1l1.5 1.2V222zm-33.9-109.6c-.8.1-1.7.1-2.6.2l22.2 17.1c1 0 2-.1 3-.1l-22.4-17.2h-.2zm33.9 7.2l-5.9-4.5c-.9-.2-1.7-.5-2.6-.7-2.6-.6-5.3-1.1-8-1.5l16.5 12.7v-6zm-61-1.3c-.7.2-1.3.5-2 .7h-.1l21.6 16.6c.7-.3 1.4-.5 2.1-.8l-21.6-16.5zM541.5 520.7L577 647.8l5.1 3.9L543 512l-1.5 8.7zm242 33.3c1.6-1.7 2.4-3.8 2.3-6.3-.1-2.6-1-4.4-2.7-5.4-1.7-1.1-4.1-1.3-7.2-.8l-3 .5.5 15.9 3-.5c3.1-.6 5.5-1.8 7.1-3.4zm153.1-25.6c3.1-.6 5.5-1.7 7.1-3.3 1.6-1.7 2.4-3.8 2.3-6.3-.1-2.6-1-4.4-2.7-5.4-1.7-1.1-4.1-1.3-7.2-.8l-3 .5.5 15.9 3-.6zm-401.3 26.9l21.5 77 5.1 3.9-25-89.6-1.6 8.7zm3.1-17.3l28.5 102.1 5.1 3.9-32-114.6-1.6 8.6zm-16.2-107.6c-1.4-.9-3.4-1.2-5.9-.7l-2.5.4v13.6l2.5-.4c2.6-.5 4.6-1.4 5.9-2.8 1.4-1.4 2.1-3.2 2.1-5.4s-.7-3.8-2.1-4.7zm323.2 130.9c1.4-1.9 2.5-4 3.2-6.3.7-2.3 1-4.8.9-7.4-.1-2.6-.6-4.9-1.4-7-.9-2.1-2.1-3.8-3.6-5.1-1.5-1.3-3.4-2.3-5.6-2.8-2.2-.5-4.6-.5-7.3-.1l-3.6.7 1.1 36.1 3.6-.7c2.7-.5 5.2-1.4 7.3-2.7 2.2-1.3 3.9-2.9 5.4-4.7zm-313.1 11.3l14.5 52 5.1 3.9-18-64.6-1.6 8.7zm127.8 118l-1.5 20 341.3-62.2-42.5-245.9-280.2 51.1-1.7 23.6-8.8-31.7-5-3.9 13.1 46.8-2.4 33.7-25.7-92.1-5.1-3.9 30 107.2.5-6.7-1.3 17.9-34.2-122.3-5.1-3.9 38.4 137.5-.8 11.2-42.6-152.5-5.1-3.9 46.8 167.7.4-6.2-1.3 17.4-51-182.7-5.1-3.9 55.3 197.9.3-3.7-1.1 14.9-59.3-213-5-3.9L665 623.2l-.8 11.2-66.7-238.9v-19.4l-433 78.9-3.4-2.6 3.4 12v12l-7.6-27.3-5.1-3.9 12.7 45.4v12l-17-60.8-5.1-3.9 22 78.8v12l-26.3-94.2-5-3.9 31.3 112.2v12l-35.6-127.6-5.1-3.9L163.3 565l1.1.9 381.3-69.5-1.2 6.7L587 655.2l5.1 3.9-45.5-162.8 3.8-.7L597.2 663l5.1 3.9-48-172 3.8-.7L607.2 671l5.1 3.9-50.6-181.1 3.8-.7 51.8 185.6 5.1 3.9-53.1-190.2 3.8-.7 54.4 194.7 5.1 3.9L576.9 491l3.8-.7 56.9 203.8 5.1 3.9-58.2-208.4 3.8-.7L647.5 702l5.1 3.9-60.8-217.5 3.7-.7 62 222.1 1.1.9.6-8.8-61.8-221.4v-14.1l62.7 224.2zm96.6-158.7l24.5-4.4c3.4-.6 6.3-.6 8.9 0 2.6.6 4.7 1.7 6.4 3.2 1.7 1.5 3 3.4 3.9 5.7.9 2.2 1.4 4.7 1.5 7.5.2 4.9-.8 9.1-3 12.5-2.1 3.5-5.4 6.1-9.7 8l19.9 23-19.6 3.5-15.8-22.1.8 24.8-15.8 2.8-2-64.5zm184.8-33.4c3.4-.6 6.3-.6 8.9 0 2.6.6 4.7 1.7 6.4 3.2 1.7 1.5 3 3.4 3.9 5.7.9 2.2 1.4 4.7 1.5 7.5.2 4.9-.8 9.1-3 12.5-2.1 3.5-5.4 6.1-9.7 8l19.9 23-19.6 3.5-15.8-22.1.8 24.8-15.8 2.9-2-64.4 24.5-4.6zm-31.4 97.8l-150.6 27.4-.2-10.7 150.6-27.4.2 10.7zM811.8 522l23.3-4.2c4.1-.7 8-.6 11.7.5 3.7 1.1 6.9 2.9 9.7 5.3 2.8 2.4 5 5.5 6.7 9.1 1.7 3.6 2.6 7.6 2.7 11.8.1 4.2-.5 8.4-1.9 12.6s-3.4 8-6 11.4c-2.6 3.5-5.7 6.4-9.3 8.8-3.6 2.4-7.4 4-11.6 4.8l-23.3 4.2-2-64.3zm96.2-3.2l-18.8 3.4.3 10.8 17.7-3.2.4 14.2-17.7 3.2.3 11.1 18.8-3.4.4 14.2-34.5 6.2-2-64.4 34.5-6.2.6 14.1zm-.8-40.6l.2 10.7-150.6 27.4-.2-10.7 150.6-27.4zm-222.6 85.7c1.5-4.4 3.7-8.4 6.6-12.1 2.9-3.6 6.3-6.7 10.4-9.1 4.1-2.5 8.5-4.2 13.5-5.1 4.9-.9 9.4-.8 13.6.2 4.2 1 7.8 2.8 10.9 5.3 3.1 2.5 5.5 5.7 7.3 9.6 1.8 3.8 2.8 8.1 2.9 12.9.1 4.8-.5 9.4-2.1 13.8-1.5 4.4-3.7 8.4-6.6 12.1-2.9 3.6-6.4 6.7-10.4 9.1-4.1 2.5-8.6 4.2-13.4 5.1-4.9.9-9.5.8-13.6-.2-4.2-1-7.8-2.8-10.8-5.3-3-2.5-5.5-5.7-7.3-9.6-1.8-3.8-2.8-8.1-2.9-12.9-.3-4.8.4-9.4 1.9-13.8zM661 679.3L597.5 452v-14l64.3 230.2-.8 11.1zm-63.5-269.6l65.9 236-.8 11.2-65.1-233.1v-14.1zM222.9 516.9c-.9 2.5-2.1 4.6-3.8 6.6-1.7 1.9-3.7 3.6-6.1 4.9-2.4 1.3-5.2 2.3-8.2 2.8-6.4 1.1-12.2.1-17.7-3.1l5.6-12.6c2 1.6 3.9 2.6 5.8 3.2 1.9.6 3.8.7 5.7.4 2.1-.4 3.7-1.2 4.8-2.5 1-1.3 1.6-2.6 1.6-3.9 0-.8-.1-1.5-.4-2.1-.3-.6-.7-1-1.3-1.4-.6-.4-1.4-.7-2.4-1-1-.3-2.2-.5-3.6-.8-1.7-.3-3.3-.6-5-1.1-1.6-.4-3.1-1.1-4.3-2-1.3-.9-2.3-2.2-3.1-3.9-.8-1.6-1.2-3.8-1.2-6.6 0-2.7.4-5.3 1.2-7.7.8-2.4 2-4.5 3.5-6.3 1.5-1.9 3.3-3.4 5.5-4.7 2.2-1.3 4.6-2.1 7.2-2.6 2.5-.4 5.1-.5 7.8-.3 2.7.3 5.3.9 7.8 1.9l-5.2 12.1c-1.4-1-2.8-1.7-4.3-2.1-1.4-.4-2.8-.4-4.1-.2-1.7.3-3.1 1-4.1 2.1-1.1 1.1-1.6 2.3-1.6 3.7 0 1 .3 1.7.8 2.3.5.5 1.2 1 2.1 1.3.9.3 1.8.5 2.9.7 1.1.1 2.2.3 3.2.5 4.3.8 7.4 2.3 9.4 4.6s3 5.5 3 9.7c-.2 3-.6 5.6-1.5 8.1zm38.7-40.5l-10.7 1.9v43.1l-13.1 2.3v-43.1l-10.7 1.9v-12.2l34.5-6.2v12.3zm30.6 37.6l-12.5-19v21.2l-13.1 2.3v-55.2l20.3-3.6c2.8-.5 5.2-.5 7.3 0 2.1.5 3.8 1.5 5.2 2.8 1.4 1.3 2.4 2.9 3.1 4.9.7 1.9 1 4.1 1 6.4 0 4.2-.9 7.8-2.8 10.7-1.8 2.9-4.6 5.2-8.2 6.8l15.8 19.8-16.1 2.9zm63.8-34.7c0 8.6-1.8 15.2-5.4 19.8-3.6 4.6-9.1 7.6-16.5 8.9-7.4 1.3-12.9.3-16.5-3-3.6-3.3-5.4-9.3-5.4-17.8v-32l13.1-2.3v30c0 1.6.1 3.3.2 4.9.1 1.7.4 3.1 1 4.4.6 1.3 1.4 2.2 2.6 2.9 1.2.6 2.9.8 5.1.4 2.2-.4 3.9-1.1 5-2.2 1.2-1.1 2.1-2.3 2.6-3.8.6-1.5.9-3.1 1-4.8.1-1.7.2-3.4.2-5v-30l13-2.3v31.9zm45.9-21.8c-3-3.5-6.8-4.9-11.2-4.1-2 .3-3.8 1.1-5.4 2.1-1.7 1.1-3.1 2.4-4.3 4-1.2 1.6-2.1 3.3-2.8 5.3-.7 2-1 4-1 6.2s.3 4.2 1 5.9c.7 1.7 1.6 3.2 2.9 4.3 1.2 1.2 2.7 2 4.3 2.5 1.6.5 3.4.6 5.3.2 4.2-.7 7.9-3.4 11.3-7.9v17l-1.3.8c-2 1.1-3.9 2-5.6 2.7-1.7.7-3.4 1.2-5.1 1.5-3.5.6-6.8.5-10-.4s-6-2.4-8.4-4.6c-2.4-2.2-4.4-4.9-5.8-8.3-1.5-3.3-2.2-7.1-2.2-11.4 0-4.2.7-8.3 2.2-12.1 1.4-3.8 3.4-7.2 5.8-10.2 2.4-3 5.2-5.5 8.4-7.5s6.6-3.3 10.1-4c2-.4 4-.5 5.9-.4 1.9.1 4 .5 6.1 1.1l-.2 17.3zm40-13.3l-10.7 1.9v43.1l-13.1 2.3v-43.1l-10.7 1.9v-12.2l34.5-6.2v12.3zm48.8 11.1c0 8.6-1.8 15.2-5.4 19.8-3.6 4.6-9.1 7.6-16.5 8.9-7.4 1.3-12.9.3-16.5-3-3.6-3.3-5.4-9.3-5.4-17.8v-32l13.1-2.3v30c0 1.6.1 3.2.2 4.9.1 1.7.4 3.1 1 4.4.6 1.3 1.4 2.2 2.6 2.9 1.2.6 2.9.8 5.1.4 2.2-.4 3.9-1.1 5-2.2 1.2-1.1 2.1-2.3 2.6-3.8.6-1.5.9-3.1 1-4.8.1-1.7.2-3.4.2-5v-30l13-2.3v31.9zm35.6 16.8l-12.5-19v21.2l-13.1 2.3v-55.2l20.3-3.6c2.8-.5 5.2-.5 7.3 0 2.1.5 3.8 1.5 5.2 2.8 1.4 1.3 2.4 2.9 3.1 4.9.7 1.9 1 4.1 1 6.4 0 4.2-.9 7.8-2.8 10.7-1.8 2.9-4.6 5.2-8.2 6.8l15.8 19.8-16.1 2.9zm49.7-52l-15.5 2.8v9.2l14.7-2.6v12.2l-14.7 2.6v9.5L576 451v12.2l-28.6 5.1v-55.2L576 408v12.1zm-287.9 52.2c-1.4-.9-3.4-1.2-5.9-.7l-2.5.4v13.6l2.5-.4c2.6-.5 4.6-1.4 5.9-2.8 1.4-1.4 2.1-3.2 2.1-5.4s-.7-3.8-2.1-4.7zm412.6 109.3c1 2 2.3 3.7 3.9 5 1.6 1.3 3.5 2.2 5.6 2.7 2.1.5 4.3.6 6.6.1 2.3-.4 4.5-1.3 6.5-2.5 2-1.3 3.8-2.8 5.4-4.7 1.5-1.9 2.7-4 3.6-6.3.8-2.3 1.2-4.8 1.1-7.3-.1-2.6-.6-4.8-1.6-6.8s-2.3-3.7-3.9-5c-1.6-1.3-3.5-2.2-5.6-2.7-2.1-.5-4.3-.6-6.6-.1-2.3.4-4.5 1.3-6.5 2.5-2 1.3-3.8 2.8-5.3 4.7-1.5 1.9-2.7 4-3.5 6.3-.8 2.3-1.2 4.8-1.1 7.3-.2 2.5.4 4.8 1.4 6.8zm-174.6 25.6l.5 1.9 5.1 3.9-4-14.5-1.6 8.7zM110 505.4l6.7 24.1 5 3.9-11.7-42.2v14.2zm0-26.2l16.1 57.5 5.1 3.9L110 465v14.2zm0 45.1l2.5 1.9-2.5-8.8v6.9zm419.2 65.6l7.5 27 5.1 3.9-11-39.5-1.6 8.6zM110 452.9l25.4 90.9 5.1 3.9-30.4-109v14.2zm31.7-235c.6-.9.4-2.1-.5-2.7-.9-.6-2.1-.4-2.7.5l-44.6 65.7-3-4.7-3.6 17.9 15.3-9.9-5.5-1.1 44.6-65.7zm81.4 127.5l-27.9-99.8v14.2l22.8 81.7 5.1 3.9zm183.5 313.2c-19.9 3.6-38.9-.3-53.7-11-13.5-9.8-22.6-24.7-25.8-42.2l5.3 1.7-8.5-16.1-5.6 17.3 5-2.6c3.3 18.6 12.9 34.5 27.3 45 11.8 8.6 26.2 13 41.6 13 4.9 0 9.9-.5 15-1.4 1-.2 1.7-1.2 1.5-2.2 0-.9-1-1.6-2.1-1.5zM110 413.1v13.6L144.7 551l5.1 3.9-39.6-141.7-.2-.1zm4.5 3.4L154 558.2l5.1 3.9-39.6-141.7-5-3.9z" />
+
+								<path fill="#4a3d3e"
+									d="M788.7 385.4c0-16-.6-32-9.4-43.3 1-2.3 1.6-4.8 1.6-7.4 0-8.6-6.1-15.8-14.1-17.5V232c-2.2 6.1-4.9 11.8-7.6 16.9v68.3c-8.1 1.8-14.1 9-14.1 17.6 0 2.6.5 5 1.5 7.2-1.1 3.9-1.8 8.9-2.2 15-5.9 1-10.2 4.3-10.2 8.3 0 4.7 6.2 8.5 13.9 8.5s13.9-3.8 13.9-8.6c0-3.8-4.1-7.1-9.8-8.1.2-2.9.4-5.4.7-7.6 2.9 2 6.4 3.2 10.2 3.2 4.3 0 8.3-1.6 11.4-4.1 6.2 9.4 6.7 22.7 6.7 36.8-5.8 1-10.1 4.3-10.1 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c-.2-3.8-4.4-7-10.2-8.1zM342.4 98.5c4.6 3.4 9.3 7.2 13.3 11.7-2.7-10.6-8.4-19.8-16.6-26.6-.9-.8-1.8-1.5-2.8-2.1V70.1v-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2V68c0-.1-.1-.1-.2-.2 0 0 0-.1-.1-.1 0-.1-.1-.1-.2-.2l-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-30.4-23.3V1H297v36.9l-25.7-19.8-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1s-.1-.1-.2-.1-.1-.1-.2-.1-.1-.1-.2-.1-.1 0-.2-.1c-.1 0-.1 0-.2-.1h-.8-.1-.1H268.6h-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1l-.1.1-.2.2-.1.1-.2.2v.1c-.1.1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1 0 .1-.1.2v47.7c2.4-.9 5.4-1.6 7.6-1.9v-37L328.7 72v85.9l-6.1-4.7c.6-1.4.9-3 .9-4.5 0-6-4.7-9.9-10.6-8.9-5.9 1.1-10.6 6.8-10.6 12.7 0 6 4.7 9.9 10.6 8.9 1.8-.3 3.5-1.1 5-2.2l12.3 9.4h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2-.1.3-.1h.1c.1 0 .2-.1.2-.1s.1 0 .1-.1c.1 0 .1-.1.2-.1l.1-.1c.1 0 .1-.1.2-.1l.1-.1.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.1.1-.2v-.1c0-.1.1-.2.1-.2v-.1c0-.1 0-.2.1-.3v-.1-.3-.1-.3V91.3c2.6 2.2 4.6 4.6 6.4 7.2zM457.6 564.9c2.4 1.9 4.5 3.7 6.4 5.4 4-13.6 10.3-34.9 17.9-60.6l-8.4 1.5-15.9 53.7z" />
+
+								<path fill="#4a3d3e"
+									d="M325.9 84v-8.4c-9.3-3.7-19.9-4.7-30.9-2.7-19.6 3.6-38.1 16.5-49.5 34.6L0 466.5h9.3L252 111.7c10.3-16.4 26.9-28.1 44.4-31.3 10.6-1.9 20.8-.6 29.5 3.6zM741.9 140.2c7 5.4 14.1 12.1 19.8 20.8-5-14.7-13.6-27.5-25.4-37.4-5.9-4.9-12.4-8.9-19.4-12v-11.5-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.2-.3v-.1l-.2-.2s0-.1-.1-.1l-.2-.2-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-35.2-27.1V0h-7.6v64.3l-30.6-23.5-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-.1-.1c-.1 0-.1-.1-.2-.1 0 0-.1 0-.1-.1-.1 0-.1-.1-.2-.1h-.1c-.1 0-.2 0-.2-.1h-.4-.4-.4-.4-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1h-.1c-.1 0-.1.1-.2.2 0 0-.1 0-.1.1l-.2.2-.1.1s-.1.1-.1.2l-.1.1v.1s0 .1-.1.1l-.1.1c0 .1-.1.1-.1.2l-.1.1c0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2v.1c0 .1 0 .2-.1.2V87.4c2-.6 5.4-.9 7.6-.7V51.6l65.8 50.6v124.2l-8.9-6.9c.6-1.5 1-3.1 1-4.7 0-6-4.8-10.1-10.8-9-5.9 1.1-10.8 6.9-10.8 12.9 0 6.1 4.8 10.1 10.8 9 1.8-.3 3.6-1.1 5.1-2.2l15.2 11.6h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2 0 .3-.1 0 0 .1 0 .1-.1.1 0 .2-.1.2-.1.1 0 .1 0 .2-.1.1 0 .1-.1.2-.1s.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1l.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.2.1-.2v-.1c0-.1.1-.2.1-.3v-.1c0-.1.1-.2.1-.3v-.1-.3-.1-113.9c5.2 2.5 10 5.7 14.5 9.4 3.8 3.2 7.2 6.8 10.3 10.6z" />
+
+								<path fill="#4a3d3e"
+									d="M706.2 115.8l.1-8c-13.3-3.8-27.8-4.4-42.7-1.6-44.9 8.2-85.1 46.1-97.7 92.1L519.3 356l-4.4 14.6-4.5.7 4.7-14.6L393.6 379c-5.1.9-5.2 4.7-.3 8.5 4.3 3.3 11 5.5 16.1 5.3.7 0 1.4-.1 2-.2L546.1 368c5.1-.9 5.2-4.7.3-8.5s-13.1-6.1-18.1-5.1l-.5.1c23.9-81 45-152.4 45.5-154.1 11.9-43.3 49.6-79 91.7-86.7 14.5-2.6 28.6-1.8 41.2 2.1zM349.9 183.6V227c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c0-3.9-4.2-7.2-10-8.2v-53.6c-2.4 3.6-5 7.1-7.8 10.3zM371.5 619.3c-9-7.5-14-18.8-14-31.9v-56l-7.6 1.3v54.7c0 15.4 5.9 28.8 16.7 37.8 8.3 6.9 18.7 10.6 30 10.6h.7l-13-9.5c-4.7-1.5-9-3.8-12.8-7zM367.6 394.5c0-3.9-4.2-7.2-10-8.2V341l-7.6 1.4v44c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5 7.5 0 13.7-3.8 13.7-8.6zM440 597.5c-1.1-.8-2.3-1.3-3.7-1.5-.9-.1-1.8-.1-2.7.1-5.3 1-9.6 6.1-9.6 11.5 0 1.2.2 2.3.6 3.3.5 1.4 1.4 2.5 2.5 3.4 1.7 1.3 4 1.8 6.5 1.4 5.3-1 9.6-6.1 9.6-11.5 0-2.9-1.3-5.3-3.2-6.7z" />
+							</svg>
+						</div>
+						<div class='part part__quote'>
+							<div class='vid-placeholder'></div>
+						</div>
+						<div class='part part__spectrum'>
+							<div class='timeline'>
+								<p class='timeline__title small'>More story structure <svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+										<line x1="4" y1="12" x2="20" y2="12"></line>
+										<polyline points="14 6 20 12 14 18"></polyline>
+									</svg></p>
+								<div class='timeline__chart'>
+									<div class='chart__bar'></div>
+									<p class='chart__label label--left small'>One-liner jokes
+										<span>
+											<em>Setup &amp; Punchline</em>
+										</span>
+									</p>
+									<p class='chart__label label--right small'>Film / TV Show</p>
+									<div class='chart__items'>
+										<div class='item'>
+											<img data-src='assets/media/ali-hello.jpg' alt='ali wong'>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='part part__system'>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 780.8" aria-labelledby="blockset2--title"
+								role="img">
+								<title id="blockset2--title">Pregnancy, Marriage, Aging</title>
+
+								<path fill="#fc7a77"
+									d="M110 438.7l30.4 109-5.1-3.9-25.3-90.9v12l21.1 75.6-5.1-3.9-16-57.4v12l11.8 42.2-5-3.9-6.7-24.1v12l2.5 8.8-2.5-1.9 34.7 26.7L110 426.7v12zm239.9 94l7.1-1.2c.2-.1.4-.3.6-.4l-9.2 1.7-.2.2c-.5.5-1.1 1.1-1.6 1.7-.2.2-.3.4-.5.6-.3.4-.7.8-1 1.2-.2.2-.4.5-.6.7-.3.4-.6.7-.9 1.1-.2.3-.4.5-.6.8-.1.2-.3.4-.4.6-.1.2-.2.3-.3.5-.2.3-.4.5-.6.8-.1.1-.1.2-.2.3-.1.2-.2.4-.3.5-.2.4-.5.8-.7 1.1-.1.2-.2.3-.3.5-.9 1.6-1.8 3.2-2.5 4.9 0 0 0 .1-.1.1-.2.5-.5 1.1-.7 1.6 0 .1-.1.1-.1.2s0 .1-.1.2c-.2.5-.4.9-.5 1.4v.1l-.9 2.7c-.1.2-.1.4-.2.6-.1.4-.2.8-.3 1.3v.2c0 .1 0 .2-.1.3-.1.6-.3 1.1-.4 1.7-.1.5-.2.9-.3 1.4-.1.4-.1.8-.2 1.2 0 .2-.1.4-.1.7-.1.7-.2 1.3-.2 2v.5c-.1.7-.1 1.3-.1 2v3.1c.1 2.8.5 5.4 1.1 7.9 0 .1.1.2.1.3.7 2.6 1.6 5.1 2.8 7.4 0 .1.1.1.1.2.2.3.4.7.6 1 .1.1.1.2.2.4.3.5.6 1 1 1.5.1.2.2.4.4.5.2.2.3.5.5.7.2.2.4.5.6.7.2.3.4.5.6.8.2.3.5.6.7.8.1.2.3.3.4.5.3.3.6.7 1 1l.3.3c.4.3.7.7 1.1 1 .1.1.3.2.4.3.4.3.8.7 1.2 1l.1.1.1.1h.1l.6.5 3.9 3c-.5-2.2-.8-4.5-1-6.8l-.5-.4c-.1 0-.1-.1-.2-.1-2.5-1.9-4.7-4.2-6.4-6.8l7 5.3c0-.8-.1-1.6-.1-2.5l-9.1-7c-.4-1-.8-2-1.2-3.1l10.3 7.9v-2.4l-11-8.5c-.3-1.6-.5-3.2-.6-4.8l11.7 9V577l-11.8-9c0-1.9.1-3.8.4-5.7l11.4 8.7v-2.4l-11-8.4c.4-2.2 1.1-4.4 1.9-6.6l9.1 7v-2.4l-8.4-6.4c1.1-2.5 2.3-5 3.8-7.3l4.6 3.5v-2.4l-3.5-2.7c1.1-1.5 2.2-3 3.5-4.4l-.3-5.8zM236.7 355.9l-28.9-103.5 5 3.9L241 356.8v2.3l267.4-48.7v-81.3L241 277.8l-1.7-1.3 1.6 1.2.1.4v14.2l-5.1-18.4-6.8-5.2 2.5 1.9 9.4 33.8v14.2l-14.5-51.8-1.4-1-2.9-2.2 18.8 67.2V345l-23.8-85.2 3.4 2.6-17-13 28.9 103.5 4.2 3zm242.8-98.1l5.6 7.7 5.6-9.7 9.4-1.7-11 18.5v15.3l-7.8 1.4V274l-11-14.6 9.2-1.6zm-31.4 14.7c.9-2.2 2-4.2 3.5-5.9s3.1-3.2 5.1-4.4c1.9-1.2 3.9-2 6-2.3 1.2-.2 2.4-.3 3.5-.2 1.2.1 2.4.3 3.7.6v9.9c-1.8-2-4-2.8-6.7-2.3-1.2.2-2.3.6-3.3 1.3s-1.9 1.4-2.6 2.3c-.7.9-1.3 1.9-1.7 3.1-.4 1.1-.6 2.3-.6 3.6 0 1.3.2 2.4.6 3.4.4 1 1 1.8 1.7 2.5s1.6 1.1 2.6 1.4c1 .3 2 .3 3.2.1 2.5-.4 4.8-2 6.8-4.6v9.8l-.8.4c-1.2.7-2.3 1.2-3.4 1.6-1 .4-2.1.7-3.1.9-2.1.4-4.1.3-6-.2-1.9-.5-3.6-1.4-5-2.6-1.5-1.2-2.6-2.8-3.5-4.7-.9-1.9-1.3-4.1-1.3-6.5 0-2.7.5-5 1.3-7.2zm-30.2-3.7l7.8-1.4 10.7 17.6v-19.4l7.8-1.4V296l-7.8 1.4-10.7-17.6v19.4l-7.8 1.4v-31.8zm-21.3 3.8l8.6-1.5 11.5 29.7-8.4 1.5-1.8-5.2-11.2 2-1.8 5.8-8.4 1.5 11.5-33.8zm-39.1 7l7.8-1.4 10.7 17.6v-19.4l7.8-1.4v31.8l-7.8 1.4-10.7-17.6V310l-7.8 1.4v-31.8zm-33.2 15c.8-2.2 1.8-4.2 3.2-5.9 1.4-1.7 3.1-3.2 5.1-4.3 2-1.2 4.2-2 6.6-2.4 3.1-.6 5.9-.3 8.3.7 2.4 1 4.2 2.9 5.6 5.7l-7.4 4.6c-.7-1.6-1.6-2.7-2.7-3.3-1.1-.6-2.4-.7-3.8-.5-1.2.2-2.2.6-3.2 1.3-1 .6-1.8 1.4-2.5 2.4s-1.2 2.1-1.6 3.4c-.4 1.3-.6 2.7-.6 4.2 0 1.3.2 2.6.5 3.7s.8 2 1.5 2.7c.7.7 1.5 1.2 2.5 1.5 1 .3 2.1.3 3.4.1.8-.1 1.5-.4 2.2-.7.7-.3 1.4-.7 1.9-1.2.6-.5 1-1.1 1.4-1.8.4-.7.6-1.5.8-2.5l-6.4 1.2v-6.4l15.5-2.8c0 1.7-.1 3.2-.2 4.6-.1 1.4-.4 2.7-.8 4-.6 1.8-1.3 3.4-2.3 4.8-1 1.5-2.1 2.7-3.4 3.8-1.3 1.1-2.7 2-4.3 2.7-1.5.7-3.2 1.2-4.9 1.6-2.3.4-4.5.4-6.4-.1-1.9-.5-3.6-1.3-5-2.5s-2.5-2.8-3.2-4.7c-.8-1.9-1.2-4.1-1.2-6.6.3-2.7.7-5.1 1.4-7.3zm-20.4-5.4l17.1-3.1v7l-9.3 1.7v5.3l8.8-1.6v7l-8.8 1.6v5.5l9.3-1.7v7l-17.1 3.1v-31.8zm-26.1 4.7l12.2-2.2c1.7-.3 3.1-.3 4.4 0 1.3.3 2.3.8 3.1 1.6.8.8 1.4 1.7 1.8 2.8.4 1.1.6 2.3.6 3.7 0 2.4-.6 4.5-1.7 6.2-1.1 1.7-2.7 3-4.9 3.9l9.5 11.3-9.8 1.8-7.5-10.9v12.2l-7.8 1.4.1-31.8zm-25.5 4.6l12.5-2.2c3.4-.6 6-.1 7.8 1.4 1.8 1.5 2.7 4 2.7 7.4 0 3.4-.9 6.1-2.7 8.3-1.8 2.2-4.4 3.6-7.8 4.2l-4.6.8v10.5l-7.8 1.4v-31.8zm-31.8 44.9l6.9 5.3-28.9-103.5-3.3-2.5v2.9l27.9 99.8-2.6-2zm-25.2-83.6v12l18.5 66.4-5-3.9-13.5-48.3v12l9.2 33-5-3.9-4.2-14.9V324l22.8 17.5-22.8-81.7zM365 529.7l50 38.4c.6-.4 1.2-.7 1.8-1l-49.2-37.8-2.6.4zm-7.5 7.3l48.9 37.5c.5-.4 1-.9 1.4-1.3l-50.3-38.6v2.4zm36.7 54.7l-36.6-28.1v2.4l35.8 27.5c.2-.5.5-1.2.8-1.8zM267 306.5c0-2.6-1.4-3.7-4.3-3.2l-2.6.5v7.9l2.6-.5c2.9-.5 4.3-2.1 4.3-4.7zm116.8 219.8l46.6 35.8c.1 0 .2 0 .3-.1.8-.1 1.6-.2 2.3-.3l-46.7-35.8-2.5.4zm-6.9 1.2l47.2 36.2c.7-.3 1.5-.5 2.2-.7l-46.8-36-2.6.5zm-19.4 48.9l33.3 25.6c.1-.7.3-1.4.5-2.1L357.5 574v2.4zm81.5-14.9l-47.7-36.6-2.5.5 47 36.1c1.1-.1 2.2-.1 3.2 0zM317.5 93l-17-13.1c-.9.1-1.8.2-2.7.4L314.3 93c1.1-.1 2.1-.1 3.2 0zm-33.6-8.8l15 11.5c.7-.2 1.5-.5 2.2-.7l-15.2-11.6c-.7.3-1.3.6-2 .8zm-11.2 6.1l14.3 11c.6-.4 1.2-.7 1.8-1l-14.4-11.1c-.6.4-1.2.7-1.7 1.1zm55.9 6.4c-5.6-1-11.6-1-17.8.1-29.2 5.3-52.9 33.8-52.9 63.5 0 7.7 1.6 14.7 4.4 20.8L242.7 166l-.1-.1-.1-.1c-4.6-3.4-8.2-7.8-10.7-12.8l24 18.5c-.2-1-.5-1.9-.7-2.9l-25-19.2c-.5-1.3-.9-2.6-1.3-4l-3.4 5c2.9 7.9 7.8 14.6 14.2 19.3l.1.1s.1 0 .1.1l34.4 26.5c9.5 7.5 22.4 10.9 36.6 8.3 29.2-5.3 52.9-33.8 52.9-63.5 0-15.8-6.7-28.8-17.4-36.8l-10-7.7V166.7c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.2v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1-.1.1v.1l-.2.2-.1.1-.3.3-.1.1c-.1.1-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1 0 0-.1 0-.1.1-.1 0-.2.1-.2.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.2-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.3-5.6c-2.8 2.5-6.2 4.4-10 5-9.5 1.7-17.2-4.7-17.2-14.4s7.7-18.9 17.2-20.6c7-1.3 13.1 1.9 15.8 7.6V91l-13.4-10.3c-3-.6-6.1-.9-9.2-.9.7.5 1.4.9 2.1 1.4l20.1 15.5zm-26.8 88.5l-1.3-2.6 10.3 3.6-9.8 4.9 1-3c-16.1-1.2-27.6-14-27.6-31.1 0-7.9 2.4-15.9 7-23.1.4-.7 1.3-.9 2-.4.7.4.9 1.3.4 2-4.3 6.7-6.6 14.2-6.6 21.6.2 15.2 10.3 26.7 24.6 28.1zM262 99.1l13.8 10.6c.5-.4 1-.9 1.4-1.3l-13.9-10.6-1.3 1.3zm66.7 55.7c-.3.8-.7 1.6-1.1 2.3l1.1.8v-3.1zm-37.2-73.2l15.7 12c.9-.2 1.8-.3 2.6-.4L293.9 81l-2.4.6zm-47.4 41.6l14.6 11.2c.2-.6.5-1.2.8-1.8l-14.3-11-1.1 1.6zm7.8-11.5l-.5.7 13.4 10.3c.4-.5.7-1.1 1.1-1.6l-13.4-10.3-.6.9zM223 140.2v.3l5.1-7.5-.8-.6c0-2.7.3-5.4.7-8l3.9 3 1.1-1.6-4.6-3.6c.6-3.1 1.5-6.1 2.7-9.1l6.9 5.3 1.1-1.6-7.3-5.6c1.5-3.5 3.2-6.8 5.3-10l8.3 6.4.1-.2c.3-.5.6-.9.9-1.4l-8.2-6.3c2.9-4.1 6.2-7.9 9.9-11.3l7.7 5.9c.4-.5.9-.9 1.4-1.4l-7.6-5.9c3.1-2.6 6.5-5 10-6.9l6.7 5.1c.5-.4 1.1-.8 1.6-1.1l-6.5-5c3.4-1.7 7-3.1 10.7-4.1l4.9 4c.6-.3 1.3-.6 1.9-.9l-4.4-3.4c.6-.1 1.1-.3 1.7-.4 1.7-.3 3.3-.5 4.9-.6l2.9 2.2c.7-.3 1.4-.5 2.2-.7l-2.1-1.6h.6c1.6 0 3.1.1 4.6.2l.4.3c1.7-.5 3.4-.9 5.2-1.2 2.4-.4 4.7-.7 7-.9-5.2-2.2-11-3.3-17.2-3.3H282.8c-1.5.1-2.9.2-4.4.4-.4.1-.8.1-1.2.2-.3 0-.5.1-.8.1-.3.1-.7.1-1 .2-7 1.3-13.7 3.9-19.8 7.5-3.5 2.1-6.7 4.4-9.8 7.1h-.1c-4.4 3.9-8.4 8.3-11.7 13.2-.2.3-.4.6-.7 1-2.4 3.7-4.5 7.6-6.2 11.7-1.5 3.5-2.6 7.2-3.4 10.9-.8 4-1.3 8-1.3 12.1.1 2.5.3 4.8.6 7.1zm10.1-.9l21.1 16.2c0-.8.1-1.5.1-2.3l-20.1-15.5-1.1 1.6zm-3.9 5.7l25.4 19.5c-.1-.8-.2-1.7-.2-2.6l-24.1-18.5-1.1 1.6zm171.7 136.3l-3.5 11.2 7-1.3-3.5-9.9zM238 132l17.3 13.3c.1-.7.3-1.4.5-2.1l-16.7-12.8-1.1 1.6zm52.7 172.8c.8-.8 1.2-1.9 1.2-3.1s-.4-2.2-1.2-2.7c-.8-.5-2-.6-3.6-.4l-1.5.3v7.8l1.5-.3c1.6-.2 2.7-.8 3.6-1.6zm271 189l50.6 181.1 5 3.9-51.8-185.6-3.8.6zm-162.5 89.1l-41.6-32v2.4l40.5 31.1c.3-.4.7-.9 1.1-1.5zm198.3-130.8L661 679.3l.8-11.2L597.5 438v14.1zm0 28.3l61.8 221.4-.6 8.8 1.5-20-62.7-224.3v14.1zm-20.8 10.7l55.7 199.3-5.1-3.9L573 491.8l-3.8.7 53.1 190.2 15.1 11.6-56.9-203.8-3.8.6zm75.8 214.8l-5.1-3.9 5.1 3.9zm-68.2-216.2l58.2 208.4 5 3.9L588 489l-3.7.7zm113.5 248.1l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm82.7-406.7c.2 1.2.4 2.4.4 3.7 0 2.7-.6 5.2-1.6 7.4 8.8 11.3 9.4 27.3 9.4 43.3 5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10.1-8.2 0-14.1-.5-27.4-6.7-36.8-3.1 2.6-7.1 4.1-11.4 4.1-3.8 0-7.3-1.2-10.2-3.2-.3 2.1-.6 4.6-.7 7.6 5.7 1 9.8 4.3 9.8 8.1 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.3-7.3 10.2-8.3.3-6.1 1-11.1 2.2-15-.6-1.4-1.1-2.9-1.3-4.5l-159.9 29.1-42.2-32.6-9.8 1.8c-1.8 6.1-3.6 12.3-5.5 18.5l.5-.1c5.1-.9 13.2 1.4 18.1 5.1 4.9 3.8 4.8 7.6-.3 8.5l-134.7 24.6c-.6.1-1.3.2-2 .2-5 .1-11.8-2-16.1-5.3-4.9-3.8-4.8-7.6.3-8.5L515 356.9l-4.7 14.6 4.5-.7 4.4-14.6 5.5-18.5L357.5 368v18.4c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-17L110 413.1l.2.2L149.8 555l-2.9-2.3 17.7 13.6-1.1-.9-39.6-141.7 5.1 3.9 35.6 127.6v-12L133.3 431l5 3.9 26.3 94.2v-12l-22-78.8 5.1 3.9 17 60.8v-12L152 445.6l5.1 3.9 7.6 27.3v-12l-3.4-12 3.4 2.6 433-78.9v19.4l66.7 238.9-.8 11.3-65.9-236v14.1l65.1 233.1-.2 3 2.7-36.7-63.7-228.1 5 3.9 59.5 212.9 1.1-14.9-.3 3.7-55.3-197.9 5.1 3.9 51 182.7 1.3-17.4-.4 6.2-46.8-167.7 5.1 3.9L669.1 567l.8-11.2-38.4-137.5 5.1 3.9 34.2 122.3 4.1-56.1-13.1-46.8 5 3.9 8.8 31.7 1.7-23.6 24.4-4.4 255.8-46.6-109-83.8-68 12.3zm-621.4 231l-5.1-3.9-39.6-141.7 5 3.9 39.7 141.7zm512.5-28.8l-30-107.2 5.1 3.9 25.7 92.1-.8 11.2zm2.4-33.7l-.8 11.3-21.5-77 5 3.9 17.3 61.8zm2.5-33.7l-4.6-16.6 5.1 3.9.4 1.5-.9 11.2zm-5.7 78.6l-.1 1.8.1-1.8zm302.3 127.4l-7.1 16.8 5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8zm-213.8-59l.2 10.7 150.6-27.4-.2-10.7-150.6 27.4zm27.9 108.5l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm89.4-16.3l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm30.6-226.9l-150.6 27.4.2 10.7L907.4 489l-.2-10.8zm-315.4 10.2l60.8 217.5 5 3.9-62-222.1-3.8.7zm-54.9 58.2l25 89.6 5 3.9L538.4 538l-1.5 8.6zM607.2 671l-49.3-176.5-3.8.7 48 172 5.1 3.8zm-63.8-11.6l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zm-8.1-104.1l.1-.5-7.8 43.7 4 14.5-3-2.3 8 6.2-7.5-27 1.5-8.7 11 39.5 16 12.3-.9-.7-21.4-77zm11.5 69.3l-14.5-52 1.5-8.7 18 64.6-5-3.9zm-.2-128l45.5 162.8-1.9-1.5 7 5.3-46.8-167.4-3.8.8zm-.8.1L543 512l39 139.7 5 3.9-42.5-152.1 1.3-6.8zM390.1 614.2l-32.5-24.9c0 .9.1 1.7.2 2.5l32.6 25c-.2-.8-.3-1.7-.3-2.6zM540 529.3L572 644l-2.5-1.9 7.5 5.8-35.5-127.1-1.5 8.5zm-149.9 78.2l-32.6-25v2.4l32.4 24.9c.1-.8.1-1.5.2-2.3zm.6 11.8L358 594.2c.1.9.3 1.9.5 2.8l32.9 25.2c-.3-.9-.5-1.9-.7-2.9zm135.2-10.8l.8.6-.5-1.9-.3 1.3zm76.3 97.9l5.2-2.2v43.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-43.2l5.2 2.2-7.1-16.8-7.1 16.8zM460.9 570.2L402 525l-.5-.4-.1-.1c-.4-.3-.7-.5-1.1-.8-.2-.1-.3-.2-.5-.3 0 0-.1 0-.1-.1l-7.7 1.4c2.4.9 4.6 2.1 6.6 3.6l43.5 33.4 2.9 2.2c-3.6-.4-7.5-.3-11.4.4-22.5 4.1-40.7 26-40.7 48.9 0 5.1.9 9.7 2.5 13.9l-3.3-2.5-33.1-25.3c.8 3 1.9 5.9 3.3 8.6l40.9 31.4 2.9 2.2c7.2 5.4 16.9 7.8 27.4 5.8 22.5-4.1 40.7-26 40.7-48.9.1-12.1-5.1-22.1-13.3-28.2zM433.6 592c1.3-.2 2.6-.3 3.8-.1 2 .2 3.8 1 5.3 2.1 2.7 2 4.5 5.4 4.5 9.5 0 7.7-6.1 15-13.6 16.4-3.5.6-6.8-.1-9.2-2-1.6-1.2-2.8-2.8-3.6-4.8-.5-1.4-.8-3-.8-4.7-.1-7.7 6-15 13.6-16.4zm1.8 42.7c-1.6.3-3.1.4-4.7.4-1.2 0-2.3-.1-3.4-.2l.6 4.4-9.6-9.4h13.5l-3.4 2.6c2.1.2 4.3.2 6.6-.3 13.2-2.4 24-15.3 24-28.8 0-6.8-2.8-12.7-7.7-16.4-.6-.4-.7-1.2-.3-1.8.4-.6 1.2-.7 1.8-.3 5.5 4.1 8.7 10.8 8.7 18.4-.1 14.8-11.8 28.8-26.1 31.4z" />
+
+								<path fill="#a46cba"
+									d="M629.2 127.4l21.8 16.8c.6-.4 1.1-.7 1.7-1.1L631 126.4c-.6.3-1.2.7-1.8 1zm-53.1 64.2l-.6 1.8 28.6 21.9.3-2.1-28.3-21.6zm33.2-49.3l22.7 17.5c.4-.5.9-.9 1.3-1.4L610.7 141c-.5.4-.9.9-1.4 1.3zM674 499.6l-17.3-61.9-5-3.9 21.5 77 .8-11.2zm-81.1-339.2s0 .1 0 0l24.3 18.8c.3-.5.7-1.1 1-1.6L594 159c-.4.5-.7.9-1.1 1.4zM571 208.1l32.1 24.6c0-.8-.1-1.6-.1-2.5l-31.4-24.1c-.2.6-.4 1.3-.6 2zM227.4 348.7l5 3.9-28.9-103.5 6.9 5.3-2.6-2 28.9 103.5 4.2 3.2v-2.3l-28.1-100.6 8.4 6.5-4.1-3.2 23.8 85.2v-14.2l-18.8-67.2 13.6 10.4 5.1 18.4v-14.2l-.1-.4-1.8-1.4 1.9 1.4 267.4-48.7-45.6-34.8-105.1 19.1V227c5.8 1 10 4.3 10 8.2 0 4.7-6.2 8.5-13.9 8.6-7.7 0-13.9-3.8-13.9-8.5 0-3.9 4.2-7.2 10-8.2v-12.4l-154.6 28.2 3.3 2.5 29 103.3zm340.2-129.2l37.3 28.7c-.2-.9-.4-1.9-.6-2.9l-36.2-27.8c-.1.6-.3 1.3-.5 2zm-341.1 47.2l14.5 51.8v-14.2l-9.4-33.8-5.1-3.8zm335.2-54.2l-.6-.5c-1.4-4.4-2.4-9.1-3-13.9l6.4 4.9.3-1.1.2-.8-7.2-5.5c-.1-1.9-.2-3.9-.2-5.9 0-3.2.2-6.4.6-9.5l10.8 8.3c.2-.6.5-1.2.7-1.9l-11.3-8.6c.7-5 1.8-9.8 3.3-14.6l13.7 10.5c.3-.6.6-1.1.9-1.7l-13.9-10.7c2.1-6.2 4.9-12.2 8.3-17.9l16.1 12.3.1-.1c.4-.5.7-1 1.1-1.4l-16.2-12.5c3.9-6.4 8.6-12.4 13.8-17.8l17.6 13.5.1-.1c.4-.4.9-.8 1.3-1.2l-17.7-13.6c5.4-5.4 11.4-10.1 17.8-14.1l18 13.8c.5-.3 1.1-.7 1.6-1 0 0 .1 0 .1-.1l-18-13.8c4.9-2.9 10.1-5.3 15.5-7.2l17.3 13.3c.1 0 .2-.1.2-.1.6-.3 1.2-.5 1.8-.7L624 99.6c3.5-1.2 7.1-2.1 10.8-2.7.4-.1.9-.2 1.3-.2l16 12.3c.7-.2 1.5-.4 2.2-.6h.1l-15.7-12c3.2-.4 6.4-.6 9.6-.6h2.3l13.6 10.4c.9-.1 1.7-.3 2.6-.4L654 96c3.6.3 7 .9 10.4 1.7l9.5 7.3c1-.1 1.9-.1 2.8-.2l-7.3-5.6c4.1 1.4 8 3.2 11.7 5.5 3 0 6 .1 8.9.4l-1.4-1.1c-8.2-6.1-17.9-10.3-28.6-12h-.2c-.3 0-.6-.1-.9-.1-.5-.1-1-.1-1.5-.2-.4 0-.7-.1-1.1-.1h-.2c-2.6-.3-5.2-.4-7.9-.4h-2.3c-3.9.1-8 .5-12.1 1.3-44.9 8.2-81.2 51.8-81.2 97.5 0 11.4 2.3 21.9 6.4 31l2.7-8.5zm20.9-35.6c-.2.5-.5.9-.7 1.4-.1.1-.1.2-.2.3l26.3 20.2c.2-.6.4-1.3.7-1.9l-26.1-20zM213.8 338.3l-18.5-66.4v14.2l13.5 48.3 5 3.9zm434.6-220c-.7.2-1.3.5-2 .7h-.1l21.6 16.6c.7-.3 1.4-.5 2.1-.8l-21.6-16.5zm148 184.2c0 1.1.9 1.9 1.9 1.9 1.1 0 1.9-.9 1.9-1.9v-72.4l5.2 2.2-7.1-16.8-7.1 16.8 5.2-2.2v72.4zm-105.8-64.8c-11.4 2.1-20.6-5.7-20.6-17.2 0-11.6 9.2-22.7 20.6-24.8 8.3-1.5 15.5 2.2 18.7 8.9V133c-6.7-.6-13.6-.3-20.9 1-44.8 8.2-81.2 51.8-81.2 97.5 0 14.1 3.5 26.8 9.6 37.3l-34.4-26.5s-.1 0-.1-.1c-.1-.1-.2-.1-.2-.2-5.3-4-9.8-8.8-13.5-14.3l39.3 30.2-1.2-3.3-40.3-31c-.6 2.1-1.3 4.2-1.9 6.5 4 6.1 9 11.4 14.8 15.7l.2.1.1.1 52.8 40.6c14.6 11.6 34.4 16.7 56.1 12.7 44.9-8.2 81.2-51.8 81.2-97.5 0-24.3-10.3-44.3-26.7-56.4l-26.1-20v6l4.8 3.7c-1.6-.4-3.2-.8-4.8-1.1V234.8c0 .1 0 .2-.1.3v.1c0 .1-.1.2-.1.3v.1c0 .1-.1.2-.1.2s0 .1-.1.1c0 .1-.1.1-.1.2l-.1.1s0 .1-.1.1v.1l-.2.2-.1.1-.3.3s-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.1.1-.2.1-.2.1-.2.1-.1 0-.1.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2 0-.3.1h-1-.1c-.2 0-.3-.1-.5-.1h-.1c-.1-.1-.3-.1-.4-.2h-.1c-.2-.1-.3-.2-.5-.3h-.1l-7.7-5.9c-3.5 3.1-7.8 5.4-12.5 6.3zm21.8 25.8l-8.5 8.9.4-3.7c-3 1.1-6.1 1.9-9.2 2.5-3.3.6-6.6.9-9.9.9-11 0-21.2-3.5-29.4-10.3-10.5-8.8-16.3-21.9-16.3-37 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 14.2 5.4 26.6 15.3 34.8 9.8 8.2 22.9 11.3 36.9 8.8 2.8-.5 5.7-1.3 8.5-2.3l-3-2.2 12.4-.4zm-35.9 202.4l.8-11.3-.4-1.5-5.1-3.9 4.7 16.7zm-1-353.5c-.8.1-1.7.1-2.6.2l22.2 17.1c1 0 2-.1 3-.1l-22.4-17.2h-.2zm33.9 17.9v-.8L687 112.4c-.4 0-.9 0-1.3-.1-.7 0-1.3-.1-2-.1l23.2 17.8c.8.1 1.6.2 2.5.3zm0 91.7c-.4 1.1-1 2.1-1.5 3.1l1.5 1.2V222zm0-102.4l-5.9-4.5c-.9-.2-1.7-.5-2.6-.7-2.6-.6-5.3-1.1-8-1.5l16.5 12.7v-6zm-49.4-4.8c-.1 0-.1 0 0 0l21.7 16.7c.8-.2 1.7-.3 2.5-.5l-21.8-16.7c-.9.1-1.6.3-2.4.5zM406.6 658.6c-19.9 3.6-38.9-.3-53.7-11-13.5-9.8-22.6-24.7-25.8-42.2l5.3 1.7-8.5-16.1-5.6 17.3 5-2.6c3.3 18.6 12.9 34.5 27.3 45 11.8 8.6 26.2 13 41.6 13 4.9 0 9.9-.5 15-1.4 1-.2 1.7-1.2 1.5-2.2 0-.9-1-1.6-2.1-1.5zm301.1-98.8l-6.5 22.8 14.3-2.6-7.8-20.2zm-166.2-39.1L577 647.8l5.1 3.9L543 512l-1.5 8.7zm-6.2 34.6l21.5 77 5.1 3.9-25-89.6-1.6 8.7zm-3 17.3l14.5 52 5.1 3.9-18-64.6-1.6 8.7zm6.1-34.6l28.5 102.1 5.1 3.9-32-114.6-1.6 8.6zm-254.7-42.1l12.1-2.2-6.1-17.2-6 19.4zm170.4-30.6l12.1-2.2-6.1-17.2-6 19.4zm206 225.3l-1.5 20 341.3-62.2-42.5-245.9-280.2 51.1-1.7 23.6-8.8-31.7-5-3.9 13.1 46.8-2.4 33.7-25.7-92.1-5.1-3.9 30 107.2.5-6.7-1.3 17.9-34.2-122.3-5.1-3.9 38.4 137.5-.8 11.2-42.6-152.5-5.1-3.9 46.8 167.7.4-6.2-1.3 17.4-51-182.7-5.1-3.9 55.3 197.9.3-3.7-1.1 14.9-59.3-213-5-3.9L665 623.2l-.8 11.2-66.7-238.9v-19.4l-433 78.9-3.4-2.6 3.4 12v12l-7.6-27.3-5.1-3.9 12.7 45.4v12l-17-60.8-5.1-3.9 22 78.8v12l-26.3-94.2-5-3.9 31.3 112.2v12l-35.6-127.6-5.1-3.9L163.3 565l1.1.9 381.3-69.5-1.2 6.7L587 655.2l5.1 3.9-45.5-162.8 3.8-.7L597.2 663l5.1 3.9-48-172 3.8-.7L607.2 671l5.1 3.9-50.6-181.1 3.8-.7 51.8 185.6 5.1 3.9-53.1-190.2 3.8-.7 54.4 194.7 5.1 3.9L576.9 491l3.8-.7 56.9 203.8 5.1 3.9-58.2-208.4 3.8-.7L647.5 702l5.1 3.9-60.8-217.5 3.7-.7 62 222.1 1.1.9.6-8.8-61.8-221.4v-14.1l62.7 224.2zm99.4-67l-.2-10.7 150.6-27.4.2 10.7-150.6 27.4zm52.3-101.7l16-2.9 2 64.7-16 2.9-2-64.7zm64.5-11.5l15.9-2.8 2 64.7-15.9 2.8-23-35.7 1.2 39.5-16 2.9-2-64.7 16-2.9 23 35.7-1.2-39.5zm44.4-7.2c4-2.4 8.4-4 13.4-4.9 6.4-1.1 12.1-.7 17 1.4 4.9 2.1 8.9 5.9 11.9 11.5l-14.9 9.3c-1.5-3.3-3.4-5.5-5.7-6.6-2.3-1.1-4.9-1.4-7.8-.9-2.4.4-4.5 1.3-6.5 2.6-1.9 1.3-3.6 2.9-4.9 4.9-1.3 2-2.3 4.3-3.1 6.9-.7 2.6-1 5.4-.9 8.4.1 2.7.5 5.2 1.3 7.5.8 2.2 1.8 4.1 3.2 5.5 1.4 1.5 3.1 2.5 5.2 3.1 2 .6 4.4.6 7 .2 1.6-.3 3.1-.7 4.5-1.4 1.5-.6 2.7-1.5 3.9-2.5 1.1-1 2.1-2.3 2.8-3.7.7-1.5 1.2-3.1 1.4-5.1l-13.1 2.4-.4-13 31.7-5.7c.1 3.4.1 6.6-.1 9.4-.2 2.8-.6 5.5-1.4 8.1-1 3.6-2.5 6.8-4.4 9.8-1.9 3-4.1 5.5-6.7 7.8-2.6 2.2-5.4 4.1-8.5 5.5-3.1 1.5-6.4 2.5-9.9 3.2-4.8.9-9.2.8-13.1-.1-4-1-7.4-2.7-10.4-5.2-2.9-2.5-5.2-5.7-6.9-9.6-1.7-3.9-2.6-8.4-2.8-13.5-.2-5 .5-9.8 1.9-14.3s3.5-8.5 6.3-11.9c2.6-3.8 6-6.8 10-9.1zm-13.5-25l.2 10.7-150.6 27.4-.2-10.7 150.6-27.4zm-164.9 74.7c1.4-4.5 3.5-8.5 6.3-12s6.1-6.4 10.1-8.8c4-2.4 8.4-4 13.4-4.9 6.4-1.1 12.1-.7 17 1.4 4.9 2.1 8.9 5.9 11.9 11.5l-14.9 9.3c-1.5-3.3-3.4-5.5-5.7-6.6-2.3-1.1-4.9-1.5-7.8-.9-2.4.4-4.5 1.3-6.5 2.6-1.9 1.3-3.6 2.9-4.9 4.9-1.3 2-2.3 4.3-3.1 6.9-.7 2.6-1 5.4-.9 8.4.1 2.7.5 5.2 1.3 7.5.8 2.2 1.8 4.1 3.2 5.5 1.4 1.5 3.1 2.5 5.2 3.1 2 .6 4.4.6 7 .2 1.6-.3 3.1-.7 4.5-1.4 1.5-.6 2.8-1.5 3.9-2.5s2.1-2.3 2.8-3.7c.7-1.4 1.2-3.1 1.4-5.1l-13.1 2.4-.4-13 31.7-5.7c.1 3.4.1 6.6-.1 9.4-.2 2.9-.6 5.6-1.4 8.1-1 3.6-2.5 6.8-4.4 9.8-1.9 3-4.1 5.5-6.7 7.8-2.6 2.2-5.4 4.1-8.5 5.5-3.1 1.5-6.4 2.5-9.9 3.2-4.8.9-9.2.8-13.1-.1-4-1-7.4-2.7-10.4-5.2-2.9-2.5-5.2-5.7-6.9-9.6-1.7-3.9-2.6-8.4-2.8-13.5-.2-5.3.4-10.1 1.8-14.5zm-43.9-10.7l17.4-3.1 25.4 60.5-17 3.1-4-10.6-22.8 4.1-3.3 11.9-17 3.1 21.3-69zM661 679.3L597.5 452v-14l64.3 230.2-.8 11.1zm-63.5-269.6l65.9 236-.8 11.2-65.1-233.1v-14.1zM247.4 522.8l-4.5-30.7-12.3 33.7-5.4 1-11.6-29.5-4.5 32.3-13.4 2.4 8.8-56.4 13.4-2.4 10.4 27.3 10.3-31.1L252 467l8.8 53.2-13.4 2.6zm55.1-9.9l-3.1-9-19.3 3.5-3.1 10.1-14.4 2.6 19.8-58.4 14.7-2.6 19.8 51.2-14.4 2.6zm45-8.1L334.6 486v21.1l-13.5 2.4v-54.8l21-3.8c2.9-.5 5.4-.5 7.6 0 2.2.5 3.9 1.4 5.3 2.7 1.4 1.3 2.5 2.9 3.2 4.8.7 1.9 1.1 4 1.1 6.3 0 4.2-1 7.7-2.9 10.7-1.9 2.9-4.7 5.2-8.4 6.8l16.3 19.5-16.8 3.1zm47.1-8.5l-12.9-18.8v21.1l-13.5 2.4v-54.8l21-3.8c2.9-.5 5.4-.5 7.6 0s3.9 1.4 5.3 2.7c1.4 1.3 2.5 2.9 3.2 4.8.7 1.9 1.1 4 1.1 6.4 0 4.2-1 7.7-2.9 10.7-1.9 2.9-4.7 5.2-8.4 6.8l16.3 19.5-16.8 3zm34.2-6.1l-13.5 2.4v-54.8l13.5-2.4v54.8zm44.1-7.9l-3.1-9-19.3 3.5-3.1 10.1-14.4 2.6 19.8-58.4 14.7-2.6 19.8 51.2-14.4 2.6zm68.6-35.1c-.2 2.4-.7 4.7-1.4 6.9-1 3-2.3 5.8-3.9 8.3-1.7 2.5-3.6 4.7-5.8 6.6-2.2 1.9-4.7 3.4-7.3 4.7-2.7 1.3-5.5 2.1-8.4 2.7-4 .7-7.7.7-11.1-.1-3.3-.8-6.2-2.3-8.6-4.4-2.4-2.1-4.2-4.8-5.6-8.2-1.3-3.3-2-7.1-2-11.4 0-4.3.7-8.3 2-12.1 1.3-3.8 3.2-7.2 5.6-10.1 2.4-3 5.3-5.4 8.7-7.5 3.4-2 7.2-3.4 11.4-4.1 5.4-1 10.2-.6 14.3 1.1 4.1 1.7 7.3 5 9.7 9.7l-12.8 7.9c-1.2-2.8-2.7-4.7-4.6-5.6-1.9-1-4.1-1.2-6.5-.8-2 .4-3.9 1.1-5.5 2.2-1.7 1.1-3.1 2.5-4.2 4.2-1.2 1.7-2.1 3.6-2.8 5.8-.7 2.2-1 4.6-1 7.2 0 2.3.3 4.4.9 6.3.6 1.9 1.4 3.4 2.6 4.7 1.1 1.2 2.6 2.1 4.3 2.6 1.7.5 3.7.5 5.9.1 1.3-.2 2.6-.6 3.9-1.2 1.2-.5 2.4-1.2 3.3-2.1 1-.9 1.8-1.9 2.4-3.2.6-1.2 1.1-2.7 1.3-4.3l-11.1 2v-11l26.8-4.8c-.1 2.8-.2 5.5-.5 7.9zm36.7-26.6l-16 2.9v9.2l15.1-2.7v12l-15.1 2.7v9.4l16-2.9v12.1l-29.5 5.3v-54.8l29.5-5.3v12.1zm-234.9 42.9c-1.4-.9-3.5-1.1-6.1-.6l-2.5.5v13.5l2.5-.5c2.7-.5 4.7-1.4 6.1-2.8 1.4-1.4 2.1-3.2 2.1-5.4 0-2.3-.7-3.8-2.1-4.7zm47.1-8.5c-1.4-.9-3.5-1.1-6.1-.6l-2.5.5v13.5l2.5-.5c2.7-.5 4.7-1.4 6.1-2.8 1.4-1.4 2.1-3.2 2.1-5.4s-.7-3.8-2.1-4.7zM110 413.1v13.6L144.7 551l5.1 3.9-39.6-141.7-.2-.1zm0 92.3l6.7 24.1 5 3.9-11.7-42.2v14.2zm0 18.9l2.5 1.9-2.5-8.8v6.9zm0-45.1l16.1 57.5 5.1 3.9L110 465v14.2zm113.1-133.8l-27.9-99.8v14.2l22.8 81.7 5.1 3.9zm306.1 244.5l7.5 27 5.1 3.9-11-39.5-1.6 8.6zm-387.5-372c.6-.9.4-2.1-.5-2.7-.9-.6-2.1-.4-2.7.5l-44.6 65.7-3-4.7-3.6 17.9 15.3-9.9-5.5-1.1 44.6-65.7zm-27.2 198.6L154 558.2l5.1 3.9-39.6-141.7-5-3.9zm411.6 190.7l.5 1.9 5.1 3.9-4-14.5-1.6 8.7zM110 452.9l25.4 90.9 5.1 3.9-30.4-109v14.2zm89.4-125.7l5 3.9-9.2-33v14.2l4.2 14.9z" />
+
+								<path fill="#4a3d3e"
+									d="M788.7 385.4c0-16-.6-32-9.4-43.3 1-2.3 1.6-4.8 1.6-7.4 0-8.6-6.1-15.8-14.1-17.5V232c-2.2 6.1-4.9 11.8-7.6 16.9v68.3c-8.1 1.8-14.1 9-14.1 17.6 0 2.6.5 5 1.5 7.2-1.1 3.9-1.8 8.9-2.2 15-5.9 1-10.2 4.3-10.2 8.3 0 4.7 6.2 8.5 13.9 8.5s13.9-3.8 13.9-8.6c0-3.8-4.1-7.1-9.8-8.1.2-2.9.4-5.4.7-7.6 2.9 2 6.4 3.2 10.2 3.2 4.3 0 8.3-1.6 11.4-4.1 6.2 9.4 6.7 22.7 6.7 36.8-5.8 1-10.1 4.3-10.1 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c-.2-3.8-4.4-7-10.2-8.1zM342.4 98.5c4.6 3.4 9.3 7.2 13.3 11.7-2.7-10.6-8.4-19.8-16.6-26.6-.9-.8-1.8-1.5-2.8-2.1V70.1v-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2v-.1c0-.1-.1-.2-.1-.2V68c0-.1-.1-.1-.2-.2 0 0 0-.1-.1-.1 0-.1-.1-.1-.2-.2l-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-30.4-23.3V1H297v36.9l-25.7-19.8-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1s-.1-.1-.2-.1-.1-.1-.2-.1-.1-.1-.2-.1-.1 0-.2-.1c-.1 0-.1 0-.2-.1h-.8-.1-.1H268.6h-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.1.1-.2.1l-.1.1c-.1 0-.1.1-.2.1l-.1.1-.2.2-.1.1-.2.2v.1c-.1.1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1 0 .1-.1.2v47.7c2.4-.9 5.4-1.6 7.6-1.9v-37L328.7 72v85.9l-6.1-4.7c.6-1.4.9-3 .9-4.5 0-6-4.7-9.9-10.6-8.9-5.9 1.1-10.6 6.8-10.6 12.7 0 6 4.7 9.9 10.6 8.9 1.8-.3 3.5-1.1 5-2.2l12.3 9.4h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2-.1.3-.1h.1c.1 0 .2-.1.2-.1s.1 0 .1-.1c.1 0 .1-.1.2-.1l.1-.1c.1 0 .1-.1.2-.1l.1-.1.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.1.1-.2v-.1c0-.1.1-.2.1-.2v-.1c0-.1 0-.2.1-.3v-.1-.3-.1-.3V91.3c2.6 2.2 4.6 4.6 6.4 7.2zM457.6 564.9c2.4 1.9 4.5 3.7 6.4 5.4 4-13.6 10.3-34.9 17.9-60.6l-8.4 1.5-15.9 53.7z" />
+
+								<path fill="#4a3d3e"
+									d="M325.9 84v-8.4c-9.3-3.7-19.9-4.7-30.9-2.7-19.6 3.6-38.1 16.5-49.5 34.6L0 466.5h9.3L252 111.7c10.3-16.4 26.9-28.1 44.4-31.3 10.6-1.9 20.8-.6 29.5 3.6zM741.9 140.2c7 5.4 14.1 12.1 19.8 20.8-5-14.7-13.6-27.5-25.4-37.4-5.9-4.9-12.4-8.9-19.4-12v-11.5-.3-.1-.3-.1c0-.1 0-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.1-.3v-.1c0-.1-.1-.2-.2-.3v-.1l-.2-.2s0-.1-.1-.1l-.2-.2-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-35.2-27.1V0h-7.6v64.3l-30.6-23.5-.1-.1-.1-.1c-.1 0-.1-.1-.2-.1l-.1-.1c-.1 0-.1-.1-.2-.1 0 0-.1 0-.1-.1-.1 0-.1-.1-.2-.1h-.1c-.1 0-.2 0-.2-.1h-.4-.4-.4-.4-.1c-.1 0-.2 0-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.3.1h-.1c-.1 0-.2.1-.2.1h-.1c-.1 0-.1.1-.2.2 0 0-.1 0-.1.1l-.2.2-.1.1s-.1.1-.1.2l-.1.1v.1s0 .1-.1.1l-.1.1c0 .1-.1.1-.1.2l-.1.1c0 .1-.1.1-.1.2 0 0 0 .1-.1.1 0 .1-.1.1-.1.2v.1c0 .1 0 .2-.1.2V87.4c2-.6 5.4-.9 7.6-.7V51.6l65.8 50.6v124.2l-8.9-6.9c.6-1.5 1-3.1 1-4.7 0-6-4.8-10.1-10.8-9-5.9 1.1-10.8 6.9-10.8 12.9 0 6.1 4.8 10.1 10.8 9 1.8-.3 3.6-1.1 5.1-2.2l15.2 11.6h.1c.1.1.3.2.5.3h.1c.1.1.3.1.4.2h.1c.2.1.3.1.5.1h1.1c.1 0 .2 0 .3-.1h.1c.1 0 .2 0 .3-.1 0 0 .1 0 .1-.1.1 0 .2-.1.2-.1.1 0 .1 0 .2-.1.1 0 .1-.1.2-.1s.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1l.3-.3.1-.1.2-.2v-.1l.1-.1.1-.1c0-.1.1-.1.1-.2 0 0 0-.1.1-.1 0-.1.1-.2.1-.2v-.1c0-.1.1-.2.1-.3v-.1c0-.1.1-.2.1-.3v-.1-.3-.1-113.9c5.2 2.5 10 5.7 14.5 9.4 3.8 3.2 7.2 6.8 10.3 10.6z" />
+
+								<path fill="#4a3d3e"
+									d="M706.2 115.8l.1-8c-13.3-3.8-27.8-4.4-42.7-1.6-44.9 8.2-85.1 46.1-97.7 92.1L519.3 356l-4.4 14.6-4.5.7 4.7-14.6L393.6 379c-5.1.9-5.2 4.7-.3 8.5 4.3 3.3 11 5.5 16.1 5.3.7 0 1.4-.1 2-.2L546.1 368c5.1-.9 5.2-4.7.3-8.5s-13.1-6.1-18.1-5.1l-.5.1c23.9-81 45-152.4 45.5-154.1 11.9-43.3 49.6-79 91.7-86.7 14.5-2.6 28.6-1.8 41.2 2.1zM349.9 183.6V227c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5s13.9-3.9 13.9-8.6c0-3.9-4.2-7.2-10-8.2v-53.6c-2.4 3.6-5 7.1-7.8 10.3zM371.5 619.3c-9-7.5-14-18.8-14-31.9v-56l-7.6 1.3v54.7c0 15.4 5.9 28.8 16.7 37.8 8.3 6.9 18.7 10.6 30 10.6h.7l-13-9.5c-4.7-1.5-9-3.8-12.8-7zM367.6 394.5c0-3.9-4.2-7.2-10-8.2V341l-7.6 1.4v44c-5.8 1-10 4.3-10 8.2 0 4.7 6.2 8.5 13.9 8.5 7.5 0 13.7-3.8 13.7-8.6zM440 597.5c-1.1-.8-2.3-1.3-3.7-1.5-.9-.1-1.8-.1-2.7.1-5.3 1-9.6 6.1-9.6 11.5 0 1.2.2 2.3.6 3.3.5 1.4 1.4 2.5 2.5 3.4 1.7 1.3 4 1.8 6.5 1.4 5.3-1 9.6-6.1 9.6-11.5 0-2.9-1.3-5.3-3.2-6.7z" />
+							</svg>
+						</div>
+						<div class='part part__end'>
+							<div class='about__content'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='story__tap'>
+				<div class='tap tap--left'>
+					<div class='inner'>
+						<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-arrow-left">
+								<line x1="20" y1="12" x2="4" y2="12"></line>
+								<polyline points="10 18 4 12 10 6"></polyline>
+							</svg></p>
+						<p class='x-small'>Prev</p>
+					</div>
+				</div>
+				<div class='tap tap--right'>
+					<div class='inner'>
+						<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-arrow-right">
+								<line x1="4" y1="12" x2="20" y2="12"></line>
+								<polyline points="14 6 20 12 14 18"></polyline>
+							</svg></p>
+						<p class='x-small'>Next</p>
+					</div>
+				</div>
+			</div>
+			<div class='story__steps'>
+				<div class='step is-visible' data-step='intro' data-act='1' data-time='99999' class='step--intro'>
+					<p>
+						<span class='step__text'></span>
+					</p>
+				</div>
+				<div class='step middle big' data-step='hello' data-act='1' data-time='' class='step--hello'>
+					<p>
+						<span class='step__text'>Here is every line from Ali Wong’s stand-up comedy special, <em>Baby
+								Cobra</em>.</span>
+					</p>
+				</div>
+				<div class='step middle' data-step='tutorial' data-act='1' data-time='99999' class='step--tutorial'>
+					<p>
+						<span class='step__text'>We’re going to explain why her hour-long routine is so great.<br>But first, know
+							that <span class=mobile>you can <mark>tap</mark> on the right to skip forward. Try it! </span><span
+								class=desktop>you can click on the right to skip forward. Or use the keyboard.<span
+									class=keyboard>&lt;</span><span class=keyboard>&gt;</span></span></span>
+					</p>
+				</div>
+				<div class='step center middle big' data-step='nice' data-act='1' data-time='2.5' class='step--nice'>
+					<p>
+						<span class='step__text'>Nice! Ok, back to Ali Wong’s comedy special...</span>
+					</p>
+				</div>
+				<div class='step center' data-step='nectar' data-act='1' data-time='' class='step--nectar'>
+					<p>
+						<span class='step__text'>We noticed something special about 50 minutes into the show.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='laughter' data-act='1' data-time='' class='step--laughter'>
+					<p>
+						<span class='step__text'>Each <span class=circle></span> marks noticeable audience laughter. The circle size
+							denotes how long the audience laughed.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='zoomout' data-act='1' data-time='' class='step--zoomout'>
+					<p>
+						<span class='step__text'>In fact, <span class=map>this moment</span> had the most laughter in the entire
+							show. We’ll call it the “laughter climax.”</span>
+					</p>
+				</div>
+				<div class='step middle big' data-step='form' data-act='1' data-time='' class='step--form'>
+					<p>
+						<span class='step__text'>Why was this moment so funny? After dissecting it, we’re going to show you how
+							form—the structure of the entire routine—played a big role. <mark>Form made the joke
+								funnier.</mark></span>
+					</p>
+				</div>
+				<div class='step center' data-step='mission' data-act='2' data-time='' class='step--mission'>
+					<p>
+						<span class='step__text'>We discovered this when we set out to understand the laughter climax.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='origin' data-act='2' data-time='' class='step--origin'>
+					<p>
+						<span class='step__text'>First, we looked for the beginning of the story that triggered it. With its
+							starting point, we could see how the story developed into the biggest laugh.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='about' data-act='2' data-time='' class='step--about'>
+					<p>
+						<span class='step__text'>The laughter climax is about <span class=map>conception.</span> We worked our way
+							backward to see how she arrived at that topic.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='backwards' data-act='2' data-time='' class='step--backwards'>
+					<p>
+						<span class='step__text'>The punchline about <span class=map>conception</span> was preceded by a reference
+							to <span class=map data-audio=hippies>being a hippy,</span> which was preceded by a description of <span
+								class=map data-audio=orgasm>a man’s face during orgasm.</span></span>
+					</p>
+				</div>
+				<div class='step ' data-step='slice' data-act='2' data-time='' class='step--slice'>
+					<p>
+						<span class='step__text'>We kept working backward, and we ended up slicing the entire routine into
+							self-contained topics, yielding a map of all subject matter in the comedy special.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='separate' data-act='2' data-time='' class='step--separate'>
+					<p>
+						<span class='step__text'>Yet when looking at the entire routine, we noticed that some of these topics
+							weren’t so separate. For example, let’s examine the first three minutes of the show.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='example1' data-act='2' data-time='' class='step--example1'>
+					<p>
+						<span class='step__text'>She has a whole digression about HPV that’s divided into three parts: <span
+								class=map data-audio=everyone>everyone has it,</span> <span class=map>men don’t get it,</span> and <span
+								class=map>Ali’s experience at the doctor.</span></span>
+					</p>
+				</div>
+				<div class='step ' data-step='example2' data-act='2' data-time='' class='step--example2'>
+					<p>
+						<span class='step__text'>But the reason she got to the topic of HPV was because of her <span
+								class=map>difficulty falling asleep.</span></span>
+					</p>
+				</div>
+				<div class='step ' data-step='example3' data-act='2' data-time='' class='step--example3'>
+					<p>
+						<span class='step__text'>And the reason she is talking about falling asleep: she’s <span
+								class=map>jealous</span> of other women who can fall asleep, as well as their <span class=map
+								data-audio=metabolism>metabolism</span> and <span class=map>inner thigh clearance.</span></span>
+					</p>
+				</div>
+				<div class='step ' data-step='general' data-act='2' data-time='' class='step--general'>
+					<p>
+						<span class='step__text'>Generally, a comedian’s stories will flow from one to another, but there’s often no
+							collective “point” The outcome of an hour-long stand-up routine is different from other long-form
+							compositions (e.g., films, books, plays).</span>
+					</p>
+				</div>
+				<div class='step ' data-step='macro' data-act='2' data-time='' class='step--macro'>
+					<p>
+						<span class='step__text'>But if you take a step back, Ali’s routine is structured around three cohesive
+							ideas: <span class=map>getting older,</span> <span class=map>marriage,</span> and <span
+								class=map>pregnancy.</span></span>
+					</p>
+				</div>
+				<div class='step ' data-step='study' data-act='3' data-time='' class='step--study'>
+					<p>
+						<span class='step__text'>Let’s put this into context. If you’re studying theatre, literature, or film, you
+							make sense of the work by breaking down its plot or form.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='beat' data-act='3' data-time='' class='step--beat'>
+					<p>
+						<span class='step__text'>In film, for example, the smallest, irreducible unit is the “beat,” described by
+							screenwriting instructor Robert McKee as “an exchange of behavior in action/reaction.”</span>
+					</p>
+				</div>
+				<div class='step center' data-step='bigger' data-act='3' data-time='' class='step--bigger'>
+					<p>
+						<span class='step__text'>Those small pieces—the beats—build a scene...</span>
+					</p>
+				</div>
+				<div class='step ' data-step='chapters' data-act='3' data-time='' class='step--chapters'>
+					<p>
+						<span class='step__text'>...and scenes build an act. We analyze the division and subdivision of a story to
+							understand what it’s about.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='favorite' data-act='3' data-time='' class='step--favorite'>
+					<p>
+						<span class='step__text'>And we find that we can do this with Ali Wong’s routine. Unlike some stand-up, it
+							adds up into something bigger. She’s telling not just 100 individual jokes, but a story that is
+							deliberately arranged, much like a comedy film or a TV series.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='spectrum' data-act='3' data-time='' class='step--spectrum'>
+					<p>
+						<span class='step__text'>We can think of comedy as a spectrum, from one-line jokes to a feature film.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='move' data-act='3' data-time='' class='step--move'>
+					<p>
+						<span class='step__text'>As we move from left to right, we have more topic continuity and use of structure.
+							The humor requires and builds off of context.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='ali' data-act='3' data-time='' class='step--ali'>
+					<p>
+						<span class='step__text'>Ali Wong’s stand-up is closer to the right of this spectrum, relying less on
+							one-liners and more on form-driven humor. It helps makes her routine great, and the jokes hit for
+							different reasons than we sometimes expect in stand-up. The laughter climax is one example of this.</span>
+					</p>
+				</div>
+				<div class='step center' data-step='zoom' data-act='4' data-time='' class='step--zoom'>
+					<p>
+						<span class='step__text'>Let’s zoom in again on the <span class=map>laughter climax</span> to see
+							why.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='outer' data-act='4' data-time='' class='step--outer'>
+					<p>
+						<span class='step__text'>We can tie this punchline to a larger three-minute story about <span
+								class=map>making babies.</span></span>
+					</p>
+				</div>
+				<div class='step center' data-step='callback' data-act='4' data-time='20' class='step--callback'>
+					<p>
+						<span class='step__text'>It also “calls back” to three other topics from earlier in the routine.</span>
+					</p>
+				</div>
+				<div class='step middle big' data-step='meta' data-act='4' data-time='' class='step--meta'>
+					<p>
+						<span class='step__text'>The laughter climax is <mark>meta funny.</mark> For 50 minutes, Ali has built a
+							universe, with each joke expanding the audience’s understanding of her world-view.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='connect' data-act='4' data-time='' class='step--connect'>
+					<p>
+						<span class='step__text'>The laughter climax connects the major themes of her routine, from <span
+								class=map>how she met her husband</span><span class=map></span> to her <span class=map>philosophy on
+								working.</span> When the punchline hits, the seemingly disparate stories snap together.</span>
+					</p>
+				</div>
+				<div class='step middle big' data-step='seinfeld' data-act='4' data-time='' class='step--seinfeld'>
+					<p>
+						<span class='step__text'>You get the same feeling when reaching the end of a great Seinfeld episode or any
+							multi-plot story—the delight in seeing all the plotlines converge into one (and realizing that the
+							storyteller was crafting a deeper idea all along).</span>
+					</p>
+				</div>
+				<div class='step ' data-step='robert' data-act='5' data-time='' class='step--robert'>
+					<p>
+						<span class='step__text'>Screenwriting educator <mark>Robert McKee</mark> devotes a large part of teaching
+							to story structure. Screenwriting is not about the exact words said (i.e., the jokes) but the pattern of
+							events and the meaning behind them. For example, here’s a point about structure that he makes in
+							screenwriting bible <em>Story</em>...</span>
+					</p>
+				</div>
+				<div class='step middle' data-step='quote' data-act='5' data-time='' class='step--quote'>
+					<p>
+						<span class='step__text'>“If, however, we were to put the content of their films aside for the moment, and
+							study the pure patterning of their events, we’d see that, like a melody without a lyric, like a silhouette
+							without a matrix, their story designs are powerfully charged with meaning.”<br>“Stripped of its surface of
+							characterization and location, story structure reveals his personal insight into the deepest patterns and
+							motivations for how and why things happen in this world––his map of life’s hidden order.”</span>
+					</p>
+				</div>
+				<div class='step center' data-step='structure' data-act='5' data-time='' class='step--structure'>
+					<p>
+						<span class='step__text'>This is what we get when stand-up isn’t just joke after joke after joke.</span>
+					</p>
+				</div>
+				<div class='step ' data-step='routine' data-act='5' data-time='' class='step--routine'>
+					<p>
+						<span class='step__text'>The structure of her routine leaves us with something more, much like a film short
+							or a play would. Her hour-long show is different because we see her world-view. We understand her
+							experience being pregnant.</span>
+					</p>
+				</div>
+				<div class='step middle big center' data-step='order' data-act='5' data-time='5' class='step--order'>
+					<p>
+						<span class='step__text'>We learn Ali’s “map of life’s hidden order.”</span>
+					</p>
+				</div>
+				<div class='step ' data-step='end' data-act='5' data-time='99999' class='step--end'>
+					<p>
+						<span class='step__text'></span>
+					</p>
+				</div>
+			</div>
+			</div>
+			<div class='about-btn switch'>
+				<span class='switch__btn'>?</span>
+			</div>
+		</section>
+		<section id='about'>
+			<div class='about__close'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-x-circle">
+					<circle cx="12" cy="12" r="10"></circle>
+					<line x1="15" y1="9" x2="9" y2="15"></line>
+					<line x1="9" y1="9" x2="15" y2="15"></line>
+				</svg></div>
+			<div class='about__content'>
+				<p class='small about__methodology'>Metholodogy: The data for this story was hand-collected with additional
+					effort from <a href=https://twitter.com/ProQuesAsker target=_blank>Amber Thomas</a> and <a
+						href=https://twitter.com/EarthTo_Caitlyn target=_blank>Caitlyn Ralph</a>. We converted the captions to csv
+					format, individually annotated the entire routine, then collectively reviewed and merged into a single data
+					set. Title art by <a href=http://friendsoftype.com/author/jason />Jason Wong</a>. Get in touch:
+					russell@polygraph.cool / <a href=https://twitter.com/russellviz target=_blank>Russell</a> or
+					matt@polygraph.cool / <a href=https://twitter.com/matthew_daniels target=_blank>Matt</a>.</p>
+				<p class='small about__who'>
+					<a href='https://pudding.cool' target=_blank>The Pudding</a> explains ideas debated in culture with visual
+					essays.
+				</p>
+				<div id='inject-footer'></div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<script src='https://pudding.cool/assets/scripts/d3.v4.10.2+jetpack.min.js'></script>
+	<script src='assets/scripts/waud.min.js'></script>
+	<script src='bundle.js?version=1526389545314' async></script>
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js?version=1526389545314' async></script>
+</body>
+
+</html>

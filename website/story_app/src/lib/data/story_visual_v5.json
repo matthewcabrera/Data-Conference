@@ -1,0 +1,867 @@
+{
+  "story_id": "wealth-should-buy-health-v5",
+  "title": "Wealth Should Buy Health. Why Doesn't It?",
+  "dek": "Across 217 countries, income predicts a lot. The remaining gap is where institutions matter most.",
+  "beats": [
+    {
+      "beat_id": "b1_curve_mechanism",
+      "label": "Beat 1",
+      "headline": "Income predicts a lot, not everything",
+      "body": "The line is the benchmark. The distance to the line is the story.",
+      "scene_id": "scene01_mechanism",
+      "aria_summary": "Global scatter introduces expectation line and residual distance.",
+      "annotations": [
+        {
+          "id": "b1_a1",
+          "text": "Income explains about two-thirds",
+          "x": 0.57,
+          "y": 0.2,
+          "dx": 0.08,
+          "dy": -0.06,
+          "anchor": "start"
+        },
+        {
+          "id": "b1_a2",
+          "text": "Typical vs tail distance",
+          "x": 0.33,
+          "y": 0.84,
+          "dx": 0.1,
+          "dy": 0.0,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b1_curve_mechanism_l01",
+          "headline": "b1_curve_mechanism_l01",
+          "body": "Before any country appears, start with the pattern.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l02",
+          "headline": "b1_curve_mechanism_l02",
+          "body": "Richer countries usually live longer. That is one of the most stable patterns in global development data.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l03",
+          "headline": "b1_curve_mechanism_l03",
+          "body": "Now hold that picture for a second.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l04",
+          "headline": "b1_curve_mechanism_l04",
+          "body": "If this were a perfect world, every dot would sit on a smooth curve: one level of income, one expected level of survival. But real countries do not line up that neatly.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l05",
+          "headline": "b1_curve_mechanism_l05",
+          "body": "In 2010, income explains about two-thirds of cross-country variation in life expectancy in this dataset. That is substantial. It is also incomplete.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l06",
+          "headline": "b1_curve_mechanism_l06",
+          "body": "That remaining third is where countries with similar income end up with very different life chances.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l07",
+          "headline": "b1_curve_mechanism_l07",
+          "body": "Treat the line as a benchmark, not a verdict. The key quantity is the vertical distance between a country and that line.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l08",
+          "headline": "b1_curve_mechanism_l08",
+          "body": "Above the line means people are living longer than income alone predicts.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l09",
+          "headline": "b1_curve_mechanism_l09",
+          "body": "Below the line means they are living shorter lives than income alone predicts.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l10",
+          "headline": "b1_curve_mechanism_l10",
+          "body": "This is where scale matters.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l11",
+          "headline": "b1_curve_mechanism_l11",
+          "body": "A typical country is not exactly on the line. In 2010, the median absolute life-expectancy gap is about 2.7 years. So modest divergence is normal.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l12",
+          "headline": "b1_curve_mechanism_l12",
+          "body": "But the tails are not modest. One in ten countries sits more than about 7.8 years away from expectation. At the extremes, the spread is wider still: around +11 years on the high side and about -18 years on the low side.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l13",
+          "headline": "b1_curve_mechanism_l13",
+          "body": "Here is the premise:",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l14",
+          "headline": "b1_curve_mechanism_l14",
+          "body": "income is powerful,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l15",
+          "headline": "b1_curve_mechanism_l15",
+          "body": "income is not destiny,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l16",
+          "headline": "b1_curve_mechanism_l16",
+          "body": "and the gap is big enough to matter in real lives.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b1_curve_mechanism_l17",
+          "headline": "b1_curve_mechanism_l17",
+          "body": "Once that frame is clear, we can track countries the way this chart tracks them: not by rank alone, but by distance from expectation and movement over time.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Model fit (2010)",
+          "value": "R^2 0.66",
+          "note": "Income explains much, not all.",
+          "claim_id": "q02"
+        },
+        {
+          "label": "Typical distance",
+          "value": "2.7 years",
+          "note": "Median absolute gap",
+          "claim_id": "q03"
+        },
+        {
+          "label": "Tail distance",
+          "value": "7.8 years",
+          "note": "90th percentile absolute gap",
+          "claim_id": "q04"
+        },
+        {
+          "label": "2010 extremes",
+          "value": "+11.0 / -17.8",
+          "note": "Residual gap range",
+          "claim_id": "q05"
+        }
+      ]
+    },
+    {
+      "beat_id": "b2_rwanda_trajectory",
+      "label": "Beat 2",
+      "headline": "Rwanda bends the trajectory",
+      "body": "The reveal is time-based first, model-based second.",
+      "scene_id": "scene02_rwanda",
+      "aria_summary": "Rwanda under-5 reveal and trajectory crossing above expectation.",
+      "annotations": [
+        {
+          "id": "b2_a1",
+          "text": "Pause: 2006 -> 2015",
+          "x": 0.14,
+          "y": 0.22,
+          "dx": 0.04,
+          "dy": 0.0,
+          "anchor": "start"
+        },
+        {
+          "id": "b2_a2",
+          "text": "Trajectory moves above expectation",
+          "x": 0.63,
+          "y": 0.36,
+          "dx": 0.07,
+          "dy": -0.07,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b2_rwanda_trajectory_l01",
+          "headline": "b2_rwanda_trajectory_l01",
+          "body": "2006: 98.3.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l02",
+          "headline": "b2_rwanda_trajectory_l02",
+          "body": "2015: 42.0.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l03",
+          "headline": "b2_rwanda_trajectory_l03",
+          "body": "That drop is the first fact.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l04",
+          "headline": "b2_rwanda_trajectory_l04",
+          "body": "The second fact is where this period starts. Rwanda enters the 2006-2015 window after a decade of state and health-system reconstruction following the mid-1990s collapse. The baseline is not a mature, fully resourced system. It is a country rebuilding capacity while still carrying severe mortality burden.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l05",
+          "headline": "b2_rwanda_trajectory_l05",
+          "body": "So the movement in this decade is not just \"improvement happened.\" It is improvement happening from a difficult starting point, and happening across multiple frontline outcomes at once.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l06",
+          "headline": "b2_rwanda_trajectory_l06",
+          "body": "In this dataset:",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l07",
+          "headline": "b2_rwanda_trajectory_l07",
+          "body": "maternal mortality drops from 534 to 290,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l08",
+          "headline": "b2_rwanda_trajectory_l08",
+          "body": "infant mortality drops from 62.6 to 31.4,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l09",
+          "headline": "b2_rwanda_trajectory_l09",
+          "body": "under-5 mortality drops from 98.3 to 42.0,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l10",
+          "headline": "b2_rwanda_trajectory_l10",
+          "body": "and life expectancy rises from 57.2 to 66.7.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l11",
+          "headline": "b2_rwanda_trajectory_l11",
+          "body": "More important than one endpoint is the trajectory relative to expectation. Rwanda starts slightly below the income-based line and moves above it by 2010, then farther above by 2015.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l12",
+          "headline": "b2_rwanda_trajectory_l12",
+          "body": "That does not prove one policy caused one outcome.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l13",
+          "headline": "b2_rwanda_trajectory_l13",
+          "body": "It does show the gap can move in the favorable direction for a sustained stretch, not only in a one-year spike.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b2_rwanda_trajectory_l14",
+          "headline": "b2_rwanda_trajectory_l14",
+          "body": "And it shows what \"institutions matter\" looks like in practice: the same income level can deliver different survival odds depending on how care is financed, organized, staffed, and reached by households.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Under-5 mortality",
+          "value": "98.3 -> 42.0",
+          "note": "Rwanda, 2006 to 2015",
+          "claim_id": "q08"
+        }
+      ]
+    },
+    {
+      "beat_id": "b3_vietnam_brief",
+      "label": "Beat 3",
+      "headline": "A second country confirms the pattern",
+      "body": "Rwanda is not a one-case narrative.",
+      "scene_id": "scene03_vietnam",
+      "aria_summary": "Vietnam and Rwanda highlighted above the same expectation line.",
+      "annotations": [
+        {
+          "id": "b3_a1",
+          "text": "Vietnam: large positive gap",
+          "x": 0.66,
+          "y": 0.28,
+          "dx": 0.1,
+          "dy": -0.04,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b3_vietnam_brief_l01",
+          "headline": "b3_vietnam_brief_l01",
+          "body": "Rwanda is not the only dot on that side.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b3_vietnam_brief_l02",
+          "headline": "b3_vietnam_brief_l02",
+          "body": "In 2010, Vietnam sits roughly 11 years above its income-based life-expectancy expectation.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b3_vietnam_brief_l03",
+          "headline": "b3_vietnam_brief_l03",
+          "body": "Vietnam comes from a different regional and institutional path, but the signal is the same: above the line.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b3_vietnam_brief_l04",
+          "headline": "b3_vietnam_brief_l04",
+          "body": "Vietnam is also not a one-year outlier in this series. It starts the decade far above the line and remains far above it by 2015.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b3_vietnam_brief_l05",
+          "headline": "b3_vietnam_brief_l05",
+          "body": "That brief confirmation matters because it lowers the chance that Rwanda is a one-case narrative. We are looking at a pattern that can appear in more than one place, through more than one pathway.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Vietnam 2010 gap",
+          "value": "+11.0 years",
+          "note": "Above expected life expectancy",
+          "claim_id": "q12"
+        }
+      ]
+    },
+    {
+      "beat_id": "b4_us_comparison_arc",
+      "label": "Beat 4",
+      "headline": "The richest country still sits below the line",
+      "body": "Money and delivery are different things.",
+      "scene_id": "scene04_us",
+      "aria_summary": "U.S. below-line position, decade persistence, and peer comparison cues.",
+      "annotations": [
+        {
+          "id": "b4_a1",
+          "text": "U.S. remains below expectation",
+          "x": 0.72,
+          "y": 0.39,
+          "dx": 0.07,
+          "dy": -0.06,
+          "anchor": "start"
+        },
+        {
+          "id": "b4_a2",
+          "text": "Peer dots cluster higher",
+          "x": 0.77,
+          "y": 0.3,
+          "dx": 0.06,
+          "dy": -0.06,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b4_us_comparison_arc_l01",
+          "headline": "b4_us_comparison_arc_l01",
+          "body": "Now shift to a country that should, on wealth alone, be difficult to place below the line.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l02",
+          "headline": "b4_us_comparison_arc_l02",
+          "body": "In 2010, the United States records life expectancy around 78.5 years, while the income-based expectation is about 81.1.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l03",
+          "headline": "b4_us_comparison_arc_l03",
+          "body": "The point is not that the U.S. is low-income and constrained. It is one of the richest countries in the dataset period.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l04",
+          "headline": "b4_us_comparison_arc_l04",
+          "body": "And within a tight band of similarly wealthy countries, the U.S. sits near the bottom on life expectancy.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l05",
+          "headline": "b4_us_comparison_arc_l05",
+          "body": "If this were only a one-year anomaly, the gap would quickly close.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l06",
+          "headline": "b4_us_comparison_arc_l06",
+          "body": "It does not.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l07",
+          "headline": "b4_us_comparison_arc_l07",
+          "body": "The U.S. life-expectancy distance from expectation is below the line in 2006, still below in 2010, and farther below again by 2015.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l08",
+          "headline": "b4_us_comparison_arc_l08",
+          "body": "That gives us a decade pattern, not a snapshot.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l09",
+          "headline": "b4_us_comparison_arc_l09",
+          "body": "The same pattern appears in child and maternal signals.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l10",
+          "headline": "b4_us_comparison_arc_l10",
+          "body": "U.S. maternal mortality is flat at 14.0 in 2006 and 14.0 in 2015, while high-income peers decline on average.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l11",
+          "headline": "b4_us_comparison_arc_l11",
+          "body": "U.S. infant mortality improves over the decade, but by less than the average high-income peer reduction.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l12",
+          "headline": "b4_us_comparison_arc_l12",
+          "body": "U.S. under-5 mortality also improves, but again more slowly than peer averages.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l13",
+          "headline": "b4_us_comparison_arc_l13",
+          "body": "One concrete comparator: Canada moves maternal mortality from 9.0 to 7.0 over the same period.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l14",
+          "headline": "b4_us_comparison_arc_l14",
+          "body": "None of this means income is irrelevant. The U.S. still has resources most countries do not.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l15",
+          "headline": "b4_us_comparison_arc_l15",
+          "body": "It means money and delivery are different things.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l16",
+          "headline": "b4_us_comparison_arc_l16",
+          "body": "A country can spend heavily while the care system remains fragmented.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l17",
+          "headline": "b4_us_comparison_arc_l17",
+          "body": "Coverage can expand while access still varies by geography, cost, and continuity.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l18",
+          "headline": "b4_us_comparison_arc_l18",
+          "body": "A wealthy country can spend heavily and still leave avoidable gaps in prevention and early intervention.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b4_us_comparison_arc_l19",
+          "headline": "b4_us_comparison_arc_l19",
+          "body": "In this chart language, that entire institutional complexity shows up as one simple geometric fact: the dot stays below the line.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "US 2010",
+          "value": "78.5 vs 81.1",
+          "note": "Actual vs expected life expectancy",
+          "claim_id": "q14"
+        },
+        {
+          "label": "Maternal (US)",
+          "value": "14.0 -> 14.0",
+          "note": "Flat over the decade",
+          "claim_id": "q17"
+        },
+        {
+          "label": "Maternal (CAN)",
+          "value": "9.0 -> 7.0",
+          "note": "Named comparator",
+          "claim_id": "q21"
+        }
+      ]
+    },
+    {
+      "beat_id": "b5_mirror_case",
+      "label": "Beat 5",
+      "headline": "The negative tail is structural",
+      "body": "Different profile. Same failure.",
+      "scene_id": "scene05_mirror",
+      "aria_summary": "Equatorial Guinea deep underperformance and Sierra Leone maternal floor marker.",
+      "annotations": [
+        {
+          "id": "b5_a1",
+          "text": "Large negative distance",
+          "x": 0.4,
+          "y": 0.58,
+          "dx": 0.08,
+          "dy": -0.05,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b5_mirror_case_l01",
+          "headline": "b5_mirror_case_l01",
+          "body": "At the opposite end of the distribution, Equatorial Guinea shows how large the negative distance can become.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l02",
+          "headline": "b5_mirror_case_l02",
+          "body": "In 2010, life expectancy is about 55.9 years against an income-based expectation near 73.7.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l03",
+          "headline": "b5_mirror_case_l03",
+          "body": "That is not a small miss. It is a structural miss.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l04",
+          "headline": "b5_mirror_case_l04",
+          "body": "It is the kind of distance no income ranking can justify on its own.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l05",
+          "headline": "b5_mirror_case_l05",
+          "body": "Supporting indicators move in the same direction: infant and under-5 mortality are far worse than income-based expectation in the same year.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l06",
+          "headline": "b5_mirror_case_l06",
+          "body": "Then the floor appears.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l07",
+          "headline": "b5_mirror_case_l07",
+          "body": "Sierra Leone records maternal mortality of 1,630 per 100,000 in 2010.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l08",
+          "headline": "b5_mirror_case_l08",
+          "body": "That marks the floor of this distribution in 2010.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l09",
+          "headline": "b5_mirror_case_l09",
+          "body": "Different country profile.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l10",
+          "headline": "b5_mirror_case_l10",
+          "body": "Different income path.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b5_mirror_case_l11",
+          "headline": "b5_mirror_case_l11",
+          "body": "Same failure.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Equatorial Guinea 2010",
+          "value": "55.9 vs 73.7",
+          "note": "Actual vs expected",
+          "claim_id": "q22"
+        },
+        {
+          "label": "Sierra Leone floor",
+          "value": "1630",
+          "note": "Maternal mortality per 100,000",
+          "claim_id": "q24"
+        }
+      ]
+    },
+    {
+      "beat_id": "b6_what_changes_gap",
+      "label": "Beat 6",
+      "headline": "Compression happens, divergence persists",
+      "body": "The spread tightens, but does not collapse.",
+      "scene_id": "scene06_compression",
+      "aria_summary": "Global year scrubber with distribution strip compression over 2006 to 2015.",
+      "annotations": [
+        {
+          "id": "b6_a1",
+          "text": "Median gap narrows over time",
+          "x": 0.31,
+          "y": 0.84,
+          "dx": 0.09,
+          "dy": 0,
+          "anchor": "start"
+        },
+        {
+          "id": "b6_a2",
+          "text": "Tail risk remains",
+          "x": 0.68,
+          "y": 0.84,
+          "dx": 0.06,
+          "dy": -0.03,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b6_what_changes_gap_l01",
+          "headline": "b6_what_changes_gap_l01",
+          "body": "So what moves these gaps?",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l02",
+          "headline": "b6_what_changes_gap_l02",
+          "body": "From 2006 to 2015, global distance from the line compresses somewhat:",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l03",
+          "headline": "b6_what_changes_gap_l03",
+          "body": "median absolute gap moves from about 3.1 years to about 2.7,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l04",
+          "headline": "b6_what_changes_gap_l04",
+          "body": "90th-percentile distance drops from about 9.3 to about 7.3,",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l05",
+          "headline": "b6_what_changes_gap_l05",
+          "body": "and mean absolute distance also declines.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l06",
+          "headline": "b6_what_changes_gap_l06",
+          "body": "So the world in this dataset gets somewhat less dispersed relative to income expectation.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l07",
+          "headline": "b6_what_changes_gap_l07",
+          "body": "But that compression is partial, not transformational.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l08",
+          "headline": "b6_what_changes_gap_l08",
+          "body": "Large positive and negative divergences remain present in every year. The distribution does not collapse around zero.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l09",
+          "headline": "b6_what_changes_gap_l09",
+          "body": "This is not an abstract prompt. In this data, upward movers usually do not improve in only one place. They improve across connected survival pathways: maternal care, infant outcomes, under-5 outcomes, and life expectancy moving together rather than in isolation.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l10",
+          "headline": "b6_what_changes_gap_l10",
+          "body": "That pattern suggests system-wide improvement, not a single isolated intervention.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l11",
+          "headline": "b6_what_changes_gap_l11",
+          "body": "A useful way to read the chart is to ask three operational questions.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l12",
+          "headline": "b6_what_changes_gap_l12",
+          "body": "First, can people enter care early and reliably through primary care rather than only at crisis point?",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l13",
+          "headline": "b6_what_changes_gap_l13",
+          "body": "Second, when higher-acuity care is needed, do referral chains actually connect local facilities to district and hospital capacity in time?",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l14",
+          "headline": "b6_what_changes_gap_l14",
+          "body": "Third, does financing protect continuity, or do cost shocks force households to delay care until conditions are harder and more expensive to treat?",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l15",
+          "headline": "b6_what_changes_gap_l15",
+          "body": "Those are not ideological questions. They are system design questions, and they are measurable in outcomes over time.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l16",
+          "headline": "b6_what_changes_gap_l16",
+          "body": "The contrast across these countries makes that concrete.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l17",
+          "headline": "b6_what_changes_gap_l17",
+          "body": "Rwanda's movement above expectation is accompanied by broad frontline improvement.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l18",
+          "headline": "b6_what_changes_gap_l18",
+          "body": "The U.S. remains below expectation over a decade despite high aggregate resources.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l19",
+          "headline": "b6_what_changes_gap_l19",
+          "body": "Equatorial Guinea sits far below expectation, and Sierra Leone shows what the floor can look like when care systems fail.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l20",
+          "headline": "b6_what_changes_gap_l20",
+          "body": "None of this yields a universal recipe that copies cleanly from one country to another.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l21",
+          "headline": "b6_what_changes_gap_l21",
+          "body": "But it does narrow where to look: conversion capacity, referral reliability, and continuity in maternal-child pathways are where gains are most likely to compound.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l22",
+          "headline": "b6_what_changes_gap_l22",
+          "body": "That persistence is the governance burden: which arrangements move dots upward, which arrangements stall despite resources, and which reforms reduce the deadliest outcomes at the bottom.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b6_what_changes_gap_l23",
+          "headline": "b6_what_changes_gap_l23",
+          "body": "You can watch that burden accumulate or ease, year by year, on the same line.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Median abs gap",
+          "value": "3.1 -> 2.7",
+          "note": "2006 to 2015",
+          "claim_id": "q25"
+        },
+        {
+          "label": "P90 abs gap",
+          "value": "9.2 -> 7.3",
+          "note": "Tail compression",
+          "claim_id": "q26"
+        }
+      ]
+    },
+    {
+      "beat_id": "b7_close",
+      "label": "Beat 7",
+      "headline": "Progress is governable",
+      "body": "What happens next is a governance question, not a math question.",
+      "scene_id": "scene07_close",
+      "aria_summary": "Final global settle with constrained-hope close.",
+      "annotations": [
+        {
+          "id": "b7_a1",
+          "text": "The hopeful reading is constrained",
+          "x": 0.54,
+          "y": 0.17,
+          "dx": 0.08,
+          "dy": -0.05,
+          "anchor": "start"
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "b7_close_l01",
+          "headline": "b7_close_l01",
+          "body": "The hopeful reading is not that progress is automatic. It is that progress is governable.",
+          "visual_cue": "script_line"
+        },
+        {
+          "card_id": "b7_close_l02",
+          "headline": "b7_close_l02",
+          "body": "What happens next is a governance question, not a math question.",
+          "visual_cue": "script_line"
+        }
+      ],
+      "detail_cards": [
+        {
+          "label": "Read",
+          "value": "Constrained hope",
+          "note": "Progress is governable."
+        }
+      ]
+    }
+  ],
+  "methods_endnote": {
+    "source_doc": "docs/story_context_endnotes_v5.md",
+    "bullets": [
+      "Scope: 217 countries, 2006-2015, using transformed MDG-aligned data in website/data/.",
+      "Frame: country-year outcomes are compared to income-based expectations using life expectancy as the persistent benchmark.",
+      "This is descriptive, not causal. Residual gaps identify over- and under-performance but do not isolate mechanisms.",
+      "Country averages hide within-country inequality and measurement limits.",
+      "External context citations are documented in docs/story_context_endnotes_v5.md."
+    ]
+  },
+  "theme": {
+    "colors": {
+      "ink": "#f2eaf5",
+      "muted": "#b99ac8",
+      "accent": "#ff32c8",
+      "positive": "#76d443",
+      "negative": "#ff32c8",
+      "paper": "#130014",
+      "grid": "#4f3157",
+      "dark_bg": "#130014"
+    },
+    "type": {
+      "headline": "Newsreader",
+      "body": "Newsreader",
+      "ui": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "motion": {
+      "base_ms": 420,
+      "slow_ms": 620,
+      "easing": "cubic-bezier(0.2, 0, 0, 1)"
+    }
+  },
+  "version": "v5.0.0"
+}

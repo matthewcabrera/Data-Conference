@@ -1,0 +1,259 @@
+{
+  "root_url": "https://pudding.cool/2019/04/eu-regions/",
+  "allowed_prefixes": [
+    "/2019/04/eu-regions/",
+    "/_app/",
+    "/assets/",
+    "/common/"
+  ],
+  "archived_count": 37,
+  "max_files": 1200,
+  "archived": [
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/",
+      "content_type": "text/html",
+      "path": "2019/04/eu-regions/index.html",
+      "bytes": 61367
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-blank-haze-2013-atlas@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/HU-blank-haze-2013-atlas@2x.png",
+      "bytes": 301708
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-blank-haze-2016-atlas@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/HU-blank-haze-2016-atlas@2x.png",
+      "bytes": 296624
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-choro-2013-haze@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/HU-choro-2013-haze@2x.png",
+      "bytes": 370423
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-choro-2017-haze-connection@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/HU-choro-2017-haze-connection@2x.png",
+      "bytes": 384726
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/LT-choro-2013-haze@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/LT-choro-2013-haze@2x.png",
+      "bytes": 184780
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/LT-choro-2017-haze@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/LT-choro-2017-haze@2x.png",
+      "bytes": 214025
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/PL-choro-2013-haze@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/PL-choro-2013-haze@2x.png",
+      "bytes": 438248
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/img/PL-choro-2017-haze@2x.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/img/PL-choro-2017-haze@2x.png",
+      "bytes": 440254
+    },
+    {
+      "url": "https://pudding.cool/assets/scripts/d3.v4.12.0+jetpack.min.js",
+      "content_type": "application/javascript",
+      "path": "assets/scripts/d3.v4.12.0+jetpack.min.js",
+      "bytes": 231265
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/bundle.js?version=1555594288148",
+      "content_type": "application/javascript",
+      "path": "2019/04/eu-regions/bundle.js__q_version_1555594288148",
+      "bytes": 160322
+    },
+    {
+      "url": "https://pudding.cool/assets/scripts/pudding-footer.js",
+      "content_type": "application/javascript",
+      "path": "assets/scripts/pudding-footer.js",
+      "bytes": 17474
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/social/social-facebook.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/social/social-facebook.png",
+      "bytes": 238134
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/social/social-twitter.png",
+      "content_type": "image/png",
+      "path": "2019/04/eu-regions/assets/social/social-twitter.png",
+      "bytes": 180812
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/canela/Canela-Light-Web.woff2",
+      "bytes": 33345
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/canela/Canela-Light-Web.woff",
+      "bytes": 43334
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/canela/Canela-Bold-Web.woff2",
+      "bytes": 34669
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/canela/Canela-Bold-Web.woff",
+      "bytes": 45034
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/publico/PublicoText-Roman-Web.woff2",
+      "bytes": 52393
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/publico/PublicoText-Roman-Web.woff",
+      "bytes": 72584
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/publico/PublicoText-Bold-Web.woff2",
+      "bytes": 57717
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/publico/PublicoText-Bold-Web.woff",
+      "bytes": 78351
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/publico/PublicoText-Italic-Web.woff2",
+      "bytes": 55105
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/publico/PublicoText-Italic-Web.woff",
+      "bytes": 75937
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2",
+      "bytes": 41233
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Light-Web.woff",
+      "bytes": 57334
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+      "bytes": 39185
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff",
+      "bytes": 54553
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2",
+      "bytes": 41337
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff",
+      "bytes": 57235
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+      "content_type": "font/woff2",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+      "bytes": 42413
+    },
+    {
+      "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff",
+      "content_type": "font/woff",
+      "path": "assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff",
+      "bytes": 58224
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/data/nuts2_gdppps17_topo.json",
+      "content_type": "application/json",
+      "path": "2019/04/eu-regions/assets/data/nuts2_gdppps17_topo.json",
+      "bytes": 222823
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/data/nuts0_gdppps17_topo.json",
+      "content_type": "application/json",
+      "path": "2019/04/eu-regions/assets/data/nuts0_gdppps17_topo.json",
+      "bytes": 99221
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/data/land.json",
+      "content_type": "application/json",
+      "path": "2019/04/eu-regions/assets/data/land.json",
+      "bytes": 728852
+    },
+    {
+      "url": "https://pudding.cool/2019/04/eu-regions/assets/data/capitals-gdppps17.json",
+      "content_type": "application/json",
+      "path": "2019/04/eu-regions/assets/data/capitals-gdppps17.json",
+      "bytes": 38903
+    },
+    {
+      "url": "https://pudding.cool/assets/data/stories.json",
+      "content_type": "application/json",
+      "path": "assets/data/stories.json",
+      "bytes": 32929
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://pudding.cool/assets/scripts/\\\"https:/pudding.cool/common/assets/thumbnails/640/\"+t.image+\".jpg\\",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://pudding.cool/common/assets/misc/icon.png",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "skipped_external_count": 11,
+  "skipped_external_examples": [
+    "http://appsso.eurostat.ec.europa.eu/nui/show.do?query=BOOKMARK_DS-513634_QID_10FA3B0_UID_-3F171EB0&layout=UNIT,L,X,0;GEO,L,Y,0;TIME,C,Z,0;INDICATORS,C,Z,1;&zSelection=DS-513634TIME,2017;DS-513634INDICATORS,OBS_FLAG;&rankName1=TIME_1_0_-1_2&rankName2=INDICATORS_1_2_-1_2&rankName3=UNIT_1_2_0_0&rankName4=GEO_1_2_0_1&rStp=&cStp=&rDCh=&cDCh=&rDM=true&cDM=true&footnes=false&empty=false&wai=false&time_mode=NONE&time_most_recent=false&lang=EN&cfo=%23%23%23%2C%23%23%23.%23%23%23",
+    "http://twitter.com/puddingviz",
+    "https://connect.facebook.net/en_US/sdk.js",
+    "https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts",
+    "https://facebook.com/pudding.viz/",
+    "https://gc.zgo.at/count.js",
+    "https://github.com/the-pudding/eu-regions/tree/master/src/assets/data",
+    "https://platform.twitter.com/widgets.js",
+    "https://twitter.com/puddingviz/",
+    "https://www.instagram.com/pudding.cool",
+    "https://www.patreon.com/thepudding"
+  ]
+}

@@ -1,0 +1,33 @@
+
+Zachary Dodds
+
+
+Sat, Feb 7, 4:34 PM (4 days ago)
+
+
+
+
+to Jairo, me
+
+
+
+
+
+
+Hi Jairo and Matthew -
+
+Thank you for this reminder! My apologies for the delay...
+
+Here is the note from one of the organizers of the DIODS conference (in hopes that you would join! :)
+
+Note that you are 100% welcome to add more data (that would be very cool...)
+That said, it might be good to first do an exploration with this data -- as a baseline -- and then explore new connections/directions...
+
+Also, the slides from the 2025 challenge (which is what was proposed) are attached -- with some initial questions to consider (but they're meant only to be a springboard).
+
+MY take is to lean into what LLMs can do (and can't, to be sure), and pull together both some data-analyses and your own personal insights, workarounds, and practices for making LLMs a "worthy assistant" to a data scientist's efforts...
+
+Many thanks to you both!!
+
+All the best,
+Zach

@@ -1,0 +1,63 @@
+:root {
+  /* ── Dark editorial palette (democracy-inspired) ── */
+  --ink: #f0e3f4;
+  --ink-soft: #c9b4d3;
+  --ink-muted: #9f88aa;
+  --paper: #0e0011;
+  --panel: #1a0020;
+  --panel-strong: #2a1234;
+  --grid: #3d2943;
+  --grid-soft: #2e1d36;
+  --accent: #b10c73;
+  --accent-soft: #d765ab;
+  --accent-glow: rgba(177, 12, 115, 0.35);
+  --positive: #76d443;
+  --positive-soft: #4a9727;
+  --negative: #ff32c8;
+  --negative-soft: #b10c73;
+  --dark-bg: #0a000d;
+
+  /* ── Typography stack ── */
+  --font-headline: "Newsreader", "Times New Roman", serif;
+  --font-body: "Newsreader", "Times New Roman", serif;
+  --font-ui: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  /* ── Fluid sizing ── */
+  --size-hero: clamp(2.6rem, 5.2vw, 4.35rem);
+  --size-h2: clamp(1.7rem, 2.5vw, 2.45rem);
+  --size-body: clamp(1.18rem, 1.45vw, 1.52rem);
+  --size-label: clamp(0.7rem, 0.8vw, 0.78rem);
+  --line-body: 1.5;
+  --line-copy: 1.42;
+
+  /* ── Motion ── */
+  --motion-micro: 180ms;
+  --motion-fast: 260ms;
+  --motion-base: 420ms;
+  --motion-slow: 550ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* ── Surfaces ── */
+  --shadow-card: 0 20px 44px rgba(12, 0, 16, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 10px 30px rgba(12, 0, 16, 0.28);
+  --radius-lg: 18px;
+  --radius-card: 14px;
+  --radius-sm: 8px;
+
+  /* ── Card surfaces ── */
+  --card-bg: rgba(49, 25, 61, 0.92);
+  --card-border: #7c5390;
+  --card-text: #f0e4f5;
+  --card-kicker: #dca7eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-micro: 0ms;
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+  }
+}

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang='en' data-version='1532027506003'>
+
+<head>
+
+	<title>Making Data Viz Without SVG Using D3 and Flexbox</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='Bye bye tricky alignments' />
+	<meta name='news_keywords' content='flexbox, d3, d3.js, stacked bar chart, waffle chart, histogram' />
+	
+	<meta property='og:title' content='Making Data Viz Without SVG Using D3 and Flexbox' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/process/flexbox-layout/' />
+	<meta property='og:description' content='Bye bye tricky alignments' />
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+	
+	<meta property='og:image' content='https://pudding.cool/process/flexbox-layout/assets/social/social-facebook.jpg' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='600' />
+	
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='https://pudding.cool' />
+	<meta name='twitter:creator' content='@proquesasker' />
+	<meta name='twitter:title' content='Making Data Viz Without SVG Using D3 and Flexbox' />
+	<meta name='twitter:description' content='Bye bye tricky alignments' />
+	<meta name='twitter:image:src' content='https://pudding.cool/process/flexbox-layout/assets/social/social-twitter.jpg' />
+	
+	<link rel='canonical' href='https://pudding.cool/process/flexbox-layout/' />
+		<style>*{-webkit-box-sizing:border-box;box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}a img{border:none}blockquote{quotes:none}blockquote:after,blockquote:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}.hide-accessible{width:1px;height:1px;overflow:hidden;position:absolute}.hide-invisible{visibility:hidden}.hide-display{display:none}.skip-to-main{border:none;width:1px;height:1px;overflow:hidden;position:absolute}.skip-to-main:focus{width:auto;height:auto;background-color:#f4f4f4;padding:.5em;z-index:1}.prose{max-width:40rem;margin:1rem auto;padding:0 1rem}.prose__hed{font-weight:700}.media-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDMDBGQ0Y5NEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDMDBGQ0ZBNEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REMwMEZDRjc0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REMwMEZDRjg0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C0EmkAAAAGElEQVR42mJiYGD4DwQMTECCEchhAAgwAEcGBv9dngKPAAAAAElFTkSuQmCC)}.graphic__hed{font-weight:500}.graphic__dek{margin:0;margin-bottom:1.5rem}.graphic__chart{width:100%}.graphic__key{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-bottom:.5rem;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.graphic__key li{padding:0;margin-left:.75em;letter-spacing:.05em;text-transform:uppercase;font-weight:700;line-height:1}.graphic__key li:before{content:'';display:inline-block;width:.8em;height:.8em;background-color:#282828;margin-right:.25em}.tk-canela{font-family:'Times New Roman',serif}.loaded-canela .tk-canela{font-family:'Canela Web','Times New Roman',serif}.tk-publico{font-family:Georgia,Times,serif}.loaded-publico .tk-publico{font-family:'Publico Text Web',Georgia,Times,serif}.tk-atlas{font-family:Helvetica,Arial,sans-serif}.loaded-atlas .tk-atlas{font-family:'Atlas Grotesk Web',Helvetica,Arial,sans-serif}.xxx-small{font-size:10px;line-height:1.5}.xx-small{font-size:11px;line-height:1.5}.x-small{font-size:12px;line-height:1.5}.small{font-size:14px;line-height:1.5}.root{font-size:16px;line-height:1.7}.medium{font-size:17px;line-height:1.7}.large{font-size:24px;line-height:1.5}.x-large{font-size:32px;line-height:1.5}.xx-large{font-size:40px;line-height:1.2}.xxx-large{font-size:48px;line-height:1.2}.xxxx-large{font-size:64px;line-height:1.2}body{-webkit-font-feature-settings:'kern' 1,'onum' 0,'liga' 0,'tnum' 1;font-feature-settings:'kern' 1,'onum' 0,'liga' 0,'tnum' 1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:transparent;background-color:#fff;color:#282828;font-size:16px}h1{font-size:40px;line-height:1.2;margin-top:1.5rem}h2{font-size:32px;line-height:1.5;margin-top:1.5rem}h3{font-size:32px;line-height:1.5;margin-top:1.5rem;padding:0 1rem;font-family:Atlas Grotesk Web,sans-serif;font-weight:600}h4{font-size:24px;line-height:1.5;margin-top:1.5rem;margin-top:1.5rem;padding:0 1rem;font-family:Atlas Grotesk Web,sans-serif}h5{font-size:16px;line-height:1.7;margin-top:1.5rem}h6{font-size:14px;line-height:1.5;margin-top:1.5rem}p{margin:1.5rem 0;font-size:16px;line-height:1.7}a{text-decoration:none;border-bottom:1px solid #282828;color:#282828}a:hover,a:visited{color:#282828}b,strong{font-weight:700}em,i{font-style:italic}ul{list-style-type:none}li{font-size:16px}img,video{display:block;width:100%}button{cursor:pointer;border:none;outline:0;margin:0;padding:0;font-size:1rem;font-size:16px}sub,sup{font-size:.75rem;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}header{z-index:1000;position:absolute;top:0;left:0;width:100%;background-color:#fff}header a.logo{display:block;border:none;max-width:9rem;margin:1rem auto}header a.logo svg{fill:#282828;display:block;width:100%}header.is-sticky{position:fixed;background-color:#fff;-webkit-box-shadow:0 0 7px 1px #c9c9c9;box-shadow:0 0 7px 1px #c9c9c9}header.is-sticky a.logo{margin:0 auto}header.is-sticky .header__toggle{position:fixed;top:0;right:0;padding:.75rem;cursor:pointer;line-height:1;z-index:1000}header.is-sticky .header__toggle svg{stroke:#282828}header.is-sticky .header__toggle span:first-of-type{display:block}header.is-sticky .header__toggle span:last-of-type{display:none}header.is-sticky .header__toggle.is-visible span:first-of-type{display:none}header.is-sticky .header__toggle.is-visible span:last-of-type{display:block}header.is-sticky .header__toggle.is-visible span svg{stroke:#f4f4f4}header.is-sticky .header__menu{position:fixed;top:0;right:0;-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);height:100vh;width:100%;max-width:30rem;padding:1rem 1.5rem;background-color:#282828;color:#f4f4f4;z-index:1000;-webkit-transition:-webkit-transform .2s ease-in-out;transition:-webkit-transform .2s ease-in-out;-o-transition:transform .2s ease-in-out;transition:transform .2s ease-in-out;transition:transform .2s ease-in-out,-webkit-transform .2s ease-in-out}header.is-sticky .header__menu.is-visible{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}header.is-sticky .header__menu a{color:#f4f4f4;border-bottom:1px solid #f4f4f4}header.is-sticky .header__menu a:hover{color:#c9c9c9}header.is-sticky .header__menu .menu__links li{margin-bottom:.5rem;font-size:24px}header.is-sticky .header__menu .menu__patreon a{font-weight:600;color:#282828;background-color:#daa520;padding:.25em .5em;border-radius:4px;border:none;border-bottom:none;font-size:.8em;text-transform:uppercase;margin-left:.5em}header.is-sticky .header__menu .menu__patreon a:hover{background-color:rgba(218,165,32,.75);color:#282828}header.is-sticky.is-dark{background-color:#282828;-webkit-box-shadow:0 0 7px 1px #5b5b5b;box-shadow:0 0 7px 1px #5b5b5b}header.is-sticky.is-dark svg{fill:#f4f4f4}header.is-sticky.is-dark .header__menu{background-color:#fff;color:#282828}header.is-sticky.is-dark a{color:#282828;border-bottom:1px solid #282828}header.is-sticky.is-dark a:hover{color:#5b5b5b}header.is-sticky.is-dark .header__toggle svg{stroke:#f4f4f4}header.is-sticky.is-dark .header__toggle.is-visible span svg{stroke:#282828}.hist-chart{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.hist-chart .group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin:0 .5rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.hist-chart .group .block{width:20px;height:20px;background-color:#fe4a49;margin:.1rem}.hist-chart .group text{font-family:Atlas Grotesk Web,sans-serif;padding-top:.25rem;margin-top:.25rem}.intro{margin:0 auto;padding:4rem 1rem 1.5rem 1rem}.intro-bg{background-image:url(assets/images/intro-bg.png);background-size:auto 100%;border-bottom:1px solid #282828;margin-bottom:4rem}.intro-text{max-width:35rem;margin:0 auto;background-color:rgba(255,255,255,.85);padding:.5rem}.intro__hed{padding-top:3rem;font-weight:400;text-align:left;background-color:#fff;font-size:40px;line-height:1.2}.intro__dek{padding-top:1rem;text-align:left;font-size:17px;line-height:1.7}.intro-by-date{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.intro-by-date .intro__date{font-size:14px;line-height:1.5}.intro-by-date .intro__byline{padding-top:1rem;padding-bottom:1.5rem;text-align:left;font-size:14px;line-height:1.5}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-shadow:0 1px rgba(0,0,0,.3);font-family:Menlo,Consolas,Monaco,'Courier New',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.stack-chart{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;margin:0 auto;width:200px}.stack-chart .group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;margin:.5rem 0;width:45px;height:230px;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.stack-chart .group .block{width:15px;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;background-color:#969696;margin-bottom:0}.stack-chart .group .label{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;font-family:Atlas Grotesk Web,sans-serif;font-size:14px;line-height:1.5;padding-top:.25rem;border-top:1px solid #969696;width:50px;text-align:center}.stack-chart .group .count{font-family:Atlas Grotesk Web,sans-serif;font-size:12px;line-height:1.5;color:#5b5b5b;-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.Facebook{font-weight:600;color:#fe4a49}section{max-width:40rem;margin:0 auto}.prose code{background-color:#2ab7ca;color:#fff;font-family:Menlo,Consolas,Monaco,'Courier New',monospace;padding:.25em .5em;font-size:.8em;font-weight:600;border-radius:2px}span.question{color:#fe4a49;font-weight:600}.disclaimer-text{margin:1rem auto;padding:1rem 1.5rem;background-color:#fee499;max-width:38rem;border-left:4px solid #282828}ul{max-width:40rem;margin:1rem auto;padding:0 1rem}ul li{margin:1rem;line-height:1.7}ul li code{background-color:#2ab7ca;color:#fff;font-family:Menlo,Consolas,Monaco,'Courier New',monospace;padding:.25em .5em;font-size:.8em;font-weight:600;border-radius:2px}pre{display:block;margin:1.5rem auto;max-width:38rem;font-size:14px}pre width 90%{max-height:100px!important}.img-desktop{max-width:500px;margin:0 auto}.waffle{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;width:140px;margin:0 auto}.waffle .block{width:10px;height:10px;margin:2px}@media only screen and (min-width:30em){body{font-size:17px}p{font-size:17px;line-height:1.7}li{font-size:17px}button{font-size:17px}header.is-sticky .header__menu{border-left:1px solid #5b5b5b}header.is-sticky .header__menu .menu__links li{font-size:32px}header.is-sticky.is-dark .header__menu{border-left:1px solid #c9c9c9}.intro__hed{font-size:48px;line-height:1.2}}@media only screen and (min-width:50em){.intro__hed{font-size:48px;line-height:1.2}}</style>
+	
+	<!-- boilerplate.css -->
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+	
+	        You may not modify the font software, use it on another website, or install it on a computer.
+	
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+	
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK     
+	*/
+		/* Canela */
+		
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		/* Publico Text */
+	
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+			font-stretch: normal;
+		}
+		/* Atlast Grotesk */
+		/*
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		*/
+	
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	</style>
+		<script>!function(e){var t={};function n(o){if(t[o])return t[o].exports;var i=t[o]={i:o,l:!1,exports:{}};return e[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(o,i,function(t){return e[t]}.bind(null,i));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=14)}([function(e,t){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"==typeof window&&(n=window)}e.exports=n},function(e,t,n){"use strict";t.a=function(e){var t=this.constructor;return this.then(function(n){return t.resolve(e()).then(function(){return n})},function(n){return t.resolve(e()).then(function(){return t.reject(n)})})}},function(e,t,n){"use strict";function o(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}Object.defineProperty(t,"__esModule",{value:!0}),t.select=function(e){return document.querySelector(e)},t.selectAll=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:document;return[].concat(o(t.querySelectorAll(e)))},t.find=function(e,t){return[].concat(o(e.querySelectorAll(t)))},t.removeClass=function(e,t){e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp("(^|\\b)"+t.split(" ").join("|")+"(\\b|$)","gi")," ")},t.addClass=function(e,t){e.classList?e.classList.add(t):e.className=e.className+" "+t},t.hasClass=function(e,t){return e.classList?e.classList.contains(t):new RegExp("(^| )"+t+"( |$)","gi").test(e.className)},t.jumpTo=function(e,t){t=t||0;var n=e.getBoundingClientRect().top+t,o=(window.pageYOffset||document.documentElement.scrollTop)+n;window.scrollTo(0,o)}},function(e,t,n){!function(){function t(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function o(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t&&(e.g=t,!0)}function r(e,n){function o(){var e=r;i(e)&&e.a.parentNode&&n(e.g)}var r=e;t(e.b,o),t(e.c,o),i(e)}function a(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}var c=null,u=null,s=null,l=null;function f(){return null===l&&(l=!!document.fonts),l}function d(e,t){return[e.style,e.weight,function(){if(null===s){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(e){}s=""!==e.style.font}return s}()?e.stretch:"","100px",t].join(" ")}a.prototype.load=function(e,t){var i=this,a=e||"BESbswy",s=0,l=t||3e3,h=(new Date).getTime();return new Promise(function(e,t){if(f()&&!function(){if(null===u)if(f()&&/Apple/.test(window.navigator.vendor)){var e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);u=!!e&&603>parseInt(e[1],10)}else u=!1;return u}()){var p=new Promise(function(e,t){!function n(){(new Date).getTime()-h>=l?t():document.fonts.load(d(i,'"'+i.family+'"'),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}()}),m=new Promise(function(e,t){s=setTimeout(t,l)});Promise.race([m,p]).then(function(){clearTimeout(s),e(i)},function(){t(i)})}else!function(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function t(){"interactive"!=document.readyState&&"complete"!=document.readyState||(document.detachEvent("onreadystatechange",t),e())})}(function(){function u(){var t;(t=-1!=y&&-1!=v||-1!=y&&-1!=w||-1!=v&&-1!=w)&&((t=y!=v&&y!=w&&v!=w)||(null===c&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),c=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=c&&(y==g&&v==g&&w==g||y==b&&v==b&&w==b||y==T&&v==T&&w==T)),t=!t),t&&(_.parentNode&&_.parentNode.removeChild(_),clearTimeout(s),e(i))}var f=new n(a),p=new n(a),m=new n(a),y=-1,v=-1,w=-1,g=-1,b=-1,T=-1,_=document.createElement("div");_.dir="ltr",o(f,d(i,"sans-serif")),o(p,d(i,"serif")),o(m,d(i,"monospace")),_.appendChild(f.a),_.appendChild(p.a),_.appendChild(m.a),document.body.appendChild(_),g=f.a.offsetWidth,b=p.a.offsetWidth,T=m.a.offsetWidth,function e(){if((new Date).getTime()-h>=l)_.parentNode&&_.parentNode.removeChild(_),t(i);else{var n=document.hidden;!0!==n&&void 0!==n||(y=f.a.offsetWidth,v=p.a.offsetWidth,w=m.a.offsetWidth,u()),s=setTimeout(e,50)}}(),r(f,function(e){y=e,u()}),o(f,d(i,'"'+i.family+'",sans-serif')),r(p,function(e){v=e,u()}),o(p,d(i,'"'+i.family+'",serif')),r(m,function(e){w=e,u()}),o(m,d(i,'"'+i.family+'",monospace'))})})},e.exports=a}()},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.loadFontGroup=t.loadFont=void 0;var o,i=(o=n(3))&&o.__esModule?o:{default:o},r=n(2),a=document.documentElement;function c(e){var t="loaded-"+e.split(" ")[0].toLowerCase().replace(/ /g,"-");(0,r.addClass)(a,t)}function u(e){console.error(e)}t.loadFont=function(e){var t=e.family,n=e.weight,o=void 0===n?"normal":n;new i.default(t,{weight:o}).load(null,5e3).then(function(){return c(e)}).catch(u)},t.loadFontGroup=function(e){var t=e.map(function(e){return new Promise(function(t,n){var o=e.family,r=e.weight,a=e.style,c=void 0===a?"normal":a;return new i.default(o,{weight:r,style:c}).load(null,5e3).then(function(){return t(o)}).catch(function(e){return n(e)})})});Promise.all(t).then(function(e){return c(e[0])}).catch(u)}},function(e,t,n){"use strict";Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(e,t){if(null==this)throw new TypeError('"this" is null or not defined');var n=Object(this),o=n.length>>>0;if(0===o)return!1;for(var i=0|t,r=Math.max(i>=0?i:o-Math.abs(i),0);r<o;){if(n[r]===e)return!0;r++}return!1}})},function(e,t,n){"use strict";Array.prototype.find||Object.defineProperty(Array.prototype,"find",{value:function(e){if(null==this)throw new TypeError("Array.prototype.find called on null or undefined");if("function"!=typeof e)throw new TypeError("predicate must be a function");for(var t,n=Object(this),o=n.length>>>0,i=arguments[1],r=0;r<o;r++)if(t=n[r],e.call(i,t,r,n))return t}})},function(e,t,n){"use strict";Array.prototype.findIndex||Object.defineProperty(Array.prototype,"findIndex",{value:function(e){if(null==this)throw new TypeError("Array.prototype.findIndex called on null or undefined");if("function"!=typeof e)throw new TypeError("predicate must be a function");for(var t,n=Object(this),o=n.length>>>0,i=arguments[1],r=0;r<o;r++)if(t=n[r],e.call(i,t,r,n))return r;return-1},enumerable:!1,configurable:!1,writable:!1})},function(e,t,n){"use strict";String.prototype.endsWith||(String.prototype.endsWith=function(e,t){var n=this.toString();("number"!=typeof t||!isFinite(t)||Math.floor(t)!==t||t>n.length)&&(t=n.length),t-=e.length;var o=n.lastIndexOf(e,t);return-1!==o&&o===t})},function(e,t,n){"use strict";String.prototype.startsWith||(String.prototype.startsWith=function(e,t){return this.substr(t||0,e.length)===e})},function(e,t){var n,o,i=e.exports={};function r(){throw new Error("setTimeout has not been defined")}function a(){throw new Error("clearTimeout has not been defined")}function c(e){if(n===setTimeout)return setTimeout(e,0);if((n===r||!n)&&setTimeout)return n=setTimeout,setTimeout(e,0);try{return n(e,0)}catch(t){try{return n.call(null,e,0)}catch(t){return n.call(this,e,0)}}}!function(){try{n="function"==typeof setTimeout?setTimeout:r}catch(e){n=r}try{o="function"==typeof clearTimeout?clearTimeout:a}catch(e){o=a}}();var u,s=[],l=!1,f=-1;function d(){l&&u&&(l=!1,u.length?s=u.concat(s):f=-1,s.length&&h())}function h(){if(!l){var e=c(d);l=!0;for(var t=s.length;t;){for(u=s,s=[];++f<t;)u&&u[f].run();f=-1,t=s.length}u=null,l=!1,function(e){if(o===clearTimeout)return clearTimeout(e);if((o===a||!o)&&clearTimeout)return o=clearTimeout,clearTimeout(e);try{o(e)}catch(t){try{return o.call(null,e)}catch(t){return o.call(this,e)}}}(e)}}function p(e,t){this.fun=e,this.array=t}function m(){}i.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)t[n-1]=arguments[n];s.push(new p(e,t)),1!==s.length||l||c(h)},p.prototype.run=function(){this.fun.apply(null,this.array)},i.title="browser",i.browser=!0,i.env={},i.argv=[],i.version="",i.versions={},i.on=m,i.addListener=m,i.once=m,i.off=m,i.removeListener=m,i.removeAllListeners=m,i.emit=m,i.prependListener=m,i.prependOnceListener=m,i.listeners=function(e){return[]},i.binding=function(e){throw new Error("process.binding is not supported")},i.cwd=function(){return"/"},i.chdir=function(e){throw new Error("process.chdir is not supported")},i.umask=function(){return 0}},function(e,t,n){(function(e,t){!function(e,n){"use strict";if(!e.setImmediate){var o,i,r,a,c,u=1,s={},l=!1,f=e.document,d=Object.getPrototypeOf&&Object.getPrototypeOf(e);d=d&&d.setTimeout?d:e,"[object process]"==={}.toString.call(e.process)?o=function(e){t.nextTick(function(){p(e)})}:function(){if(e.postMessage&&!e.importScripts){var t=!0,n=e.onmessage;return e.onmessage=function(){t=!1},e.postMessage("","*"),e.onmessage=n,t}}()?(a="setImmediate$"+Math.random()+"$",c=function(t){t.source===e&&"string"==typeof t.data&&0===t.data.indexOf(a)&&p(+t.data.slice(a.length))},e.addEventListener?e.addEventListener("message",c,!1):e.attachEvent("onmessage",c),o=function(t){e.postMessage(a+t,"*")}):e.MessageChannel?((r=new MessageChannel).port1.onmessage=function(e){p(e.data)},o=function(e){r.port2.postMessage(e)}):f&&"onreadystatechange"in f.createElement("script")?(i=f.documentElement,o=function(e){var t=f.createElement("script");t.onreadystatechange=function(){p(e),t.onreadystatechange=null,i.removeChild(t),t=null},i.appendChild(t)}):o=function(e){setTimeout(p,0,e)},d.setImmediate=function(e){"function"!=typeof e&&(e=new Function(""+e));for(var t=new Array(arguments.length-1),n=0;n<t.length;n++)t[n]=arguments[n+1];var i={callback:e,args:t};return s[u]=i,o(u),u++},d.clearImmediate=h}function h(e){delete s[e]}function p(e){if(l)setTimeout(p,0,e);else{var t=s[e];if(t){l=!0;try{!function(e){var t=e.callback,o=e.args;switch(o.length){case 0:t();break;case 1:t(o[0]);break;case 2:t(o[0],o[1]);break;case 3:t(o[0],o[1],o[2]);break;default:t.apply(n,o)}}(t)}finally{h(e),l=!1}}}}}("undefined"==typeof self?void 0===e?this:e:self)}).call(this,n(0),n(10))},function(e,t,n){(function(e){var o=void 0!==e&&e||"undefined"!=typeof self&&self||window,i=Function.prototype.apply;function r(e,t){this._id=e,this._clearFn=t}t.setTimeout=function(){return new r(i.call(setTimeout,o,arguments),clearTimeout)},t.setInterval=function(){return new r(i.call(setInterval,o,arguments),clearInterval)},t.clearTimeout=t.clearInterval=function(e){e&&e.close()},r.prototype.unref=r.prototype.ref=function(){},r.prototype.close=function(){this._clearFn.call(o,this._id)},t.enroll=function(e,t){clearTimeout(e._idleTimeoutId),e._idleTimeout=t},t.unenroll=function(e){clearTimeout(e._idleTimeoutId),e._idleTimeout=-1},t._unrefActive=t.active=function(e){clearTimeout(e._idleTimeoutId);var t=e._idleTimeout;t>=0&&(e._idleTimeoutId=setTimeout(function(){e._onTimeout&&e._onTimeout()},t))},n(11),t.setImmediate="undefined"!=typeof self&&self.setImmediate||void 0!==e&&e.setImmediate||this&&this.setImmediate,t.clearImmediate="undefined"!=typeof self&&self.clearImmediate||void 0!==e&&e.clearImmediate||this&&this.clearImmediate}).call(this,n(0))},function(e,t,n){"use strict";n.r(t),function(e){var o=n(1),i=setTimeout;function r(){}function a(e){if(!(this instanceof a))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=void 0,this._deferreds=[],f(e,this)}function c(e,t){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,a._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;if(null!==n){var o;try{o=n(e._value)}catch(e){return void s(t.promise,e)}u(t.promise,o)}else(1===e._state?u:s)(t.promise,e._value)})):e._deferreds.push(t)}function u(e,t){try{if(t===e)throw new TypeError("A promise cannot be resolved with itself.");if(t&&("object"==typeof t||"function"==typeof t)){var n=t.then;if(t instanceof a)return e._state=3,e._value=t,void l(e);if("function"==typeof n)return void f((o=n,i=t,function(){o.apply(i,arguments)}),e)}e._state=1,e._value=t,l(e)}catch(t){s(e,t)}var o,i}function s(e,t){e._state=2,e._value=t,l(e)}function l(e){2===e._state&&0===e._deferreds.length&&a._immediateFn(function(){e._handled||a._unhandledRejectionFn(e._value)});for(var t=0,n=e._deferreds.length;t<n;t++)c(e,e._deferreds[t]);e._deferreds=null}function f(e,t){var n=!1;try{e(function(e){n||(n=!0,u(t,e))},function(e){n||(n=!0,s(t,e))})}catch(e){if(n)return;n=!0,s(t,e)}}a.prototype.catch=function(e){return this.then(null,e)},a.prototype.then=function(e,t){var n=new this.constructor(r);return c(this,new function(e,t,n){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof t?t:null,this.promise=n}(e,t,n)),n},a.prototype.finally=o.a,a.all=function(e){return new a(function(t,n){if(!e||void 0===e.length)throw new TypeError("Promise.all accepts an array");var o=Array.prototype.slice.call(e);if(0===o.length)return t([]);var i=o.length;function r(e,a){try{if(a&&("object"==typeof a||"function"==typeof a)){var c=a.then;if("function"==typeof c)return void c.call(a,function(t){r(e,t)},n)}o[e]=a,0==--i&&t(o)}catch(e){n(e)}}for(var a=0;a<o.length;a++)r(a,o[a])})},a.resolve=function(e){return e&&"object"==typeof e&&e.constructor===a?e:new a(function(t){t(e)})},a.reject=function(e){return new a(function(t,n){n(e)})},a.race=function(e){return new a(function(t,n){for(var o=0,i=e.length;o<i;o++)e[o].then(t,n)})},a._immediateFn="function"==typeof e&&function(t){e(t)}||function(e){i(e,0)},a._unhandledRejectionFn=function(e){"undefined"!=typeof console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)},t.default=a}.call(this,n(12).setImmediate)},function(e,t,n){"use strict";var o,i=(o=n(13))&&o.__esModule?o:{default:o};n(9),n(8),n(7),n(6),n(5);var r=n(4);window.Promise||(window.Promise=i.default),(0,r.loadFontGroup)([{family:"Canela Web",weight:300},{family:"Canela Web",weight:700}]),(0,r.loadFontGroup)([{family:"Publico Text Web",weight:400},{family:"Publico Text Web",weight:700}]),(0,r.loadFontGroup)([{family:"Atlas Grotesk Web",weight:400},{family:"Atlas Grotesk Web",weight:500},{family:"Atlas Grotesk Web",weight:600}])}]);</script>
+	
+	
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class='tk-publico'>
+
+	<a href='#content' class='skip-to-main'>Skip to main content</a>
+	
+	<header class='is-sticky is-dark'>
+		<a href='https://pudding.cool' target='_blank' class='logo'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="296.91" height="47.52" viewBox="19.42 11.31 296.911 47.518" aria-labelledby="logo-title" role="img">
+	<title id="logo-title">The Pudding</title>
+  	<path d="M47.77 56.8c-2.5-.2-15.5-.2-18 0v-.44l2.05-.3c1.8-.25 2.5-1.35 2.5-9.35V15.1h-1.9c-3.6 0-5.5 1.75-9.7 9.4l-2.8 5.25h-.5c.3-3.2 1-13.24 1.1-16.6l.1-.04c1.8.2 9.3.5 11.1.5h17.5c2.3 0 11.1-1.4 13.2-2.1l.1.1v15.8h.27l1-1.1c2.9-3.3 5.3-4.4 8-4.4 4.4 0 7 2.4 7 7.5v11.5c0 7.7.7 8.9 2.6 9.2l1.1.2v.5c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.6-.4 2.3-1.3 2.3-9.2v-11c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.7l-1.8.6v12.9c0 7.9.6 8.8 2.2 9.3l.56.2v.5c-2.38-.2-12.4-.2-14.78 0v-.4l1.03-.2c1.97-.3 2.7-1.5 2.7-9.2V21c-2.43-4.6-5.13-5.75-8.63-5.75h-2.1v31.6c0 8 .6 9.07 2.4 9.37l1.9.3v.46l-.1-.18zm3.25-.64h55.7v.65H51v-.6zm45-5.1c-8.5 0-12.3-4.55-12.3-13.8v-1.7c0-8.86 4.3-13.76 13.28-13.76 7.66 0 11.1 3.26 11.1 12.36v1.8H92.97v3.2c0 7.1 1.9 9 6 9 2.45 0 5-1.25 7.4-2.9l2-1.35.1 1.4-1.6 1.5c-2.95 2.7-6.75 4.4-10.85 4.4v-.1zm-3-16.6h7.4v-2.7c0-6.75-1-7.95-3.7-7.95-2.6 0-3.7 1.2-3.7 9.3v1.4zm35.2 22.35c-2.5-.2-15.7-.2-18.2 0v-.4l1.9-.3c1.8-.3 2.4-1.3 2.4-9.3V23.5c0-8.04-.6-9.14-2.4-9.4l-1.8-.24v-.45c1.36.1 7.8.2 9 .2 1.46 0 8.06-.1 9.3-.1 10.36 0 14.96 5.1 14.96 12.8v1.5c0 7.8-4.55 12.8-14.9 12.8h-2.2V39c.55.04 1.1.04 1.5.04 3.8 0 5.35-2.9 5.35-10.44v-3.3c0-7.54-1.54-10.44-5.44-10.44-.4 0-2.6 0-4.1.05v31.8c0 8 .7 9.1 2.5 9.4l2.3.3v.5l-.3-.1zm3.3-.6H282.3v.7H131.5v-.7zm22.6-5c-4.4 0-7-2.4-7-7.5V33.2c0-7-.4-8.56-1.8-9l-.6-.2v-.4c1.8-.2 8.4-1.1 10.7-1.66v20.9c0 2.5.9 3.4 3.1 3.4.74 0 1.7-.24 3.1-.64l1.84-.5V33.2c0-6.9-.8-8.2-2.7-8.86l-1.1-.34v-.4c2.1-.2 9.7-1.1 12-1.66v17.9c0 6.86.75 8.2 2.65 8.8l1.1.36v.45c-2.1.16-9.2 1.06-11.5 1.66l-.3-5.4h-.2l-1 1.1c-2.9 3.3-5.3 4.4-8.1 4.4zm32 0c-5.4 0-9-4.4-9-13.6v-2.2c0-9.5 4.3-13.6 11.1-13.6 2.4 0 4.24.5 6.14 2.2l.8.7h.24v-2.6c0-6.5-.76-7.7-2.66-8.3l-1.1-.3v-.4c2.14-.2 9.44-1.1 11.74-1.6v28.2c0 7 .8 8.5 2.7 9.1l1.05.4v.5c-2.1.2-8.95 1.1-11.25 1.7l-.35-5.4h-.27l-1 1.1c-2.95 3.3-5.4 4.4-8.1 4.4l-.05-.2zm7.7-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.6-8.8-3.3 0-4.66 2.6-4.66 9.54v3.7c0 6.2 1.44 7.9 4.5 7.9.84 0 1.84-.2 3.2-.64h-.05zm24.1 5.6c-5.46 0-9-4.4-9-13.6v-2.2c0-9.5 4.2-13.6 11-13.6 2.44 0 4.2.6 6.14 2.2l.84.7h.24v-2.6c0-6.5-.8-7.6-2.7-8.3l-1.06-.3v-.4c2.1-.2 9.45-1.1 11.75-1.6v28.2c0 7 .75 8.5 2.65 9.1l1.1.4v.5c-2.15.2-9 1.1-11.3 1.7l-.36-5.4h-.27l-1 1.1c-2.95 3.3-5.35 4.4-8.1 4.4l.06-.2zm7.64-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.66-8.8-3.26 0-4.6 2.6-4.6 9.54v3.7c0 6.2 1.4 7.9 4.44 7.9.84 0 1.84-.2 3.2-.64h.02zm28.1 5.1c-2.16-.2-11.56-.2-13.76 0v-.4l.54-.1c1.6-.4 2.2-1.3 2.2-9.2v-7.7c0-6.9-.76-8.2-2.66-8.8l-1.1-.3v-.4c2.15-.2 9.7-1.1 12-1.6V41c0 7.9.7 8.8 2.24 9.27l.5.14v.5l.03-.1zm-12.1-35.3c0-2.6 1.6-4.1 5.1-4.1 3.54 0 5.1 1.5 5.1 4.1 0 2.6-1.56 4.1-5.1 4.1-3.5 0-5.1-1.5-5.1-4.1zm45.13 35.3c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.5-.4 2.2-1.3 2.2-9.2V30.1c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.66l-1.8.55v12.9c0 7.9.6 8.8 2.2 9.3l.53.2v.5c-2.35-.2-12.4-.2-14.75 0v-.4l1.07-.2c1.92-.3 2.7-1.5 2.7-9.2v-7.7c0-6.9-.8-8.2-2.7-8.8l-1.1-.3v-.4c2.1-.2 9.2-1.1 11.5-1.6l.33 5.4h.28l1-1.1c2.94-3.2 5.4-4.4 8.1-4.4 4.44 0 7.04 2.4 7.04 7.5V41c0 7.7.77 8.9 2.67 9.2l1.1.2v.5l.1-.15zm15.6 7.9h-4.7c-10.5 0-12.3-1.3-12.3-3.4V55c0-1.85 2.5-4.35 7.3-4.35h.2V54c0 1.8 1 2.6 4.7 2.6h4.6c5.02 0 6.82-1.3 6.82-3.2V53c0-1.8-.85-3.2-3.5-3.2h-13.3c-2.75 0-4.2-1.3-4.2-3.7v-.16c0-1.94 1.2-3.54 4.75-5.4l3-1.54v-.5c-5.64-1-8.2-3.46-8.2-7.86v-.24c0-5.55 4.16-8.55 13.1-8.55 2.46 0 4.46.26 6.46.8l.16-.34c1.7-3.4 3.93-5 8-5h.9v5.4h-5.6c-.5 0-1.9.1-2.27.2l-.36.1v.5c3.8 1.1 5.76 3.6 5.76 7.1v.3c0 5.6-4.13 8.6-13.03 8.6-1.3 0-2.5-.1-3.7-.2l-.9 1.1c-.85 1-1.05 1.5-1.05 1.8 0 .4.2.5.6.5h11.62c5.8 0 8.9 3 8.9 7.4v.4c0 5.28-5.9 8.5-14 8.5l.1-.2zm2.5-27.7v-.7c0-4.7-.9-6.3-4.1-6.3-3.3 0-4.1 1.6-4.1 6.3v.8c0 4.7.9 6.3 4.1 6.3 3.2 0 4-1.6 4-6.3v-.1z"/>
+</svg>
+
+		</a>
+		 
+		  <div class='header__menu tk-atlas'>
+		<p class='menu__tagline'><a href='https://pudding.cool' target='_blank'>The Pudding</a> explains ideas debated in culture with visual essays.</p>
+		<ul class='menu__links'>
+			<li><a >Greatest Hits</a></li>
+			<li><a href='https://pudding.cool/#new' target='_blank'>What’s New</a></li>
+			<li><a href='https://pudding.cool/#all' target='_blank' >All Essays</a></li>
+		</ul>
+		<p class='menu__patreon'>We pour our ❤️ into these stories, but they take time and money. For just $1/month, you can help support us. Join our
+		growing community of data-driven enthusiasts. <a href='https://www.patreon.com/thepudding' target='_blank'>Help fund us</a></p>
+	
+		<p>
+			<a class='' href='https://pudding.cool/about/' target='_blank' >About</a>
+		</p>
+	</div>
+	<btn class='header__toggle'>
+		<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
+		<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+	</btn> 
+	</header>
+	
+
+	<main id='content'>
+
+		<div class='intro'>
+			<div class='intro-bg'>
+				<div class='intro-text'>
+					<h1 class='intro__hed tk-canela'>Making Data Viz Without SVG Using D3 &amp; Flexbox</h1>
+					<p class='intro__dek tk-atlas'>Bye bye tricky alignments.</p>
+					<div class='intro-by-date'>
+						<p class='intro__byline tk-atlas'>By
+							<a href='https://pudding.cool/author/amber-thomas/' target='_blank'>
+								<strong>Amber Thomas</strong>
+							</a>
+						</p>
+						<p class='intro__date tk-atlas'>July 2018</p>
+					</div>
+				</div>
+			</div>
+				<p class='prose'>A few months ago, my co-worker <a href=https://pudding.cool/author/matt-daniels/ target=_blank>Matt</a> and I were collaborating on a project. I had been building a <a href=https://bl.ocks.org/mbostock/3886208 target=_blank>stacked bar chart</a> in <a href=https://d3js.org/ target=_blank>D3.js</a>, and was seriously struggling to get the bars to stack on top of each other nicely <em>and</em> to animate from the bottom of the graphic instead of the top. For some reason, the fact that an SVG space places its (0,0) coordinates at the <em>top</em> left corner instead of the <em>bottom</em> left corner will always cause some weird mental disconnect in my brain.</p>
+				<p class='prose'>Amid all of my frustration, Matt suggested ditching the SVG altogether, making the bars out of <code>div</code> elements with a <code>background-color</code> and aligning them using <a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ target=_blank>Flexbox</a>. To be totally honest, I was super confused by the suggestion because it involved a few things that I honestly didn't know were possible. I should have asked: <span class=question>You can make D3 graphics without SVG?</span> <span class=question>Divs can be used to make bars?</span> <span class=question>I can use flexbox to do all the alignment math for me?</span></p>
+				<p class='prose'>It turns out the answer to all of those questions is <strong>yes</strong>. In that moment, I was being stubborn and eventually got the SVG to work the way I wanted, but Matt’s suggestion stuck with me. And when I actually saw it in action in one of his more <a href=https://pudding.cool/2018/05/similarity/ target=_blank>recent projects</a>, I was mind-blown. I ended up loving it so much that one of the <a href=https://pudding.cool/2018/06/makeup-shades>most recent data-viz stories</a> that I programmed contains <strong>no SVG</strong>. I’m so in love with this method (for very specific circumstances) that I wanted to shout it from the rooftops...or at least from this post.</p>
+				<p class='prose'>In this post, I’ll give some background information that I wish I knew, and an example of how to use this method to make a <a href=#waffle>waffle chart</a>, a <a href=#hist>modified histogram</a>, and a <a href=#stack>stacked bar chart</a>.</p>
+		</div>
+		<section class='need'>
+		  <h3>Some Important Context</h3>
+		  <div class='disclaimer'>
+		    <p class='disclaimer-text'>If you’re already super-familiar with the inner-workings of D3.js, DOM elements, and Flexbox, you can <a href=#waffle>skip this section</a>.</p>
+		  </div>
+		  <p class='prose'>Although I’d been using D3 to make graphics for over a year, I had some major misconceptions about what it can do that stopped me from fully grasping this concept early on. So here’s some things I wish I knew:</p>
+		  <ul>
+		      <li><strong>D3 manipulates DOM elements, not just SVG</strong>: In hindsight, I feel like this one should have been obvious, but I clearly missed it. It even says it right on the D3 homepage: “D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document.” meaning that while D3 <em>can</em> create and manipulate DOM elements that are on an SVG plane (think <code>path</code>, <code>rect</code>, <code>circle</code> etc. elements), it can also manipulate non-SVG elements (like <code>p</code>, <code>div</code>, and <code>span</code> elements).</li>
+		      <li><strong>Flexbox arranges DOM elements in rows or columns</strong>: Unlike <a href=https://css-tricks.com/snippets/css/complete-guide-grid/ target=_blank>CSS grid</a>, Flexbox arranges items in a one-dimensional manner in either a row <em>or</em> column format. While you can use CSS-grid for the methods described in this post, I’m going to primarily focus on using Flexbox. More info on the differences can be found <a href=https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf target=_blank>here</a>.</li>
+		      <li><strong>Flexbox can organize non-SVG DOM elements</strong>: You can’t use Flexbox to arrange elements within SVG. That is, if you have a bunch of <code>rect</code> elements within your SVG, Flexbox can’t move them. But, if you have several, separate SVG elements (think <a href=https://pudding.cool/2017/04/beer/ target=_blank>small multiples</a>), Flexbox can arrange them for you.</li>
+		  </ul>
+		</section>
+		<section class='work' id='waffle'>
+		  <h3>Making a Waffle Chart</h3>
+		
+		    <p class='prose'>Let’s start with a waffle chart. In this kind of graphic, we’ll use small blocks to represent a percentage of something (much like a square pie chart). For this example, we’ll say that 5% of our readers <a href=https://pudding.cool/process/resize/ target=_blank>resize their browser</a>.</p>
+		    <p class='prose'>To make this kind of graphic, we’ll need a single <code>figure</code> element with 100 smaller <code>div</code> elements inside of it. Like this:</p>
+		
+		  <img class='img-desktop' src='assets/images/waffle.png'>
+		
+		  <h4>HTML</h4>
+		  <p class='prose'>In your HTML file, you’ll only need a single, empty <code>figure</code> element. Remember, no need to add an SVG element.</p>
+		  <pre data-src='assets/prism/waffle.html'></pre>
+		
+		  <h4>JavaScript</h4>
+		  <p class='prose'>Since we’re going to need 100 blocks (in our case, <code>div</code> elements) inside of our <code>figure</code> element, we can add them with JavaScript. In this example, we’re creating an array of 100 numbers and creating a div for each one. To make our graphic represent 5% of something, we need 5 of our 100 blocks to be stylistically different from the rest. Here we set the style <code>background-color</code> to be red if the number is less than 5 and gray if it’s greater than 5.</p>
+		  <pre data-src='assets/prism/waffle.js'></pre>
+		
+		  <h4>CSS</h4>
+		  <p class='prose'>The magic of this method shows up here, in the CSS. At this point, we have an outer-most <code>figure</code> element called <code>waffle</code> and 100 divs inside that are each called <code>block</code>. Using CSS, we can define the size of our <code>block</code> and <code>waffle</code> elements, and use Flexbox to arrange them. Be aware that in this example, we aren’t including any vendor prefixes. You can automatically add them by running this CSS code through an <a href=https://autoprefixer.github.io/ target=_blank>autoprefixer</a>.</p>
+		  <pre data-src='assets/prism/waffle.css'></pre>
+		  <p class='prose'>Here, the designation <code>display: flex</code> indicates that the <code>waffle</code> <code>figure</code> element should be considered a flex container. The line <code>flex-wrap: wrap</code> indicates that the items inside of <code>waffle</code> should line themselves up in a row (starting in the upper left-hand corner) until they reach the end of the container (in this case, <code>width: 140px</code>), and then form a new row. If you want this process to start in the lower right-hand corner instead, use <code>flex-wrap: wrap-reverse</code>. Last, give your <code>block</code> elements a <code>width</code> and <code>height</code> to make them visible. That’s it!</p>
+		
+		  <h4>The Results</h4>
+		  <p class='prose'>Here’s what our final graphic looks like. Feel free to inspect it to double-check that it’s only made up of <code>div</code> elements.</p>
+		  <figure class='waffle'></figure>
+		</section>
+		<section class='hist' id='hist'>
+		  <h3>Making a Modified Histogram</h3>
+		    <p class='prose'><a href=https://en.wikipedia.org/wiki/Histogram target=_blank>Histograms</a> are generally used to show a distribution in the data. While a typical histogram uses a single bar of varying height to signify the count of items in a bin, at The Pudding, we often use a type of modified histogram, where small shapes of identical size are stacked on top of one another. So, instead of a 100px tall rectangle representing a count of 10, you could have 10, 10px tall rectangles (spaced 1px apart) representing a count of 10.</p>
+		    <p class='prose'>To make a modified histogram using this method, you need to plan for the overall structure of your graphic. You’ll need a <code>figure</code> element to contain the entire graphic, a <code>div</code> for each stack of blocks, and a <code>div</code> for each block. Like this:</p>
+		  <img class='img-desktop' src='assets/images/hist.png'>
+		
+		  <h4>HTML</h4>
+		  <p class='prose'>Again, we’ll start with a single <code>figure</code> element to contain everything.</p>
+		  <pre data-src='assets/prism/hist.html'></pre>
+		
+		  <h4>JavaScript</h4>
+		  <p class='prose'>For this example, we’ll make a histogram of the state where each of The Pudding team members lives. We’ll manually add the state data for each of our 6 members, but you could have imported the data using D3.csv or D3.json. Next, we need to nest the data by state, add a <code>div</code> to contain all the blocks we’ll add for each state. Then, to each group <code>div</code> we need to add the appropriate number of block <code>div</code> elements. Last, we’ll add a state label to each group.</p>
+		  <pre data-src='assets/prism/hist.js'></pre>
+		
+		  <h4>CSS</h4>
+		  <p class='prose'>Here we have two elements that need to act as flexbox containers. To align the block <code>div</code> elements and the label in a column, we assign the group <code>div</code> <code>display: flex</code> and <code>flex-direction: column</code>.  Then, we want all 3 groups to sit next to one another in a row, so we assign the hist <code>figure</code> element <code>display: flex</code> and <code>flex-direction: row</code>. This automatically aligns the groups in a row, but they are also aligned at the <em>tops</em> of their groups (so the stacks look like they are hanging from the top of the graphic instead of growing from the bottom). To fix this, we assign <code>align-items: flex-end</code>.</p>
+		  <pre data-src='assets/prism/hist.css'></pre>
+		
+		  <h4>The Results</h4>
+		  <p class='prose'>Here’s what our final graphic looks like. Once again, feel free to inspect it to double-check that it’s only made up of <code>div</code> elements.</p>
+		  <figure class='hist-chart'></figure>
+		</section>
+		<section class='stack' id='stack'>
+		  <h3>Making a Stacked Bar Chart</h3>
+		  <p class='prose'>Stacked bar charts are only slightly more complex than waffle charts or histograms because they require 2 additional elements: different sized block <code>div</code> elements and a way to quantify the overall height of the bars. Structurally, it needs to be set up like this:</p>
+		  <img src='assets/images/stack.png' class='img-desktop'>
+		  <p class='prose'>In this example, we’ll look at a small part of our site’s traffic. Specifically, the traffic that has come from <a href=https://www.facebook.com/pudding.viz/?ref=aymt_homepage_panel target=_blank>Facebook</a>, <a href=https://twitter.com/puddingviz target=_blank>Twitter</a>, <a href=https://www.youtube.com/channel/UCFuV9vMFVluW9CAOdS4Oluw target=_blank>YouTube</a>, and <a href=https://www.instagram.com/pudding.cool/ target=_blank>Instagram</a> over the past few months.</p>
+		
+		  <h4>HTML</h4>
+		  <p class='prose'>Just like our first two examples, you start with a single <code>figure</code> element.</p>
+		  <pre data-src='assets/prism/stack.html'></pre>
+		
+		  <h4>JavaScript</h4>
+		  <p class='prose'>Our process of preparing our elements in JavaScript is similar to how you would write the JavaScript code for an <a href=https://bl.ocks.org/mbostock/3886208 target=_blank>SVG-rendered stacked bar chart</a>, with one-notable example. You don’t need <code>d3.stack()</code>. That <a href=https://github.com/d3/d3/blob/master/API.md#stacks target=_blank>specific function</a> calculates the bottom and top positions of each rectangle in your stack, and since we’ll use Flexbox to arrange our shapes, that becomes unnecessary. Instead, we need to append a <code>div</code> element for each month, and then append additional <code>div</code> elements for each social media type. Last, we have to set a scale (here we use d3’s built in <code>d3.scaleLinear()</code>) and use the scale to define the height of our <code>div</code> elements (<code>.style(‘height’, function(d){return `${scaleY(d.value)}px`)</code>). Instead of a full y-axis, we’re going to just add a value label to sit on the top of our bars.</p>
+		  <pre data-src='assets/prism/stack.js'></pre>
+		
+		  <h4>CSS</h4>
+		    <p class='prose'>The styling for this stacked bar chart is very similar to our modified histogram in that we want our <code>block</code> elements to be aligned in a column and our <code>group</code> elements to be aligned in a row. I’ve added a few other pieces of styling to arrange the items in the way that I want. Originally, the bars for <span class=Facebook>Facebook</span> were at the top of the stack because they are the first item in my array for each month. Since I want to draw my reader’s attention to these bars, I want them to have the same baseline, and so I want them to be on the bottom. Using Flexbox, I can reverse the order of my bars using <code>flex-direction: column-reverse</code>.</p>
+		    <p class='prose'>Then, I want the month <code>label</code> to be at the <em>bottom</em> of my bars, so I can assign it an <code>order: 0</code> (if our bars were still organized using <code>flex-direction: column</code> in the default order, <code>order: 0</code> would put this label at the <em>top</em> of the stack). And I want the number <code>count</code> label to be at the top of the bars, so I assign it an <code>order: 2</code>. My block elements are assigned an <code>order: 1</code> to keep them between both labels.</p>
+		  <pre data-src='assets/prism/stack.css'></pre>
+		
+		  <h4>The Results</h4>
+		  <p class='prose'>Here’s our final image (with a little bit of extra styling).</p>
+		  <div class='stack-chart'>
+		</section>
+		<section class='conclusion'>
+		  <h3>That's it!</h3>
+		    <p class='prose'>Basically, this method takes away the need to calculate the exact positioning of all of our blocks and gives that responsibility to Flexbox to handle automatically. It works especially well when all of your elements can line up in a grid of rows and columns. If you’re interested in other ways to use D3 without SVG, check out this oldie but a goodie <a href=http://vallandingham.me/d3_without_svg.html target=_blank>post</a> from <a href=https://twitter.com/vlandham target=_blank>Jim Vallandingham</a> about how to make an HTML bubble chart or this simple <a href=https://bost.ocks.org/mike/bar/ target=_blank>example from the D3 documentation</a> that I totally missed 🤦🏻‍♀️.</p>
+		    <p class='prose'>This method doesn’t work as well if you have elements that would need to reach <em>across</em> your rows or columns. For instance, you can add axes (check out some examples of that <a href=https://pudding.cool/2018/06/makeup-shades/ target=_blank>here</a>) but if you want gridlines to extend from your axes all the way behind your graphic...this method won’t work for you. Also, if you want annotations that aren’t going to line up in a grid...stick with SVG. Boxes arranged in this way also don’t <a href=https://stackoverflow.com/questions/18846481/use-transition-on-flexbox-order target=_blank>smoothly animate</a> from one position to another. So, you’ll lose object constancy if your graphic includes any animation.</p>
+		    <p class='prose'>But otherwise, give it a try! And hit us up with any questions at <a href=mailto:amber@pudding.cool>amber@pudding.cool</a>.</p>
+		</section>
+		<!-- PUT ALL YOUR HTML HERE-->
+
+	</main>
+
+	<script src='https://pudding.cool/assets/scripts/d3.v4.12.0+jetpack.min.js'></script>
+	<script src='assets/scripts/prism.js'></script>
+	<script src='bundle.js?version=1532027506003' async></script>
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
+</body>
+
+</html>

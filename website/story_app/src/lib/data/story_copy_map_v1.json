@@ -1,0 +1,92 @@
+{
+  "story_id": "wealth-not-destiny-v1",
+  "title": "Progress Is Governable",
+  "dek": "Income draws a line. Health systems decide the distance from it.",
+  "version": "v1.0.0",
+  "beats": [
+    {
+      "beat_id": "b1_curve",
+      "label": "Beat 1",
+      "headline": "Income sets the baseline, not the outcome",
+      "body": "The first view teaches the shared rule: wealth predicts a lot, but countries still spread above and below expectation. The distance to the line is the story object.",
+      "visual_scene": "scene01",
+      "aria_summary": "Global scatter and expectation line showing typical and tail gaps in life expectancy.",
+      "annotations": [
+        {
+          "id": "b1_ann_r2",
+          "text": "Income explains about two-thirds",
+          "x": 0.56,
+          "y": 0.2,
+          "dx": 0.08,
+          "dy": -0.06,
+          "anchor": "start"
+        },
+        {
+          "id": "b1_ann_strip",
+          "text": "Typical vs tail distance",
+          "x": 0.34,
+          "y": 0.84,
+          "dx": 0.1,
+          "dy": 0.0,
+          "anchor": "start"
+        }
+      ]
+    },
+    {
+      "beat_id": "b2_rwanda",
+      "label": "Beat 2",
+      "headline": "Rwanda bends the trajectory",
+      "body": "The reveal is time-based first, model-based second: under-5 mortality drops from 98.3 to 42.0, while Rwanda's position shifts from near/below expectation to above it.",
+      "visual_scene": "scene02",
+      "aria_summary": "Rwanda trajectory with before-and-after under-5 card and movement against the same expectation line.",
+      "annotations": [
+        {
+          "id": "b2_ann_path",
+          "text": "Trajectory moves above expectation",
+          "x": 0.63,
+          "y": 0.36,
+          "dx": 0.08,
+          "dy": -0.08,
+          "anchor": "start"
+        },
+        {
+          "id": "b2_ann_card",
+          "text": "Pause on 2006, then 2015",
+          "x": 0.14,
+          "y": 0.23,
+          "dx": 0.02,
+          "dy": 0.0,
+          "anchor": "start"
+        }
+      ]
+    },
+    {
+      "beat_id": "b3_vietnam",
+      "label": "Beat 3",
+      "headline": "A second country confirms the pattern",
+      "body": "Vietnam is not a one-off blip. In 2010 it sits about 11 years above its income-based life-expectancy expectation, confirming the same directional signal on a different path.",
+      "visual_scene": "scene03",
+      "aria_summary": "Vietnam and Rwanda highlighted above the same expectation line to confirm pattern beyond one country.",
+      "annotations": [
+        {
+          "id": "b3_ann_vietnam",
+          "text": "Vietnam: large positive gap",
+          "x": 0.66,
+          "y": 0.28,
+          "dx": 0.1,
+          "dy": -0.04,
+          "anchor": "start"
+        },
+        {
+          "id": "b3_ann_rwanda",
+          "text": "Rwanda also above line",
+          "x": 0.46,
+          "y": 0.47,
+          "dx": 0.09,
+          "dy": -0.02,
+          "anchor": "start"
+        }
+      ]
+    }
+  ]
+}

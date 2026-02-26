@@ -1,0 +1,1444 @@
+{
+  "adol_fert_rate": {
+    "label": "Adolescent Fertility Rate",
+    "best": [
+      {
+        "Country.Code": "PRK",
+        "Country.Name": "Korea, Dem. Rep.",
+        "quality_pct_change": 58.409090909090914,
+        "pct_change": -58.409090909090914
+      },
+      {
+        "Country.Code": "MDV",
+        "Country.Name": "Maldives",
+        "quality_pct_change": 55.469503897067916,
+        "pct_change": -55.469503897067916
+      },
+      {
+        "Country.Code": "BTN",
+        "Country.Name": "Bhutan",
+        "quality_pct_change": 55.36773550473464,
+        "pct_change": -55.36773550473464
+      },
+      {
+        "Country.Code": "BEL",
+        "Country.Name": "Belgium",
+        "quality_pct_change": 47.73448208341492,
+        "pct_change": -47.73448208341492
+      },
+      {
+        "Country.Code": "ISL",
+        "Country.Name": "Iceland",
+        "quality_pct_change": 47.43451981195433,
+        "pct_change": -47.43451981195433
+      },
+      {
+        "Country.Code": "IND",
+        "Country.Name": "India",
+        "quality_pct_change": 45.47536651355943,
+        "pct_change": -45.47536651355943
+      },
+      {
+        "Country.Code": "USA",
+        "Country.Name": "United States",
+        "quality_pct_change": 44.2268405068073,
+        "pct_change": -44.2268405068073
+      },
+      {
+        "Country.Code": "LUX",
+        "Country.Name": "Luxembourg",
+        "quality_pct_change": 43.43392092421073,
+        "pct_change": -43.43392092421073
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "AZE",
+        "Country.Name": "Azerbaijan",
+        "quality_pct_change": -38.559092638947696,
+        "pct_change": 38.559092638947696
+      },
+      {
+        "Country.Code": "KGZ",
+        "Country.Name": "Kyrgyz Republic",
+        "quality_pct_change": -28.776124851692984,
+        "pct_change": 28.776124851692984
+      },
+      {
+        "Country.Code": "MNG",
+        "Country.Name": "Mongolia",
+        "quality_pct_change": -27.162466707641876,
+        "pct_change": 27.162466707641876
+      },
+      {
+        "Country.Code": "THA",
+        "Country.Name": "Thailand",
+        "quality_pct_change": -22.209781355707996,
+        "pct_change": 22.209781355707996
+      },
+      {
+        "Country.Code": "TUN",
+        "Country.Name": "Tunisia",
+        "quality_pct_change": -19.862346396806927,
+        "pct_change": 19.862346396806927
+      },
+      {
+        "Country.Code": "ALB",
+        "Country.Name": "Albania",
+        "quality_pct_change": -11.64454516024604,
+        "pct_change": 11.64454516024604
+      },
+      {
+        "Country.Code": "TKM",
+        "Country.Name": "Turkmenistan",
+        "quality_pct_change": -11.637702190917786,
+        "pct_change": 11.637702190917786
+      },
+      {
+        "Country.Code": "DZA",
+        "Country.Name": "Algeria",
+        "quality_pct_change": -10.526967869827358,
+        "pct_change": 10.526967869827358
+      }
+    ]
+  },
+  "co2_emissions_by_gdp": {
+    "label": "CO\u2082 Emissions per GDP",
+    "best": [
+      {
+        "Country.Code": "NRU",
+        "Country.Name": "Nauru",
+        "quality_pct_change": 74.06869966696559,
+        "pct_change": -74.06869966696559
+      },
+      {
+        "Country.Code": "MAC",
+        "Country.Name": "Macao SAR, China",
+        "quality_pct_change": 68.54337275888425,
+        "pct_change": -68.54337275888425
+      },
+      {
+        "Country.Code": "UZB",
+        "Country.Name": "Uzbekistan",
+        "quality_pct_change": 60.250727386863204,
+        "pct_change": -60.250727386863204
+      },
+      {
+        "Country.Code": "ROU",
+        "Country.Name": "Romania",
+        "quality_pct_change": 59.10462007941457,
+        "pct_change": -59.10462007941457
+      },
+      {
+        "Country.Code": "SYC",
+        "Country.Name": "Seychelles",
+        "quality_pct_change": 57.089198247073114,
+        "pct_change": -57.089198247073114
+      },
+      {
+        "Country.Code": "MKD",
+        "Country.Name": "Macedonia, FYR",
+        "quality_pct_change": 56.21551917132047,
+        "pct_change": -56.21551917132047
+      },
+      {
+        "Country.Code": "DNK",
+        "Country.Name": "Denmark",
+        "quality_pct_change": 54.2951311225654,
+        "pct_change": -54.2951311225654
+      },
+      {
+        "Country.Code": "AZE",
+        "Country.Name": "Azerbaijan",
+        "quality_pct_change": 52.454163315809154,
+        "pct_change": -52.454163315809154
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "TLS",
+        "Country.Name": "Timor-Leste",
+        "quality_pct_change": -174.2182567065176,
+        "pct_change": 174.2182567065176
+      },
+      {
+        "Country.Code": "AFG",
+        "Country.Name": "Afghanistan",
+        "quality_pct_change": -158.4659784367057,
+        "pct_change": 158.4659784367057
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": -122.78711890315324,
+        "pct_change": 122.78711890315324
+      },
+      {
+        "Country.Code": "MOZ",
+        "Country.Name": "Mozambique",
+        "quality_pct_change": -115.2938749807667,
+        "pct_change": 115.2938749807667
+      },
+      {
+        "Country.Code": "NPL",
+        "Country.Name": "Nepal",
+        "quality_pct_change": -89.83059625122839,
+        "pct_change": 89.83059625122839
+      },
+      {
+        "Country.Code": "NER",
+        "Country.Name": "Niger",
+        "quality_pct_change": -69.75418671444143,
+        "pct_change": 69.75418671444143
+      },
+      {
+        "Country.Code": "COG",
+        "Country.Name": "Congo, Rep.",
+        "quality_pct_change": -67.42809774961036,
+        "pct_change": 67.42809774961036
+      },
+      {
+        "Country.Code": "BRN",
+        "Country.Name": "Brunei Darussalam",
+        "quality_pct_change": -64.77469707474212,
+        "pct_change": 64.77469707474212
+      }
+    ]
+  },
+  "co2_emissions_percap": {
+    "label": "CO\u2082 Emissions per Capita (mt)",
+    "best": [
+      {
+        "Country.Code": "ABW",
+        "Country.Name": "Aruba",
+        "quality_pct_change": 68.79812466426773,
+        "pct_change": -68.79812466426773
+      },
+      {
+        "Country.Code": "PRK",
+        "Country.Name": "Korea, Dem. Rep.",
+        "quality_pct_change": 49.51290193041895,
+        "pct_change": -49.51290193041895
+      },
+      {
+        "Country.Code": "SYR",
+        "Country.Name": "Syrian Arab Republic",
+        "quality_pct_change": 43.55751478901881,
+        "pct_change": -43.55751478901881
+      },
+      {
+        "Country.Code": "DNK",
+        "Country.Name": "Denmark",
+        "quality_pct_change": 41.305617863802894,
+        "pct_change": -41.305617863802894
+      },
+      {
+        "Country.Code": "JAM",
+        "Country.Name": "Jamaica",
+        "quality_pct_change": 37.735126040616784,
+        "pct_change": -37.735126040616784
+      },
+      {
+        "Country.Code": "SYC",
+        "Country.Name": "Seychelles",
+        "quality_pct_change": 37.49384297113584,
+        "pct_change": -37.49384297113584
+      },
+      {
+        "Country.Code": "ESP",
+        "Country.Name": "Spain",
+        "quality_pct_change": 36.15297397063218,
+        "pct_change": -36.15297397063218
+      },
+      {
+        "Country.Code": "ITA",
+        "Country.Name": "Italy",
+        "quality_pct_change": 34.703026302875514,
+        "pct_change": -34.703026302875514
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "AFG",
+        "Country.Name": "Afghanistan",
+        "quality_pct_change": -369.8763081529352,
+        "pct_change": 369.8763081529352
+      },
+      {
+        "Country.Code": "MOZ",
+        "Country.Name": "Mozambique",
+        "quality_pct_change": -236.96581900760344,
+        "pct_change": 236.96581900760344
+      },
+      {
+        "Country.Code": "NPL",
+        "Country.Name": "Nepal",
+        "quality_pct_change": -186.9487318148693,
+        "pct_change": 186.9487318148693
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": -167.8898679068662,
+        "pct_change": 167.8898679068662
+      },
+      {
+        "Country.Code": "NER",
+        "Country.Name": "Niger",
+        "quality_pct_change": -126.48706247906706,
+        "pct_change": 126.48706247906706
+      },
+      {
+        "Country.Code": "TLS",
+        "Country.Name": "Timor-Leste",
+        "quality_pct_change": -125.85943575378047,
+        "pct_change": 125.85943575378047
+      },
+      {
+        "Country.Code": "COD",
+        "Country.Name": "Congo, Dem. Rep.",
+        "quality_pct_change": -122.57770725732635,
+        "pct_change": 122.57770725732635
+      },
+      {
+        "Country.Code": "BTN",
+        "Country.Name": "Bhutan",
+        "quality_pct_change": -120.89357892620399,
+        "pct_change": 120.89357892620399
+      }
+    ]
+  },
+  "immunization_measles_pct_12-23mos": {
+    "label": "Measles Immunization (%)",
+    "best": [
+      {
+        "Country.Code": "LAO",
+        "Country.Name": "Lao PDR",
+        "quality_pct_change": 83.33333333333334,
+        "pct_change": 83.33333333333334
+      },
+      {
+        "Country.Code": "AGO",
+        "Country.Name": "Angola",
+        "quality_pct_change": 70.0,
+        "pct_change": 70.0
+      },
+      {
+        "Country.Code": "ETH",
+        "Country.Name": "Ethiopia",
+        "quality_pct_change": 47.72727272727273,
+        "pct_change": 47.72727272727273
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": 46.15384615384615,
+        "pct_change": 46.15384615384615
+      },
+      {
+        "Country.Code": "AZE",
+        "Country.Name": "Azerbaijan",
+        "quality_pct_change": 42.028985507246375,
+        "pct_change": 42.028985507246375
+      },
+      {
+        "Country.Code": "NER",
+        "Country.Name": "Niger",
+        "quality_pct_change": 41.509433962264154,
+        "pct_change": 41.509433962264154
+      },
+      {
+        "Country.Code": "KIR",
+        "Country.Name": "Kiribati",
+        "quality_pct_change": 37.704918032786885,
+        "pct_change": 37.704918032786885
+      },
+      {
+        "Country.Code": "COM",
+        "Country.Name": "Comoros",
+        "quality_pct_change": 36.36363636363637,
+        "pct_change": 36.36363636363637
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "SSD",
+        "Country.Name": "South Sudan",
+        "quality_pct_change": -67.74193548387096,
+        "pct_change": -67.74193548387096
+      },
+      {
+        "Country.Code": "GNQ",
+        "Country.Name": "Equatorial Guinea",
+        "quality_pct_change": -47.05882352941176,
+        "pct_change": -47.05882352941176
+      },
+      {
+        "Country.Code": "UKR",
+        "Country.Name": "Ukraine",
+        "quality_pct_change": -42.857142857142854,
+        "pct_change": -42.857142857142854
+      },
+      {
+        "Country.Code": "SYR",
+        "Country.Name": "Syrian Arab Republic",
+        "quality_pct_change": -34.5679012345679,
+        "pct_change": -34.5679012345679
+      },
+      {
+        "Country.Code": "MNE",
+        "Country.Name": "Montenegro",
+        "quality_pct_change": -28.888888888888886,
+        "pct_change": -28.888888888888886
+      },
+      {
+        "Country.Code": "SLB",
+        "Country.Name": "Solomon Islands",
+        "quality_pct_change": -24.242424242424242,
+        "pct_change": -24.242424242424242
+      },
+      {
+        "Country.Code": "MHL",
+        "Country.Name": "Marshall Islands",
+        "quality_pct_change": -21.875,
+        "pct_change": -21.875
+      },
+      {
+        "Country.Code": "CAF",
+        "Country.Name": "Central African Republic",
+        "quality_pct_change": -19.672131147540984,
+        "pct_change": -19.672131147540984
+      }
+    ]
+  },
+  "internet_users": {
+    "label": "Internet Users (%)",
+    "best": [
+      {
+        "Country.Code": "MMR",
+        "Country.Name": "Myanmar",
+        "quality_pct_change": 11834.102270183566,
+        "pct_change": 11834.102270183566
+      },
+      {
+        "Country.Code": "KHM",
+        "Country.Name": "Cambodia",
+        "quality_pct_change": 4667.18586571305,
+        "pct_change": 4667.18586571305
+      },
+      {
+        "Country.Code": "TLS",
+        "Country.Name": "Timor-Leste",
+        "quality_pct_change": 4500.0,
+        "pct_change": 4500.0
+      },
+      {
+        "Country.Code": "ETH",
+        "Country.Name": "Ethiopia",
+        "quality_pct_change": 4360.883169550084,
+        "pct_change": 4360.883169550084
+      },
+      {
+        "Country.Code": "SLE",
+        "Country.Name": "Sierra Leone",
+        "quality_pct_change": 2686.680920055896,
+        "pct_change": 2686.680920055896
+      },
+      {
+        "Country.Code": "CIV",
+        "Country.Name": "Cote d'Ivoire",
+        "quality_pct_change": 2420.8197294666725,
+        "pct_change": 2420.8197294666725
+      },
+      {
+        "Country.Code": "MWI",
+        "Country.Name": "Malawi",
+        "quality_pct_change": 2087.092075960939,
+        "pct_change": 2087.092075960939
+      },
+      {
+        "Country.Code": "KAZ",
+        "Country.Name": "Kazakhstan",
+        "quality_pct_change": 2067.1338972728927,
+        "pct_change": 2067.1338972728927
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "SMR",
+        "Country.Name": "San Marino",
+        "quality_pct_change": -1.212259740259657,
+        "pct_change": -1.212259740259657
+      },
+      {
+        "Country.Code": "SWE",
+        "Country.Name": "Sweden",
+        "quality_pct_change": 3.2477210574293536,
+        "pct_change": 3.2477210574293536
+      },
+      {
+        "Country.Code": "USA",
+        "Country.Name": "United States",
+        "quality_pct_change": 8.157423235488219,
+        "pct_change": 8.157423235488219
+      },
+      {
+        "Country.Code": "FIN",
+        "Country.Name": "Finland",
+        "quality_pct_change": 8.488743826945152,
+        "pct_change": 8.488743826945152
+      },
+      {
+        "Country.Code": "NLD",
+        "Country.Name": "Netherlands",
+        "quality_pct_change": 9.586783669097375,
+        "pct_change": 9.586783669097375
+      },
+      {
+        "Country.Code": "ISL",
+        "Country.Name": "Iceland",
+        "quality_pct_change": 9.708412467880681,
+        "pct_change": 9.708412467880681
+      },
+      {
+        "Country.Code": "DNK",
+        "Country.Name": "Denmark",
+        "quality_pct_change": 11.171956145412572,
+        "pct_change": 11.171956145412572
+      },
+      {
+        "Country.Code": "GRL",
+        "Country.Name": "Greenland",
+        "quality_pct_change": 13.878911788767656,
+        "pct_change": 13.878911788767656
+      }
+    ]
+  },
+  "life_exp": {
+    "label": "Life Expectancy (years)",
+    "best": [
+      {
+        "Country.Code": "ZWE",
+        "Country.Name": "Zimbabwe",
+        "quality_pct_change": 30.325392715346112,
+        "pct_change": 30.325392715346112
+      },
+      {
+        "Country.Code": "BWA",
+        "Country.Name": "Botswana",
+        "quality_pct_change": 22.629667566812557,
+        "pct_change": 22.629667566812557
+      },
+      {
+        "Country.Code": "MWI",
+        "Country.Name": "Malawi",
+        "quality_pct_change": 22.473271700252145,
+        "pct_change": 22.473271700252145
+      },
+      {
+        "Country.Code": "SWZ",
+        "Country.Name": "Eswatini",
+        "quality_pct_change": 21.9036844127567,
+        "pct_change": 21.9036844127567
+      },
+      {
+        "Country.Code": "ZMB",
+        "Country.Name": "Zambia",
+        "quality_pct_change": 20.554104734041502,
+        "pct_change": 20.554104734041502
+      },
+      {
+        "Country.Code": "NAM",
+        "Country.Name": "Namibia",
+        "quality_pct_change": 18.15201081822055,
+        "pct_change": 18.15201081822055
+      },
+      {
+        "Country.Code": "ZAF",
+        "Country.Name": "South Africa",
+        "quality_pct_change": 17.803246284258954,
+        "pct_change": 17.803246284258954
+      },
+      {
+        "Country.Code": "RWA",
+        "Country.Name": "Rwanda",
+        "quality_pct_change": 16.56268022859539,
+        "pct_change": 16.56268022859539
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "SYR",
+        "Country.Name": "Syrian Arab Republic",
+        "quality_pct_change": -6.05816266193626,
+        "pct_change": -6.05816266193626
+      },
+      {
+        "Country.Code": "LBY",
+        "Country.Name": "Libya",
+        "quality_pct_change": 0.3565386390011262,
+        "pct_change": 0.3565386390011262
+      },
+      {
+        "Country.Code": "GEO",
+        "Country.Name": "Georgia",
+        "quality_pct_change": 0.5032311288326683,
+        "pct_change": 0.5032311288326683
+      },
+      {
+        "Country.Code": "BRN",
+        "Country.Name": "Brunei Darussalam",
+        "quality_pct_change": 0.7730037276829616,
+        "pct_change": 0.7730037276829616
+      },
+      {
+        "Country.Code": "VIR",
+        "Country.Name": "Virgin Islands (U.S.)",
+        "quality_pct_change": 0.8826728826728037,
+        "pct_change": 0.8826728826728037
+      },
+      {
+        "Country.Code": "CPV",
+        "Country.Name": "Cabo Verde",
+        "quality_pct_change": 1.0537011775841498,
+        "pct_change": 1.0537011775841498
+      },
+      {
+        "Country.Code": "USA",
+        "Country.Name": "United States",
+        "quality_pct_change": 1.2903428356146602,
+        "pct_change": 1.2903428356146602
+      },
+      {
+        "Country.Code": "KWT",
+        "Country.Name": "Kuwait",
+        "quality_pct_change": 1.3494781474233462,
+        "pct_change": 1.3494781474233462
+      }
+    ]
+  },
+  "maternal_mortality_ratio": {
+    "label": "Maternal Mortality (per 100K)",
+    "best": [
+      {
+        "Country.Code": "KAZ",
+        "Country.Name": "Kazakhstan",
+        "quality_pct_change": 70.73170731707317,
+        "pct_change": -70.73170731707317
+      },
+      {
+        "Country.Code": "TUR",
+        "Country.Name": "Turkey",
+        "quality_pct_change": 66.66666666666666,
+        "pct_change": -66.66666666666666
+      },
+      {
+        "Country.Code": "BLR",
+        "Country.Name": "Belarus",
+        "quality_pct_change": 60.0,
+        "pct_change": -60.0
+      },
+      {
+        "Country.Code": "TLS",
+        "Country.Name": "Timor-Leste",
+        "quality_pct_change": 53.862660944206006,
+        "pct_change": -53.862660944206006
+      },
+      {
+        "Country.Code": "LAO",
+        "Country.Name": "Lao PDR",
+        "quality_pct_change": 49.744897959183675,
+        "pct_change": -49.744897959183675
+      },
+      {
+        "Country.Code": "ETH",
+        "Country.Name": "Ethiopia",
+        "quality_pct_change": 49.4269340974212,
+        "pct_change": -49.4269340974212
+      },
+      {
+        "Country.Code": "AFG",
+        "Country.Name": "Afghanistan",
+        "quality_pct_change": 48.96907216494845,
+        "pct_change": -48.96907216494845
+      },
+      {
+        "Country.Code": "MNG",
+        "Country.Name": "Mongolia",
+        "quality_pct_change": 48.837209302325576,
+        "pct_change": -48.837209302325576
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "MUS",
+        "Country.Name": "Mauritius",
+        "quality_pct_change": -26.190476190476193,
+        "pct_change": 26.190476190476193
+      },
+      {
+        "Country.Code": "SYR",
+        "Country.Name": "Syrian Arab Republic",
+        "quality_pct_change": -23.636363636363637,
+        "pct_change": 23.636363636363637
+      },
+      {
+        "Country.Code": "HUN",
+        "Country.Name": "Hungary",
+        "quality_pct_change": -21.428571428571427,
+        "pct_change": 21.428571428571427
+      },
+      {
+        "Country.Code": "ZAF",
+        "Country.Name": "South Africa",
+        "quality_pct_change": -15.966386554621847,
+        "pct_change": 15.966386554621847
+      },
+      {
+        "Country.Code": "IRL",
+        "Country.Name": "Ireland",
+        "quality_pct_change": -14.285714285714285,
+        "pct_change": 14.285714285714285
+      },
+      {
+        "Country.Code": "SRB",
+        "Country.Name": "Serbia",
+        "quality_pct_change": -13.333333333333334,
+        "pct_change": 13.333333333333334
+      },
+      {
+        "Country.Code": "GRD",
+        "Country.Name": "Grenada",
+        "quality_pct_change": -8.0,
+        "pct_change": 8.0
+      },
+      {
+        "Country.Code": "PAN",
+        "Country.Name": "Panama",
+        "quality_pct_change": -6.8181818181818175,
+        "pct_change": 6.8181818181818175
+      }
+    ]
+  },
+  "mortality_rate_infant": {
+    "label": "Infant Mortality (per 1,000)",
+    "best": [
+      {
+        "Country.Code": "KAZ",
+        "Country.Name": "Kazakhstan",
+        "quality_pct_change": 58.68725868725869,
+        "pct_change": -58.68725868725869
+      },
+      {
+        "Country.Code": "MNE",
+        "Country.Name": "Montenegro",
+        "quality_pct_change": 57.30337078651686,
+        "pct_change": -57.30337078651686
+      },
+      {
+        "Country.Code": "MDV",
+        "Country.Name": "Maldives",
+        "quality_pct_change": 56.14035087719299,
+        "pct_change": -56.14035087719299
+      },
+      {
+        "Country.Code": "EST",
+        "Country.Name": "Estonia",
+        "quality_pct_change": 51.92307692307693,
+        "pct_change": -51.92307692307693
+      },
+      {
+        "Country.Code": "CHN",
+        "Country.Name": "China",
+        "quality_pct_change": 50.53763440860216,
+        "pct_change": -50.53763440860216
+      },
+      {
+        "Country.Code": "RWA",
+        "Country.Name": "Rwanda",
+        "quality_pct_change": 49.840255591054316,
+        "pct_change": -49.840255591054316
+      },
+      {
+        "Country.Code": "BLR",
+        "Country.Name": "Belarus",
+        "quality_pct_change": 48.333333333333336,
+        "pct_change": -48.333333333333336
+      },
+      {
+        "Country.Code": "MNG",
+        "Country.Name": "Mongolia",
+        "quality_pct_change": 48.064516129032256,
+        "pct_change": -48.064516129032256
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "DMA",
+        "Country.Name": "Dominica",
+        "quality_pct_change": -94.5945945945946,
+        "pct_change": 94.5945945945946
+      },
+      {
+        "Country.Code": "VEN",
+        "Country.Name": "Venezuela, RB",
+        "quality_pct_change": -24.675324675324667,
+        "pct_change": 24.675324675324667
+      },
+      {
+        "Country.Code": "GRD",
+        "Country.Name": "Grenada",
+        "quality_pct_change": -21.311475409836078,
+        "pct_change": 21.311475409836078
+      },
+      {
+        "Country.Code": "GRC",
+        "Country.Name": "Greece",
+        "quality_pct_change": -8.333333333333329,
+        "pct_change": 8.333333333333329
+      },
+      {
+        "Country.Code": "FJI",
+        "Country.Name": "Fiji",
+        "quality_pct_change": -4.522613065326644,
+        "pct_change": 4.522613065326644
+      },
+      {
+        "Country.Code": "SYC",
+        "Country.Name": "Seychelles",
+        "quality_pct_change": -2.4793388429752126,
+        "pct_change": 2.4793388429752126
+      },
+      {
+        "Country.Code": "TON",
+        "Country.Name": "Tonga",
+        "quality_pct_change": -0.6993006993006968,
+        "pct_change": 0.6993006993006968
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": 0.8403361344537785,
+        "pct_change": -0.8403361344537785
+      }
+    ]
+  },
+  "mortality_rate_under5": {
+    "label": "Under-5 Mortality (per 1,000)",
+    "best": [
+      {
+        "Country.Code": "KAZ",
+        "Country.Name": "Kazakhstan",
+        "quality_pct_change": 59.044368600682596,
+        "pct_change": -59.044368600682596
+      },
+      {
+        "Country.Code": "MNE",
+        "Country.Name": "Montenegro",
+        "quality_pct_change": 58.163265306122454,
+        "pct_change": -58.163265306122454
+      },
+      {
+        "Country.Code": "RWA",
+        "Country.Name": "Rwanda",
+        "quality_pct_change": 57.273652085452696,
+        "pct_change": -57.273652085452696
+      },
+      {
+        "Country.Code": "MDV",
+        "Country.Name": "Maldives",
+        "quality_pct_change": 55.99999999999999,
+        "pct_change": -55.99999999999999
+      },
+      {
+        "Country.Code": "EST",
+        "Country.Name": "Estonia",
+        "quality_pct_change": 52.307692307692314,
+        "pct_change": -52.307692307692314
+      },
+      {
+        "Country.Code": "SWZ",
+        "Country.Name": "Eswatini",
+        "quality_pct_change": 51.79316096747289,
+        "pct_change": -51.79316096747289
+      },
+      {
+        "Country.Code": "CHN",
+        "Country.Name": "China",
+        "quality_pct_change": 50.68493150684931,
+        "pct_change": -50.68493150684931
+      },
+      {
+        "Country.Code": "ZAF",
+        "Country.Name": "South Africa",
+        "quality_pct_change": 50.55214723926381,
+        "pct_change": -50.55214723926381
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "DMA",
+        "Country.Name": "Dominica",
+        "quality_pct_change": -89.0909090909091,
+        "pct_change": 89.0909090909091
+      },
+      {
+        "Country.Code": "VEN",
+        "Country.Name": "Venezuela, RB",
+        "quality_pct_change": -25.69832402234638,
+        "pct_change": 25.69832402234638
+      },
+      {
+        "Country.Code": "GRD",
+        "Country.Name": "Grenada",
+        "quality_pct_change": -16.428571428571434,
+        "pct_change": 16.428571428571434
+      },
+      {
+        "Country.Code": "GRC",
+        "Country.Name": "Greece",
+        "quality_pct_change": -11.627906976744185,
+        "pct_change": 11.627906976744185
+      },
+      {
+        "Country.Code": "FJI",
+        "Country.Name": "Fiji",
+        "quality_pct_change": -5.12820512820514,
+        "pct_change": 5.12820512820514
+      },
+      {
+        "Country.Code": "SYC",
+        "Country.Name": "Seychelles",
+        "quality_pct_change": -2.8368794326241162,
+        "pct_change": 2.8368794326241162
+      },
+      {
+        "Country.Code": "TON",
+        "Country.Name": "Tonga",
+        "quality_pct_change": -0.6024096385542039,
+        "pct_change": 0.6024096385542039
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": 1.052631578947371,
+        "pct_change": -1.052631578947371
+      }
+    ]
+  },
+  "net_oda_provided_pctgni": {
+    "label": "ODA as % of GNI",
+    "best": [
+      {
+        "Country.Code": "TUR",
+        "Country.Name": "Turkey",
+        "quality_pct_change": 179.8882681564246,
+        "pct_change": 179.8882681564246
+      },
+      {
+        "Country.Code": "KOR",
+        "Country.Name": "Korea, Rep.",
+        "quality_pct_change": 170.5882352941177,
+        "pct_change": 170.5882352941177
+      },
+      {
+        "Country.Code": "DEU",
+        "Country.Name": "Germany",
+        "quality_pct_change": 46.910112359550574,
+        "pct_change": 46.910112359550574
+      },
+      {
+        "Country.Code": "FIN",
+        "Country.Name": "Finland",
+        "quality_pct_change": 38.88888888888889,
+        "pct_change": 38.88888888888889
+      },
+      {
+        "Country.Code": "SWE",
+        "Country.Name": "Sweden",
+        "quality_pct_change": 37.073170731707336,
+        "pct_change": 37.073170731707336
+      },
+      {
+        "Country.Code": "CHE",
+        "Country.Name": "Switzerland",
+        "quality_pct_change": 37.06666666666667,
+        "pct_change": 37.06666666666667
+      },
+      {
+        "Country.Code": "GBR",
+        "Country.Name": "United Kingdom",
+        "quality_pct_change": 36.96498054474707,
+        "pct_change": 36.96498054474707
+      },
+      {
+        "Country.Code": "SVN",
+        "Country.Name": "Slovenia",
+        "quality_pct_change": 25.210084033613445,
+        "pct_change": 25.210084033613445
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "ESP",
+        "Country.Name": "Spain",
+        "quality_pct_change": -62.857142857142854,
+        "pct_change": -62.857142857142854
+      },
+      {
+        "Country.Code": "THA",
+        "Country.Name": "Thailand",
+        "quality_pct_change": -52.77777777777777,
+        "pct_change": -52.77777777777777
+      },
+      {
+        "Country.Code": "IRL",
+        "Country.Name": "Ireland",
+        "quality_pct_change": -41.2199630314233,
+        "pct_change": -41.2199630314233
+      },
+      {
+        "Country.Code": "GRC",
+        "Country.Name": "Greece",
+        "quality_pct_change": -29.479768786127163,
+        "pct_change": -29.479768786127163
+      },
+      {
+        "Country.Code": "PRT",
+        "Country.Name": "Portugal",
+        "quality_pct_change": -25.471698113207548,
+        "pct_change": -25.471698113207548
+      },
+      {
+        "Country.Code": "AUT",
+        "Country.Name": "Austria",
+        "quality_pct_change": -24.520255863539443,
+        "pct_change": -24.520255863539443
+      },
+      {
+        "Country.Code": "FRA",
+        "Country.Name": "France",
+        "quality_pct_change": -21.367521367521373,
+        "pct_change": -21.367521367521373
+      },
+      {
+        "Country.Code": "JPN",
+        "Country.Name": "Japan",
+        "quality_pct_change": -18.54838709677419,
+        "pct_change": -18.54838709677419
+      }
+    ]
+  },
+  "pct_undernourished": {
+    "label": "Undernourishment (%)",
+    "best": [
+      {
+        "Country.Code": "MDA",
+        "Country.Name": "Moldova",
+        "quality_pct_change": 63.829787234042556,
+        "pct_change": -63.829787234042556
+      },
+      {
+        "Country.Code": "MLI",
+        "Country.Name": "Mali",
+        "quality_pct_change": 60.0,
+        "pct_change": -60.0
+      },
+      {
+        "Country.Code": "TTO",
+        "Country.Name": "Trinidad and Tobago",
+        "quality_pct_change": 57.52212389380531,
+        "pct_change": -57.52212389380531
+      },
+      {
+        "Country.Code": "IDN",
+        "Country.Name": "Indonesia",
+        "quality_pct_change": 57.065217391304344,
+        "pct_change": -57.065217391304344
+      },
+      {
+        "Country.Code": "CMR",
+        "Country.Name": "Cameroon",
+        "quality_pct_change": 56.59340659340659,
+        "pct_change": -56.59340659340659
+      },
+      {
+        "Country.Code": "PAN",
+        "Country.Name": "Panama",
+        "quality_pct_change": 56.13207547169811,
+        "pct_change": -56.13207547169811
+      },
+      {
+        "Country.Code": "DJI",
+        "Country.Name": "Djibouti",
+        "quality_pct_change": 55.55555555555556,
+        "pct_change": -55.55555555555556
+      },
+      {
+        "Country.Code": "ALB",
+        "Country.Name": "Albania",
+        "quality_pct_change": 55.45454545454545,
+        "pct_change": -55.45454545454545
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "VEN",
+        "Country.Name": "Venezuela, RB",
+        "quality_pct_change": -54.76190476190476,
+        "pct_change": 54.76190476190476
+      },
+      {
+        "Country.Code": "CAF",
+        "Country.Name": "Central African Republic",
+        "quality_pct_change": -53.00261096605746,
+        "pct_change": 53.00261096605746
+      },
+      {
+        "Country.Code": "UGA",
+        "Country.Name": "Uganda",
+        "quality_pct_change": -50.0,
+        "pct_change": 50.0
+      },
+      {
+        "Country.Code": "LBN",
+        "Country.Name": "Lebanon",
+        "quality_pct_change": -45.94594594594595,
+        "pct_change": 45.94594594594595
+      },
+      {
+        "Country.Code": "STP",
+        "Country.Name": "Sao Tome and Principe",
+        "quality_pct_change": -39.17525773195877,
+        "pct_change": 39.17525773195877
+      },
+      {
+        "Country.Code": "NGA",
+        "Country.Name": "Nigeria",
+        "quality_pct_change": -29.508196721311492,
+        "pct_change": 29.508196721311492
+      },
+      {
+        "Country.Code": "BLZ",
+        "Country.Name": "Belize",
+        "quality_pct_change": -26.530612244897956,
+        "pct_change": 26.530612244897956
+      },
+      {
+        "Country.Code": "MDG",
+        "Country.Name": "Madagascar",
+        "quality_pct_change": -26.268656716417905,
+        "pct_change": 26.268656716417905
+      }
+    ]
+  },
+  "prop_women_parliament": {
+    "label": "Women in Parliament (%)",
+    "best": [
+      {
+        "Country.Code": "DZA",
+        "Country.Name": "Algeria",
+        "quality_pct_change": 409.6774193548387,
+        "pct_change": 409.6774193548387
+      },
+      {
+        "Country.Code": "NPL",
+        "Country.Name": "Nepal",
+        "quality_pct_change": 400.0,
+        "pct_change": 400.0
+      },
+      {
+        "Country.Code": "ARE",
+        "Country.Name": "United Arab Emirates",
+        "quality_pct_change": 350.0,
+        "pct_change": 350.0
+      },
+      {
+        "Country.Code": "CMR",
+        "Country.Name": "Cameroon",
+        "quality_pct_change": 249.43820224719104,
+        "pct_change": 249.43820224719104
+      },
+      {
+        "Country.Code": "TUR",
+        "Country.Name": "Turkey",
+        "quality_pct_change": 238.63636363636363,
+        "pct_change": 238.63636363636363
+      },
+      {
+        "Country.Code": "BTN",
+        "Country.Name": "Bhutan",
+        "quality_pct_change": 214.81481481481478,
+        "pct_change": 214.81481481481478
+      },
+      {
+        "Country.Code": "BOL",
+        "Country.Name": "Bolivia",
+        "quality_pct_change": 214.2011834319527,
+        "pct_change": 214.2011834319527
+      },
+      {
+        "Country.Code": "MHL",
+        "Country.Name": "Marshall Islands",
+        "quality_pct_change": 203.33333333333331,
+        "pct_change": 203.33333333333331
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "TON",
+        "Country.Name": "Tonga",
+        "quality_pct_change": -100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "VUT",
+        "Country.Name": "Vanuatu",
+        "quality_pct_change": -100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "YEM",
+        "Country.Name": "Yemen, Rep.",
+        "quality_pct_change": -100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "BLZ",
+        "Country.Name": "Belize",
+        "quality_pct_change": -53.73134328358209,
+        "pct_change": -53.73134328358209
+      },
+      {
+        "Country.Code": "MDV",
+        "Country.Name": "Maldives",
+        "quality_pct_change": -50.83333333333333,
+        "pct_change": -50.83333333333333
+      },
+      {
+        "Country.Code": "OMN",
+        "Country.Name": "Oman",
+        "quality_pct_change": -50.0,
+        "pct_change": -50.0
+      },
+      {
+        "Country.Code": "SWZ",
+        "Country.Name": "Eswatini",
+        "quality_pct_change": -42.592592592592595,
+        "pct_change": -42.592592592592595
+      },
+      {
+        "Country.Code": "LBN",
+        "Country.Name": "Lebanon",
+        "quality_pct_change": -34.04255319148936,
+        "pct_change": -34.04255319148936
+      }
+    ]
+  },
+  "tb_incidence": {
+    "label": "TB Incidence (per 100K)",
+    "best": [
+      {
+        "Country.Code": "VGB",
+        "Country.Name": "British Virgin Islands",
+        "quality_pct_change": 100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "MCO",
+        "Country.Name": "Monaco",
+        "quality_pct_change": 100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "BMU",
+        "Country.Name": "Bermuda",
+        "quality_pct_change": 100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "BRB",
+        "Country.Name": "Barbados",
+        "quality_pct_change": 100.0,
+        "pct_change": -100.0
+      },
+      {
+        "Country.Code": "TCA",
+        "Country.Name": "Turks and Caicos Islands",
+        "quality_pct_change": 76.89655172413794,
+        "pct_change": -76.89655172413794
+      },
+      {
+        "Country.Code": "AND",
+        "Country.Name": "Andorra",
+        "quality_pct_change": 65.29411764705883,
+        "pct_change": -65.29411764705883
+      },
+      {
+        "Country.Code": "DMA",
+        "Country.Name": "Dominica",
+        "quality_pct_change": 64.51612903225806,
+        "pct_change": -64.51612903225806
+      },
+      {
+        "Country.Code": "ARE",
+        "Country.Name": "United Arab Emirates",
+        "quality_pct_change": 60.5,
+        "pct_change": -60.5
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "GRD",
+        "Country.Name": "Grenada",
+        "quality_pct_change": -390.90909090909093,
+        "pct_change": 390.90909090909093
+      },
+      {
+        "Country.Code": "FJI",
+        "Country.Name": "Fiji",
+        "quality_pct_change": -200.0,
+        "pct_change": 200.0
+      },
+      {
+        "Country.Code": "KNA",
+        "Country.Name": "St. Kitts and Nevis",
+        "quality_pct_change": -134.78260869565221,
+        "pct_change": 134.78260869565221
+      },
+      {
+        "Country.Code": "TUV",
+        "Country.Name": "Tuvalu",
+        "quality_pct_change": -104.90196078431373,
+        "pct_change": 104.90196078431373
+      },
+      {
+        "Country.Code": "GUM",
+        "Country.Name": "Guam",
+        "quality_pct_change": -68.75,
+        "pct_change": 68.75
+      },
+      {
+        "Country.Code": "URY",
+        "Country.Name": "Uruguay",
+        "quality_pct_change": -57.89473684210527,
+        "pct_change": 57.89473684210527
+      },
+      {
+        "Country.Code": "GNQ",
+        "Country.Name": "Equatorial Guinea",
+        "quality_pct_change": -57.798165137614674,
+        "pct_change": 57.798165137614674
+      },
+      {
+        "Country.Code": "CYP",
+        "Country.Name": "Cyprus",
+        "quality_pct_change": -55.00000000000001,
+        "pct_change": 55.00000000000001
+      }
+    ]
+  },
+  "trade_pct_gdp": {
+    "label": "Trade as % of GDP",
+    "best": [
+      {
+        "Country.Code": "MMR",
+        "Country.Name": "Myanmar",
+        "quality_pct_change": 19000.9642022346,
+        "pct_change": 19000.9642022346
+      },
+      {
+        "Country.Code": "TLS",
+        "Country.Name": "Timor-Leste",
+        "quality_pct_change": 81.51358609559128,
+        "pct_change": 81.51358609559128
+      },
+      {
+        "Country.Code": "BFA",
+        "Country.Name": "Burkina Faso",
+        "quality_pct_change": 68.66470220471868,
+        "pct_change": 68.66470220471868
+      },
+      {
+        "Country.Code": "SLE",
+        "Country.Name": "Sierra Leone",
+        "quality_pct_change": 59.38476799968676,
+        "pct_change": 59.38476799968676
+      },
+      {
+        "Country.Code": "GHA",
+        "Country.Name": "Ghana",
+        "quality_pct_change": 52.52490568463317,
+        "pct_change": 52.52490568463317
+      },
+      {
+        "Country.Code": "GNB",
+        "Country.Name": "Guinea-Bissau",
+        "quality_pct_change": 47.7941207920657,
+        "pct_change": 47.7941207920657
+      },
+      {
+        "Country.Code": "ARE",
+        "Country.Name": "United Arab Emirates",
+        "quality_pct_change": 46.66466643396161,
+        "pct_change": 46.66466643396161
+      },
+      {
+        "Country.Code": "MOZ",
+        "Country.Name": "Mozambique",
+        "quality_pct_change": 46.3532725270307,
+        "pct_change": 46.3532725270307
+      }
+    ],
+    "worst": [
+      {
+        "Country.Code": "VIR",
+        "Country.Name": "Virgin Islands (U.S.)",
+        "quality_pct_change": -85.05556366690892,
+        "pct_change": -85.05556366690892
+      },
+      {
+        "Country.Code": "NGA",
+        "Country.Name": "Nigeria",
+        "quality_pct_change": -66.98207955233426,
+        "pct_change": -66.98207955233426
+      },
+      {
+        "Country.Code": "SDN",
+        "Country.Name": "Sudan",
+        "quality_pct_change": -58.24496671255156,
+        "pct_change": -58.24496671255156
+      },
+      {
+        "Country.Code": "YEM",
+        "Country.Name": "Yemen, Rep.",
+        "quality_pct_change": -56.5649235028575,
+        "pct_change": -56.5649235028575
+      },
+      {
+        "Country.Code": "LBR",
+        "Country.Name": "Liberia",
+        "quality_pct_change": -54.52907277360147,
+        "pct_change": -54.52907277360147
+      },
+      {
+        "Country.Code": "SSD",
+        "Country.Name": "South Sudan",
+        "quality_pct_change": -50.5400516359324,
+        "pct_change": -50.5400516359324
+      },
+      {
+        "Country.Code": "AFG",
+        "Country.Name": "Afghanistan",
+        "quality_pct_change": -44.50446219497627,
+        "pct_change": -44.50446219497627
+      },
+      {
+        "Country.Code": "ARG",
+        "Country.Name": "Argentina",
+        "quality_pct_change": -44.38711147244582,
+        "pct_change": -44.38711147244582
+      }
+    ]
+  }
+}

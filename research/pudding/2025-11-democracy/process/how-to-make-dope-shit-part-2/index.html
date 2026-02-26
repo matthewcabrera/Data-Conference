@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang='en' data-version='1501690346367'>
+
+<head>
+
+	<title>Making Internet Things, Part 2: Design</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='Making Internet Things, Part 2: Design.' />
+	<meta name='news_keywords' content='introduction data visualization' />
+
+	<meta property='og:title' content='Making Internet Things, Part 2: Design' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/process/intro_tutorial_2/' />
+	<meta property='og:description'
+		content='This is the second installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.' />
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+
+	<meta property='og:image' content='https://pudding.cool/process/how-to-make-dope-shit-part-2/assets/og-img.png' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='600' />
+
+	<meta name='twitter:card' content='summary_large_image'>
+	<meta name='twitter:site' content='https://pudding.cool'>
+	<meta name='twitter:creator' content='@puddingviz'>
+	<meta name='twitter:title' content='Making Internet Things, Part 2: Design'>
+	<meta name='twitter:description'
+		content='This is the second installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.'>
+	<meta name='twitter:image:src' content='https://pudding.cool/process/how-to-make-dope-shit-part-2/assets/og-img.png'>
+
+	<!-- smoosh -->
+
+	<!-- endsmoosh -->
+
+
+	<link rel="stylesheet" href="critical.css" />
+	<link rel="stylesheet" href="bundle.css" />
+
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+
+	        You may not modify the font software, use it on another website, or install it on a computer.
+
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK
+	*/
+		/* Canela */
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		/* Publico Text */
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+			font-stretch: normal;
+		}
+
+		/* Atlast Grotesk */
+		/*
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		*/
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	</style>
+	<!-- smoosh -->
+	<script src='critical.js'></script>
+	<!-- endsmoosh -->
+
+
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class='tk-publico'>
+
+	<a href='#content' class='skip-to-main'>Skip to main content</a>
+	<header>
+		<a href='https://pudding.cool' target='_blank' class='logo'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="296.91" height="47.52" viewBox="19.42 11.31 296.911 47.518"
+				aria-labelledby="logo-title" role="img">
+				<title id="logo-title">The Pudding</title>
+				<path
+					d="M47.77 56.8c-2.5-.2-15.5-.2-18 0v-.44l2.05-.3c1.8-.25 2.5-1.35 2.5-9.35V15.1h-1.9c-3.6 0-5.5 1.75-9.7 9.4l-2.8 5.25h-.5c.3-3.2 1-13.24 1.1-16.6l.1-.04c1.8.2 9.3.5 11.1.5h17.5c2.3 0 11.1-1.4 13.2-2.1l.1.1v15.8h.27l1-1.1c2.9-3.3 5.3-4.4 8-4.4 4.4 0 7 2.4 7 7.5v11.5c0 7.7.7 8.9 2.6 9.2l1.1.2v.5c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.6-.4 2.3-1.3 2.3-9.2v-11c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.7l-1.8.6v12.9c0 7.9.6 8.8 2.2 9.3l.56.2v.5c-2.38-.2-12.4-.2-14.78 0v-.4l1.03-.2c1.97-.3 2.7-1.5 2.7-9.2V21c-2.43-4.6-5.13-5.75-8.63-5.75h-2.1v31.6c0 8 .6 9.07 2.4 9.37l1.9.3v.46l-.1-.18zm3.25-.64h55.7v.65H51v-.6zm45-5.1c-8.5 0-12.3-4.55-12.3-13.8v-1.7c0-8.86 4.3-13.76 13.28-13.76 7.66 0 11.1 3.26 11.1 12.36v1.8H92.97v3.2c0 7.1 1.9 9 6 9 2.45 0 5-1.25 7.4-2.9l2-1.35.1 1.4-1.6 1.5c-2.95 2.7-6.75 4.4-10.85 4.4v-.1zm-3-16.6h7.4v-2.7c0-6.75-1-7.95-3.7-7.95-2.6 0-3.7 1.2-3.7 9.3v1.4zm35.2 22.35c-2.5-.2-15.7-.2-18.2 0v-.4l1.9-.3c1.8-.3 2.4-1.3 2.4-9.3V23.5c0-8.04-.6-9.14-2.4-9.4l-1.8-.24v-.45c1.36.1 7.8.2 9 .2 1.46 0 8.06-.1 9.3-.1 10.36 0 14.96 5.1 14.96 12.8v1.5c0 7.8-4.55 12.8-14.9 12.8h-2.2V39c.55.04 1.1.04 1.5.04 3.8 0 5.35-2.9 5.35-10.44v-3.3c0-7.54-1.54-10.44-5.44-10.44-.4 0-2.6 0-4.1.05v31.8c0 8 .7 9.1 2.5 9.4l2.3.3v.5l-.3-.1zm3.3-.6H282.3v.7H131.5v-.7zm22.6-5c-4.4 0-7-2.4-7-7.5V33.2c0-7-.4-8.56-1.8-9l-.6-.2v-.4c1.8-.2 8.4-1.1 10.7-1.66v20.9c0 2.5.9 3.4 3.1 3.4.74 0 1.7-.24 3.1-.64l1.84-.5V33.2c0-6.9-.8-8.2-2.7-8.86l-1.1-.34v-.4c2.1-.2 9.7-1.1 12-1.66v17.9c0 6.86.75 8.2 2.65 8.8l1.1.36v.45c-2.1.16-9.2 1.06-11.5 1.66l-.3-5.4h-.2l-1 1.1c-2.9 3.3-5.3 4.4-8.1 4.4zm32 0c-5.4 0-9-4.4-9-13.6v-2.2c0-9.5 4.3-13.6 11.1-13.6 2.4 0 4.24.5 6.14 2.2l.8.7h.24v-2.6c0-6.5-.76-7.7-2.66-8.3l-1.1-.3v-.4c2.14-.2 9.44-1.1 11.74-1.6v28.2c0 7 .8 8.5 2.7 9.1l1.05.4v.5c-2.1.2-8.95 1.1-11.25 1.7l-.35-5.4h-.27l-1 1.1c-2.95 3.3-5.4 4.4-8.1 4.4l-.05-.2zm7.7-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.6-8.8-3.3 0-4.66 2.6-4.66 9.54v3.7c0 6.2 1.44 7.9 4.5 7.9.84 0 1.84-.2 3.2-.64h-.05zm24.1 5.6c-5.46 0-9-4.4-9-13.6v-2.2c0-9.5 4.2-13.6 11-13.6 2.44 0 4.2.6 6.14 2.2l.84.7h.24v-2.6c0-6.5-.8-7.6-2.7-8.3l-1.06-.3v-.4c2.1-.2 9.45-1.1 11.75-1.6v28.2c0 7 .75 8.5 2.65 9.1l1.1.4v.5c-2.15.2-9 1.1-11.3 1.7l-.36-5.4h-.27l-1 1.1c-2.95 3.3-5.35 4.4-8.1 4.4l.06-.2zm7.64-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.66-8.8-3.26 0-4.6 2.6-4.6 9.54v3.7c0 6.2 1.4 7.9 4.44 7.9.84 0 1.84-.2 3.2-.64h.02zm28.1 5.1c-2.16-.2-11.56-.2-13.76 0v-.4l.54-.1c1.6-.4 2.2-1.3 2.2-9.2v-7.7c0-6.9-.76-8.2-2.66-8.8l-1.1-.3v-.4c2.15-.2 9.7-1.1 12-1.6V41c0 7.9.7 8.8 2.24 9.27l.5.14v.5l.03-.1zm-12.1-35.3c0-2.6 1.6-4.1 5.1-4.1 3.54 0 5.1 1.5 5.1 4.1 0 2.6-1.56 4.1-5.1 4.1-3.5 0-5.1-1.5-5.1-4.1zm45.13 35.3c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.5-.4 2.2-1.3 2.2-9.2V30.1c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.66l-1.8.55v12.9c0 7.9.6 8.8 2.2 9.3l.53.2v.5c-2.35-.2-12.4-.2-14.75 0v-.4l1.07-.2c1.92-.3 2.7-1.5 2.7-9.2v-7.7c0-6.9-.8-8.2-2.7-8.8l-1.1-.3v-.4c2.1-.2 9.2-1.1 11.5-1.6l.33 5.4h.28l1-1.1c2.94-3.2 5.4-4.4 8.1-4.4 4.44 0 7.04 2.4 7.04 7.5V41c0 7.7.77 8.9 2.67 9.2l1.1.2v.5l.1-.15zm15.6 7.9h-4.7c-10.5 0-12.3-1.3-12.3-3.4V55c0-1.85 2.5-4.35 7.3-4.35h.2V54c0 1.8 1 2.6 4.7 2.6h4.6c5.02 0 6.82-1.3 6.82-3.2V53c0-1.8-.85-3.2-3.5-3.2h-13.3c-2.75 0-4.2-1.3-4.2-3.7v-.16c0-1.94 1.2-3.54 4.75-5.4l3-1.54v-.5c-5.64-1-8.2-3.46-8.2-7.86v-.24c0-5.55 4.16-8.55 13.1-8.55 2.46 0 4.46.26 6.46.8l.16-.34c1.7-3.4 3.93-5 8-5h.9v5.4h-5.6c-.5 0-1.9.1-2.27.2l-.36.1v.5c3.8 1.1 5.76 3.6 5.76 7.1v.3c0 5.6-4.13 8.6-13.03 8.6-1.3 0-2.5-.1-3.7-.2l-.9 1.1c-.85 1-1.05 1.5-1.05 1.8 0 .4.2.5.6.5h11.62c5.8 0 8.9 3 8.9 7.4v.4c0 5.28-5.9 8.5-14 8.5l.1-.2zm2.5-27.7v-.7c0-4.7-.9-6.3-4.1-6.3-3.3 0-4.1 1.6-4.1 6.3v.8c0 4.7.9 6.3 4.1 6.3 3.2 0 4-1.6 4-6.3v-.1z" />
+			</svg>
+
+		</a>
+	</header>
+	<main id='content'>
+
+		<div class='intro'>
+			<p class='intro__overline tk-atlas'>How to Make Dope Shit</p>
+			<h1 class='intro__hed tk-atlas'>Part 2: Design</h1>
+
+
+			<p class='intro__dek tk-atlas'>This is the second installment of a multi-part series designed to help you
+				familiarize yourself with the tools used to
+				make visual, data-driven essays.</p>
+
+			<img class='intro__image' src='assets/dog-drawing.gif'>
+
+			<p class='intro__byline tk-atlas'>By <a href='https://twitter.com/iliablinderman' target='_blank'><strong>Ilia
+						Blinderman</strong></a></p>
+		</div>
+
+		<!-- PUT ALL YOUR HTML HERE-->
+		<div class='post'>
+			<h2 class='post__hed tk-atlas'>Introduction</h2>
+			<p>
+				A few months ago, I put together the first part of a guide to help people who wanted to start delving into that
+				hard-to-pin-down brand of storytelling that we do at The Pudding. I was frustrated by the fact that finding
+				sufficiently beginner-friendly resources was so difficult, and decided to collect the most useful links for
+				jumping into data analysis in <a target='_blank'
+					href='https://pudding.cool/process/how-to-make-dope-shit-part-1/'>
+					this blog post</a>.
+			</p>
+
+
+			<p>
+				Today, I bring you the second installment of How To Make Dope Shit on The Internet; this one, aimed at helping
+				ease some anxieties that people may have about designing visualizations.
+			</p>
+
+			<h2 class='post__hed tk-atlas'>Design and Data Visualization</h2>
+			<p>
+				Approaching the design of a visualization can be daunting: which insights of your analysis will you visualize?
+				Which chart should you use? How will you code it?
+			</p>
+
+			<p>
+				The complexity of this chain of decisions can quickly become frustrating. Picking the right way to communicate
+				data may be difficult enough on its own, but pairing it with code, especially when you’re new to programming,
+				can seem exponentially more maddening. I get it — I’ve been there, and that uncertainty sucks. Below, I’ll
+				provide you with a few thoughts on how to make this a little less anxiety-inducing, because at the end of the
+				day, you’re doing cool, exciting work.
+			</p>
+
+
+			<p class='list-title'><strong>Look at visualization</strong></p>
+
+			<p>
+				To learn how to create something, you need to see what others who were practicing it before you were doing.
+				Ernest Hemingway read the works of Shakespeare and Dostoyevsky; Picasso deconstructed the paintings of
+				Velázquez and Goya. While we’re not in the same league, or even playing the same game, the core principle
+				remains the same. In order to know what’s possible — both in terms of <i>what</i> to visualize and <i>how</i>
+				to do it — draw inspiration from past pieces of data visualization that you’ve seen and enjoyed.
+			<p>
+
+			<p>
+				Internally, we’re always getting excited about work that our peers are putting out. Some of our most
+				consistent sources of inspiration are:
+			</p>
+
+			<ul>
+				<li>
+					<a target='_blank' href="https://www.nytimes.com/interactive/2016/12/28/us/year-in-interactive-graphics.html">
+						The New York Times’ interactives</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="https://www.nytimes.com/section/upshot">
+						The Upshot</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="https://twitter.com/PostGraphics">
+						The Washington Post</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="https://twitter.com/GoogleTrends">
+						Google News Lab</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="https://www.theguardian.com/interactive">
+						The Guardian's interactives</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="https://www.reddit.com/r/dataisbeautiful/">
+						The r/dataisbeautiful subreddit</a>
+				</li>
+			</ul>
+
+			<p>
+				I’d also suggest you take some time exploring the archives of Kantar’s
+				<a target='_blank' href='https://www.informationisbeautifulawards.com'>Information Is Beautiful Awards</a>,
+				which view like an encyclopedia of some of the best-designed visualizations in the past several years.
+			</p>
+
+
+
+			<p>
+				Another terrific resource is Andy Kirk’s
+				<a target='_blank' href='http://www.visualisingdata.com/2017/10/best-visualisation-web-august-2017/'>Visualizing
+					Data</a>,
+				which contains a massive monthly archive of his favourite visualizations.
+			</p>
+
+
+
+			<p class='list-title'><strong>Archive the work that you like</strong></p>
+
+			<p>
+				I frequently come across data viz work that I admire, either due to the clarity of its message,
+				the aesthetic design, or certain subtle touches that solve visual problems I’ve previously struggled
+				to overcome. Since you’re likely to be learning viz on the fly, either while you’re working on a
+				technical project or in your spare time, it’s imperative to keep notes on the most interesting and
+				impressive pieces you encounter.
+			</p>
+
+			<p>
+				To make sure that I remember the lessons to be gleaned from each of these, I save them to an ever-open
+				Google doc. It’s as simple as taking a screenshot and adding it to the doc with an annotation of what
+				I liked about it, and a link to the original.
+			</p>
+
+			<p>
+				Another option is to use <a target='_blank'
+					href='https://medium.com/@jordansekky/why-sightline-b877670aad5b'>Sightline</a>,
+				a tool created by Jordan Sechler and Evan Peck, which allows you to
+				automatically save data visualizations you encounter online through a Chrome extension. In addition to
+				automatically compiling your personal archive, you can explore the visualizations that have been saved
+				by other users, which makes trawling for inspiration even easier.
+			</p>
+
+			<p class='list-title'><strong>Think about your message</strong></p>
+			<p>
+				Before you begin visualizing your data, think through the most important points that you’re
+				trying to communicate. Is the key message the growth of a variable over time? A disparity
+				between quantities? The degree to which a particular value varies? A geographic pattern?
+			</p>
+
+			<p>
+				Once you have an idea of the essential takeaways you’d like your readers to understand, you can
+				consider which type of visualization would be most effective at expressing it. During this step,
+				I like to think of the pieces of work that I’ve got in my archive and see if any one of those is
+				especially suitable for the task at hand.
+			</p>
+
+			<p>
+				Other freely available resources are the <a target='_blank' href='https://datavizcatalogue.com/'>Data Viz
+					Catalogue</a>
+				or <a target='_blank' href='http://datavizproject.com/'>Data Viz Project</a>,
+				which give a long list of chart examples, alongside descriptions of the types of data they’re most suited to.
+			</p>
+
+			<p class='list-title'><strong>Don’t design in code</strong></p>
+
+			<p>
+				Once you’ve got a chart in mind, it’s time to design it out. Some people can sketch a
+				few lines on the back of a napkin and jump straight to code, designing as they go
+				(I’m looking at you, <a target='_blank' href='https://twitter.com/russellviz'>Russell</a>).
+				For most people reading this guide, however, designing on the fly in JavaScript isn’t a viable option:
+				it’s too easy to get bogged down in bugs and syntax, going down StackOverflow rabbit holes rather
+				than designing viz.
+			</p>
+
+			<p>
+				Instead, I’d recommend spending some time designing the static visualizations using a simpler tool.
+				This will allow you to quickly get a sense of whether or not your visualization communicates the
+				insights you’re hoping to express.
+			</p>
+
+			<p>
+				There’s no need for coding or fancy software, here. For years, Matt’s been drafting viz in
+				<a target='_blank' href='https://www.apple.com/keynote/'>Keynote</a>,
+				and quickly converted me to doing so after we began to work together. It’s surprisingly easy to
+				create data-driven charts and fine-tune their design using Keynote’s in-built capabilities
+				(shapes, masks, gradients, etc.), while keeping the learning curve sufficiently low and
+				avoiding barriers posed by more powerful software like Adobe Illustrator (if you’re
+				comfortable with Illustrator, bless your heart — go forth and design the hell out of your
+				viz, but remember not to get too bogged down in detail). We've also recently started to
+				explore <a target='_blank' href='https://www.figma.com/'>Figma</a>, a web-based design tool that
+				makes it easy to collaborate with multiple team members and helps export CSS styles,
+				and have been thoroughly impressed.
+			</p>
+
+			<p>
+				Happy with the viz you’ve designed, and itching to make it interactive? Let’s talk code.
+			</p>
+
+
+			<p class='list-title'><strong>Ready to learn to code, pt. 1: Read
+					<a target='_blank' href='http://alignedleft.com/work/d3-book-2e'>Scott Murray’s Book</a></strong>
+			</p>
+
+			<p>
+				There are very few resources for learning to code data-driven visualizations that are geared for
+				beginners, and Scott Murray’s <i>Interactive Data Visualization for the Web</i> is one of the few
+				that explains a sufficiently broad range of concepts to get you started with programming.
+				I read his original book cover to cover, and can testify to the fact that it was an incredibly
+				useful resource when it came to helping me understand both general HTML/CSS, and the way that
+				D3, the JavaScript library that we use for data-driven visualizations, works.
+			</p>
+
+			<p>
+				Moreover, Murray does a terrific job of limiting the concepts he exposes his readers to,
+				which helps beginners bypass the “Dear god there’s so much I don’t understand, EJECT!”
+				stage. I can’t recommend it enough.
+			</p>
+
+			<p class='list-title'><strong>Ready to learn to code, pt. 2: Look at other people’s code </strong>
+			</p>
+
+			<p>
+				Ian Johnson, known online as enjalot, has created a wonderfully useful tool
+				for browsing data-driven visualizations called
+				<a target='_blank' href='http://blockbuilder.org/search'>Bl.ock Builder</a>.
+			</p>
+
+			<p>
+				Want to put together a pie chart but aren’t sure how? Just search for “pie” and browse any
+				one of the numerous code examples. Confused by how to use the d3.forceSimulation function?
+				Search for “d3.force” and read through the code — most of the time, you should be able to find
+				a code example that will help you get your head around the tricky concepts.
+			</p>
+
+			<p class='list-title'><strong>Ready to learn to code, pt. 3: Ask questions!</strong>
+
+			<p>
+				Sometimes, learning how to combine all of these skills can be a lonely endeavour, and
+				it may seem like there’s no one around to help. In truth, the data visualization community
+				is incredibly helpful and supportive.
+			</p>
+
+			<p>
+				If you get stuck, or just want to talk about coding and
+				visualization with other folks in the same boat,
+				<a target='_blank' href='https://d3-slackin.herokuapp.com/'>the D3 Slack group</a> can be a great resource.
+			</p>
+
+			<p>
+				For more pointed technical questions without the camaraderie, posting a question
+				<a target='_blank' href='https://stackoverflow.com/questions/tagged/d3.js'>tagged with d3.js posts on
+					StackOverflow</a>
+				is a quick way to clear up any technical ambiguities you’re struggling with.
+			</p>
+
+
+			<p class='list-title'><strong>Putting it all together</strong>
+
+			<p>
+				My hope is that the previous sections have helped with any specific design and
+				coding questions you may have faced. Nevertheless, combining all of these steps
+				to create a final output is <i>hard</i> if you’re not used to doing so. That’s why I’d
+				like to leave you with a few examples of the fact that even for pros, design is
+				hard, time-consuming, and iterative.
+			</p>
+
+			<p>
+				Check out, for example, this image that Scientific American’s Jen Christiansen
+				<a target='_blank' href='https://twitter.com/ChristiansenJen/status/919913808394469376'>tweeted out</a>,
+				documenting the numerous design drafts that her team produced to demonstrate the stages of pregnancy:
+			</p>
+
+
+
+			<figure>
+				<img src="assets/sciam.gif">
+				<figcaption class='small'>
+					<em>AXS Studio (Contributors: Man-San Ma, Sonya Amin, Eddy Xuan, Joyce Hui, and Susan Park); Jen Christiansen
+						(art direction)
+					</em>
+				</figcaption>
+			</figure>
+
+			<p>
+				The evolution from original concept to final form is dramatic, and I love the fact that
+				Jan, who’s been working at <i>Scientific American</i> for over a decade, puts so much emphasis on
+				honing her team’s designs over a series of steps.
+			</p>
+
+
+
+
+			<p>
+				Our team has done the same. Consider Matt’s lengthy design process for our
+				<a target='_blank' href='https://googletrends.github.io/asne/'>collaboration with Google
+					News Lab, examining the diversity in US newsrooms</a> (final project available
+				<a target='_blank' href='https://googletrends.github.io/asne/'>here</a>).
+			</p>
+
+			<p>
+				First, there was the initial whiteboard session:
+			</p>
+
+			<figure>
+				<img src="assets/whiteboard.png">
+			</figure>
+
+			<p>
+				After this, he created a multitude of different designs for the various sections of the project:
+			</p>
+
+			<figure>
+				<img src="assets/asne1.png">
+			</figure>
+
+			<figure>
+				<img src="assets/asne2.png">
+			</figure>
+
+			<figure>
+				<img src="assets/asne3.png">
+			</figure>
+
+
+			<figure>
+				<img src="assets/asne4.png">
+			</figure>
+
+
+			<figure>
+				<img src="assets/asne5.png">
+			</figure>
+
+
+			<figure>
+				<img src="assets/asne6.png">
+			</figure>
+
+
+			<figure>
+				<img src="assets/asne7.png">
+			</figure>
+
+
+			<figure>
+				<img src="assets/asne8.png">
+			</figure>
+
+			<figure>
+				<img src="assets/asne9.png">
+			</figure>
+
+
+
+
+			<p>
+				To see how the final version turned out, head <a target='_blank'
+					href='https://googletrends.github.io/asne/'>here</a>.
+			</p>
+
+			<p>
+				Finally, I’d like to leave you with a talk by Mike Bostock, who created the D3 library that we
+				rely on so consistently to produce our visualizations, and who spent several years creating
+				visualizations at the New York Times.
+			</p>
+
+			<p>
+				Here, he discusses the fact that designing visualizations is a matter of work. While good design
+				may be an innate talent for a select few, most of us are in the same boat: quality work is a
+				function of hours invested, rather than preternatural skill. Seeing the many iterations of
+				Mike’s work is, to me, thoroughly heartening: if someone of his calibre tries a hundred different
+				approaches to see what sticks, it’s a good signal to the rest of us to keep our noses to the grindstone.
+			</p>
+
+			<div class="iframe-box">
+				<iframe class="iframe-vid" src="https://www.youtube.com/embed/fThhbt23SGM" frameborder="0"
+					allowfullscreen></iframe>
+			</div>
+
+	</main>
+
+
+	<!-- <script src='assets/scripts/d3.v4.9.1.min.js'></script>
+	<script src='bundle.js?version=1501690346367'></script> -->
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
+</body>
+
+</html>

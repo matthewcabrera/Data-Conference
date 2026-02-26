@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>The Pudding</title>
+		<atom:link href="https://pudding.cool/rss.xml" rel="self" type="application/rss+xml" />
+		<link>https://pudding.cool</link>
+		<description>The Pudding is an editorial publication that explains ideas debated in culture with visual essays.</description>
+		<lastBuildDate>
+			Wed, 20 Nov 2024 12:00:00 GMT
+		</lastBuildDate>
+		<language>en-US</language>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<image>
+			<title>The Pudding</title>
+			<url>https://pudding.cool/common/assets/misc/social-facebook.jpg</url>
+			<link>https://pudding.cool</link>
+		</image>
+
+	
+<item>
+	<title>Sizing Chaos</title>
+	<link>https://pudding.cool/2026/02/womens-sizing</link>
+	<description>The inter-generational struggle to find clothes that fit more than a tiny portion of women.</description>
+	<pubDate>Wed, 18 Feb 2026 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2026/02/womens-sizing</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2026_02_womens-sizing.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Common Threads</title>
+	<link>https://pudding.cool/2025/12/motifs</link>
+	<description>Visualizing how musicals use motifs to tell stories.</description>
+	<pubDate>Tue, 09 Dec 2025 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/12/motifs</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_12_motifs.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>In pursuit of democracy</title>
+	<link>https://pudding.cool/2025/11/democracy</link>
+	<description>Every time someone said 'democracy' in Congress.</description>
+	<pubDate>Mon, 03 Nov 2025 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/11/democracy</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_11_democracy.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>What it’s like to walk across Massachusetts</title>
+	<link>https://pudding.cool/2025/10/walk</link>
+	<description>A visually-aided journal of a very long walk home.</description>
+	<pubDate>Mon, 20 Oct 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/10/walk</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_10_walk.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Dicing an Onion, the Mathematically Optimal Way</title>
+	<link>https://pudding.cool/2025/08/onions</link>
+	<description>What is the best way to dice an onion to get the most uniform piece sizes?</description>
+	<pubDate>Tue, 12 Aug 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/08/onions</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_08_onions.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>NYC's Urban Textscape</title>
+	<link>https://pudding.cool/2025/07/street-view</link>
+	<description>What if you could search every visible word on New York City’s streets?</description>
+	<pubDate>Thu, 24 Jul 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/07/street-view</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_07_street-view.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Bears Will Be Boys</title>
+	<link>https://pudding.cool/2025/07/kids-books</link>
+	<description>How and why do we gender animals in stories?</description>
+	<pubDate>Mon, 07 Jul 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/07/kids-books</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_07_kids-books.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>30 Minutes with a Stranger</title>
+	<link>https://pudding.cool/2025/06/hello-stranger</link>
+	<description>Watch hundreds of strangers talk for 30 minutes, and track how their moods change.</description>
+	<pubDate>Thu, 12 Jun 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/06/hello-stranger</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_06_hello-stranger.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>The Loneliness Epidemic, in Data</title>
+	<link>https://www.youtube.com/watch?v=h7w339vE2F8</link>
+	<description>A six-minute video about the loneliness epidemic, in data.</description>
+	<pubDate>Thu, 05 Jun 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://www.youtube.com/watch?v=h7w339vE2F8</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_06_loneliness.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Asian Misrepresentation</title>
+	<link>https://pudding.cool/2025/05/aapi-casting</link>
+	<description>How accurately are Asian Americans cast in Hollywood?</description>
+	<pubDate>Wed, 28 May 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/05/aapi-casting</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_05_aapi-casting.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Are you more likely to die on your birthday?</title>
+	<link>https://pudding.cool/2025/04/birthday-effect</link>
+	<description>Are you more likely to die on your birthday? Yes.</description>
+	<pubDate>Thu, 08 May 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/04/birthday-effect</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_04_birthday-effect.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>The Pour-igin of Species</title>
+	<link>https://pudding.cool/2025/04/wine-animals</link>
+	<description>We try to predict the price and quality of a bottle of wine based on the animal on the label.</description>
+	<pubDate>Wed, 16 Apr 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/04/wine-animals</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_04_wine-animals.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>The Generational Legacy of Samples in Music</title>
+	<link>https://pudding.cool/2025/04/music-dna</link>
+	<description>We trace musical DNA from the classical "Hall of the Mountain King" to 2pac's "Hit Em Up." </description>
+	<pubDate>Tue, 01 Apr 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/04/music-dna</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_04_music-dna.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>What we can learn from watching reality stars apologize</title>
+	<link>https://pudding.cool/2025/03/housewives</link>
+	<description>What we can learn from watching reality stars apologize.</description>
+	<pubDate>Wed, 19 Mar 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/03/housewives</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_03_housewives.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Onomatopoeia Odyssey</title>
+	<link>https://pudding.cool/2025/03/language</link>
+	<description>Analyzing animal onomatopoeia across languages can demystify how we shape sound into meaning.</description>
+	<pubDate>Mon, 10 Mar 2025 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/03/language</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_03_language.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>The Middle Ages</title>
+	<link>https://pudding.cool/2025/02/middle-school</link>
+	<description>Follow hundreds of kids as they navigate their trecherous middle school years.</description>
+	<pubDate>Mon, 03 Mar 2025 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2025/02/middle-school</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2025_02_middle-school.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Sitters and Standers</title>
+	<link>https://pudding.cool/2024/11/sitters-standers</link>
+	<description>The American worker divide: Those who sit, and those who stand.</description>
+	<pubDate>Tue, 19 Nov 2024 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2024/11/sitters-standers</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2024_11_sitters-standers.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Is the Love Song Dying?</title>
+	<link>https://pudding.cool/2024/11/love-songs</link>
+	<description>Is love dead in pop music? We checked all 5,141 Top 10 hits since 1958.</description>
+	<pubDate>Mon, 11 Nov 2024 05:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2024/11/love-songs</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2024_11_love-songs.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>An expert explains why queues are so tricky</title>
+	<link>https://youtu.be/2r3gElTiLik</link>
+	<description>Queues are everywhere we go—discover the hidden mechanics that keep them moving smoothly.</description>
+	<pubDate>Mon, 28 Oct 2024 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://youtu.be/2r3gElTiLik</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2024_10_queues.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+<item>
+	<title>Colors of the Court</title>
+	<link>https://pudding.cool/2024/10/nba-uniforms</link>
+	<description>We took a look at the data behind the increasingly vibrant (and maybe a little confusing) landscape of NBA jerseys.</description>
+	<pubDate>Thu, 24 Oct 2024 04:00:00 GMT</pubDate>
+	<guid isPermaLink="false">https://pudding.cool/2024/10/nba-uniforms</guid>
+	<media:content url="https://pudding.cool/common/assets/thumbnails/640/2024_10_nba-uniforms.jpg" medium="image" type="image/jpeg"/>
+</item>
+
+
+	</channel>
+</rss>

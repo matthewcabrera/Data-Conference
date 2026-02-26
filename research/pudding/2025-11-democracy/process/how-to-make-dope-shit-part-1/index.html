@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang='en' data-version='1501690346367'>
+
+<head>
+
+	<title>Making Internet Things, Part 1: Working with Data</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='Making Internet Things, Part 1: Working with Data.' />
+	<meta name='news_keywords' content='introduction data visualization' />
+
+	<meta property='og:title' content='Making Internet Things, Part 1: Working with Data' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/process/intro_tutorial_1/' />
+	<meta property='og:description' content='This is the first installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.'
+	/>
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+
+	<meta property='og:image' content='https://pudding.cool/process/how-to-make-dope-shit-part-1/assets/og-img.png' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='600' />
+
+	<meta name='twitter:card' content='summary_large_image'>
+	<meta name='twitter:site' content='https://pudding.cool'>
+	<meta name='twitter:creator' content='@puddingviz'>
+	<meta name='twitter:title' content='Making Internet Things, Part 1: Working with Data'>
+	<meta name='twitter:description' content='This is the first installment of a multi-part series designed to help you familiarize yourself with the tools used to make visual, data-driven essays.'>
+	<meta name='twitter:image:src' content='https://pudding.cool/process/how-to-make-dope-shit-part-1/assets/og-img.png'>
+
+	<!-- smoosh -->
+
+	<!-- endsmoosh -->
+
+
+	<link rel="stylesheet" href="critical.css" />
+	<link rel="stylesheet" href="bundle.css" />
+
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+
+	        You may not modify the font software, use it on another website, or install it on a computer.
+
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK
+	*/
+		/* Canela */
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Canela Web';
+			src: url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		/* Publico Text */
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+			font-stretch: normal;
+		}
+		/* Atlast Grotesk */
+		/*
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff') format('woff');
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		*/
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+		}
+	</style>
+	<!-- smoosh -->
+	<script src='critical.js'></script>
+	<!-- endsmoosh -->
+
+
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class='tk-publico'>
+
+	<a href='#content' class='skip-to-main'>Skip to main content</a>
+	<header>
+		<a href='https://pudding.cool' target='_blank' class='logo'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="296.91" height="47.52" viewBox="19.42 11.31 296.911 47.518" aria-labelledby="logo-title"
+			 role="img">
+				<title id="logo-title">The Pudding</title>
+				<path d="M47.77 56.8c-2.5-.2-15.5-.2-18 0v-.44l2.05-.3c1.8-.25 2.5-1.35 2.5-9.35V15.1h-1.9c-3.6 0-5.5 1.75-9.7 9.4l-2.8 5.25h-.5c.3-3.2 1-13.24 1.1-16.6l.1-.04c1.8.2 9.3.5 11.1.5h17.5c2.3 0 11.1-1.4 13.2-2.1l.1.1v15.8h.27l1-1.1c2.9-3.3 5.3-4.4 8-4.4 4.4 0 7 2.4 7 7.5v11.5c0 7.7.7 8.9 2.6 9.2l1.1.2v.5c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.6-.4 2.3-1.3 2.3-9.2v-11c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.7l-1.8.6v12.9c0 7.9.6 8.8 2.2 9.3l.56.2v.5c-2.38-.2-12.4-.2-14.78 0v-.4l1.03-.2c1.97-.3 2.7-1.5 2.7-9.2V21c-2.43-4.6-5.13-5.75-8.63-5.75h-2.1v31.6c0 8 .6 9.07 2.4 9.37l1.9.3v.46l-.1-.18zm3.25-.64h55.7v.65H51v-.6zm45-5.1c-8.5 0-12.3-4.55-12.3-13.8v-1.7c0-8.86 4.3-13.76 13.28-13.76 7.66 0 11.1 3.26 11.1 12.36v1.8H92.97v3.2c0 7.1 1.9 9 6 9 2.45 0 5-1.25 7.4-2.9l2-1.35.1 1.4-1.6 1.5c-2.95 2.7-6.75 4.4-10.85 4.4v-.1zm-3-16.6h7.4v-2.7c0-6.75-1-7.95-3.7-7.95-2.6 0-3.7 1.2-3.7 9.3v1.4zm35.2 22.35c-2.5-.2-15.7-.2-18.2 0v-.4l1.9-.3c1.8-.3 2.4-1.3 2.4-9.3V23.5c0-8.04-.6-9.14-2.4-9.4l-1.8-.24v-.45c1.36.1 7.8.2 9 .2 1.46 0 8.06-.1 9.3-.1 10.36 0 14.96 5.1 14.96 12.8v1.5c0 7.8-4.55 12.8-14.9 12.8h-2.2V39c.55.04 1.1.04 1.5.04 3.8 0 5.35-2.9 5.35-10.44v-3.3c0-7.54-1.54-10.44-5.44-10.44-.4 0-2.6 0-4.1.05v31.8c0 8 .7 9.1 2.5 9.4l2.3.3v.5l-.3-.1zm3.3-.6H282.3v.7H131.5v-.7zm22.6-5c-4.4 0-7-2.4-7-7.5V33.2c0-7-.4-8.56-1.8-9l-.6-.2v-.4c1.8-.2 8.4-1.1 10.7-1.66v20.9c0 2.5.9 3.4 3.1 3.4.74 0 1.7-.24 3.1-.64l1.84-.5V33.2c0-6.9-.8-8.2-2.7-8.86l-1.1-.34v-.4c2.1-.2 9.7-1.1 12-1.66v17.9c0 6.86.75 8.2 2.65 8.8l1.1.36v.45c-2.1.16-9.2 1.06-11.5 1.66l-.3-5.4h-.2l-1 1.1c-2.9 3.3-5.3 4.4-8.1 4.4zm32 0c-5.4 0-9-4.4-9-13.6v-2.2c0-9.5 4.3-13.6 11.1-13.6 2.4 0 4.24.5 6.14 2.2l.8.7h.24v-2.6c0-6.5-.76-7.7-2.66-8.3l-1.1-.3v-.4c2.14-.2 9.44-1.1 11.74-1.6v28.2c0 7 .8 8.5 2.7 9.1l1.05.4v.5c-2.1.2-8.95 1.1-11.25 1.7l-.35-5.4h-.27l-1 1.1c-2.95 3.3-5.4 4.4-8.1 4.4l-.05-.2zm7.7-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.6-8.8-3.3 0-4.66 2.6-4.66 9.54v3.7c0 6.2 1.44 7.9 4.5 7.9.84 0 1.84-.2 3.2-.64h-.05zm24.1 5.6c-5.46 0-9-4.4-9-13.6v-2.2c0-9.5 4.2-13.6 11-13.6 2.44 0 4.2.6 6.14 2.2l.84.7h.24v-2.6c0-6.5-.8-7.6-2.7-8.3l-1.06-.3v-.4c2.1-.2 9.45-1.1 11.75-1.6v28.2c0 7 .75 8.5 2.65 9.1l1.1.4v.5c-2.15.2-9 1.1-11.3 1.7l-.36-5.4h-.27l-1 1.1c-2.95 3.3-5.35 4.4-8.1 4.4l.06-.2zm7.64-5.6l1.6-.5V33.9c0-6.96-1.36-8.8-4.66-8.8-3.26 0-4.6 2.6-4.6 9.54v3.7c0 6.2 1.4 7.9 4.44 7.9.84 0 1.84-.2 3.2-.64h.02zm28.1 5.1c-2.16-.2-11.56-.2-13.76 0v-.4l.54-.1c1.6-.4 2.2-1.3 2.2-9.2v-7.7c0-6.9-.76-8.2-2.66-8.8l-1.1-.3v-.4c2.15-.2 9.7-1.1 12-1.6V41c0 7.9.7 8.8 2.24 9.27l.5.14v.5l.03-.1zm-12.1-35.3c0-2.6 1.6-4.1 5.1-4.1 3.54 0 5.1 1.5 5.1 4.1 0 2.6-1.56 4.1-5.1 4.1-3.5 0-5.1-1.5-5.1-4.1zm45.13 35.3c-2.4-.2-12.4-.2-14.8 0v-.4l.5-.1c1.5-.4 2.2-1.3 2.2-9.2V30.1c0-2.5-.9-3.4-3.1-3.4-.8 0-1.8.2-3.2.66l-1.8.55v12.9c0 7.9.6 8.8 2.2 9.3l.53.2v.5c-2.35-.2-12.4-.2-14.75 0v-.4l1.07-.2c1.92-.3 2.7-1.5 2.7-9.2v-7.7c0-6.9-.8-8.2-2.7-8.8l-1.1-.3v-.4c2.1-.2 9.2-1.1 11.5-1.6l.33 5.4h.28l1-1.1c2.94-3.2 5.4-4.4 8.1-4.4 4.44 0 7.04 2.4 7.04 7.5V41c0 7.7.77 8.9 2.67 9.2l1.1.2v.5l.1-.15zm15.6 7.9h-4.7c-10.5 0-12.3-1.3-12.3-3.4V55c0-1.85 2.5-4.35 7.3-4.35h.2V54c0 1.8 1 2.6 4.7 2.6h4.6c5.02 0 6.82-1.3 6.82-3.2V53c0-1.8-.85-3.2-3.5-3.2h-13.3c-2.75 0-4.2-1.3-4.2-3.7v-.16c0-1.94 1.2-3.54 4.75-5.4l3-1.54v-.5c-5.64-1-8.2-3.46-8.2-7.86v-.24c0-5.55 4.16-8.55 13.1-8.55 2.46 0 4.46.26 6.46.8l.16-.34c1.7-3.4 3.93-5 8-5h.9v5.4h-5.6c-.5 0-1.9.1-2.27.2l-.36.1v.5c3.8 1.1 5.76 3.6 5.76 7.1v.3c0 5.6-4.13 8.6-13.03 8.6-1.3 0-2.5-.1-3.7-.2l-.9 1.1c-.85 1-1.05 1.5-1.05 1.8 0 .4.2.5.6.5h11.62c5.8 0 8.9 3 8.9 7.4v.4c0 5.28-5.9 8.5-14 8.5l.1-.2zm2.5-27.7v-.7c0-4.7-.9-6.3-4.1-6.3-3.3 0-4.1 1.6-4.1 6.3v.8c0 4.7.9 6.3 4.1 6.3 3.2 0 4-1.6 4-6.3v-.1z"
+				/>
+			</svg>
+
+		</a>
+	</header>
+	<main id='content'>
+
+		<div class='intro'>
+			<p class='intro__overline tk-atlas'>How to Make Dope Shit</p>
+			<h1 class='intro__hed tk-atlas'>Part 1: Working with Data</h1>
+
+
+			<p class='intro__dek tk-atlas'>This is the first installment of a multi-part series designed to help you familiarize yourself with the tools used to
+				make visual, data-driven essays.</p>
+
+			<img class='intro__image' src='assets/dog_typing.gif'>
+
+			<p class='intro__byline tk-atlas'>By <a href='https://twitter.com/iliablinderman' target='_blank'><strong>Ilia Blinderman</strong></a></p>
+		</div>
+
+		<!-- PUT ALL YOUR HTML HERE-->
+		<div class='post'>
+			<h2 class='post__hed tk-atlas'>Introduction</h2>
+			<p>
+				Every so often, readers email us asking how they can gain the skills necessary to create the sorts of data-driven, visually
+				essays that we publish on <a target='_blank' href='https://pudding.cool'>The Pudding</a>. The deficit in clear guides
+				to becoming visual journalists is understandable: this form of storytelling has only recently begun to gather momentum,
+				and unlike traditional essay-writing, reporting, or editorial work, has neither a well-defined form, nor a formalized
+				set of tools. Moreover, resources for those willing to learn are fragmented, tending to focus exclusively on data analysis,
+				or solely dealing with data visualization, making it difficult to find a comprehensive and unified guide.
+			</p>
+
+			<p>
+				There is, however, a broader issue at play: we have a curious tendency of assuming that people who can do certain things
+				that we cannot are imbued with superior innate talents (if you’d like to hear more about this in the context of programming,
+				I’d recommend this talk on
+				<a target='_blank' href="https://www.youtube.com/watch?v=hIJdFxYlEKE">experts
+				and beginners</a> by Jacob Kaplan-Moss, or <a target='_blank' href="https://www.youtube.com/watch?v=0IQlpFWTFbM">this heartening talk</a>				by Julia Evans). This may be especially common for the sort of code-driven interactive data visualizations which we work
+				on, since they rely on an odd grab-bag of skills —critical thought, design, writing, and programming — that people in
+				many other professions may have neither a full awareness of, nor full expertise in.
+			</p>
+
+			<p>
+				In this series of blog posts, I’ll attempt to present a clear, non-technical introduction to the tools used in visual, data-driven
+				storytelling, and provide you with a map to the field’s general landscape — reading this should give you a sense of how
+				we work, and where you can turn to hone your skills to start working on visualizations like ours. More broadly, however,
+				I’m hoping that my putting this guide together will help remove some of the unnecessary mystique surrounding data viz,
+				and demonstrate that the only things that separate a beginner from a speaker on the conference circuit time and practice.
+			</p>
+
+
+			<h2 class='post__hed tk-atlas'>The Pudding workflow</h2>
+			<p>
+				Members of the Polygraph team have vastly different backgrounds, which include business, computers science, psychology, marine
+				biology, and journalism. Consequently, we’ve all picked up our data skills in myriad ways. While each of us has some
+				manner of specialty or preference, we are, broadly, generalists, each of whom uses a general purpose programming language,
+				some combination of data analysis tools, and JavaScript for web programming and data visualization.
+			</p>
+
+			<p>
+				In addition to a common purpose, these tools share something else: they’re all free. While there are many proprietary programs
+				and software packages for data and visualization-related work, our team relies exclusively on open-source tools that
+				anyone can use. In addition to focusing on these tools because they are currently the industry-standard, I’m also hoping
+				to show that the largest barrier to entry into the data-visualization/storytelling world are time and persistence, rather
+				than tool cost.
+			</p>
+
+			<p>Broadly, the three components of our work are:</p>
+			<ol>
+				<li>Data</li>
+				<li>Visualization</li>
+				<li>Writing</li>
+			</ol>
+
+			<p>
+				This first blog post is dedicated to data.
+			</p>
+
+
+			<h2 class='post__hed tk-atlas'>Getting comfortable with programming</h2>
+
+			<p>
+				Newcomers to programming often wonder what the best language to learn is, and the answer largely depends on what you’d like
+				to do.
+			</p>
+
+			<p>
+				I’m heavily in favor of learning Python for data work, since Python syntax is relatively easy to understand for beginners,
+				and has a plethora of fantastic pre-written content (generally referred to as libraries) that you can seamless incorporate
+				into your code to get around nearly any data issue.
+			</p>
+
+			<p>Beginning with Python has another advantage: the basics you’ll learn here will prove invaluable when it comes to compiling
+				data sets and coding actual visualizations. Having said this, however, it’s worth mentioning that others on the Pudding
+				team lean towards other tools: Russell prefers using JavaScript/Node for data processing, while Amber’s tool of choice
+				is R, a language whose roots lie at Bell Labs, where its predecessor was first created with data analysis in mind; Matt, meanwhile,
+				is a strong proponent of using MySQL for high-level number crunching.
+			</p>
+			<figure>
+				<img src="assets/r_screenshot.png">
+				<figcaption class='small'><em>RStudio, used for writing and running R code</em></figcaption>
+			</figure>
+
+			<p>
+				My take on these options is that JavaScript is a fantastic tool, and the more you familiarize yourself with its concepts
+				and quirks, the easier it’ll be to create interactive data-driven visualizations on the web. R tends to shine when it
+				comes to data analysis and mocking up/creating static visualizations; it also has a terrific user interface (RStudio).
+				I’ve nevertheless personally found it less versatile than Python for some non-standard tasks (e.g., tricky string manipulation,
+				web scraping, etc.), and noticed that it tends to struggle with large datasets when using the standard RStudio interface.
+				MySQL, meanwhile, has a relatively gentle learning curve and will allow you to analyze data sets fairly quickly after
+				trying your hand at programming, but isn’t a general-purpose programming language (i.e., it won’t allow you to scrape
+				data and is quite limited in terms of more advanced analyses). Frankly, you can even use Excel (paid) or Google Sheets
+				(free) to run basic analyses; I use a mix of R, Python, MySQL, and spreadsheets, depending on the task at hand.
+			</p>
+
+			<p>
+				If you’d like to begin with any of these tools, here are a few links to get you started:
+			</p>
+
+			<p class='list-title'><strong>R</strong></p>
+			<ul>
+				<li>
+					<a target='_blank' href="https://www.datacamp.com/courses/free-introduction-to-r">DataCamp’s Introduction to R</a>
+				</li>
+				<li>
+					<a target='_blank' href="https://www.datacamp.com/courses/free-introduction-to-r">ComputerWorld</a> ’s
+					<a target='_blank' href="http://www.computerworld.com/article/2884322/application-development/learn-r-programming-basics-with-our-pdf.html#tk.ctw-infsb">
+						Learn R For Beginners PDF
+					</a> (free, but requires registration)
+				</li>
+			</ul>
+			<p class='list-title'><strong>MySQL</strong></p>
+			<ul>
+				<li>
+					<a target='_blank' href="https://sqlzoo.net/">Learning about MySQL and query basics at SQLZoo</a> (I’d suggest running
+					through this first to understand how MySQL works)
+				</li>
+
+				<li>
+					<a target='_blank' href="https://www.youtube.com/watch?v=iiUlL2V3dMI">Setting up SequelPro and MAMP</a> (this is how
+					most of the team uses MySQL)
+				</li>
+			</ul>
+
+			<p class='list-title'><strong>JavaScript</strong></p>
+			<ul>
+				<li>
+					<a target='_blank' href="http://eloquentjavascript.net/">A broad, in-depth introduction to JavaScript</a>
+				</li>
+
+				<li>
+					<a target='_blank' href="http://learnjsdata.com/">A guide to analyzing data with JavaScript</a>
+				</li>
+			</ul>
+
+			<p class='list-title'><strong>Python</strong></p>
+			<p>
+				Since Python is my personal favorite, I’ll provide a more expansive set of resources to get you started below.
+			</p>
+
+			<p>
+				First, to get a sense of how Python works, I’d suggest running through several exercises that explain programming. Don’t
+				worry — I realize that approaching the whole concept of programming is daunting, especially on your own, but by this
+				point, the virtual fabric of the internet is literally (figuratively) bursting with great resources.
+			</p>
+
+			<p>
+				Before you start, I’d suggest setting up the <a target='_blank' href="http://jupyter.readthedocs.io/en/latest/install.html">Jupyter notebook
+			</a> environment using Anaconda (don’t worry about these names — all you need to remember is that Anaconda makes installing
+				things a breeze). While you’d normally be able to write code and run your programs through the terminal — a text-based
+				interface for your computer — notebooks provide a more intuitive, user-friendly interface, as well as an easier sense
+				of the programming you’re doing, and an avenue to quickly edit and annotate your code. If you’ve never used terminal,
+				I’d suggest checking out this <a target='_blank' href="https://www.youtube.com/watch?v=-Vl4rpZVA6I">
+				brief video tutorial</a> to help familiarize yourself with working in a text-based environment.
+			</p>
+
+			<figure>
+				<img src="assets/jupyter_screenshot.png">
+				<figcaption class='small'><em>The Jupyter notebook interface</em></figcaption>
+			</figure>
+
+			<p>
+				Next, let’s move on to programming: the following three lectures on Python — <a target='_blank' href="https://github.com/ledeprogram/courses/blob/master/databases/01%20Lists.ipynb">Lists</a>,
+				<a target='_blank' href="https://github.com/ledeprogram/courses/blob/master/databases/02%20Dictionaries%20and%20Web%20APIs.ipynb">Dictionaries and
+			Web APIs</a>, <a target='_blank' href="https://github.com/ledeprogram/courses/blob/master/databases/03%20Strings%20and%20regular%20expressions.ipynb">Strings and Regular Expressions</a>				— from Columbia’s <a href="http://ledeprogram.com/">Lede Program</a> (full disclosure: I’m an alum) are great starting
+				points which I relied on to get a grasp of basic programming concepts like lists (also called arrays), loops, if statements,
+				return statements, print statements, objects (also called dictionaries), strings, integers, and floats.
+			</p>
+
+			<p>
+				Once you’ve started to familiarize yourself with programming, my suggestion is to run through <a href="http://www.firstpythonnotebook.org/">My
+			First Python Notebook</a>, which is, hands-down, the single best resource for programming beginners interested in data-work
+				that I’ve encountered outside a classroom (a public shoutout to the admirable thorough <a href="https://twitter.com/palewire">Ben Welsh</a>				of the LA Times Data Desk for compiling it). Welsh does a fantastic job of keeping the technical jargon to a minimum
+				while showing you the some of the breadth of analyses that you’ll be capable of running, and packages this primer into
+				16 neat, code-video pairings. Remarkably, this series was also updated in May of 2017 (it’s early August 2017 as I write);
+				finding updated resources online can be difficult, especially for beginner resources, so I’m doubly grateful to Ben for
+				compiling this guide.
+			</p>
+
+			<p>
+				It’s worth noting here that this first stage of data-work can be somewhat vexing: computers are great, but they’re also incredibly
+				frustrating when they don’t do what you’d like them to do. That’s why it’s important to remember that you don’t need
+				to worry — learning to program is exactly as infuriating and as dispiriting for you as it is for everyone else. I know
+				this all too well: some people seem to be terrific at it without putting in all that much effort; then there was me,
+				who first began writing code in 2014, and couldn’t understand the difference between a return statement and a print statement.
+				The reason learning to code is so maddening is because it doesn’t merely involve learning a set number of commands, but
+				a way of thinking. Remember that, and know that the little victories you amass when you finally run your loop correctly
+				or manage to solve a particular data problem all combine to form that deeper understanding.
+			</p>
+
+			<p>
+				The most important skill to develop at this point is a comfort with saying “I don’t know how to do this, please help!” and
+				framing your questions in the right way. <a href="http://stackoverflow.com">StackOverflow</a> (
+				<a href="http://www.theallium.com/engineering/computer-programming-to-be-officially-renamed-googling-stackoverflow/">here</a>’s
+				a primer to give you a sense of its importance in the programming community), the forum where programmers ask each other
+				for help and advice, is the single greatest source you can consult. While some users can seem like they’re nitpicking,
+				the whole of the community is willing to go to tremendous lengths to help each other out. If other users downvote your
+				questions at first, know that this is normal, and much the same thing happened to most of us when we were starting out.
+				Just remember: we’ve all eaten the same shit sandwich when we were starting out. Struggling in the first few weeks is
+				just the price of admission.
+			</p>
+
+			<h2 class="tk-atlas post__hed">Summary</h2>
+			<ul>
+				<li>Get a basic sense of programming (my vote goes to Python or JavaScript).</li>
+				<li> Be intimidated, feel like it sucks, and power through it.</li>
+				<li>Don’t be afraid to ask people who are more experienced — they’ll gladly help if they see you’re putting in the effort.</li>
+			</ul>
+		</div>
+	</main>
+
+
+	<!-- <script src='assets/scripts/d3.v4.9.1.min.js'></script>
+	<script src='bundle.js?version=1501690346367'></script> -->
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
+</body>
+
+</html>

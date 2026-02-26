@@ -1,0 +1,2694 @@
+<!doctype html>
+<html lang='en' data-version='1596221136618'>
+
+<head>
+
+	<title>What city is the microbrew capital of the US?</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta name='description' content='Using beer review data to rank the best cities in the country.' />
+	<meta name='news_keywords' content='Beer, craft, microbrew, brewery, rating, city, data, visualization' />
+
+	<meta property='og:title' content='What city is the microbrew capital of the US?' />
+	<meta property='og:site_name' content='The Pudding' />
+	<meta property='og:url' content='https://pudding.cool/2017/04/beer/' />
+	<meta property='og:description' content='Using beer review data to rank the best cities in the country.' />
+	<meta property='og:type' content='article' />
+	<meta property='og:locale' content='en_US' />
+
+	<meta property='og:image' content='https://pudding.cool/2017/04/beer/assets/social/social-facebook.jpg' />
+	<meta property='og:image:type' content='image/jpeg' />
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='600' />
+
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='https://pudding.cool' />
+	<meta name='twitter:creator' content='@russellviz' />
+	<meta name='twitter:title' content='What city is the microbrew capital of the US?' />
+	<meta name='twitter:description' content='Using beer review data to rank the best cities in the country.' />
+	<meta name='twitter:image:src' content='https://pudding.cool/2017/04/beer/assets/social/social-twitter.jpg' />
+
+	<link rel='canonical' href='https://pudding.cool/2017/04/beer/' />
+
+	<link rel='apple-touch-icon' sizes='180x180' href='https://pudding.cool/apple-touch-icon.png'>
+	<link rel='icon' type='image/png' sizes='32x32' href='https://pudding.cool/favicon-32x32.png'>
+	<link rel='icon' type='image/png' sizes='16x16' href='https://pudding.cool/favicon-16x16.png'>
+	<link rel='manifest' href='https://pudding.cool/site.webmanifest'>
+	<link rel='mask-icon' href='https://pudding.cool/safari-pinned-tab.svg' color='#5bbad5'>
+	<meta name='msapplication-TileColor' content='#ffc40d'>
+	<meta name='theme-color' content='#ffffff'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/national/National2Web-Regular.woff2'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/national/National2Web-Bold.woff2'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/national/National2NarrowWeb-Regular.woff2'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/national/National2NarrowWeb-Bold.woff2'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2'>
+	<link rel='preload' type='font/woff2' as='font' crossorigin
+		href='https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2'>
+
+	<style>
+		* {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		dl,
+		dt,
+		dd,
+		ol,
+		ul,
+		li,
+		fieldset,
+		form,
+		label,
+		legend,
+		table,
+		caption,
+		tbody,
+		tfoot,
+		thead,
+		tr,
+		th,
+		td,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline
+		}
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section {
+			display: block
+		}
+
+		a img {
+			border: none
+		}
+
+		blockquote {
+			quotes: none
+		}
+
+		blockquote:before,
+		blockquote:after {
+			content: '';
+			content: none
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		caption,
+		th,
+		td {
+			text-align: left;
+			font-weight: normal;
+			vertical-align: middle
+		}
+
+		.xxx-small {
+			font-size: 10px;
+			line-height: 1.65
+		}
+
+		.xx-small {
+			font-size: 11px;
+			line-height: 1.65
+		}
+
+		.x-small {
+			font-size: 12px;
+			line-height: 1.65
+		}
+
+		.small {
+			font-size: 14px;
+			line-height: 1.65
+		}
+
+		.root {
+			font-size: 16px;
+			line-height: 1.65
+		}
+
+		.medium {
+			font-size: 18px;
+			line-height: 1.65
+		}
+
+		.large {
+			font-size: 20px;
+			line-height: 1.5
+		}
+
+		.x-large {
+			font-size: 24px;
+			line-height: 1.4
+		}
+
+		.xx-large {
+			font-size: 32px;
+			line-height: 1.4
+		}
+
+		.xxx-large {
+			font-size: 40px;
+			line-height: 1.4
+		}
+
+		.xxxx-large {
+			font-size: 48px;
+			line-height: 1.2
+		}
+
+		.xxxxx-large {
+			font-size: 64px;
+			line-height: 1.2
+		}
+
+		.hide-accessible {
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			position: absolute
+		}
+
+		.hide-invisible {
+			visibility: hidden
+		}
+
+		.hide-display {
+			display: none
+		}
+
+		.skip-to-main {
+			border: none;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			position: absolute
+		}
+
+		.skip-to-main:focus {
+			width: auto;
+			height: auto;
+			background-color: #dbcdbd;
+			padding: .5rem;
+			z-index: 1000
+		}
+
+		.prose {
+			max-width: 40rem;
+			margin: 0 auto;
+			padding: 0 1rem
+		}
+
+		.media-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDMDBGQ0Y5NEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDMDBGQ0ZBNEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REMwMEZDRjc0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REMwMEZDRjg0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C0EmkAAAAGElEQVR42mJiYGD4DwQMTECCEchhAAgwAEcGBv9dngKPAAAAAElFTkSuQmCC")
+		}
+
+		#starter-guide {
+			max-width: 40rem;
+			margin: 0 auto
+		}
+
+		body {
+			-webkit-font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
+			font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
+			-webkit-font-smoothing: antialiased;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			background-color: #fff;
+			color: #282828;
+			font-weight: 500;
+			font-family: 'Tiempos Text Web', Georgia, Times, serif;
+			font-size: 16px
+		}
+
+		@media only screen and (min-width:30em) {
+			body {
+				font-size: 18px
+			}
+		}
+
+		h1 {
+			font-size: 32px;
+			line-height: 1.4;
+			margin-top: 1.5rem
+		}
+
+		h2 {
+			font-size: 24px;
+			line-height: 1.4;
+			margin-top: 1.5rem
+		}
+
+		h3 {
+			font-size: 20px;
+			line-height: 1.5;
+			margin-top: 1.5rem
+		}
+
+		h4 {
+			font-size: 18px;
+			line-height: 1.65;
+			margin-top: 1.5rem
+		}
+
+		h5 {
+			font-size: 16px;
+			line-height: 1.65;
+			margin-top: 1.5rem
+		}
+
+		h6 {
+			font-size: 14px;
+			line-height: 1.65;
+			margin-top: 1.5rem
+		}
+
+		p {
+			margin: 1.5rem 0;
+			font-size: 16px;
+			line-height: 1.65
+		}
+
+		@media only screen and (min-width:30em) {
+			p {
+				font-size: 18px;
+				line-height: 1.65
+			}
+		}
+
+		a {
+			text-decoration: none;
+			border-bottom: 1px solid #282828;
+			color: #282828
+		}
+
+		a:visited,
+		a:hover {
+			color: #282828
+		}
+
+		strong,
+		b {
+			font-weight: 700
+		}
+
+		em,
+		i {
+			font-style: italic
+		}
+
+		ul {
+			list-style-type: none
+		}
+
+		li {
+			font-size: 16px
+		}
+
+		@media only screen and (min-width:30em) {
+			li {
+				font-size: 18px
+			}
+		}
+
+		img,
+		video {
+			display: block;
+			width: 100%
+		}
+
+		button {
+			cursor: pointer;
+			border: none;
+			outline: none;
+			margin: 0;
+			padding: 0;
+			font-size: 16px
+		}
+
+		@media only screen and (min-width:30em) {
+			button {
+				font-size: 18px
+			}
+		}
+
+		sub,
+		sup {
+			font-size: .75rem;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		/*! nouislider - 14.0.2 - 6/28/2019 */
+		/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+		.noUi-target,
+		.noUi-target * {
+			-webkit-touch-callout: none;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-user-select: none;
+			-ms-touch-action: none;
+			touch-action: none;
+			-ms-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.noUi-target {
+			position: relative;
+			direction: ltr;
+		}
+
+		.noUi-base,
+		.noUi-connects {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			z-index: 1;
+		}
+
+		/* Wrapper for all connect elements.
+ */
+		.noUi-connects {
+			overflow: hidden;
+			z-index: 0;
+		}
+
+		.noUi-connect,
+		.noUi-origin {
+			will-change: transform;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			-ms-transform-origin: 0 0;
+			-webkit-transform-origin: 0 0;
+			-webkit-transform-style: preserve-3d;
+			transform-origin: 0 0;
+			-webkit-transform-style: flat;
+			transform-style: flat;
+		}
+
+		.noUi-connect {
+			height: 100%;
+			width: 100%;
+		}
+
+		.noUi-origin {
+			height: 10%;
+			width: 10%;
+		}
+
+		/* Offset direction
+ */
+		html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
+			left: auto;
+			right: 0;
+		}
+
+		/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+		.noUi-vertical .noUi-origin {
+			width: 0;
+		}
+
+		.noUi-horizontal .noUi-origin {
+			height: 0;
+		}
+
+		.noUi-handle {
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			position: absolute;
+		}
+
+		.noUi-touch-area {
+			height: 100%;
+			width: 100%;
+		}
+
+		.noUi-state-tap .noUi-connect,
+		.noUi-state-tap .noUi-origin {
+			-webkit-transition: transform 0.3s;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: -webkit-transform 0.3s;
+			-o-transition: transform 0.3s;
+			transition: transform 0.3s;
+			transition: transform 0.3s, -webkit-transform 0.3s;
+		}
+
+		.noUi-state-drag * {
+			cursor: inherit !important;
+		}
+
+		/* Slider size and handle placement;
+ */
+		.noUi-horizontal {
+			height: 18px;
+		}
+
+		.noUi-horizontal .noUi-handle {
+			width: 34px;
+			height: 28px;
+			left: -17px;
+			top: -6px;
+		}
+
+		.noUi-vertical {
+			width: 18px;
+		}
+
+		.noUi-vertical .noUi-handle {
+			width: 28px;
+			height: 34px;
+			left: -6px;
+			top: -17px;
+		}
+
+		html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+			right: -17px;
+			left: auto;
+		}
+
+		/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+		.noUi-target {
+			background: #FAFAFA;
+			border-radius: 4px;
+			border: 1px solid #D3D3D3;
+			-webkit-box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+			box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+		}
+
+		.noUi-connects {
+			border-radius: 3px;
+		}
+
+		.noUi-connect {
+			background: #3FB8AF;
+		}
+
+		/* Handles and cursors;
+ */
+		.noUi-draggable {
+			cursor: ew-resize;
+		}
+
+		.noUi-vertical .noUi-draggable {
+			cursor: ns-resize;
+		}
+
+		.noUi-handle {
+			border: 1px solid #D9D9D9;
+			border-radius: 3px;
+			background: #FFF;
+			cursor: default;
+			-webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+			box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+		}
+
+		.noUi-active {
+			-webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+			box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+		}
+
+		/* Handle stripes;
+ */
+		.noUi-handle:before,
+		.noUi-handle:after {
+			content: "";
+			display: block;
+			position: absolute;
+			height: 14px;
+			width: 1px;
+			background: #E8E7E6;
+			left: 14px;
+			top: 6px;
+		}
+
+		.noUi-handle:after {
+			left: 17px;
+		}
+
+		.noUi-vertical .noUi-handle:before,
+		.noUi-vertical .noUi-handle:after {
+			width: 14px;
+			height: 1px;
+			left: 6px;
+			top: 14px;
+		}
+
+		.noUi-vertical .noUi-handle:after {
+			top: 17px;
+		}
+
+		/* Disabled state;
+ */
+		[disabled] .noUi-connect {
+			background: #B8B8B8;
+		}
+
+		[disabled].noUi-target,
+		[disabled].noUi-handle,
+		[disabled] .noUi-handle {
+			cursor: not-allowed;
+		}
+
+		/* Base;
+ *
+ */
+		.noUi-pips,
+		.noUi-pips * {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.noUi-pips {
+			position: absolute;
+			color: #999;
+		}
+
+		/* Values;
+ *
+ */
+		.noUi-value {
+			position: absolute;
+			white-space: nowrap;
+			text-align: center;
+		}
+
+		.noUi-value-sub {
+			color: #ccc;
+			font-size: 10px;
+		}
+
+		/* Markings;
+ *
+ */
+		.noUi-marker {
+			position: absolute;
+			background: #CCC;
+		}
+
+		.noUi-marker-sub {
+			background: #AAA;
+		}
+
+		.noUi-marker-large {
+			background: #AAA;
+		}
+
+		/* Horizontal layout;
+ *
+ */
+		.noUi-pips-horizontal {
+			padding: 10px 0;
+			height: 80px;
+			top: 100%;
+			left: 0;
+			width: 100%;
+		}
+
+		.noUi-value-horizontal {
+			-webkit-transform: translate(-50%, 50%);
+			-ms-transform: translate(-50%, 50%);
+			transform: translate(-50%, 50%);
+		}
+
+		.noUi-rtl .noUi-value-horizontal {
+			-webkit-transform: translate(50%, 50%);
+			-ms-transform: translate(50%, 50%);
+			transform: translate(50%, 50%);
+		}
+
+		.noUi-marker-horizontal.noUi-marker {
+			margin-left: -1px;
+			width: 2px;
+			height: 5px;
+		}
+
+		.noUi-marker-horizontal.noUi-marker-sub {
+			height: 10px;
+		}
+
+		.noUi-marker-horizontal.noUi-marker-large {
+			height: 15px;
+		}
+
+		/* Vertical layout;
+ *
+ */
+		.noUi-pips-vertical {
+			padding: 0 10px;
+			height: 100%;
+			top: 0;
+			left: 100%;
+		}
+
+		.noUi-value-vertical {
+			-webkit-transform: translate(0, -50%);
+			-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+			padding-left: 25px;
+		}
+
+		.noUi-rtl .noUi-value-vertical {
+			-webkit-transform: translate(0, 50%);
+			-ms-transform: translate(0, 50%);
+			transform: translate(0, 50%);
+		}
+
+		.noUi-marker-vertical.noUi-marker {
+			width: 5px;
+			height: 2px;
+			margin-top: -1px;
+		}
+
+		.noUi-marker-vertical.noUi-marker-sub {
+			width: 10px;
+		}
+
+		.noUi-marker-vertical.noUi-marker-large {
+			width: 15px;
+		}
+
+		.noUi-tooltip {
+			display: block;
+			position: absolute;
+			border: 1px solid #D9D9D9;
+			border-radius: 3px;
+			background: #fff;
+			color: #000;
+			padding: 5px;
+			text-align: center;
+			white-space: nowrap;
+		}
+
+		.noUi-horizontal .noUi-tooltip {
+			-webkit-transform: translate(-50%, 0);
+			-ms-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+			left: 50%;
+			bottom: 120%;
+		}
+
+		.noUi-vertical .noUi-tooltip {
+			-webkit-transform: translate(0, -50%);
+			-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+			top: 50%;
+			right: 120%;
+		}
+
+		.slider.noUi-target {
+			border: none;
+			background: #dbcdbd;
+			-webkit-box-shadow: none;
+			box-shadow: none
+		}
+
+		.slider.noUi-horizontal {
+			height: 10px;
+			background: #dbcdbd;
+			cursor: pointer
+		}
+
+		.slider.noUi-horizontal .noUi-base {
+			height: 100%
+		}
+
+		.slider.noUi-horizontal .noUi-base .noUi-connect {
+			background: #53412d
+		}
+
+		.slider.noUi-horizontal .noUi-base:after {
+			position: absolute;
+			top: 50%;
+			display: block;
+			display: none;
+			width: 100%;
+			height: 2px;
+			border-radius: 2px;
+			background: #282828;
+			content: ''
+		}
+
+		.slider.noUi-horizontal .noUi-handle {
+			position: absolute;
+			top: 0;
+			width: 20px;
+			height: 20px;
+			outline: none;
+			border: 2px solid #a5825a;
+			border-radius: 50%;
+			background: #fff;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			cursor: pointer;
+			-webkit-transform: translate(-50%, -25%);
+			-ms-transform: translate(-50%, -25%);
+			transform: translate(-50%, -25%)
+		}
+
+		.slider.noUi-horizontal .noUi-handle:before {
+			display: none
+		}
+
+		.slider.noUi-horizontal .noUi-handle:after {
+			display: none
+		}
+
+		footer.pudding-footer {
+			margin-top: 3rem;
+			padding: 3rem;
+			border-top: 4px solid #000;
+			font-family: 'National 2 Web', Helvetica, Arial, sans-serif
+		}
+
+		footer.pudding-footer .footer-recirc {
+			margin: 0 auto;
+			max-width: 65rem
+		}
+
+		footer.pudding-footer .footer-recirc__articles {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between
+		}
+
+		footer.pudding-footer .footer-recirc__article {
+			display: block;
+			margin-bottom: 2rem;
+			width: 100%;
+			border: none
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-recirc__article {
+				margin-right: 1.5rem;
+				width: calc(25% - 1.5rem)
+			}
+
+			footer.pudding-footer .footer-recirc__article:last-of-type {
+				margin-right: 0
+			}
+		}
+
+		footer.pudding-footer .footer-recirc .article__headline {
+			font-family: 'National 2 Narrow Web', Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			padding-left: .5rem;
+			font-weight: 700;
+			line-height: 1
+		}
+
+		footer.pudding-footer .footer-company {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			margin: 0 auto;
+			margin-top: 3rem;
+			max-width: 65rem;
+			font-family: 'National 2 Narrow Web', Helvetica, Arial, sans-serif
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-company {
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row
+			}
+		}
+
+		footer.pudding-footer .footer-company__cta {
+			-webkit-box-ordinal-group: 2;
+			-ms-flex-order: 1;
+			order: 1;
+			margin: 2rem 0 0 0;
+			width: 100%
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-company__cta {
+				margin: 0 0 0 2rem;
+				width: 22rem
+			}
+		}
+
+		footer.pudding-footer .footer-company__cta-list {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			height: 12rem
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-company__cta-list {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column
+			}
+		}
+
+		footer.pudding-footer .footer-company__cta-list li {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			margin-bottom: 1rem;
+			width: 50%
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-company__cta-list li {
+				padding-left: 1rem
+			}
+		}
+
+		footer.pudding-footer .footer-company__cta-list li a {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			border: none
+		}
+
+		footer.pudding-footer .footer-company__cta-list li p {
+			margin: 0;
+			padding-top: .1rem;
+			padding-left: .5rem;
+			color: #a5825a;
+			font-family: 'National 2 Narrow Web', Helvetica, Arial, sans-serif;
+			line-height: 1
+		}
+
+		@media only screen and (min-width:40em) {
+			footer.pudding-footer .footer-company__cta-list li p {
+				font-size: 20px
+			}
+		}
+
+		footer.pudding-footer .footer-company__cta-list li svg {
+			vertical-align: middle;
+			fill: #a5825a;
+			stroke: none
+		}
+
+		footer.pudding-footer .footer-company__cta-list li svg circle,
+		footer.pudding-footer .footer-company__cta-list li svg polyline,
+		footer.pudding-footer .footer-company__cta-list li svg line {
+			fill: none;
+			stroke: #a5825a
+		}
+
+		footer.pudding-footer .footer-company__cta-list li .feather-mail path,
+		footer.pudding-footer .footer-company__cta-list li .feather-lock path,
+		footer.pudding-footer .footer-company__cta-list li .feather-rss path {
+			stroke: #a5825a;
+			fill: none
+		}
+
+		footer.pudding-footer .footer-company__about {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-ordinal-group: 1;
+			-ms-flex-order: 0;
+			order: 0;
+			width: 100%;
+			color: #a5825a
+		}
+
+		@media only screen and (min-width:50em) {
+			footer.pudding-footer .footer-company__about {
+				width: calc(100% - 24rem)
+			}
+		}
+
+		footer.pudding-footer .footer-company__about p {
+			margin: 0;
+			font-size: 16px;
+			line-height: 1.4
+		}
+
+		footer.pudding-footer .footer-company__about svg {
+			margin-bottom: .5rem;
+			width: 12rem
+		}
+
+		.graphic__capital {
+			position: relative
+		}
+
+		.graphic__capital .capital__chart {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: .5;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0)
+		}
+
+		.graphic__capital .capital__chart.is-bottom {
+			position: absolute;
+			top: auto;
+			bottom: 0
+		}
+
+		.graphic__capital .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-box-shadow: inset 0 0 30px 30px #ede6de;
+			box-shadow: inset 0 0 30px 30px #ede6de;
+			pointer-events: none
+		}
+
+		.graphic__capital .state__border {
+			fill: none;
+			stroke: #c9b49c;
+			stroke-width: 1px;
+			stroke-linecap: round;
+			stroke-linejoin: round
+		}
+
+		.graphic__capital .capital__prose {
+			position: relative;
+			margin-top: 2rem;
+			pointer-events: none
+		}
+
+		.graphic__capital .prose__step {
+			margin: 0 auto;
+			max-width: 40rem;
+			height: 320px
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__capital .prose__step {
+				height: 100vh
+			}
+		}
+
+		.graphic__capital .prose__step.small .step__text {
+			font-size: .9rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__capital .prose__step.small .step__text {
+				font-size: 1.1rem
+			}
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__capital .prose__step:last-child {
+				height: 60vh
+			}
+		}
+
+		.graphic__capital .prose__step.is-hidden {
+			display: none
+		}
+
+		.graphic__capital .step__text {
+			display: none;
+			margin: 0;
+			padding: .75rem;
+			background: #ede6de;
+			-webkit-box-shadow: 0 0 1rem .5rem #ede6de;
+			box-shadow: 0 0 1rem .5rem #ede6de;
+			font-size: 1.3rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__capital .step__text {
+				font-size: 1.5rem
+			}
+		}
+
+		.graphic__capital .step__text.is-visible {
+			display: block
+		}
+
+		.graphic__capital .g-map text {
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: 500;
+			font-size: 12px;
+			fill: #53412d
+		}
+
+		.graphic__capital .g-map circle {
+			fill: #53412d;
+			stroke: none
+		}
+
+		.graphic__capital .city circle {
+			fill-opacity: .75
+		}
+
+		.graphic__capital .city text {
+			visibility: hidden;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: 500;
+			font-size: 12px;
+			pointer-events: none;
+			fill: #53412d
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__capital .city text {
+				visibility: visible
+			}
+		}
+
+		.graphic__capital .city text.text--bg {
+			fill-opacity: 0;
+			stroke: #ede6de;
+			stroke-width: 2px
+		}
+
+		.graphic__capital .map-cities {
+			opacity: 0
+		}
+
+		.graphic__capital .map-custom {
+			opacity: 0
+		}
+
+		.graphic__capital .map-best {
+			opacity: 0
+		}
+
+		.graphic__explore {
+			position: relative;
+			-webkit-font-feature-settings: 'tnum' 1;
+			font-feature-settings: 'tnum' 1
+		}
+
+		.graphic__explore .is-hidden {
+			opacity: 0
+		}
+
+		.graphic__explore .explore__chart {
+			position: relative;
+			margin: 0 auto;
+			width: 95%
+		}
+
+		.graphic__explore .explore__filter {
+			margin: 0 auto;
+			padding: 0 .75rem;
+			max-width: 60rem
+		}
+
+		.graphic__explore .explore__filter p {
+			margin: 0;
+			text-align: center;
+			font-size: 1.1rem;
+			line-height: 1.7
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__explore .explore__filter p {
+				font-size: 1.5rem
+			}
+		}
+
+		.graphic__explore .explore__toggle {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin: 1rem auto 0 auto;
+			max-width: 20rem;
+			width: 100%
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__explore .explore__toggle {
+				display: none
+			}
+		}
+
+		.graphic__explore .explore__toggle li {
+			padding: .25em 0;
+			width: 50%;
+			border: 1px solid #a5825a;
+			border-radius: 3px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: 400;
+			font-size: .8rem;
+			cursor: pointer
+		}
+
+		.graphic__explore .explore__toggle li:first-child {
+			border-right: none;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0
+		}
+
+		.graphic__explore .explore__toggle li:last-child {
+			border-left: none;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0
+		}
+
+		.graphic__explore .explore__toggle li.is-selected {
+			background-color: #c9b49c
+		}
+
+		.graphic__explore .step__text {
+			display: none;
+			padding: .5rem;
+			background: #ece6df;
+			-webkit-box-shadow: 0 0 1rem .5rem #ede6de;
+			box-shadow: 0 0 1rem .5rem #ede6de
+		}
+
+		.graphic__explore .table__title {
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: bold;
+			font-size: 12px;
+			fill: #53412d
+		}
+
+		.graphic__explore .connector {
+			visibility: hidden;
+			fill: none;
+			stroke: #c9b49c;
+			stroke-dasharray: 2px 2px
+		}
+
+		.graphic__explore .connector.is-visible {
+			visibility: visible
+		}
+
+		.graphic__explore .cities-axis text {
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-size: 12px;
+			fill: #53412d
+		}
+
+		.graphic__explore .target text {
+			letter-spacing: .05em;
+			font-weight: 400;
+			font-size: 12px;
+			fill: #a5825a
+		}
+
+		.graphic__explore .target circle {
+			fill: #a5825a
+		}
+
+		.graphic__explore .cities-axis line {
+			stroke: #a5825a;
+			stroke-width: 1px;
+			stroke-dasharray: 4px 4px
+		}
+
+		.graphic__explore .city circle {
+			opacity: 1;
+			-webkit-transition: 100ms opacity;
+			-o-transition: 100ms opacity;
+			transition: 100ms opacity;
+			pointer-events: none;
+			fill-opacity: .75
+		}
+
+		.graphic__explore .city.is-faded circle {
+			opacity: .65
+		}
+
+		.graphic__explore .city.is-active circle {
+			opacity: 1;
+			fill-opacity: 1;
+			stroke: #53412d;
+			stroke-width: 2px
+		}
+
+		.graphic__explore .g-tooltip {
+			visibility: hidden;
+			pointer-events: none
+		}
+
+		.graphic__explore .g-tooltip.is-visible {
+			visibility: visible
+		}
+
+		.graphic__explore .tooltip__text {
+			font-weight: 500;
+			font-size: 12px;
+			opacity: 1;
+			fill: #53412d
+		}
+
+		.graphic__explore .tooltip__text.shadow {
+			fill-opacity: 0;
+			stroke: #ede6de;
+			stroke-width: 3px
+		}
+
+		.graphic__explore .tooltip__quantity {
+			text-transform: uppercase;
+			letter-spacing: .05;
+			font-weight: 500;
+			font-size: 10px;
+			fill: #745b3f
+		}
+
+		.graphic__explore .tooltip__quantity.shadow {
+			fill-opacity: 0;
+			stroke: #ede6de;
+			stroke-width: 3px
+		}
+
+		.graphic__explore .tooltip__quality {
+			text-transform: uppercase;
+			letter-spacing: .05;
+			font-weight: 500;
+			font-size: 10px;
+			fill: #745b3f
+		}
+
+		.graphic__explore .tooltip__quality.shadow {
+			fill-opacity: 0;
+			stroke: #ede6de;
+			stroke-width: 3px
+		}
+
+		.graphic__explore .g-table .row {
+			cursor: pointer
+		}
+
+		.graphic__explore .g-table .row.is-connected text {
+			font-weight: 500
+		}
+
+		.graphic__explore .g-table text {
+			letter-spacing: .05em;
+			font-weight: 400;
+			fill: #53412d
+		}
+
+		.graphic__explore .g-table rect {
+			fill-opacity: 0
+		}
+
+		.graphic__explore .g-table .brews__label {
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: bold
+		}
+
+		.graphic__explore .table__brews {
+			visibility: hidden;
+			pointer-events: none
+		}
+
+		.graphic__explore .table__brews line {
+			stroke: #c9b49c;
+			stroke-dasharray: 2px 2px
+		}
+
+		.graphic__explore .table__brews.is-visible {
+			visibility: visible
+		}
+
+		.graphic__explore .g-voronoi path {
+			cursor: pointer;
+			fill-opacity: 0;
+			stroke: none
+		}
+
+		.graphic__explore .explore__slider {
+			display: block;
+			margin: .5rem auto 0 auto;
+			max-width: 20rem;
+			width: 100%
+		}
+
+		.graphic__explore .slider__result {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin: .25rem auto 0 auto;
+			max-width: 20rem;
+			width: 100%
+		}
+
+		.graphic__explore .slider__result p {
+			width: 50%;
+			text-align: left
+		}
+
+		.graphic__explore .slider__result p.result__quality,
+		.graphic__explore .slider__result p.result__quantity {
+			font-weight: 500;
+			font-size: .7rem
+		}
+
+		.graphic__explore .slider__result p:last-child {
+			text-align: right
+		}
+
+		.graphic__explore select {
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			color: #53412d;
+			font-weight: bold;
+			font-size: .9rem;
+			outline: none;
+			background: #dbcdbd;
+			-moz-text-align-last: center;
+			text-align-last: center;
+			font-family: 'Publico Text Web', 'Tiempos Text Web', Georgia, Times, serif
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__explore select {
+				font-size: 1.4rem
+			}
+		}
+
+		.graphic__explore .chart__note {
+			margin: 0 auto;
+			padding: 1rem;
+			max-width: 20rem;
+			color: #a5825a
+		}
+
+		.graphic__explore .chart__note p {
+			display: inline-block;
+			padding-top: .5rem;
+			max-width: 20rem;
+			border-top: 1px solid #c9b49c;
+			text-align: left;
+			font-size: .7rem
+		}
+
+		.graphic__explore .chart__key {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+			margin: 1rem auto .5rem auto;
+			max-width: 40rem;
+			color: #a5825a;
+			text-align: center
+		}
+
+		.graphic__explore .chart__key p {
+			border-bottom: 1px dotted #c9b49c;
+			font-size: .7rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__explore .chart__key p {
+				font-size: .75rem
+			}
+		}
+
+		.explore__transition {
+			margin: 6rem auto 4rem auto;
+			padding: 0 .75rem;
+			max-width: 40rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.explore__transition {
+				margin: 6rem auto
+			}
+		}
+
+		.graphic__trend {
+			position: relative;
+			margin: 2rem auto;
+			max-width: 70rem;
+			width: 95%
+		}
+
+		.graphic__trend .trend__transition {
+			margin: 4rem auto;
+			max-width: 40rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__trend .trend__transition {
+				margin: 6rem auto
+			}
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__trend .trend__intro {
+				position: absolute;
+				top: 10rem;
+				left: 33%;
+				margin: 0 auto;
+				padding: .5rem 1rem;
+				max-width: 30rem;
+				width: 100%;
+				background-color: #ede6de;
+				-webkit-transform: translate(-50%, 0);
+				-ms-transform: translate(-50%, 0);
+				transform: translate(-50%, 0)
+			}
+		}
+
+		.graphic__trend .trend__intro p {
+			margin: 0
+		}
+
+		.graphic__trend .hed--section {
+			margin: 0;
+			margin-bottom: .5rem
+		}
+
+		.graphic__trend .trend__chart--all {
+			-webkit-font-feature-settings: 'tnum' 1;
+			font-feature-settings: 'tnum' 1
+		}
+
+		.graphic__trend .trend__chart--all .all__path {
+			stroke: #ff3814;
+			stroke-width: 3px;
+			fill: none;
+			stroke-linecap: round
+		}
+
+		.graphic__trend .trend__chart--all .g-axis text {
+			fill: #745b3f
+		}
+
+		.graphic__trend .trend__chart--all .g-axis path,
+		.graphic__trend .trend__chart--all line {
+			stroke: #c9b49c
+		}
+
+		.graphic__trend .trend__chart--all .axis--y {
+			stroke-dasharray: 4px 4px
+		}
+
+		.graphic__trend .trend__chart--all .axis--y path {
+			display: none
+		}
+
+		.graphic__trend .trend__chart--all .axis--y .tick:nth-child(3) {
+			display: none
+		}
+
+		.graphic__trend .trend__chart--all .y-label {
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-size: 11px
+		}
+
+		.graphic__trend .trend__chart--state {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-pack: left;
+			-ms-flex-pack: left;
+			justify-content: left;
+			-webkit-font-feature-settings: 'tnum' 1;
+			font-feature-settings: 'tnum' 1
+		}
+
+		.graphic__trend .trend__chart--state .state__label {
+			position: absolute;
+			top: 25%;
+			left: 0;
+			margin: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 12px;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%)
+		}
+
+		.graphic__trend .trend__chart--state .state__line {
+			stroke: #53412d;
+			stroke-linecap: round;
+			stroke-width: 2px;
+			stroke-opacity: .75
+		}
+
+		.graphic__trend .trend__chart--state .state__area {
+			fill-opacity: .75
+		}
+
+		.graphic__trend .trend__chart--state .g-axis text {
+			fill: #745b3f
+		}
+
+		.graphic__trend .trend__chart--state .g-axis path {
+			stroke: #c9b49c
+		}
+
+		.graphic__trend .trend__chart--state .g-axis line {
+			stroke: #c9b49c;
+			stroke-dasharray: 4px 4px
+		}
+
+		.graphic__trend .trend__chart--state .axis--y {
+			stroke-dasharray: 4px 4px
+		}
+
+		.graphic__trend .trend__chart--state .axis--y path {
+			display: none
+		}
+
+		.graphic__trend .trend__chart--state .axis--y .tick:nth-child(1) {
+			display: none
+		}
+
+		.graphic__trend .chart__state {
+			position: relative;
+			display: block;
+			padding: 0 1rem;
+			width: 50%
+		}
+
+		@media only screen and (min-width:800px) {
+			.graphic__trend .chart__state {
+				padding: 0 1rem;
+				width: 16.66%
+			}
+		}
+
+		.graphic__trend .trend__hed {
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: 500;
+			font-size: .8rem;
+			-webkit-font-feature-settings: 'tnum' 1;
+			font-feature-settings: 'tnum' 1
+		}
+
+		.graphic__trend .trend__dek {
+			margin: 0;
+			text-align: center;
+			font-weight: 400;
+			font-size: .8rem
+		}
+
+		header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			width: 100%;
+			background-color: #ede6de;
+			font-family: 'National 2 Web', Helvetica, Arial, sans-serif
+		}
+
+		header a.logo {
+			display: block;
+			margin: 1rem auto;
+			max-width: 9rem;
+			border: none
+		}
+
+		header a.logo svg {
+			display: block;
+			width: 100%;
+			fill: #53412d
+		}
+
+		header.is-sticky {
+			position: absolute;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			height: 3rem;
+			background-color: #fff;
+			-webkit-box-shadow: 0 0 7px 1px #c9b49c;
+			box-shadow: 0 0 7px 1px #c9b49c;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0)
+		}
+
+		header.is-sticky a.logo {
+			margin: 0 auto
+		}
+
+		header.is-sticky .header__toggle {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 1000;
+			padding: .75rem;
+			border: none;
+			background-color: transparent;
+			line-height: 1;
+			cursor: pointer;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0)
+		}
+
+		header.is-sticky .header__toggle svg {
+			stroke: #53412d
+		}
+
+		header.is-sticky .header__toggle span:first-of-type {
+			display: block
+		}
+
+		header.is-sticky .header__toggle span:last-of-type {
+			display: none
+		}
+
+		header.is-sticky .header__toggle.is-visible span:first-of-type {
+			display: none
+		}
+
+		header.is-sticky .header__toggle.is-visible span:last-of-type {
+			display: block
+		}
+
+		header.is-sticky .header__toggle.is-visible span svg {
+			stroke: #dbcdbd
+		}
+
+		header.is-sticky .header__menu {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 1.5rem;
+			max-width: 30rem;
+			width: 100%;
+			height: 100vh;
+			background-color: #53412d;
+			color: #dbcdbd;
+			-webkit-transition: -webkit-transform 200ms ease-in-out;
+			transition: -webkit-transform 200ms ease-in-out;
+			-o-transition: transform 200ms ease-in-out;
+			transition: transform 200ms ease-in-out;
+			transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+			-webkit-transform: translateX(100%);
+			-ms-transform: translateX(100%);
+			transform: translateX(100%)
+		}
+
+		@media only screen and (min-width:30em) {
+			header.is-sticky .header__menu {
+				border-left: 1px solid #745b3f
+			}
+		}
+
+		header.is-sticky .header__menu.is-visible {
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0)
+		}
+
+		header.is-sticky .header__menu a {
+			border-bottom: 1px solid #dbcdbd;
+			color: #dbcdbd
+		}
+
+		header.is-sticky .header__menu a:hover {
+			color: #c9b49c
+		}
+
+		header.is-sticky .header__menu .menu__links {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap
+		}
+
+		@media only screen and (min-width:40em) {
+			header.is-sticky .header__menu .menu__links {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column
+			}
+		}
+
+		header.is-sticky .header__menu .menu__links li {
+			margin-right: .5em;
+			margin-bottom: .5em;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: 'National 2 Narrow Web', Helvetica, Arial, sans-serif;
+			font-size: 20px
+		}
+
+		@media only screen and (min-width:30em) {
+			header.is-sticky .header__menu .menu__links li {
+				font-size: 24px
+			}
+		}
+
+		header.is-sticky .header__menu a.patreon-link {
+			padding: .5em .75em;
+			border: none;
+			background-color: #dbcdbd;
+			color: #53412d;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: 'National 2 Narrow Web', Helvetica, Arial, sans-serif
+		}
+
+		header.is-sticky .header__menu a.patreon-link:hover {
+			opacity: .75
+		}
+
+		header.is-sticky .menu__patrons ul {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap
+		}
+
+		header.is-sticky .menu__patrons li:after {
+			display: inline;
+			margin-right: .25em;
+			content: ','
+		}
+
+		header.is-sticky .menu__patrons li:last-of-type:after {
+			content: '.'
+		}
+
+		header.is-sticky.is-dark {
+			background-color: #53412d;
+			-webkit-box-shadow: 0 0 7px 1px #745b3f;
+			box-shadow: 0 0 7px 1px #745b3f
+		}
+
+		header.is-sticky.is-dark svg path {
+			fill: #dbcdbd
+		}
+
+		header.is-sticky.is-dark .header__menu {
+			background-color: #fff;
+			color: #53412d
+		}
+
+		@media only screen and (min-width:30em) {
+			header.is-sticky.is-dark .header__menu {
+				border-left: 1px solid #c9b49c
+			}
+		}
+
+		header.is-sticky.is-dark a {
+			border-bottom: 1px solid #53412d;
+			color: #53412d
+		}
+
+		header.is-sticky.is-dark a:hover {
+			color: #745b3f
+		}
+
+		header.is-sticky.is-dark .header__toggle svg {
+			stroke: #dbcdbd
+		}
+
+		header.is-sticky.is-dark .header__toggle.is-visible span svg {
+			stroke: #53412d
+		}
+
+		.intro {
+			position: relative;
+			z-index: 1;
+			height: 100vh;
+			background: transparent
+		}
+
+		.intro__custom {
+			margin: 0 auto;
+			padding: 1rem;
+			padding-top: 5rem;
+			max-width: 60rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.intro__custom {
+				padding-top: 10rem
+			}
+		}
+
+		.intro__hed {
+			font-weight: 700;
+			font-size: 2rem;
+			font-family: 'Tiempos Headline Web', Georgia, Times, serif
+		}
+
+		@media only screen and (min-width:800px) {
+			.intro__hed {
+				font-size: 3rem
+			}
+		}
+
+		.intro__hed span {
+			opacity: 0;
+			-webkit-transition: opacity 500ms ease-in-out;
+			-o-transition: opacity 500ms ease-in-out;
+			transition: opacity 500ms ease-in-out
+		}
+
+		.intro__hed span.is-visible {
+			opacity: 1
+		}
+
+		.intro__byline {
+			left: 0;
+			padding-bottom: 1em;
+			padding-left: .3em;
+			width: 100%;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-size: .8rem;
+			line-height: 1
+		}
+
+		.intro__prompt {
+			position: absolute;
+			bottom: 3rem;
+			left: 50%;
+			margin-left: -24px;
+			width: 48px;
+			height: 26px;
+			opacity: 0;
+			-webkit-transition: 500ms opacity;
+			-o-transition: 500ms opacity;
+			transition: 500ms opacity;
+			-webkit-animation: bounce 2s infinite;
+			animation: bounce 2s infinite
+		}
+
+		.intro__prompt.is-reveal {
+			opacity: .5
+		}
+
+		.intro__prompt svg path {
+			fill: #745b3f
+		}
+
+		@-webkit-keyframes bounce {
+			0% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+
+			50% {
+				-webkit-transform: translateY(-5px);
+				transform: translateY(-5px)
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+		}
+
+		@keyframes bounce {
+			0% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+
+			50% {
+				-webkit-transform: translateY(-5px);
+				transform: translateY(-5px)
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+		}
+
+		body {
+			background-color: #ede6de;
+			color: #53412d;
+			font-size: 17px
+		}
+
+		main {
+			overflow-y: hidden;
+			height: 101vh
+		}
+
+		main.is-reveal {
+			overflow-y: auto;
+			height: auto
+		}
+
+		p {
+			line-height: 1.7
+		}
+
+		a,
+		a:visited,
+		a:hover {
+			border-color: currentColor;
+			color: #ff3814
+		}
+
+		.hed--section {
+			font-weight: bold;
+			font-size: 1.75rem
+		}
+
+		@media only screen and (min-width:800px) {
+			.hed--section {
+				font-size: 2rem
+			}
+		}
+
+		svg text {
+			font-family: 'Atlas Grotesk Web', 'National 2 Web', Helvetica, Arial, sans-serif
+		}
+
+		.outro {
+			margin: 3rem auto;
+			padding: .75rem;
+			max-width: 40rem;
+			border-top: 1px solid #c9b49c
+		}
+
+		.outro p {
+			margin: 0;
+			font-size: .85rem
+		}
+
+		footer {
+			display: none;
+			background-color: #e4dacd
+		}
+
+		footer.is-reveal {
+			display: block
+		}
+
+		.tk-atlas {
+			font-family: 'National 2 Web', Helvetica, Arial, sans-serif
+		}
+
+		.tk-canela {
+			font-family: 'Tiempos Text Web', Georgia, Times, serif
+		}
+	</style>
+
+	<style>
+		/*
+	        This font software is the property of Commercial Type.
+	
+	        You may not modify the font software, use it on another website, or install it on a computer.
+	
+	        License information is available at http://commercialtype.com/eula
+	        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+	
+	        Copyright (C) 2017 Schwartzco Inc.
+	        License: 1704-GNCLGK
+	*/
+
+		/*
+		********************
+			National
+		********************
+		*/
+
+		@font-face {
+			font-family: 'National 2 Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2Web-Regular.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/national/National2Web-Regular.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'National 2 Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2Web-Bold.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/national/National2Web-Bold.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		/*
+		********************
+			National Narrow
+		********************
+		*/
+
+		/*
+		@font-face {
+			font-family: 'National 2 Narrow Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Extralight.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Extralight.woff') format('woff');
+			font-weight: 200;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		*/
+
+		@font-face {
+			font-family: 'National 2 Narrow Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Regular.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Regular.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'National 2 Narrow Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Bold.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Bold.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		/*
+		@font-face {
+			font-family: 'National 2 Narrow Web';
+			src: url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Black.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/national/National2NarrowWeb-Black.woff') format('woff');
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		*/
+
+		/*
+		********************
+			Tiempos Text
+		********************
+		*/
+
+		@font-face {
+			font-family: 'Tiempos Text Web';
+			src: url('https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Tiempos Text Web';
+			src: url('https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2') format('woff2'),
+				url('https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+
+		/*
+		********************
+			Tiempos Headline
+		********************
+		*/
+
+		/*
+		@font-face {
+			font-family: 'Tiempos Headline Web';
+			src: url('https://pudding.cool/assets/fonts/tiempos/TiemposHeadlineWeb-Regular.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/tiempos/TiemposHeadlineWeb-Regular.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		*/
+
+		/*
+		********************
+			Publico Text
+		********************
+		*/
+		/*
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+	
+		@font-face {
+			font-family: 'Publico Text Web';
+			src: url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		*/
+
+		/*
+		********************
+			Atlas Grotesk
+		********************
+		*/
+
+		/*
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+	
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		
+		@font-face {
+			font-family: 'Atlas Grotesk Web';
+			src: url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+			url('https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+			font-display: swap;
+		}
+		*/
+	</style>
+	<script>
+
+	</script>
+<script data-goatcounter="https://thepudding.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+
+	<a href='#content' class='skip-to-main'>Skip to main content</a>
+
+	<header class=''>
+		<a href='https://pudding.cool' target='_blank' class='logo'>
+			<svg id="wordmark" x="0px" y="0px" style="enable-background:new 0 0 192.6 50;" xml:space="preserve"
+				viewBox="0 0 192.6 50">
+				<g>
+					<path class="st0"
+						d="M150.1,9.5c1.5,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8s-2.8-1.3-2.8-2.8S148.6,9.5,150.1,9.5z" />
+					<path class="st0" d="M147.2,17.3h5.6v18.2h-5.6V17.3z" />
+					<path class="st0" d="M77.1,9.5h-1.9h-7v19.3v6.7h5.6v-6.7v-1.4h1.4h1.9c4.9,0,8.9-4,8.9-8.9S82.1,9.5,77.1,9.5z M77.1,21.8h-1.9
+		h-1.4v-1.4v-3.8v-1.4h1.4h1.9c1.8,0,3.3,1.5,3.3,3.3S79,21.8,77.1,21.8z" />
+					<path class="st0" d="M105.7,17.6h-5.6v8.9c0,1.8-1.5,3.3-3.3,3.3s-3.3-1.5-3.3-3.3v-8.9h-5.6v8.9c0,4.9,4,8.9,8.9,8.9
+		s8.9-4,8.9-8.9V17.6z" />
+					<path class="st0" d="M164.1,17.6c-4.9,0-8.9,4-8.9,8.9v8.9h5.6v-8.9c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3v8.9h5.6v-8.9
+		C173,21.6,169,17.6,164.1,17.6z" />
+					<path class="st0"
+						d="M119.7,16.2v1.4h-1.4h-1.9c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3
+		C119.7,12.8,119.7,16.2,119.7,16.2z M119.8,24.6v3.8v1.4h-1.4h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4V24.6z" />
+					<path class="st0" d="M139.3,16.2v1.4h-1.4H136c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3V16.2z M139.4,24.6v3.8
+		v1.4h-1.5H136c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4v1.4H139.4z" />
+					<path class="st0" d="M183.7,17.6c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h1.4v1.4v0.9v1.4v1.4c0,1.8-1.5,3.3-3.3,3.3
+		s-3.3-1.5-3.3-3.3V38l-5.6,3.3c0.4,4.5,4.2,8.1,8.9,8.1c4.9,0,8.9-4,8.9-8.9v-1.4v-2.3V17.6h-7H183.7z M187,23.4v1.4v3.8V30h-1.4
+		h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9C185.6,23.4,187,23.4,187,23.4z" />
+					<path class="st0" d="M28.6,17.6c-1.2,0-2.3,0.2-3.3,0.6V9.5l-5.6,3.3v13.7v2v6.9h5.6v-6.9l0,0v-2c0-1.8,1.5-3.3,3.3-3.3
+		s3.3,1.5,3.3,3.3v8.9h5.6v-8.9C37.5,21.6,33.5,17.6,28.6,17.6z" />
+					<path class="st0" d="M17.8,9.5H0v5.6h6.1v20.3h5.6V15.1h6.1V9.5z" />
+					<path class="st0" d="M48.3,30.2c-0.4,0-1.2-0.1-1.8-0.4l5.2-2.1l5.6-2.3l-1-2.3l-0.1-0.2c-0.1-0.3-0.3-0.6-0.5-1
+		c-0.1-0.1-0.1-0.2-0.2-0.3c0,0,0-0.1-0.1-0.1l-0.1-0.1l-0.1-0.1c-1.6-2.2-4-3.5-6.7-3.7l0,0h-0.6c-4.9,0-8.9,4-8.9,8.9
+		c0,0.4,0,0.9,0.1,1.4l0,0V28c0,0,0,0,0,0.1c0,0,0,0,0,0.1c0,0.3,0.1,0.5,0.2,0.8v0.1v0.1c0.1,0.3,0.2,0.7,0.4,1v0.1v0.1
+		c0.1,0.3,0.3,0.5,0.4,0.8c0,0.1,0.1,0.1,0.1,0.2l0,0c0.1,0.2,0.3,0.4,0.4,0.6c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1l0.1,0.1
+		c1.7,2.1,4.4,3.4,7.2,3.4h6.1v-5.2C54.5,30.2,50.6,30.2,48.3,30.2L48.3,30.2z M56.2,22.9L56.2,22.9L56.2,22.9z M44.6,25.7
+		L44.6,25.7l-0.2,0.1c0.2-1.9,1.8-3.5,3.7-3.5c0.9,0,1.8,0.4,2.4,0.9L46.2,25L44.6,25.7L44.6,25.7z" />
+				</g>
+			</svg>
+		</a>
+
+		Russell Samora
+	</header>
+
+
+	<main id='content'>
+
+		<div class='intro tk-canela'>
+			<div class='intro__custom'>
+				<p class='intro__byline tk-atlas'>By
+					<a href='https://twitter.com/russellviz' target='_blank'>Russell Russell Samora</a>
+				</p>
+				<h1 class='intro__hed'>Craft beer &mdash; so hot right now.
+					<span></span>
+				</h1>
+			</div>
+			<div class='intro__prompt'><svg id="Layer_1" x="0px" y="0px" width="48px" height="26px"
+					enable-background="new 0 0 48 26" xml:space="preserve" viewBox="0 0 48 26">
+					<g>
+						<path fill="#FFFFFF" d="M24.146,26c-0.53,0-1.039-0.284-1.414-0.659L0.586,3.158c-0.781-0.781-0.781-2.066,0-2.846
+		c0.78-0.781,2.048-0.791,2.828-0.009L24.137,21.02L44.576,0.305c0.776-0.787,2.042-0.796,2.829-0.021
+		c0.786,0.776,0.794,2.042,0.019,2.828L25.57,25.332C25.196,25.711,24.686,26,24.153,26C24.151,26,24.149,26,24.146,26z">
+						</path>
+					</g>
+				</svg></div>
+		</div>
+		<div class='graphic__capital'>
+			<div class='capital__chart tk-atlas'>
+				<svg></svg>
+				<div class='overlay'></div>
+			</div>
+			<div class='capital__prose'>
+				<div class='prose__step' data-step='local'>
+					<p class='step__text text--local'></p>
+				</div>
+				<div class='prose__step' data-step='best'>
+					<p class='step__text text--best'>But nothing compares to
+						<span class='place'></span>, the microbrew capital of the US. Let’s look at what makes this West Coast city
+						a beer mecca, and how everywhere
+						else stacks up.
+					</p>
+					<p class='step__text text--match-best'>
+						<strong>It sure is!</strong> Santa Rosa, California is tops if you are looking for an abundance of high
+						quality brews. Let’s
+						look at what makes this west coast city a beer mecca, and how everywhere else stacks up.
+					</p>
+				</div>
+				<div class='prose__step small' data-step='explanation'>
+					<p class='step__text is-visible'>I recently noticed that when there is a discussion involving beer, someone
+						will eventually reference a small, amazing
+						brewery, or say something like ‘‘oh, but you have to go to Minneapolis, it has
+						<em>the best</em> breweries’’ (almost true).
+					</p>
+					<p class='step__text is-visible'>But not everyone can be right. Since a brewery is only as good as its beers,
+						I looked at the available data to make that
+						claim. So what makes Santa Rosa so good?</p>
+					<p class='step__text is-visible'>When you boil it down to a weighted blend of quality (beer ratings) and
+						quantity (breweries in proximity), Santa Rosa
+						tops the list.</p>
+				</div>
+				<div class='prose__step' data-step='everywhere'>
+					<p class='step__text is-visible'>Which gives us the top 50 cities for beer-lovers in the US. The bigger the
+						circle, the higher the ranking.</p>
+				</div>
+				<div class='prose__step' data-step='rank'>
+					<p class='step__text is-visible'>But I am just one person, with one opinion and control of the data. Go ahead
+						and adjust some things below to see how it
+						influences the rankings.</p>
+				</div>
+			</div>
+		</div>
+		<div class='graphic__explore'>
+			<div class='explore__filter'>
+				<p>Cities with at least
+					<select data-col='nearby'>
+						<option>1</option>
+						<option>3</option>
+						<option selected>5</option>
+					</select>
+					breweries within
+					<select data-col='dist'>
+						<option>5</option>
+						<option>10</option>
+						<option selected>20</option>
+						<option>50</option>
+					</select> miles based on
+					<select data-col='abv'>
+						<option>light</option>
+						<option>medium</option>
+						<option>heavy</option>
+						<option selected>all</option>
+					</select> beers.
+				</p>
+				<div class='chart__key tk-atlas'>
+					<p>Average rating of all beers</p>
+					<p>Number of breweries nearby</p>
+				</div>
+				<div class='explore__slider slider tk-atlas'></div>
+				<div class='slider__result tk-atlas'>
+					<p class='result__quality'>80%</p>
+					<p class='result__quantity'>20%</p>
+				</div>
+				<ul class='explore__toggle tk-atlas'>
+					<li class='is-selected'>Chart</li>
+					<li>Table</li>
+				</ul>
+			</div>
+			<div class='explore__chart tk-atlas'>
+				<svg></svg>
+				<div class='chart__note'>
+					<p>
+						<strong>Note:</strong> Brewery counts are lower than the number that actually exist due to criteria
+						restrictions to account for
+						lack of data. See methodology below.
+					</p>
+				</div>
+			</div>
+			<div class='explore__transition'>
+				<p>It should come as no surprise that picking ‘‘the best’’ city is highly subjective, even for a computer.
+					Regardless of the
+					results, there is no doubt that the beer scene has swept across the country. Let’s see just how trendy it is.
+				</p>
+			</div>
+		</div>
+		<div class='graphic__trend'>
+			<div class='trend__intro'>
+				<h2 class='tk-canela hed--section'>Are we at peak beer hype?</h2>
+				<p>Apparently not. New breweries are opening across the country at an increasing rate. Although the trend has
+					been booming
+					since 2010, it doesn’t appear to be slowing either, with nearly 900 new breweries established in 2016. </p>
+			</div>
+			<div class='trend__chart--all tk-atlas'></div>
+			<p class='trend__transition'>But not all states are equally excited about beer. While California has the most new
+				breweries by volume, it’s also our
+				biggest state. When we look at breweries opened per capita, we find out where the real beer nuts are at.
+				<strong>Vermonters love the hops.</strong>
+			<p class='trend__hed tk-atlas'>Breweries opened per 100,000 people</p>
+			<p class='trend__dek tk-atlas'>States ordered from highest to lowest average per capita openings in the last 20
+				years</p>
+			<div class='trend__chart--state tk-atlas'></div>
+		</div>
+		<div class='outro tk-atlas'>
+			<p>
+				<strong>Methodology:</strong> Data from RateBeer. Only breweries with 3+ beers that were reviewed 10+ times and
+				50+ total reviews
+				were included. Restricted each brewery to its top 10 beers by review count (which accounted for greater than 90%
+				of all
+				reviews). Considered only breweries categorized as either microbrewery or brewpub. Only cities with a population
+				of 40,000+
+				were used. Light beer = 0-4%, medium = 4-7, heavy = 7. Get in touch: russell@polygraph.cool or
+				<a href='https://twitter.com/russellviz' target='_blank'>@russellviz</a>.
+			</p>
+		</div>
+	</main>
+
+	<footer class='pudding-footer'>
+
+		<div class='footer-recirc'>
+			<div class='footer-recirc__articles'></div>
+		</div>
+
+		<div class='footer-company'>
+			<div class='footer-company__cta'>
+				<ul class='footer-company__cta-list'>
+					<li>
+						<a href='https://facebook.com/pudding.viz/'>
+							<svg width="24" height="24" fill="#000000" stroke="currentColor" stroke-width=".2" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-facebook" viewBox="0 0 24 24">
+								<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+							</svg>
+							<p>FACEBOOK</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://twitter.com/puddingviz/'>
+							<svg width="24" height="24" fill="#000" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-twitter" viewBox="0 0 24 24">
+								<path
+									d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+								</path>
+							</svg>
+							<p>TWITTER</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://www.instagram.com/the.pudding'>
+							<svg width="24" height="24" id="Layer_1" x="0px" y="0px" enable-background="new 0 0 24 24"
+								xml:space="preserve" viewBox="0 0 24 24">
+								<path d="M17,23H7c-3.3,0-6-2.7-6-6V7c0-3.3,2.7-6,6-6h10c3.3,0,6,2.7,6,6v10C23,20.3,20.3,23,17,23z M7,3C4.8,3,3,4.8,3,7v10
+	c0,2.2,1.8,4,4,4h10c2.2,0,4-1.8,4-4V7c0-2.2-1.8-4-4-4H7z" />
+								<path d="M12,17c-1.1,0-2.1-0.3-3-1c-1.1-0.8-1.8-2-2-3.3C6.7,10,8.6,7.4,11.3,7c0.5-0.1,1-0.1,1.5,0c2.2,0.3,3.9,2,4.2,4.2l0,0
+	c0.2,1.3-0.1,2.6-0.9,3.7c-0.8,1.1-2,1.8-3.3,2C12.5,16.9,12.3,17,12,17z M12,9c-0.1,0-0.3,0-0.4,0c-1.6,0.2-2.8,1.8-2.5,3.4
+	c0.2,1.6,1.8,2.8,3.4,2.5c0.8-0.1,1.5-0.5,2-1.2s0.7-1.4,0.6-2.2l0,0c-0.2-1.3-1.2-2.3-2.5-2.5C12.3,9,12.2,9,12,9z" />
+								<path d="M17.5,7.5c-0.3,0-0.5-0.1-0.7-0.3c-0.1-0.1-0.2-0.2-0.2-0.3c-0.1-0.1-0.1-0.2-0.1-0.4c0-0.3,0.1-0.5,0.3-0.7
+	c0.4-0.4,1-0.4,1.4,0c0.2,0.2,0.3,0.4,0.3,0.7c0,0.1,0,0.3-0.1,0.4s-0.1,0.2-0.2,0.3C18,7.4,17.8,7.5,17.5,7.5z" />
+							</svg>
+							<p>INSTAGRAM</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://patreon.com/thepudding/'>
+							<svg id="Layer_1" width="24" height="24" x="0px" y="0px" enable-background="new 0 0 24 24"
+								xml:space="preserve" viewBox="0 0 24 24">
+								<g>
+
+									<path fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" d="
+		M15.7,3.3c-3.7,0-6.8,3-6.8,6.8c0,3.7,3,6.7,6.8,6.7c3.7,0,6.7-3,6.7-6.7C22.4,6.3,19.4,3.3,15.7,3.3" />
+
+									<rect x="3.7" y="3.3" stroke-linecap="round" stroke-linejoin="round" width="3.3" height="18" />
+								</g>
+							</svg>
+							<p>PATREON</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://pudding.cool/about'>
+							<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-info" viewBox="0 0 24 24">
+								<circle cx="12" cy="12" r="10"></circle>
+								<line x1="12" y1="16" x2="12" y2="12"></line>
+								<line x1="12" y1="8" x2="12" y2="8"></line>
+							</svg>
+							<p>ABOUT</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://pudding.cool/privacy/'>
+							<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-lock" viewBox="0 0 24 24">
+								<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+								<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+							</svg>
+							<p>PRIVACY</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://pudding.cool/subscribe'>
+							<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-mail" viewBox="0 0 24 24">
+								<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+								<polyline points="22,6 12,13 2,6"></polyline>
+							</svg>
+							<p>NEWSLETTER</p>
+						</a>
+					</li>
+					<li>
+						<a href='https://pudding.cool/feed/index.xml'>
+							<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="feather feather-rss" viewBox="0 0 24 24">
+								<path d="M4 11a9 9 0 0 1 9 9"></path>
+								<path d="M4 4a16 16 0 0 1 16 16"></path>
+								<circle cx="5" cy="19" r="1"></circle>
+							</svg>
+							<p>RSS</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class='footer-company__about'>
+				<svg id="wordmark" x="0px" y="0px" style="enable-background:new 0 0 192.6 50;" xml:space="preserve"
+					viewBox="0 0 192.6 50">
+					<g>
+						<path class="st0"
+							d="M150.1,9.5c1.5,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8s-2.8-1.3-2.8-2.8S148.6,9.5,150.1,9.5z" />
+						<path class="st0" d="M147.2,17.3h5.6v18.2h-5.6V17.3z" />
+						<path class="st0" d="M77.1,9.5h-1.9h-7v19.3v6.7h5.6v-6.7v-1.4h1.4h1.9c4.9,0,8.9-4,8.9-8.9S82.1,9.5,77.1,9.5z M77.1,21.8h-1.9
+		h-1.4v-1.4v-3.8v-1.4h1.4h1.9c1.8,0,3.3,1.5,3.3,3.3S79,21.8,77.1,21.8z" />
+						<path class="st0" d="M105.7,17.6h-5.6v8.9c0,1.8-1.5,3.3-3.3,3.3s-3.3-1.5-3.3-3.3v-8.9h-5.6v8.9c0,4.9,4,8.9,8.9,8.9
+		s8.9-4,8.9-8.9V17.6z" />
+						<path class="st0" d="M164.1,17.6c-4.9,0-8.9,4-8.9,8.9v8.9h5.6v-8.9c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3v8.9h5.6v-8.9
+		C173,21.6,169,17.6,164.1,17.6z" />
+						<path class="st0"
+							d="M119.7,16.2v1.4h-1.4h-1.9c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3
+		C119.7,12.8,119.7,16.2,119.7,16.2z M119.8,24.6v3.8v1.4h-1.4h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4V24.6z" />
+						<path class="st0" d="M139.3,16.2v1.4h-1.4H136c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h7V16.2V9.5l-5.6,3.3V16.2z M139.4,24.6v3.8
+		v1.4h-1.5H136c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9h1.4v1.4H139.4z" />
+						<path class="st0" d="M183.7,17.6c-4.9,0-8.9,4-8.9,8.9s4,8.9,8.9,8.9h1.9h1.4v1.4v0.9v1.4v1.4c0,1.8-1.5,3.3-3.3,3.3
+		s-3.3-1.5-3.3-3.3V38l-5.6,3.3c0.4,4.5,4.2,8.1,8.9,8.1c4.9,0,8.9-4,8.9-8.9v-1.4v-2.3V17.6h-7H183.7z M187,23.4v1.4v3.8V30h-1.4
+		h-1.9c-1.8,0-3.3-1.5-3.3-3.3s1.5-3.3,3.3-3.3h1.9C185.6,23.4,187,23.4,187,23.4z" />
+						<path class="st0" d="M28.6,17.6c-1.2,0-2.3,0.2-3.3,0.6V9.5l-5.6,3.3v13.7v2v6.9h5.6v-6.9l0,0v-2c0-1.8,1.5-3.3,3.3-3.3
+		s3.3,1.5,3.3,3.3v8.9h5.6v-8.9C37.5,21.6,33.5,17.6,28.6,17.6z" />
+						<path class="st0" d="M17.8,9.5H0v5.6h6.1v20.3h5.6V15.1h6.1V9.5z" />
+						<path class="st0" d="M48.3,30.2c-0.4,0-1.2-0.1-1.8-0.4l5.2-2.1l5.6-2.3l-1-2.3l-0.1-0.2c-0.1-0.3-0.3-0.6-0.5-1
+		c-0.1-0.1-0.1-0.2-0.2-0.3c0,0,0-0.1-0.1-0.1l-0.1-0.1l-0.1-0.1c-1.6-2.2-4-3.5-6.7-3.7l0,0h-0.6c-4.9,0-8.9,4-8.9,8.9
+		c0,0.4,0,0.9,0.1,1.4l0,0V28c0,0,0,0,0,0.1c0,0,0,0,0,0.1c0,0.3,0.1,0.5,0.2,0.8v0.1v0.1c0.1,0.3,0.2,0.7,0.4,1v0.1v0.1
+		c0.1,0.3,0.3,0.5,0.4,0.8c0,0.1,0.1,0.1,0.1,0.2l0,0c0.1,0.2,0.3,0.4,0.4,0.6c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1l0.1,0.1
+		c1.7,2.1,4.4,3.4,7.2,3.4h6.1v-5.2C54.5,30.2,50.6,30.2,48.3,30.2L48.3,30.2z M56.2,22.9L56.2,22.9L56.2,22.9z M44.6,25.7
+		L44.6,25.7l-0.2,0.1c0.2-1.9,1.8-3.5,3.7-3.5c0.9,0,1.8,0.4,2.4,0.9L46.2,25L44.6,25.7L44.6,25.7z" />
+					</g>
+				</svg>
+				<p class='footer-company__description'><a href='https://pudding.cool'>The Pudding</a> is a digital publication
+					that
+					explains ideas debated in culture with visual essays.</p>
+			</div>
+
+		</div>
+	</footer>
+
+
+	<script src='https://pudding.cool/assets/scripts/d3.v4.12.0+jetpack.min.js'></script>
+	<script src='main.js?version=1596221136618' async></script>
+</body>
+
+</html>

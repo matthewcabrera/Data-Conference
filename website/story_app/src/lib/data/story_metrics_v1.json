@@ -1,0 +1,1968 @@
+{
+  "scene_data": {
+    "year_anchor": 2010,
+    "points": [
+      {
+        "code": "BDI",
+        "name": "Burundi",
+        "gni_percap": 210.0,
+        "life_exp": 54.861,
+        "predicted": 55.843204800662164,
+        "residual_gap": -0.9822048006621671,
+        "residual_z": -0.19775544287300872
+      },
+      {
+        "code": "LBR",
+        "name": "Liberia",
+        "gni_percap": 250.0,
+        "life_exp": 59.631,
+        "predicted": 56.65146997894585,
+        "residual_gap": 2.9795300210541527,
+        "residual_z": 0.5998935033404093
+      },
+      {
+        "code": "COD",
+        "name": "Congo, Dem. Rep.",
+        "gni_percap": 320.0,
+        "life_exp": 56.907,
+        "predicted": 57.79586073709479,
+        "residual_gap": -0.8888607370947952,
+        "residual_z": -0.17896170798402478
+      },
+      {
+        "code": "NER",
+        "name": "Niger",
+        "gni_percap": 350.0,
+        "life_exp": 56.838,
+        "predicted": 58.21128362394448,
+        "residual_gap": -1.3732836239444808,
+        "residual_z": -0.2764945875445795
+      },
+      {
+        "code": "ETH",
+        "name": "Ethiopia",
+        "gni_percap": 380.0,
+        "life_exp": 61.625,
+        "predicted": 58.59252193667094,
+        "residual_gap": 3.0324780633290587,
+        "residual_z": 0.610553972055563
+      },
+      {
+        "code": "ERI",
+        "name": "Eritrea",
+        "gni_percap": 410.0,
+        "life_exp": 62.181,
+        "predicted": 58.944776421979896,
+        "residual_gap": 3.236223578020102,
+        "residual_z": 0.6515757472127944
+      },
+      {
+        "code": "MDG",
+        "name": "Madagascar",
+        "gni_percap": 420.0,
+        "life_exp": 63.388,
+        "predicted": 59.0564875400844,
+        "residual_gap": 4.331512459915601,
+        "residual_z": 0.8720993465345503
+      },
+      {
+        "code": "SLE",
+        "name": "Sierra Leone",
+        "gni_percap": 420.0,
+        "life_exp": 48.224,
+        "predicted": 59.0564875400844,
+        "residual_gap": -10.8324875400844,
+        "residual_z": -2.1809946046502455
+      },
+      {
+        "code": "MWI",
+        "name": "Malawi",
+        "gni_percap": 430.0,
+        "life_exp": 57.263,
+        "predicted": 59.1655699158031,
+        "residual_gap": -1.9025699158030989,
+        "residual_z": -0.3830601887130428
+      },
+      {
+        "code": "TGO",
+        "name": "Togo",
+        "gni_percap": 450.0,
+        "life_exp": 57.465,
+        "predicted": 59.37632380186231,
+        "residual_gap": -1.9113238018623093,
+        "residual_z": -0.38482268123327074
+      },
+      {
+        "code": "MOZ",
+        "name": "Mozambique",
+        "gni_percap": 460.0,
+        "life_exp": 54.7,
+        "predicted": 59.478213333510936,
+        "residual_gap": -4.778213333510934,
+        "residual_z": -0.9620373401485586
+      },
+      {
+        "code": "CAF",
+        "name": "Central African Republic",
+        "gni_percap": 470.0,
+        "life_exp": 47.56,
+        "predicted": 59.57791152166654,
+        "residual_gap": -12.01791152166654,
+        "residual_z": -2.419665851534829
+      },
+      {
+        "code": "ZWE",
+        "name": "Zimbabwe",
+        "gni_percap": 490.0,
+        "life_exp": 52.975,
+        "predicted": 59.77109726894312,
+        "residual_gap": -6.796097268943122,
+        "residual_z": -1.3683146573116411
+      },
+      {
+        "code": "AFG",
+        "name": "Afghanistan",
+        "gni_percap": 500.0,
+        "life_exp": 61.226,
+        "predicted": 59.86475271836808,
+        "residual_gap": 1.3612472816319183,
+        "residual_z": 0.27407121086897795
+      },
+      {
+        "code": "NPL",
+        "name": "Nepal",
+        "gni_percap": 540.0,
+        "life_exp": 67.914,
+        "predicted": 60.221527718002235,
+        "residual_gap": 7.692472281997766,
+        "residual_z": 1.5487892768282845
+      },
+      {
+        "code": "UGA",
+        "name": "Uganda",
+        "gni_percap": 540.0,
+        "life_exp": 57.153,
+        "predicted": 60.221527718002235,
+        "residual_gap": -3.068527718002237,
+        "residual_z": -0.6178121481716887
+      },
+      {
+        "code": "RWA",
+        "name": "Rwanda",
+        "gni_percap": 560.0,
+        "life_exp": 63.14,
+        "predicted": 60.390120372730074,
+        "residual_gap": 2.7498796272699266,
+        "residual_z": 0.5536560839161263
+      },
+      {
+        "code": "BFA",
+        "name": "Burkina Faso",
+        "gni_percap": 570.0,
+        "life_exp": 57.096,
+        "predicted": 60.4721718434475,
+        "residual_gap": -3.3761718434475014,
+        "residual_z": -0.6797526927848827
+      },
+      {
+        "code": "GNB",
+        "name": "Guinea-Bissau",
+        "gni_percap": 570.0,
+        "life_exp": 55.05,
+        "predicted": 60.4721718434475,
+        "residual_gap": -5.422171843447501,
+        "residual_z": -1.0916908505350864
+      },
+      {
+        "code": "GMB",
+        "name": "Gambia, The",
+        "gni_percap": 580.0,
+        "life_exp": 59.622,
+        "predicted": 60.552796259490535,
+        "residual_gap": -0.9307962594905348,
+        "residual_z": -0.18740493468978892
+      },
+      {
+        "code": "GIN",
+        "name": "Guinea",
+        "gni_percap": 620.0,
+        "life_exp": 56.765,
+        "predicted": 60.86196327128132,
+        "residual_gap": -4.096963271281318,
+        "residual_z": -0.8248756120928012
+      },
+      {
+        "code": "HTI",
+        "name": "Haiti",
+        "gni_percap": 650.0,
+        "life_exp": 61.296,
+        "predicted": 61.081017584039984,
+        "residual_gap": 0.21498241596001577,
+        "residual_z": 0.043284193733753876
+      },
+      {
+        "code": "MLI",
+        "name": "Mali",
+        "gni_percap": 690.0,
+        "life_exp": 55.249,
+        "predicted": 61.357863240287486,
+        "residual_gap": -6.108863240287484,
+        "residual_z": -1.2299481276402557
+      },
+      {
+        "code": "TZA",
+        "name": "Tanzania",
+        "gni_percap": 690.0,
+        "life_exp": 60.893,
+        "predicted": 61.357863240287486,
+        "residual_gap": -0.46486324028748527,
+        "residual_z": -0.09359477361183458
+      },
+      {
+        "code": "KHM",
+        "name": "Cambodia",
+        "gni_percap": 750.0,
+        "life_exp": 66.555,
+        "predicted": 61.74440262514464,
+        "residual_gap": 4.810597374855369,
+        "residual_z": 0.9685574879158805
+      },
+      {
+        "code": "BGD",
+        "name": "Bangladesh",
+        "gni_percap": 780.0,
+        "life_exp": 70.198,
+        "predicted": 61.92622150017989,
+        "residual_gap": 8.271778499820101,
+        "residual_z": 1.6654258047574004
+      },
+      {
+        "code": "BEN",
+        "name": "Benin",
+        "gni_percap": 790.0,
+        "life_exp": 59.319,
+        "predicted": 61.985276911203286,
+        "residual_gap": -2.6662769112032834,
+        "residual_z": -0.5368236553533632
+      },
+      {
+        "code": "COM",
+        "name": "Comoros",
+        "gni_percap": 790.0,
+        "life_exp": 61.862,
+        "predicted": 61.985276911203286,
+        "residual_gap": -0.1232769112032841,
+        "residual_z": -0.024820363486907537
+      },
+      {
+        "code": "KGZ",
+        "name": "Kyrgyz Republic",
+        "gni_percap": 850.0,
+        "life_exp": 69.3,
+        "predicted": 62.32463230528421,
+        "residual_gap": 6.975367694715786,
+        "residual_z": 1.4044086597221461
+      },
+      {
+        "code": "MMR",
+        "name": "Myanmar",
+        "gni_percap": 860.0,
+        "life_exp": 65.178,
+        "predicted": 62.37885265522533,
+        "residual_gap": 2.799147344774667,
+        "residual_z": 0.5635755623058918
+      },
+      {
+        "code": "SLB",
+        "name": "Solomon Islands",
+        "gni_percap": 900.0,
+        "life_exp": 68.572,
+        "predicted": 62.58960654128455,
+        "residual_gap": 5.98239345871545,
+        "residual_z": 1.2044849170675056
+      },
+      {
+        "code": "TCD",
+        "name": "Chad",
+        "gni_percap": 910.0,
+        "life_exp": 50.233,
+        "predicted": 62.64083122903862,
+        "residual_gap": -12.40783122903862,
+        "residual_z": -2.498171621781825
+      },
+      {
+        "code": "TJK",
+        "name": "Tajikistan",
+        "gni_percap": 910.0,
+        "life_exp": 69.644,
+        "predicted": 62.64083122903862,
+        "residual_gap": 7.003168770961388,
+        "residual_z": 1.4100060810965773
+      },
+      {
+        "code": "KEN",
+        "name": "Kenya",
+        "gni_percap": 980.0,
+        "life_exp": 62.936,
+        "predicted": 62.98438000836535,
+        "residual_gap": -0.04838000836534917,
+        "residual_z": -0.009740748542501412
+      },
+      {
+        "code": "LAO",
+        "name": "Lao PDR",
+        "gni_percap": 1000.0,
+        "life_exp": 64.357,
+        "predicted": 63.078035457790314,
+        "residual_gap": 1.2789645422096854,
+        "residual_z": 0.2575045441572308
+      },
+      {
+        "code": "SEN",
+        "name": "Senegal",
+        "gni_percap": 1050.0,
+        "life_exp": 64.177,
+        "predicted": 63.30421627014328,
+        "residual_gap": 0.872783729856728,
+        "residual_z": 0.1757247907094505
+      },
+      {
+        "code": "PAK",
+        "name": "Pakistan",
+        "gni_percap": 1080.0,
+        "life_exp": 65.134,
+        "predicted": 63.43481045742446,
+        "residual_gap": 1.6991895425755388,
+        "residual_z": 0.34211193051660926
+      },
+      {
+        "code": "MRT",
+        "name": "Mauritania",
+        "gni_percap": 1130.0,
+        "life_exp": 61.997,
+        "predicted": 63.64461037968298,
+        "residual_gap": -1.6476103796829804,
+        "residual_z": -0.33172706964648946
+      },
+      {
+        "code": "STP",
+        "name": "Sao Tome and Principe",
+        "gni_percap": 1170.0,
+        "life_exp": 65.875,
+        "predicted": 63.80587140695645,
+        "residual_gap": 2.0691285930435512,
+        "residual_z": 0.41659482930920594
+      },
+      {
+        "code": "YEM",
+        "name": "Yemen, Rep.",
+        "gni_percap": 1180.0,
+        "life_exp": 63.508,
+        "predicted": 63.84532515210244,
+        "residual_gap": -0.3373251521024372,
+        "residual_z": -0.0679164720038523
+      },
+      {
+        "code": "CIV",
+        "name": "Cote d'Ivoire",
+        "gni_percap": 1200.0,
+        "life_exp": 50.423,
+        "predicted": 63.92323937393022,
+        "residual_gap": -13.50023937393022,
+        "residual_z": -2.7181152184181707
+      },
+      {
+        "code": "IND",
+        "name": "India",
+        "gni_percap": 1220.0,
+        "life_exp": 66.625,
+        "predicted": 63.99986569824365,
+        "residual_gap": 2.625134301756347,
+        "residual_z": 0.528540072391193
+      },
+      {
+        "code": "GHA",
+        "name": "Ghana",
+        "gni_percap": 1250.0,
+        "life_exp": 60.924,
+        "predicted": 64.11248144842696,
+        "residual_gap": -3.1884814484269626,
+        "residual_z": -0.6419634280966281
+      },
+      {
+        "code": "SDN",
+        "name": "Sudan",
+        "gni_percap": 1250.0,
+        "life_exp": 62.62,
+        "predicted": 64.11248144842696,
+        "residual_gap": -1.4924814484269646,
+        "residual_z": -0.3004936746536443
+      },
+      {
+        "code": "VNM",
+        "name": "Vietnam",
+        "gni_percap": 1250.0,
+        "life_exp": 75.117,
+        "predicted": 64.11248144842696,
+        "residual_gap": 11.004518551573042,
+        "residual_z": 2.215631035710139
+      },
+      {
+        "code": "ZMB",
+        "name": "Zambia",
+        "gni_percap": 1320.0,
+        "life_exp": 56.588,
+        "predicted": 64.36507707340563,
+        "residual_gap": -7.7770770734056285,
+        "residual_z": -1.5658234615347302
+      },
+      {
+        "code": "LSO",
+        "name": "Lesotho",
+        "gni_percap": 1330.0,
+        "life_exp": 50.826,
+        "predicted": 64.40006431172846,
+        "residual_gap": -13.574064311728456,
+        "residual_z": -2.732979005745946
+      },
+      {
+        "code": "UZB",
+        "name": "Uzbekistan",
+        "gni_percap": 1340.0,
+        "life_exp": 70.005,
+        "predicted": 64.4347894708996,
+        "residual_gap": 5.570210529100393,
+        "residual_z": 1.121496707545654
+      },
+      {
+        "code": "CMR",
+        "name": "Cameroon",
+        "gni_percap": 1350.0,
+        "life_exp": 55.424,
+        "predicted": 64.46925644806112,
+        "residual_gap": -9.045256448061117,
+        "residual_z": -1.8211565384127302
+      },
+      {
+        "code": "NGA",
+        "name": "Nigeria",
+        "gni_percap": 1470.0,
+        "life_exp": 50.847,
+        "predicted": 64.86402991514191,
+        "residual_gap": -14.017029915141912,
+        "residual_z": -2.8221649464188916
+      },
+      {
+        "code": "NIC",
+        "name": "Nicaragua",
+        "gni_percap": 1530.0,
+        "life_exp": 73.699,
+        "predicted": 65.04948612820068,
+        "residual_gap": 8.649513871799314,
+        "residual_z": 1.7414784016538838
+      },
+      {
+        "code": "HND",
+        "name": "Honduras",
+        "gni_percap": 1760.0,
+        "life_exp": 72.446,
+        "predicted": 65.6987099060513,
+        "residual_gap": 6.747290093948692,
+        "residual_z": 1.3584879037670714
+      },
+      {
+        "code": "PNG",
+        "name": "Papua New Guinea",
+        "gni_percap": 1780.0,
+        "life_exp": 64.634,
+        "predicted": 65.7510922382297,
+        "residual_gap": -1.1170922382297022,
+        "residual_z": -0.2249134499772199
+      },
+      {
+        "code": "BOL",
+        "name": "Bolivia",
+        "gni_percap": 1810.0,
+        "life_exp": 66.408,
+        "predicted": 65.82857237727492,
+        "residual_gap": 0.5794276227250776,
+        "residual_z": 0.11666097138560712
+      },
+      {
+        "code": "MDA",
+        "name": "Moldova",
+        "gni_percap": 1820.0,
+        "life_exp": 69.616,
+        "predicted": 65.85411396846085,
+        "residual_gap": 3.7618860315391487,
+        "residual_z": 0.7574117309376666
+      },
+      {
+        "code": "BTN",
+        "name": "Bhutan",
+        "gni_percap": 1970.0,
+        "life_exp": 67.79,
+        "predicted": 66.22125459042462,
+        "residual_gap": 1.568745409575385,
+        "residual_z": 0.3158485307915819
+      },
+      {
+        "code": "KIR",
+        "name": "Kiribati",
+        "gni_percap": 1990.0,
+        "life_exp": 65.354,
+        "predicted": 66.26808112062339,
+        "residual_gap": -0.9140811206233934,
+        "residual_z": -0.18403953707910023
+      },
+      {
+        "code": "MNG",
+        "name": "Mongolia",
+        "gni_percap": 2000.0,
+        "life_exp": 67.383,
+        "predicted": 66.29131819721255,
+        "residual_gap": 1.0916818027874484,
+        "residual_z": 0.2197973561533169
+      },
+      {
+        "code": "COG",
+        "name": "Congo, Rep.",
+        "gni_percap": 2070.0,
+        "life_exp": 60.473,
+        "predicted": 66.45079588648628,
+        "residual_gap": -5.977795886486277,
+        "residual_z": -1.2035592496998535
+      },
+      {
+        "code": "PSE",
+        "name": "West Bank and Gaza",
+        "gni_percap": 2310.0,
+        "life_exp": 72.444,
+        "predicted": 66.95933670904091,
+        "residual_gap": 5.484663290959091,
+        "residual_z": 1.1042727722179189
+      },
+      {
+        "code": "EGY",
+        "name": "Egypt, Arab Rep.",
+        "gni_percap": 2330.0,
+        "life_exp": 70.357,
+        "predicted": 66.9993006382047,
+        "residual_gap": 3.357699361795298,
+        "residual_z": 0.6760334747688141
+      },
+      {
+        "code": "LKA",
+        "name": "Sri Lanka",
+        "gni_percap": 2420.0,
+        "life_exp": 74.352,
+        "predicted": 67.17499359616335,
+        "residual_gap": 7.177006403836657,
+        "residual_z": 1.4450062542316187
+      },
+      {
+        "code": "PHL",
+        "name": "Philippines",
+        "gni_percap": 2470.0,
+        "life_exp": 68.32,
+        "predicted": 67.26979827182396,
+        "residual_gap": 1.0502017281760345,
+        "residual_z": 0.21144582852928617
+      },
+      {
+        "code": "IDN",
+        "name": "Indonesia",
+        "gni_percap": 2520.0,
+        "life_exp": 68.15,
+        "predicted": 67.36270292570542,
+        "residual_gap": 0.7872970742945853,
+        "residual_z": 0.15851305297509305
+      },
+      {
+        "code": "VUT",
+        "name": "Vanuatu",
+        "gni_percap": 2690.0,
+        "life_exp": 70.721,
+        "predicted": 67.66533773148302,
+        "residual_gap": 3.0556622685169827,
+        "residual_z": 0.6152218404690607
+      },
+      {
+        "code": "GTM",
+        "name": "Guatemala",
+        "gni_percap": 2700.0,
+        "life_exp": 71.494,
+        "predicted": 67.68253918748334,
+        "residual_gap": 3.811460812516657,
+        "residual_z": 0.7673930329644234
+      },
+      {
+        "code": "TLS",
+        "name": "Timor-Leste",
+        "gni_percap": 2810.0,
+        "life_exp": 67.313,
+        "predicted": 67.86765872985143,
+        "residual_gap": -0.5546587298514254,
+        "residual_z": -0.11167404465056728
+      },
+      {
+        "code": "FSM",
+        "name": "Micronesia, Fed. Sts.",
+        "gni_percap": 2880.0,
+        "life_exp": 68.582,
+        "predicted": 67.98172602949236,
+        "residual_gap": 0.6002739705076294,
+        "residual_z": 0.12085813956809219
+      },
+      {
+        "code": "MAR",
+        "name": "Morocco",
+        "gni_percap": 2930.0,
+        "life_exp": 73.999,
+        "predicted": 68.06151779406068,
+        "residual_gap": 5.937482205939318,
+        "residual_z": 1.1954425618715852
+      },
+      {
+        "code": "PRY",
+        "name": "Paraguay",
+        "gni_percap": 2930.0,
+        "life_exp": 72.285,
+        "predicted": 68.06151779406068,
+        "residual_gap": 4.2234822059393196,
+        "residual_z": 0.8503487190642298
+      },
+      {
+        "code": "GUY",
+        "name": "Guyana",
+        "gni_percap": 2950.0,
+        "life_exp": 66.022,
+        "predicted": 68.09305388216131,
+        "residual_gap": -2.0710538821613085,
+        "residual_z": -0.4169824637433694
+      },
+      {
+        "code": "UKR",
+        "name": "Ukraine",
+        "gni_percap": 2990.0,
+        "life_exp": 70.2653658536586,
+        "predicted": 68.15548966866393,
+        "residual_gap": 2.1098761849946612,
+        "residual_z": 0.4247988801210814
+      },
+      {
+        "code": "GEO",
+        "name": "Georgia",
+        "gni_percap": 3000.0,
+        "life_exp": 72.649,
+        "predicted": 68.17096810398911,
+        "residual_gap": 4.47803189601089,
+        "residual_z": 0.901599320424918
+      },
+      {
+        "code": "SWZ",
+        "name": "Eswatini",
+        "gni_percap": 3070.0,
+        "life_exp": 51.598,
+        "predicted": 68.27789379808102,
+        "residual_gap": -16.679893798081025,
+        "residual_z": -3.3583014284704524
+      },
+      {
+        "code": "WSM",
+        "name": "Samoa",
+        "gni_percap": 3200.0,
+        "life_exp": 73.122,
+        "predicted": 68.47015494599813,
+        "residual_gap": 4.651845054001868,
+        "residual_z": 0.9365945658284118
+      },
+      {
+        "code": "AGO",
+        "name": "Angola",
+        "gni_percap": 3240.0,
+        "life_exp": 58.192,
+        "predicted": 68.52774310362325,
+        "residual_gap": -10.335743103623251,
+        "residual_z": -2.080980925261942
+      },
+      {
+        "code": "CPV",
+        "name": "Cabo Verde",
+        "gni_percap": 3330.0,
+        "life_exp": 71.941,
+        "predicted": 68.65475891398177,
+        "residual_gap": 3.2862410860182365,
+        "residual_z": 0.661646187144372
+      },
+      {
+        "code": "SLV",
+        "name": "El Salvador",
+        "gni_percap": 3370.0,
+        "life_exp": 71.902,
+        "predicted": 68.71011225310548,
+        "residual_gap": 3.1918877468945226,
+        "residual_z": 0.6426492464326403
+      },
+      {
+        "code": "XKX",
+        "name": "Kosovo",
+        "gni_percap": 3420.0,
+        "life_exp": 69.9,
+        "predicted": 68.77838722906851,
+        "residual_gap": 1.1216127709314918,
+        "residual_z": 0.22582360633754822
+      },
+      {
+        "code": "ARM",
+        "name": "Armenia",
+        "gni_percap": 3470.0,
+        "life_exp": 73.331,
+        "predicted": 68.84567124145032,
+        "residual_gap": 4.485328758549684,
+        "residual_z": 0.9030684583093693
+      },
+      {
+        "code": "JOR",
+        "name": "Jordan",
+        "gni_percap": 3470.0,
+        "life_exp": 73.412,
+        "predicted": 68.84567124145032,
+        "residual_gap": 4.5663287585496874,
+        "residual_z": 0.9193768604490408
+      },
+      {
+        "code": "TON",
+        "name": "Tonga",
+        "gni_percap": 3560.0,
+        "life_exp": 72.173,
+        "predicted": 68.96437497765194,
+        "residual_gap": 3.208625022348059,
+        "residual_z": 0.6460191009859578
+      },
+      {
+        "code": "FJI",
+        "name": "Fiji",
+        "gni_percap": 3650.0,
+        "life_exp": 69.267,
+        "predicted": 69.08011492456573,
+        "residual_gap": 0.1868850754342617,
+        "residual_z": 0.03762712301339254
+      },
+      {
+        "code": "BLZ",
+        "name": "Belize",
+        "gni_percap": 3910.0,
+        "life_exp": 69.676,
+        "predicted": 69.39910438990817,
+        "residual_gap": 0.2768956100918274,
+        "residual_z": 0.05574969086527353
+      },
+      {
+        "code": "TKM",
+        "name": "Turkmenistan",
+        "gni_percap": 4070.0,
+        "life_exp": 66.657,
+        "predicted": 69.58502552996293,
+        "residual_gap": -2.9280255299629374,
+        "residual_z": -0.589523676763682
+      },
+      {
+        "code": "TUN",
+        "name": "Tunisia",
+        "gni_percap": 4130.0,
+        "life_exp": 74.793,
+        "predicted": 69.65286752715994,
+        "residual_gap": 5.140132472840065,
+        "residual_z": 1.0349055236821798
+      },
+      {
+        "code": "CHN",
+        "name": "China",
+        "gni_percap": 4340.0,
+        "life_exp": 75.236,
+        "predicted": 69.88278838576107,
+        "residual_gap": 5.35321161423893,
+        "residual_z": 1.077806515355124
+      },
+      {
+        "code": "ALB",
+        "name": "Albania",
+        "gni_percap": 4360.0,
+        "life_exp": 76.652,
+        "predicted": 69.90410238686191,
+        "residual_gap": 6.747897613138093,
+        "residual_z": 1.3586102206466801
+      },
+      {
+        "code": "PER",
+        "name": "Peru",
+        "gni_percap": 4360.0,
+        "life_exp": 73.681,
+        "predicted": 69.90410238686191,
+        "residual_gap": 3.7768976131380896,
+        "residual_z": 0.7604341372273951
+      },
+      {
+        "code": "JAM",
+        "name": "Jamaica",
+        "gni_percap": 4370.0,
+        "life_exp": 74.883,
+        "predicted": 69.91472275135378,
+        "residual_gap": 4.968277248646217,
+        "residual_z": 1.000304485337037
+      },
+      {
+        "code": "NAM",
+        "name": "Namibia",
+        "gni_percap": 4400.0,
+        "life_exp": 58.189,
+        "predicted": 69.94643863611017,
+        "residual_gap": -11.757438636110173,
+        "residual_z": -2.3672226840763884
+      },
+      {
+        "code": "ECU",
+        "name": "Ecuador",
+        "gni_percap": 4410.0,
+        "life_exp": 75.046,
+        "predicted": 69.9569625613407,
+        "residual_gap": 5.089037438659304,
+        "residual_z": 1.0246181364629197
+      },
+      {
+        "code": "IRQ",
+        "name": "Iraq",
+        "gni_percap": 4430.0,
+        "life_exp": 68.465,
+        "predicted": 69.97793900922676,
+        "residual_gap": -1.5129390092267556,
+        "residual_z": -0.30461256512672774
+      },
+      {
+        "code": "DZA",
+        "name": "Algeria",
+        "gni_percap": 4460.0,
+        "life_exp": 74.676,
+        "predicted": 70.00922677978039,
+        "residual_gap": 4.666773220219611,
+        "residual_z": 0.9396001774072613
+      },
+      {
+        "code": "THA",
+        "name": "Thailand",
+        "gni_percap": 4580.0,
+        "life_exp": 73.923,
+        "predicted": 70.13230800251115,
+        "residual_gap": 3.7906919974888496,
+        "residual_z": 0.7632114750948195
+      },
+      {
+        "code": "MKD",
+        "name": "Macedonia, FYR",
+        "gni_percap": 4700.0,
+        "life_exp": 74.632,
+        "predicted": 70.25220573056988,
+        "residual_gap": 4.379794269430121,
+        "residual_z": 0.88182032388756
+      },
+      {
+        "code": "BIH",
+        "name": "Bosnia and Herzegovina",
+        "gni_percap": 4930.0,
+        "life_exp": 75.905,
+        "predicted": 70.47368731588777,
+        "residual_gap": 5.431312684112228,
+        "residual_z": 1.093531251837004
+      },
+      {
+        "code": "DOM",
+        "name": "Dominican Republic",
+        "gni_percap": 5230.0,
+        "life_exp": 72.702,
+        "predicted": 70.74753387435354,
+        "residual_gap": 1.9544661256464622,
+        "residual_z": 0.3935088832766303
+      },
+      {
+        "code": "AZE",
+        "name": "Azerbaijan",
+        "gni_percap": 5410.0,
+        "life_exp": 70.987,
+        "predicted": 70.90439877870114,
+        "residual_gap": 0.08260122129885872,
+        "residual_z": 0.016630789310739132
+      },
+      {
+        "code": "COL",
+        "name": "Colombia",
+        "gni_percap": 5540.0,
+        "life_exp": 73.325,
+        "predicted": 71.01447743369408,
+        "residual_gap": 2.31052256630592,
+        "residual_z": 0.46519668103828815
+      },
+      {
+        "code": "CUB",
+        "name": "Cuba",
+        "gni_percap": 5560.0,
+        "life_exp": 78.959,
+        "predicted": 71.03118299077454,
+        "residual_gap": 7.927817009225464,
+        "residual_z": 1.5961731836564381
+      },
+      {
+        "code": "BWA",
+        "name": "Botswana",
+        "gni_percap": 5570.0,
+        "life_exp": 59.868,
+        "predicted": 71.03951324831371,
+        "residual_gap": -11.171513248313708,
+        "residual_z": -2.2492534637303723
+      },
+      {
+        "code": "SRB",
+        "name": "Serbia",
+        "gni_percap": 5850.0,
+        "life_exp": 74.3365853658537,
+        "predicted": 71.26688287643756,
+        "residual_gap": 3.06970248941613,
+        "residual_z": 0.6180486746487287
+      },
+      {
+        "code": "MDV",
+        "name": "Maldives",
+        "gni_percap": 5980.0,
+        "life_exp": 76.112,
+        "predicted": 71.36877240808617,
+        "residual_gap": 4.743227591913822,
+        "residual_z": 0.9549933704804102
+      },
+      {
+        "code": "VCT",
+        "name": "St. Vincent and the Grenadines",
+        "gni_percap": 6030.0,
+        "life_exp": 72.327,
+        "predicted": 71.40737202387496,
+        "residual_gap": 0.9196279761250423,
+        "residual_z": 0.18515633152517202
+      },
+      {
+        "code": "BLR",
+        "name": "Belarus",
+        "gni_percap": 6080.0,
+        "life_exp": 70.4048780487805,
+        "predicted": 71.44565289435988,
+        "residual_gap": -1.040774845579378,
+        "residual_z": -0.20954783603163168
+      },
+      {
+        "code": "IRN",
+        "name": "Iran, Islamic Rep.",
+        "gni_percap": 6140.0,
+        "life_exp": 73.932,
+        "predicted": 71.49117653750326,
+        "residual_gap": 2.4408234624967378,
+        "residual_z": 0.4914312417079098
+      },
+      {
+        "code": "ZAF",
+        "name": "South Africa",
+        "gni_percap": 6160.0,
+        "life_exp": 55.888,
+        "predicted": 71.50625228110881,
+        "residual_gap": -15.618252281108816,
+        "residual_z": -3.1445523323352305
+      },
+      {
+        "code": "MNE",
+        "name": "Montenegro",
+        "gni_percap": 6920.0,
+        "life_exp": 75.28,
+        "predicted": 72.0455750767145,
+        "residual_gap": 3.234424923285502,
+        "residual_z": 0.6512136091298034
+      },
+      {
+        "code": "BGR",
+        "name": "Bulgaria",
+        "gni_percap": 6980.0,
+        "life_exp": 73.5121951219512,
+        "predicted": 72.0855965086484,
+        "residual_gap": 1.4265986133028008,
+        "residual_z": 0.28722893676097494
+      },
+      {
+        "code": "GRD",
+        "name": "Grenada",
+        "gni_percap": 7050.0,
+        "life_exp": 72.618,
+        "predicted": 72.13185563734643,
+        "residual_gap": 0.48614436265356176,
+        "residual_z": 0.09787947856899254
+      },
+      {
+        "code": "PAN",
+        "name": "Panama",
+        "gni_percap": 7150.0,
+        "life_exp": 76.828,
+        "predicted": 72.19714949241873,
+        "residual_gap": 4.630850507581272,
+        "residual_z": 0.932367559584374
+      },
+      {
+        "code": "CRI",
+        "name": "Costa Rica",
+        "gni_percap": 7230.0,
+        "life_exp": 78.756,
+        "predicted": 72.2487304092484,
+        "residual_gap": 6.507269590751605,
+        "residual_z": 1.3101625841633153
+      },
+      {
+        "code": "LCA",
+        "name": "St. Lucia",
+        "gni_percap": 7390.0,
+        "life_exp": 74.465,
+        "predicted": 72.35020175614429,
+        "residual_gap": 2.1147982438557165,
+        "residual_z": 0.4257898790749236
+      },
+      {
+        "code": "KAZ",
+        "name": "Kazakhstan",
+        "gni_percap": 7440.0,
+        "life_exp": 68.2953658536585,
+        "predicted": 72.38146139632457,
+        "residual_gap": -4.086095542666072,
+        "residual_z": -0.8226875221100576
+      },
+      {
+        "code": "SUR",
+        "name": "Suriname",
+        "gni_percap": 7660.0,
+        "life_exp": 70.335,
+        "predicted": 72.51655349282535,
+        "residual_gap": -2.1815534928253584,
+        "residual_z": -0.4392302672864112
+      },
+      {
+        "code": "GAB",
+        "name": "Gabon",
+        "gni_percap": 7750.0,
+        "life_exp": 62.893,
+        "predicted": 72.5707034708213,
+        "residual_gap": -9.6777034708213,
+        "residual_z": -1.9484923455634782
+      },
+      {
+        "code": "MUS",
+        "name": "Mauritius",
+        "gni_percap": 8250.0,
+        "life_exp": 72.9673170731707,
+        "predicted": 72.86053453352338,
+        "residual_gap": 0.10678253964732676,
+        "residual_z": 0.021499414790914658
+      },
+      {
+        "code": "MYS",
+        "name": "Malaysia",
+        "gni_percap": 8290.0,
+        "life_exp": 74.21,
+        "predicted": 72.88295676380503,
+        "residual_gap": 1.3270432361949673,
+        "residual_z": 0.267184626575282
+      },
+      {
+        "code": "LBN",
+        "name": "Lebanon",
+        "gni_percap": 8540.0,
+        "life_exp": 78.43,
+        "predicted": 73.02069081272339,
+        "residual_gap": 5.4093091872766195,
+        "residual_z": 1.0891011052336201
+      },
+      {
+        "code": "ROU",
+        "name": "Romania",
+        "gni_percap": 8640.0,
+        "life_exp": 73.4585365853659,
+        "predicted": 73.07465867569115,
+        "residual_gap": 0.38387790967475155,
+        "residual_z": 0.07728932498163237
+      },
+      {
+        "code": "MEX",
+        "name": "Mexico",
+        "gni_percap": 8930.0,
+        "life_exp": 76.096,
+        "predicted": 73.22770367893162,
+        "residual_gap": 2.868296321068385,
+        "residual_z": 0.5774978995027377
+      },
+      {
+        "code": "ARG",
+        "name": "Argentina",
+        "gni_percap": 9170.0,
+        "life_exp": 75.595,
+        "predicted": 73.35064888435898,
+        "residual_gap": 2.244351115641024,
+        "residual_z": 0.451873833783862
+      },
+      {
+        "code": "BRA",
+        "name": "Brazil",
+        "gni_percap": 9610.0,
+        "life_exp": 73.838,
+        "predicted": 73.56791402373455,
+        "residual_gap": 0.27008597626544883,
+        "residual_z": 0.054378650780526776
+      },
+      {
+        "code": "GNQ",
+        "name": "Equatorial Guinea",
+        "gni_percap": 9890.0,
+        "life_exp": 55.908,
+        "predicted": 73.70105346990817,
+        "residual_gap": -17.793053469908173,
+        "residual_z": -3.582423102221331
+      },
+      {
+        "code": "RUS",
+        "name": "Russian Federation",
+        "gni_percap": 9980.0,
+        "life_exp": 68.8412195121951,
+        "predicted": 73.74304880859256,
+        "residual_gap": -4.901829296397466,
+        "residual_z": -0.9869259677243141
+      },
+      {
+        "code": "SYC",
+        "name": "Seychelles",
+        "gni_percap": 10190.0,
+        "life_exp": 73.1975609756098,
+        "predicted": 73.83958331169596,
+        "residual_gap": -0.642022336086157,
+        "residual_z": -0.12926368443881242
+      },
+      {
+        "code": "URY",
+        "name": "Uruguay",
+        "gni_percap": 10390.0,
+        "life_exp": 76.588,
+        "predicted": 73.92968890976098,
+        "residual_gap": 2.6583110902390104,
+        "residual_z": 0.5352198305180828
+      },
+      {
+        "code": "TUR",
+        "name": "Turkey",
+        "gni_percap": 10430.0,
+        "life_exp": 74.154,
+        "predicted": 73.94750175424477,
+        "residual_gap": 0.20649824575522757,
+        "residual_z": 0.0415760053446045
+      },
+      {
+        "code": "CHL",
+        "name": "Chile",
+        "gni_percap": 10780.0,
+        "life_exp": 78.454,
+        "predicted": 74.1005119167441,
+        "residual_gap": 4.353488083255897,
+        "residual_z": 0.876523881135828
+      },
+      {
+        "code": "VEN",
+        "name": "Venezuela, RB",
+        "gni_percap": 11570.0,
+        "life_exp": 73.625,
+        "predicted": 74.4283685733827,
+        "residual_gap": -0.8033685733826985,
+        "residual_z": -0.1617488612481304
+      },
+      {
+        "code": "ATG",
+        "name": "Antigua and Barbuda",
+        "gni_percap": 11800.0,
+        "life_exp": 75.412,
+        "predicted": 74.51961936100577,
+        "residual_gap": 0.8923806389942399,
+        "residual_z": 0.17967039904166202
+      },
+      {
+        "code": "LTU",
+        "name": "Lithuania",
+        "gni_percap": 12430.0,
+        "life_exp": 73.2682926829268,
+        "predicted": 74.76074228806172,
+        "residual_gap": -1.4924496051349223,
+        "residual_z": -0.3004872633794211
+      },
+      {
+        "code": "LBY",
+        "name": "Libya",
+        "gni_percap": 12440.0,
+        "life_exp": 71.643,
+        "predicted": 74.7644703036009,
+        "residual_gap": -3.1214703036009013,
+        "residual_z": -0.6284715182489352
+      },
+      {
+        "code": "LVA",
+        "name": "Latvia",
+        "gni_percap": 12620.0,
+        "life_exp": 73.4829268292683,
+        "predicted": 74.83106695354486,
+        "residual_gap": -1.3481401242765685,
+        "residual_z": -0.2714322381151599
+      },
+      {
+        "code": "POL",
+        "name": "Poland",
+        "gni_percap": 12770.0,
+        "life_exp": 76.2463414634146,
+        "predicted": 74.88584254639078,
+        "residual_gap": 1.3604989170238184,
+        "residual_z": 0.2739205364124842
+      },
+      {
+        "code": "HUN",
+        "name": "Hungary",
+        "gni_percap": 13100.0,
+        "life_exp": 74.2073170731707,
+        "predicted": 75.00411797878257,
+        "residual_gap": -0.7968009056118746,
+        "residual_z": -0.16042653819718777
+      },
+      {
+        "code": "HRV",
+        "name": "Croatia",
+        "gni_percap": 13790.0,
+        "life_exp": 76.4756097560976,
+        "predicted": 75.24207970490437,
+        "residual_gap": 1.2335300511932275,
+        "residual_z": 0.24835684106454364
+      },
+      {
+        "code": "EST",
+        "name": "Estonia",
+        "gni_percap": 14540.0,
+        "life_exp": 75.4292682926829,
+        "predicted": 75.48758996981613,
+        "residual_gap": -0.05832167713322178,
+        "residual_z": -0.011742387211709714
+      },
+      {
+        "code": "BRB",
+        "name": "Barbados",
+        "gni_percap": 15740.0,
+        "life_exp": 74.973,
+        "predicted": 75.85521609415663,
+        "residual_gap": -0.8822160941566324,
+        "residual_z": -0.1776238868839003
+      },
+      {
+        "code": "TTO",
+        "name": "Trinidad and Tobago",
+        "gni_percap": 16460.0,
+        "life_exp": 69.756,
+        "predicted": 76.06256535704995,
+        "residual_gap": -6.306565357049948,
+        "residual_z": -1.2697531353442857
+      },
+      {
+        "code": "PRI",
+        "name": "Puerto Rico",
+        "gni_percap": 16920.0,
+        "life_exp": 78.4081707317073,
+        "predicted": 76.19034229290858,
+        "residual_gap": 2.217828438798719,
+        "residual_z": 0.4465338031694812
+      },
+      {
+        "code": "SVK",
+        "name": "Slovak Republic",
+        "gni_percap": 17240.0,
+        "life_exp": 75.1121951219512,
+        "predicted": 76.27719798719227,
+        "residual_gap": -1.165002865241064,
+        "residual_z": -0.2345596940767886
+      },
+      {
+        "code": "OMN",
+        "name": "Oman",
+        "gni_percap": 18170.0,
+        "life_exp": 75.694,
+        "predicted": 76.52076046530834,
+        "residual_gap": -0.8267604653083396,
+        "residual_z": -0.1664585449559214
+      },
+      {
+        "code": "SAU",
+        "name": "Saudi Arabia",
+        "gni_percap": 18750.0,
+        "life_exp": 73.574,
+        "predicted": 76.66642556410685,
+        "residual_gap": -3.092425564106847,
+        "residual_z": -0.6226236998327498
+      },
+      {
+        "code": "BHR",
+        "name": "Bahrain",
+        "gni_percap": 18970.0,
+        "life_exp": 76.056,
+        "predicted": 76.72050216648371,
+        "residual_gap": -0.6645021664837145,
+        "residual_z": -0.13378973523084903
+      },
+      {
+        "code": "CZE",
+        "name": "Czech Republic",
+        "gni_percap": 19210.0,
+        "life_exp": 77.4243902439025,
+        "predicted": 76.77878417550247,
+        "residual_gap": 0.6456060684000278,
+        "residual_z": 0.12998522700345214
+      },
+      {
+        "code": "MLT",
+        "name": "Malta",
+        "gni_percap": 20530.0,
+        "life_exp": 81.3975609756098,
+        "predicted": 77.08686121988556,
+        "residual_gap": 4.310699755724244,
+        "residual_z": 0.8679089520954557
+      },
+      {
+        "code": "KOR",
+        "name": "Korea, Rep.",
+        "gni_percap": 21260.0,
+        "life_exp": 80.1170731707317,
+        "predicted": 77.24883627796021,
+        "residual_gap": 2.868236892771492,
+        "residual_z": 0.5774859343105869
+      },
+      {
+        "code": "BHS",
+        "name": "Bahamas, The",
+        "gni_percap": 21660.0,
+        "life_exp": 74.761,
+        "predicted": 77.3352467401348,
+        "residual_gap": -2.574246740134811,
+        "residual_z": -0.5182944573438897
+      },
+      {
+        "code": "PRT",
+        "name": "Portugal",
+        "gni_percap": 22960.0,
+        "life_exp": 79.0268292682927,
+        "predicted": 77.60544975472635,
+        "residual_gap": 1.4213795135663503,
+        "residual_z": 0.2861781321028381
+      },
+      {
+        "code": "SVN",
+        "name": "Slovenia",
+        "gni_percap": 24560.0,
+        "life_exp": 79.4219512195122,
+        "predicted": 77.91774201634772,
+        "residual_gap": 1.5042092031644785,
+        "residual_z": 0.3028549208321021
+      },
+      {
+        "code": "GRC",
+        "name": "Greece",
+        "gni_percap": 27660.0,
+        "life_exp": 80.3878048780488,
+        "predicted": 78.46878978774185,
+        "residual_gap": 1.9190150903069423,
+        "residual_z": 0.38637123215830227
+      },
+      {
+        "code": "ISR",
+        "name": "Israel",
+        "gni_percap": 29580.0,
+        "life_exp": 81.6024390243903,
+        "predicted": 78.77990270150879,
+        "residual_gap": 2.8225363228815183,
+        "residual_z": 0.568284659350367
+      },
+      {
+        "code": "NZL",
+        "name": "New Zealand",
+        "gni_percap": 29770.0,
+        "life_exp": 80.7024390243902,
+        "predicted": 78.80958433766415,
+        "residual_gap": 1.8928546867260536,
+        "residual_z": 0.3811041410257934
+      },
+      {
+        "code": "CYP",
+        "name": "Cyprus",
+        "gni_percap": 31330.0,
+        "life_exp": 79.43,
+        "predicted": 79.04635683762486,
+        "residual_gap": 0.38364316237515084,
+        "residual_z": 0.07724206135986582
+      },
+      {
+        "code": "ESP",
+        "name": "Spain",
+        "gni_percap": 32130.0,
+        "life_exp": 81.6268292682927,
+        "predicted": 79.16324388887921,
+        "residual_gap": 2.4635853794134874,
+        "residual_z": 0.4960140873196151
+      },
+      {
+        "code": "BRN",
+        "name": "Brunei Darussalam",
+        "gni_percap": 33300.0,
+        "life_exp": 76.719,
+        "predicted": 79.32905312288511,
+        "residual_gap": -2.6100531228851196,
+        "residual_z": -0.525503653505112
+      },
+      {
+        "code": "HKG",
+        "name": "Hong Kong SAR, China",
+        "gni_percap": 33620.0,
+        "life_exp": 82.9780487804878,
+        "predicted": 79.37338854339839,
+        "residual_gap": 3.604660237089405,
+        "residual_z": 0.7257561570782142
+      },
+      {
+        "code": "ARE",
+        "name": "United Arab Emirates",
+        "gni_percap": 34530.0,
+        "life_exp": 76.344,
+        "predicted": 79.49719828622082,
+        "residual_gap": -3.153198286220828,
+        "residual_z": -0.6348595762692593
+      },
+      {
+        "code": "ISL",
+        "name": "Iceland",
+        "gni_percap": 36530.0,
+        "life_exp": 81.8975609756097,
+        "predicted": 79.75821780442668,
+        "residual_gap": 2.1393431711830146,
+        "residual_z": 0.43073171296804186
+      },
+      {
+        "code": "ITA",
+        "name": "Italy",
+        "gni_percap": 37690.0,
+        "life_exp": 82.0365853658537,
+        "predicted": 79.9031369886907,
+        "residual_gap": 2.133448377162992,
+        "residual_z": 0.4295448651728683
+      },
+      {
+        "code": "GBR",
+        "name": "United Kingdom",
+        "gni_percap": 41380.0,
+        "life_exp": 80.4024390243902,
+        "predicted": 80.33613278302963,
+        "residual_gap": 0.06630624136057861,
+        "residual_z": 0.013349985783685544
+      },
+      {
+        "code": "KWT",
+        "name": "Kuwait",
+        "gni_percap": 42060.0,
+        "life_exp": 73.979,
+        "predicted": 80.41169378495805,
+        "residual_gap": -6.4326937849580474,
+        "residual_z": -1.29514761835132
+      },
+      {
+        "code": "JPN",
+        "name": "Japan",
+        "gni_percap": 43440.0,
+        "life_exp": 82.8426829268293,
+        "predicted": 80.5613532417404,
+        "residual_gap": 2.281329685088892,
+        "residual_z": 0.4593190360197333
+      },
+      {
+        "code": "FRA",
+        "name": "France",
+        "gni_percap": 43790.0,
+        "life_exp": 81.6634146341463,
+        "predicted": 80.59855452989365,
+        "residual_gap": 1.0648601042526593,
+        "residual_z": 0.2143971210203001
+      },
+      {
+        "code": "CAN",
+        "name": "Canada",
+        "gni_percap": 44370.0,
+        "life_exp": 81.1975609756098,
+        "predicted": 80.65955260828534,
+        "residual_gap": 0.5380083673244656,
+        "residual_z": 0.1083216889979662
+      },
+      {
+        "code": "IRL",
+        "name": "Ireland",
+        "gni_percap": 44760.0,
+        "life_exp": 80.7439024390244,
+        "predicted": 80.70012185538793,
+        "residual_gap": 0.043780583636461756,
+        "residual_z": 0.008814708195716656
+      },
+      {
+        "code": "DEU",
+        "name": "Germany",
+        "gni_percap": 44790.0,
+        "life_exp": 79.9878048780488,
+        "predicted": 80.70322791049452,
+        "residual_gap": -0.7154230324457131,
+        "residual_z": -0.14404205571737433
+      },
+      {
+        "code": "SGP",
+        "name": "Singapore",
+        "gni_percap": 44790.0,
+        "life_exp": 81.5414634146342,
+        "predicted": 80.70322791049452,
+        "residual_gap": 0.838235504139675,
+        "residual_z": 0.16876890974394654
+      },
+      {
+        "code": "MAC",
+        "name": "Macao SAR, China",
+        "gni_percap": 45690.0,
+        "life_exp": 82.704,
+        "predicted": 80.79545483303957,
+        "residual_gap": 1.9085451669604225,
+        "residual_z": 0.38426323561130754
+      },
+      {
+        "code": "AUS",
+        "name": "Australia",
+        "gni_percap": 46550.0,
+        "life_exp": 81.6951219512195,
+        "predicted": 80.88190089568931,
+        "residual_gap": 0.8132210555301924,
+        "residual_z": 0.16373254323498887
+      },
+      {
+        "code": "BEL",
+        "name": "Belgium",
+        "gni_percap": 47920.0,
+        "life_exp": 80.1829268292683,
+        "predicted": 81.01636630413336,
+        "residual_gap": -0.8334394748650595,
+        "residual_z": -0.16780328537253492
+      },
+      {
+        "code": "USA",
+        "name": "United States",
+        "gni_percap": 48950.0,
+        "life_exp": 78.5414634146342,
+        "predicted": 81.11495287666732,
+        "residual_gap": -2.5734894620331232,
+        "residual_z": -0.5181419882597676
+      },
+      {
+        "code": "FIN",
+        "name": "Finland",
+        "gni_percap": 49330.0,
+        "life_exp": 79.8707317073171,
+        "predicted": 81.15080163259773,
+        "residual_gap": -1.2800699252806282,
+        "residual_z": -0.25772710010339184
+      },
+      {
+        "code": "AUT",
+        "name": "Austria",
+        "gni_percap": 49610.0,
+        "life_exp": 80.5804878048781,
+        "predicted": 81.17704023873739,
+        "residual_gap": -0.5965524338592871,
+        "residual_z": -0.12010885171329011
+      },
+      {
+        "code": "NLD",
+        "name": "Netherlands",
+        "gni_percap": 53530.0,
+        "life_exp": 80.7024390243902,
+        "predicted": 81.52959100236436,
+        "residual_gap": -0.8271519779741539,
+        "residual_z": -0.16653737144970998
+      },
+      {
+        "code": "SWE",
+        "name": "Sweden",
+        "gni_percap": 53900.0,
+        "life_exp": 81.4512195121951,
+        "predicted": 81.5615233862252,
+        "residual_gap": -0.11030387403010877,
+        "residual_z": -0.022208394262302086
+      },
+      {
+        "code": "DNK",
+        "name": "Denmark",
+        "gni_percap": 61220.0,
+        "life_exp": 79.1,
+        "predicted": 82.1518605315552,
+        "residual_gap": -3.0518605315552065,
+        "residual_z": -0.6144564052196512
+      },
+      {
+        "code": "QAT",
+        "name": "Qatar",
+        "gni_percap": 66360.0,
+        "life_exp": 77.301,
+        "predicted": 82.52560015072628,
+        "residual_gap": -5.224600150726275,
+        "residual_z": -1.0519121021855402
+      },
+      {
+        "code": "CHE",
+        "name": "Switzerland",
+        "gni_percap": 77360.0,
+        "life_exp": 82.2463414634147,
+        "predicted": 83.23661578166124,
+        "residual_gap": -0.9902743182465485,
+        "residual_z": -0.1993801458092956
+      },
+      {
+        "code": "LUX",
+        "name": "Luxembourg",
+        "gni_percap": 78440.0,
+        "life_exp": 80.6317073170732,
+        "predicted": 83.30088702986014,
+        "residual_gap": -2.669179712786942,
+        "residual_z": -0.5374081004837086
+      },
+      {
+        "code": "NOR",
+        "name": "Norway",
+        "gni_percap": 88440.0,
+        "life_exp": 80.9975609756098,
+        "predicted": 83.85713676489937,
+        "residual_gap": -2.859575789289565,
+        "residual_z": -0.5757421224765519
+      },
+      {
+        "code": "BMU",
+        "name": "Bermuda",
+        "gni_percap": 110440.0,
+        "life_exp": 79.2885365853658,
+        "predicted": 84.8869677356694,
+        "residual_gap": -5.598431150303597,
+        "residual_z": -1.1271785993877883
+      }
+    ],
+    "model": {
+      "slope": 10.67429420890334,
+      "intercept": 31.055152831080292,
+      "r2": 0.664523385675689
+    },
+    "country_series": [
+      {
+        "code": "RWA",
+        "metric": "life_exp_path",
+        "values": [
+          {
+            "year": 2006,
+            "value": 57.219,
+            "gni_percap": 320.0,
+            "predicted": 58.045830173499894,
+            "residual_gap": -0.8268301734998929
+          },
+          {
+            "year": 2007,
+            "value": 58.971,
+            "gni_percap": 370.0,
+            "predicted": 58.6977810558824,
+            "residual_gap": 0.27321894411759473
+          },
+          {
+            "year": 2008,
+            "value": 60.565,
+            "gni_percap": 450.0,
+            "predicted": 59.22774797303654,
+            "residual_gap": 1.337252026963455
+          },
+          {
+            "year": 2009,
+            "value": 61.962,
+            "gni_percap": 510.0,
+            "predicted": 59.89725638040638,
+            "residual_gap": 2.064743619593621
+          },
+          {
+            "year": 2010,
+            "value": 63.14,
+            "gni_percap": 560.0,
+            "predicted": 60.390120372730074,
+            "residual_gap": 2.7498796272699266
+          },
+          {
+            "year": 2011,
+            "value": 64.106,
+            "gni_percap": 610.0,
+            "predicted": 60.89999679070115,
+            "residual_gap": 3.206003209298842
+          },
+          {
+            "year": 2012,
+            "value": 64.911,
+            "gni_percap": 660.0,
+            "predicted": 61.34106730542166,
+            "residual_gap": 3.569932694578341
+          },
+          {
+            "year": 2013,
+            "value": 65.598,
+            "gni_percap": 680.0,
+            "predicted": 61.54644942405182,
+            "residual_gap": 4.051550575948177
+          },
+          {
+            "year": 2014,
+            "value": 66.188,
+            "gni_percap": 700.0,
+            "predicted": 61.82658472617996,
+            "residual_gap": 4.361415273820043
+          },
+          {
+            "year": 2015,
+            "value": 66.696,
+            "gni_percap": 710.0,
+            "predicted": 62.285674958176685,
+            "residual_gap": 4.410325041823313
+          }
+        ]
+      },
+      {
+        "code": "VNM",
+        "metric": "life_exp_path",
+        "values": [
+          {
+            "year": 2006,
+            "value": 74.438,
+            "gni_percap": 720.0,
+            "predicted": 61.72892300031485,
+            "residual_gap": 12.709076999685152
+          },
+          {
+            "year": 2007,
+            "value": 74.609,
+            "gni_percap": 830.0,
+            "predicted": 62.29481825057655,
+            "residual_gap": 12.314181749423447
+          },
+          {
+            "year": 2008,
+            "value": 74.777,
+            "gni_percap": 980.0,
+            "predicted": 62.760412559233075,
+            "residual_gap": 12.016587440766926
+          },
+          {
+            "year": 2009,
+            "value": 74.946,
+            "gni_percap": 1100.0,
+            "predicted": 63.43245200878884,
+            "residual_gap": 11.513547991211155
+          },
+          {
+            "year": 2010,
+            "value": 75.117,
+            "gni_percap": 1250.0,
+            "predicted": 64.11248144842696,
+            "residual_gap": 11.004518551573042
+          },
+          {
+            "year": 2011,
+            "value": 75.294,
+            "gni_percap": 1360.0,
+            "predicted": 64.62997772815886,
+            "residual_gap": 10.664022271841134
+          },
+          {
+            "year": 2012,
+            "value": 75.476,
+            "gni_percap": 1530.0,
+            "predicted": 65.19655919704863,
+            "residual_gap": 10.27944080295137
+          },
+          {
+            "year": 2013,
+            "value": 75.663,
+            "gni_percap": 1710.0,
+            "predicted": 65.76062001864189,
+            "residual_gap": 9.90237998135811
+          },
+          {
+            "year": 2014,
+            "value": 75.855,
+            "gni_percap": 1860.0,
+            "predicted": 66.3280999682641,
+            "residual_gap": 9.526900031735906
+          },
+          {
+            "year": 2015,
+            "value": 76.052,
+            "gni_percap": 1950.0,
+            "predicted": 66.92195316294367,
+            "residual_gap": 9.13004683705634
+          }
+        ]
+      },
+      {
+        "code": "RWA",
+        "metric": "under5",
+        "values": [
+          {
+            "year": 2006,
+            "value": 98.3
+          },
+          {
+            "year": 2007,
+            "value": 88.1
+          },
+          {
+            "year": 2008,
+            "value": 79.2
+          },
+          {
+            "year": 2009,
+            "value": 71.3
+          },
+          {
+            "year": 2010,
+            "value": 64.4
+          },
+          {
+            "year": 2011,
+            "value": 57.5
+          },
+          {
+            "year": 2012,
+            "value": 52.2
+          },
+          {
+            "year": 2013,
+            "value": 48.0
+          },
+          {
+            "year": 2014,
+            "value": 44.7
+          },
+          {
+            "year": 2015,
+            "value": 42.0
+          }
+        ]
+      }
+    ],
+    "distribution": [
+      {
+        "year": 2006,
+        "median_abs_gap": 3.1229536685994788,
+        "p90_abs_gap": 9.24998127755215,
+        "max_pos_gap": 12.709076999685152,
+        "max_neg_gap": -21.439690598328333
+      },
+      {
+        "year": 2007,
+        "median_abs_gap": 2.830835949965028,
+        "p90_abs_gap": 8.967068421618457,
+        "max_pos_gap": 12.314181749423447,
+        "max_neg_gap": -20.484046209050014
+      },
+      {
+        "year": 2008,
+        "median_abs_gap": 2.74497054665693,
+        "p90_abs_gap": 8.487855154263181,
+        "max_pos_gap": 12.016587440766926,
+        "max_neg_gap": -19.6825354951184
+      },
+      {
+        "year": 2009,
+        "median_abs_gap": 2.78329376919649,
+        "p90_abs_gap": 8.192308039001627,
+        "max_pos_gap": 11.513547991211155,
+        "max_neg_gap": -19.041600856468982
+      },
+      {
+        "year": 2010,
+        "median_abs_gap": 2.662294000721147,
+        "p90_abs_gap": 7.751695635983271,
+        "max_pos_gap": 11.004518551573042,
+        "max_neg_gap": -17.793053469908173
+      },
+      {
+        "year": 2011,
+        "median_abs_gap": 2.5560256267969876,
+        "p90_abs_gap": 7.353413510050178,
+        "max_pos_gap": 10.664022271841134,
+        "max_neg_gap": -18.272276464004207
+      },
+      {
+        "year": 2012,
+        "median_abs_gap": 2.6328100357329802,
+        "p90_abs_gap": 7.3497269495789395,
+        "max_pos_gap": 10.27944080295137,
+        "max_neg_gap": -18.667811843363594
+      },
+      {
+        "year": 2013,
+        "median_abs_gap": 2.664811837379226,
+        "p90_abs_gap": 7.446470977085867,
+        "max_pos_gap": 9.90237998135811,
+        "max_neg_gap": -18.441244282278262
+      },
+      {
+        "year": 2014,
+        "median_abs_gap": 2.7273197056036658,
+        "p90_abs_gap": 7.521129159304084,
+        "max_pos_gap": 9.526900031735906,
+        "max_neg_gap": -18.153809763293886
+      },
+      {
+        "year": 2015,
+        "median_abs_gap": 2.702485198081696,
+        "p90_abs_gap": 7.347703348895905,
+        "max_pos_gap": 9.13004683705634,
+        "max_neg_gap": -17.334381970956187
+      }
+    ]
+  },
+  "kpis": {
+    "country_count": 184,
+    "r2_2010": 0.664523385675689,
+    "median_abs_gap_2010": 2.662294000721147,
+    "p90_abs_gap_2010": 7.751695635983271,
+    "max_pos_gap_2010": 11.004518551573042,
+    "max_neg_gap_2010": -17.793053469908173
+  },
+  "beat_metrics": {
+    "b1_curve": {
+      "r2": 0.664523385675689,
+      "median_abs_gap": 2.662294000721147,
+      "p90_abs_gap": 7.751695635983271,
+      "max_pos_gap": 11.004518551573042,
+      "max_neg_gap": -17.793053469908173
+    },
+    "b2_rwanda": {
+      "under5_2006": 98.3,
+      "under5_2015": 42.0,
+      "life_gap_2006": -0.8268301734998929,
+      "life_gap_2015": 4.410325041823313
+    },
+    "b3_vietnam": {
+      "gap_2010": 11.004518551573042,
+      "gap_2015": 9.13004683705634,
+      "vietnam_2010_life_exp": 75.117
+    }
+  }
+}

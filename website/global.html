@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDG Global Deep Dive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="bg-orb bg-orb-a"></div>
+  <div class="bg-orb bg-orb-b"></div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">DIODS 2026 · All-Country Interactive Lab</p>
+      <h1>Millennium Development Goals: Global Deep Dive</h1>
+      <p class="hero-copy">
+        Explore 217 countries across 2006-2015. Benchmark outcomes, inspect wealth-adjusted outliers,
+        and compare development trajectories with transparent, reproducible metrics.
+      </p>
+      <div class="hero-links">
+        <a class="hero-link" href="index.html">Original Story Site</a>
+        <a class="hero-link" href="story.html">Narrative Prototype</a>
+        <a class="hero-link hero-link-secondary" href="../docs/methodology_audit_report.md">Method Audit</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls-panel">
+      <h2>Controls</h2>
+      <div class="preset-row" id="preset-row">
+        <button class="preset-btn active" data-region="All" data-income="All">Global</button>
+        <button class="preset-btn" data-region="All" data-income="High income">High Income</button>
+        <button class="preset-btn" data-region="Sub-Saharan Africa" data-income="All">Sub-Saharan Africa</button>
+        <button class="preset-btn" data-region="Latin America & Caribbean" data-income="All">Latin America</button>
+      </div>
+      <div class="controls-grid">
+        <label>
+          Indicator
+          <select id="indicator-select"></select>
+        </label>
+        <label>
+          Country
+          <select id="country-select"></select>
+        </label>
+        <label>
+          Region
+          <select id="region-select"></select>
+        </label>
+        <label>
+          Income Group
+          <select id="income-select"></select>
+        </label>
+      </div>
+
+      <div class="control-actions">
+        <label class="country-search-label">
+          Quick Country Search
+          <input id="country-search-input" list="country-search-list" placeholder="Type country name...">
+          <datalist id="country-search-list"></datalist>
+        </label>
+        <button id="reset-filters-btn" class="control-btn">Reset Filters</button>
+      </div>
+
+      <div class="compare-wrap">
+        <div class="compare-header">
+          <span>Multi-Country Compare (up to 5)</span>
+        </div>
+        <div class="compare-controls">
+          <select id="compare-country-select"></select>
+          <button id="add-compare-btn" class="control-btn">Add</button>
+        </div>
+        <div id="compare-chips" class="compare-chips"></div>
+      </div>
+
+      <div class="year-wrap">
+        <div class="year-header">
+          <span>Year</span>
+          <strong id="year-value">2010</strong>
+        </div>
+        <input id="year-slider" type="range" min="2006" max="2015" step="1" value="2010">
+        <div class="timelapse-controls">
+          <button id="step-back-btn" class="control-btn">◀ Step</button>
+          <button id="timelapse-toggle-btn" class="control-btn primary">▶ Play Timelapse</button>
+          <button id="step-forward-btn" class="control-btn">Step ▶</button>
+          <label class="speed-label">
+            Speed
+            <select id="timelapse-speed-select">
+              <option value="1600">Slow</option>
+              <option value="1000" selected>Medium</option>
+              <option value="550">Fast</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel kpi-panel">
+      <h2>Snapshot</h2>
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <p class="kpi-label">Countries in View</p>
+          <p id="kpi-country-count" class="kpi-value">-</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-label">Indicator Coverage</p>
+          <p id="kpi-coverage" class="kpi-value">-</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-label">Selected Country Percentile</p>
+          <p id="kpi-percentile" class="kpi-value">-</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-label">Selected Country Wealth-Adjusted z</p>
+          <p id="kpi-residual" class="kpi-value">-</p>
+        </article>
+      </div>
+      <p id="insight-text" class="insight-text">Loading data...</p>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Global Percentile Map</h2>
+      <p class="panel-subtitle">Higher color intensity means stronger percentile performance for the selected indicator-year.</p>
+      <div id="map-chart" class="chart"></div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Wealth vs. Outcomes (Adjusted)</h2>
+      <p class="panel-subtitle">X-axis is log GNI per capita. Color shows wealth-adjusted performance (z-score).</p>
+      <div id="scatter-chart" class="chart"></div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Country Trajectory vs. Global Median</h2>
+      <p class="panel-subtitle">Track one country over time against the global median for the same indicator.</p>
+      <div id="trend-chart" class="chart"></div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Distribution at Selected Year</h2>
+      <p class="panel-subtitle">See where the selected country falls in the global distribution.</p>
+      <div id="distribution-chart" class="chart"></div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Timelapse Ranking View</h2>
+      <p class="panel-subtitle">Top performers by percentile for the selected year. Use Play Timelapse to watch year-by-year shifts.</p>
+      <div id="timelapse-chart" class="chart"></div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h2>Unexpected Peers</h2>
+      <p class="panel-subtitle">Countries with similar overall profiles this year, but different performance on the selected indicator.</p>
+      <div id="peers-table"></div>
+    </section>
+
+    <section class="panel movers-panel">
+      <h2>Top Movers (Quality-Adjusted Change)</h2>
+      <p class="panel-subtitle">Best and worst long-run movers for the selected indicator.</p>
+      <div class="movers-grid">
+        <div>
+          <h3>Most Improved</h3>
+          <div id="movers-best"></div>
+        </div>
+        <div>
+          <h3>Most Worsened</h3>
+          <div id="movers-worst"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel methods-panel">
+      <h2>Methods and Caveats</h2>
+      <div class="methods-grid">
+        <article>
+          <h3>Entity Scope</h3>
+          <p>
+            Country-only analyses use metadata region classification to exclude aggregate entities.
+            Region and income filters are then applied interactively.
+          </p>
+        </article>
+        <article>
+          <h3>Quality Percentiles</h3>
+          <p>
+            Within each year and indicator, countries are ranked and converted to percentiles
+            where higher means better performance according to indicator directionality.
+          </p>
+        </article>
+        <article>
+          <h3>Wealth-Adjusted Residuals</h3>
+          <p>
+            Residuals come from indicator ~ log10(GNI per capita) fits by year. Positive z means
+            better-than-expected performance relative to wealth.
+          </p>
+        </article>
+        <article>
+          <h3>Trend Movers</h3>
+          <p>
+            Top movers are sorted by quality-adjusted percent change from each country's first
+            to last available year for the selected indicator.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Data: World Bank MDG Databank (2006-2015). Country-only filtering uses metadata region classification.
+    </p>
+  </footer>
+
+  <script type="module" src="global.js"></script>
+</body>
+</html>

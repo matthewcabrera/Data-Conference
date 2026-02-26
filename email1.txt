@@ -1,0 +1,19 @@
+Hi Jairo -
+
+Thank you for the reminder!  I _think_ I've just opened those up -- see if a refresh does it!
+
+Question:   Would you be interested in a data analysis project that you could present at Harvey Mudd's upcoming Data Science conference?  Perhaps teaming with Matthew?
+
+In particular, this could be part of cs35's work (cs35 is intentionally adaptable to make these kinds of opportunities possible -- though only if desired!) 
+It would involve
+	•	taking on a data-science challenge related to the Millennium Development Goals (and their dataset: https://databank.worldbank.org/source/millennium-development-goals)
+	•	specifically, using Claude (which I hope to provide everyone this week in cs35) to explore how much can be automated (and, perhaps, what can't be)
+	•	creating, likely using Claude's help, a live site that shows off the results
+	•	presenting a poster - and probably the website summaries - at the conference on Sat. February 28
+Since it's a local, first-year conference, it should be fun, informal, and interactive. Since it's 2/28, it's "time-limited," and shouldn't be overwhelming (plus this could replace cs35 work, if you like). ((Extra context: the conference would like one or more high-school teams to present. I'd be delighted to advise.))
+
+Thanks for considering it, Jairo -- feel free to run it by Matthew, as well... .
+Happy to chat more on Wednesday --
+
+All the best!
+ZD

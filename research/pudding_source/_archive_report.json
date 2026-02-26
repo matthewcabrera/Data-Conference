@@ -1,0 +1,728 @@
+{
+  "generated_at_unix": 1772059191,
+  "pages": [
+    {
+      "slug": "2025-11-democracy",
+      "root_url": "https://pudding.cool/2025/11/democracy/",
+      "allowed_prefixes": [
+        "/2025/11/democracy/",
+        "/_app/",
+        "/assets/",
+        "/common/"
+      ],
+      "archived_count": 41,
+      "max_files": 1200,
+      "archived": [
+        {
+          "url": "https://pudding.cool/2025/11/democracy/",
+          "content_type": "text/html",
+          "path": "2025/11/democracy/index.html",
+          "bytes": 207047
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/0.BxW2HVbW.css",
+          "content_type": "text/css",
+          "path": "2025/11/democracy/_app/immutable/assets/0.BxW2HVbW.css",
+          "bytes": 22304
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/2.C4iF_hl0.css",
+          "content_type": "text/css",
+          "path": "2025/11/democracy/_app/immutable/assets/2.C4iF_hl0.css",
+          "bytes": 13386
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/entry/start.DnwixTQ8.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/entry/start.DnwixTQ8.js",
+          "bytes": 83
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/zoy27qcx.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/zoy27qcx.js",
+          "bytes": 31827
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/bx8iAid7.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/bx8iAid7.js",
+          "bytes": 15531
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/cUJtBVlI.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/cUJtBVlI.js",
+          "bytes": 633
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/Dfsv0Y5z.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/Dfsv0Y5z.js",
+          "bytes": 172
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/CfdplfV1.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/CfdplfV1.js",
+          "bytes": 492
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/entry/app.Ct93aQ5-.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/entry/app.Ct93aQ5-.js",
+          "bytes": 5420
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/Dp1pzeXC.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/Dp1pzeXC.js",
+          "bytes": 1266
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/BpLu4jy3.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/BpLu4jy3.js",
+          "bytes": 5475
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/B5VPODEY.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/B5VPODEY.js",
+          "bytes": 931
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/CWj6FrbW.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/CWj6FrbW.js",
+          "bytes": 106
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/BrmOP2e0.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/BrmOP2e0.js",
+          "bytes": 927
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/KF-ZJeJX.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/KF-ZJeJX.js",
+          "bytes": 192
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/BE6HT1iO.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/BE6HT1iO.js",
+          "bytes": 1816
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/0.pLBUFSRl.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/0.pLBUFSRl.js",
+          "bytes": 35841
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/DxspkrBg.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/DxspkrBg.js",
+          "bytes": 782
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/2.s3KalUei.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/2.s3KalUei.js",
+          "bytes": 3718632
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/XtI2ufFr.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/XtI2ufFr.js",
+          "bytes": 46873
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/EsuAtjtd.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/EsuAtjtd.js",
+          "bytes": 38847
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
+          "bytes": 56337
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
+          "bytes": 56985
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+          "bytes": 39185
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+          "bytes": 42413
+        },
+        {
+          "url": "https://pudding.cool/assets/stickers/donate-footer-square@2x.png",
+          "content_type": "image/png",
+          "path": "assets/stickers/donate-footer-square@2x.png",
+          "bytes": 215908
+        },
+        {
+          "url": "https://pudding.cool/assets/stickers/subscribe-footer@2x.png",
+          "content_type": "image/png",
+          "path": "assets/stickers/subscribe-footer@2x.png",
+          "bytes": 291541
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/assets/social-facebook.jpg",
+          "content_type": "image/jpeg",
+          "path": "2025/11/democracy/assets/social-facebook.jpg",
+          "bytes": 967174
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/assets/social-twitter.jpg",
+          "content_type": "image/jpeg",
+          "path": "2025/11/democracy/assets/social-twitter.jpg",
+          "bytes": 576491
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasTypewriter-Medium-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasTypewriter-Medium-Web.woff2",
+          "bytes": 28361
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/1.XUTAscR3.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/1.XUTAscR3.js",
+          "bytes": 625
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/3.02l40qEt.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/3.02l40qEt.js",
+          "bytes": 48331
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/3.CO4jlTh2.css",
+          "content_type": "text/css",
+          "path": "2025/11/democracy/_app/immutable/assets/3.CO4jlTh2.css",
+          "bytes": 720
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/4.D6rz239U.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/4.D6rz239U.js",
+          "bytes": 9587
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/4.BosP74pi.css",
+          "content_type": "text/css",
+          "path": "2025/11/democracy/_app/immutable/assets/4.BosP74pi.css",
+          "bytes": 178
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/5.BC6mQgbV.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/5.BC6mQgbV.js",
+          "bytes": 4899
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/5.B-mGqUsL.css",
+          "content_type": "text/css",
+          "path": "2025/11/democracy/_app/immutable/assets/5.B-mGqUsL.css",
+          "bytes": 777
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/6.DUcV82Gi.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/nodes/6.DUcV82Gi.js",
+          "bytes": 69
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/Ca-B7oA6.js",
+          "content_type": "text/javascript",
+          "path": "2025/11/democracy/_app/immutable/chunks/Ca-B7oA6.js",
+          "bytes": 1061349
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/assets/demo/test.jpg",
+          "content_type": "image/jpeg",
+          "path": "2025/11/democracy/assets/demo/test.jpg",
+          "bytes": 5561
+        }
+      ],
+      "failures": [
+        {
+          "url": "https://pudding.cool/2025/11/democracy/.\", location",
+          "error": "URL can't contain control characters. '/2025/11/democracy/.\", location' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/.html__data.json",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/t",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/t,e",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/t instanceof SVGAElement?t.href.baseVal:t.href,document.baseURI",
+          "error": "URL can't contain control characters. '/2025/11/democracy/_app/immutable/chunks/t instanceof SVGAElement?t.href.baseVal:t.href,document.baseURI' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/e",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/location.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/h,n",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/a,n",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/i",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/o.location,location.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/h.location,e",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/c.target.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/t,location.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/(r==null?void 0:r.hasAttribute(\"formaction",
+          "error": "URL can't contain control characters. '/2025/11/democracy/_app/immutable/chunks/(r==null?void 0:r.hasAttribute(\"formaction' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/n.state[Xe]??location.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/f.location,location.href",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/${e}",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/f,a",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/$2",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/assets/app/",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/,3,!1);const C=`https:/pudding.cool/assets/data/stories.json?v=${Date.now()}`,I=[{name:",
+          "error": "URL can't contain control characters. '/2025/11/democracy/_app/immutable/nodes/,3,!1);const C=`https:/pudding.cool/assets/data/stories.json?v=${Date.now()}`,I=[{name:' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/_mobile.svg",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/elements",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/fonts",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/assets/demo/test.jpg",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/o",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/nodes/",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/data/local_storage.js",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/Did you just try to use p5.js",
+          "error": "URL can't contain control characters. '/2025/11/democracy/_app/immutable/chunks/Did you just try to use p5.js' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/docs/parameterData.json",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/connect() is meant to be used with Web Audio API or p5.sound.js",
+          "error": "URL can't contain control characters. '/2025/11/democracy/_app/immutable/chunks/connect() is meant to be used with Web Audio API or p5.sound.js' (found at least ' ')"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/opentype.js",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/b?a=1&b=2&c=3\",\"http://a",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/De.path[0]",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/h",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/.concat(l,",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/h,o",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/V",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/b",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/n",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/2025/11/democracy/_app/immutable/chunks/`",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ],
+      "skipped_external_count": 34,
+      "skipped_external_examples": [
+        "http://a",
+        "http://x\",void 0",
+        "http://\u0442\u0435\u0441\u0442",
+        "https://a@b",
+        "https://cdn.jsdelivr.net/npm/p5/translations/{{lng}}/{{ns}}.json",
+        "https://data.stanford.edu/congress_text",
+        "https://example.com",
+        "https://github.com/unitedstates/congressional-record",
+        "https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1318&context=rtds",
+        "https://patreon.com/thepudding",
+        "https://polygraph.cool",
+        "https://twitter.com/puddingviz/",
+        "https://webhelper.brown.edu/cheit/Understanding_the_Iran_Contra_Affair/prosecutions.php",
+        "https://wwnorton.com/books/The-Rise-of-American-Democracy",
+        "https://www.archives.gov/education/lessons/japanese-relocation",
+        "https://www.archives.gov/publications/prologue/2016/summer/lavender.html",
+        "https://www.brennancenter.org/our-work/research-reports/19th-amendment-explained",
+        "https://www.brennancenter.org/our-work/research-reports/birthright-citizenship-under-us-constitution",
+        "https://www.brennancenter.org/our-work/research-reports/citizens-united-explained",
+        "https://www.britannica.com/topic/Boland-Amendment",
+        "https://www.brookings.edu/articles/trumps-hostility-to-election-security-preparedness/",
+        "https://www.instagram.com/the.pudding",
+        "https://www.nationalww2museum.org/war/articles/four-freedoms",
+        "https://www.newyorker.com/magazine/2020/08/03/joseph-mccarthy-and-the-force-of-political-falsehoods",
+        "https://www.oyez.org/cases/1940-1955/347us483",
+        "https://www.oyez.org/cases/2008/08-205",
+        "https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/",
+        "https://www.penguinrandomhouse.com/books/717588/democracy-awakening-by-heather-cox-richardson/",
+        "https://www.propublica.org/article/trump-dhs-ice-secret-police-civil-rights-unaccountable",
+        "https://www.researchgate.net/figure/Turnout-in-Presidential-Elections-South-and-Non-South-1872-1968_fig1_380816713"
+      ]
+    },
+    {
+      "slug": "2019-04-eu-regions",
+      "root_url": "https://pudding.cool/2019/04/eu-regions/",
+      "allowed_prefixes": [
+        "/2019/04/eu-regions/",
+        "/_app/",
+        "/assets/",
+        "/common/"
+      ],
+      "archived_count": 37,
+      "max_files": 1200,
+      "archived": [
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/",
+          "content_type": "text/html",
+          "path": "2019/04/eu-regions/index.html",
+          "bytes": 61367
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-blank-haze-2013-atlas@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/HU-blank-haze-2013-atlas@2x.png",
+          "bytes": 301708
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-blank-haze-2016-atlas@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/HU-blank-haze-2016-atlas@2x.png",
+          "bytes": 296624
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-choro-2013-haze@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/HU-choro-2013-haze@2x.png",
+          "bytes": 370423
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/HU-choro-2017-haze-connection@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/HU-choro-2017-haze-connection@2x.png",
+          "bytes": 384726
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/LT-choro-2013-haze@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/LT-choro-2013-haze@2x.png",
+          "bytes": 184780
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/LT-choro-2017-haze@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/LT-choro-2017-haze@2x.png",
+          "bytes": 214025
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/PL-choro-2013-haze@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/PL-choro-2013-haze@2x.png",
+          "bytes": 438248
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/img/PL-choro-2017-haze@2x.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/img/PL-choro-2017-haze@2x.png",
+          "bytes": 440254
+        },
+        {
+          "url": "https://pudding.cool/assets/scripts/d3.v4.12.0+jetpack.min.js",
+          "content_type": "application/javascript",
+          "path": "assets/scripts/d3.v4.12.0+jetpack.min.js",
+          "bytes": 231265
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/bundle.js?version=1555594288148",
+          "content_type": "application/javascript",
+          "path": "2019/04/eu-regions/bundle.js__q_version_1555594288148",
+          "bytes": 160322
+        },
+        {
+          "url": "https://pudding.cool/assets/scripts/pudding-footer.js",
+          "content_type": "application/javascript",
+          "path": "assets/scripts/pudding-footer.js",
+          "bytes": 17474
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/social/social-facebook.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/social/social-facebook.png",
+          "bytes": 238134
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/social/social-twitter.png",
+          "content_type": "image/png",
+          "path": "2019/04/eu-regions/assets/social/social-twitter.png",
+          "bytes": 180812
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/canela/Canela-Light-Web.woff2",
+          "bytes": 33345
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/canela/Canela-Light-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/canela/Canela-Light-Web.woff",
+          "bytes": 43334
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/canela/Canela-Bold-Web.woff2",
+          "bytes": 34669
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/canela/Canela-Bold-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/canela/Canela-Bold-Web.woff",
+          "bytes": 45034
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/publico/PublicoText-Roman-Web.woff2",
+          "bytes": 52393
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Roman-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/publico/PublicoText-Roman-Web.woff",
+          "bytes": 72584
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/publico/PublicoText-Bold-Web.woff2",
+          "bytes": 57717
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Bold-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/publico/PublicoText-Bold-Web.woff",
+          "bytes": 78351
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/publico/PublicoText-Italic-Web.woff2",
+          "bytes": 55105
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/publico/PublicoText-Italic-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/publico/PublicoText-Italic-Web.woff",
+          "bytes": 75937
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Light-Web.woff2",
+          "bytes": 41233
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Light-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Light-Web.woff",
+          "bytes": 57334
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
+          "bytes": 39185
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff",
+          "bytes": 54553
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2",
+          "bytes": 41337
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff",
+          "bytes": 57235
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+          "content_type": "font/woff2",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2",
+          "bytes": 42413
+        },
+        {
+          "url": "https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff",
+          "content_type": "font/woff",
+          "path": "assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff",
+          "bytes": 58224
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/data/nuts2_gdppps17_topo.json",
+          "content_type": "application/json",
+          "path": "2019/04/eu-regions/assets/data/nuts2_gdppps17_topo.json",
+          "bytes": 222823
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/data/nuts0_gdppps17_topo.json",
+          "content_type": "application/json",
+          "path": "2019/04/eu-regions/assets/data/nuts0_gdppps17_topo.json",
+          "bytes": 99221
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/data/land.json",
+          "content_type": "application/json",
+          "path": "2019/04/eu-regions/assets/data/land.json",
+          "bytes": 728852
+        },
+        {
+          "url": "https://pudding.cool/2019/04/eu-regions/assets/data/capitals-gdppps17.json",
+          "content_type": "application/json",
+          "path": "2019/04/eu-regions/assets/data/capitals-gdppps17.json",
+          "bytes": 38903
+        },
+        {
+          "url": "https://pudding.cool/assets/data/stories.json",
+          "content_type": "application/json",
+          "path": "assets/data/stories.json",
+          "bytes": 32929
+        }
+      ],
+      "failures": [
+        {
+          "url": "https://pudding.cool/assets/scripts/\\\"https:/pudding.cool/common/assets/thumbnails/640/\"+t.image+\".jpg\\",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pudding.cool/common/assets/misc/icon.png",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ],
+      "skipped_external_count": 11,
+      "skipped_external_examples": [
+        "http://appsso.eurostat.ec.europa.eu/nui/show.do?query=BOOKMARK_DS-513634_QID_10FA3B0_UID_-3F171EB0&layout=UNIT,L,X,0;GEO,L,Y,0;TIME,C,Z,0;INDICATORS,C,Z,1;&zSelection=DS-513634TIME,2017;DS-513634INDICATORS,OBS_FLAG;&rankName1=TIME_1_0_-1_2&rankName2=INDICATORS_1_2_-1_2&rankName3=UNIT_1_2_0_0&rankName4=GEO_1_2_0_1&rStp=&cStp=&rDCh=&cDCh=&rDM=true&cDM=true&footnes=false&empty=false&wai=false&time_mode=NONE&time_most_recent=false&lang=EN&cfo=%23%23%23%2C%23%23%23.%23%23%23",
+        "http://twitter.com/puddingviz",
+        "https://connect.facebook.net/en_US/sdk.js",
+        "https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts",
+        "https://facebook.com/pudding.viz/",
+        "https://gc.zgo.at/count.js",
+        "https://github.com/the-pudding/eu-regions/tree/master/src/assets/data",
+        "https://platform.twitter.com/widgets.js",
+        "https://twitter.com/puddingviz/",
+        "https://www.instagram.com/pudding.cool",
+        "https://www.patreon.com/thepudding"
+      ]
+    }
+  ]
+}
