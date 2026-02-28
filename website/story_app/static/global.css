@@ -114,6 +114,12 @@ body {
   background: rgba(245, 158, 11, 0.16);
 }
 
+.hero-link[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+}
+
 .layout {
   max-width: 1160px;
   margin: 0 auto;

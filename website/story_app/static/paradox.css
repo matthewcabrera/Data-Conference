@@ -103,6 +103,12 @@ section:last-child {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.hero .global-link[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+}
+
 /* ── Section Headers ────────────────────────────── */
 
 h2 {
