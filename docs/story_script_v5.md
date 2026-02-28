@@ -7,7 +7,7 @@
 - **Dek:** Income draws a line. Health systems decide the distance from it.
 
 ### Option B
-- **Title:** Wealth Should Buy Health. Why Doesn't It?
+- **Title:** Wealth Doesn't Buy Health. Why not?
 - **Dek:** Across 217 countries, income predicts a lot. The remaining gap is where institutions matter most.
 
 ---

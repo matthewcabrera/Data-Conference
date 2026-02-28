@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/paradox", "destination": "/paradox.html" },
+    { "source": "/dashboard", "destination": "/dashboard.html" },
     { "source": "/story", "destination": "/index.html" },
     { "source": "/story/(.*)", "destination": "/index.html" }
   ]

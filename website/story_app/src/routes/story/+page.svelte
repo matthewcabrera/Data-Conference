@@ -114,6 +114,11 @@
 
 <main class="story-page">
   <a class="skip-link" href="#methods-endnote">Skip to methods</a>
+  <nav class="story-top-nav" aria-label="Conference navigation">
+    <a href="/">DIODS Home</a>
+    <a href="/paradox">America's Development Paradox</a>
+    <a href="/dashboard">MDG Interactive Data Dashboard</a>
+  </nav>
 
   <header class="intro">
     <svg class="sky" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -178,6 +183,37 @@
   }
   .skip-link:focus {
     left: 0;
+  }
+
+  .story-top-nav {
+    position: fixed;
+    top: 0.9rem;
+    right: 0.95rem;
+    z-index: 90;
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: min(92vw, 830px);
+  }
+
+  .story-top-nav a {
+    text-decoration: none;
+    padding: 0.42rem 0.72rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(21, 0, 24, 0.46);
+    color: #f5e9fb;
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    line-height: 1;
+    white-space: nowrap;
+    backdrop-filter: blur(3px);
+  }
+
+  .story-top-nav a:hover {
+    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(21, 0, 24, 0.66);
   }
 
   /* ── Page shell ── */
@@ -335,6 +371,24 @@
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
+    .story-top-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: none;
+      justify-content: center;
+      padding: 0.5rem 0.45rem;
+      background: rgba(19, 0, 20, 0.82);
+      border-bottom: 1px solid var(--grid);
+      backdrop-filter: blur(4px);
+    }
+
+    .story-top-nav a {
+      font-size: 0.74rem;
+      padding: 0.4rem 0.62rem;
+    }
+
     .stage-sticky {
       padding: 0.5rem;
       height: 100svh;

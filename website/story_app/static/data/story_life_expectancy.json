@@ -1,0 +1,2908 @@
+{
+  "story_meta": {
+    "indicator": "life_exp",
+    "indicator_label": "Life Expectancy (years)",
+    "year": 2010,
+    "thesis": "National wealth explains part of life expectancy, but countries can still significantly overperform or underperform their income level.",
+    "subhed": "This prototype chapter is a narrative shell for the full Pudding-style story build."
+  },
+  "summary": {
+    "country_count": 184,
+    "model_r2": 0.664523385675689,
+    "usa_value": 78.5414634146342,
+    "usa_predicted": 81.11495287666732,
+    "usa_z": -0.5181419882597676,
+    "usa_percentile": 80.90452261306532,
+    "usa_rank_text": "39 of 200"
+  },
+  "model": {
+    "slope": 10.67429420890334,
+    "intercept": 31.055152831080292,
+    "r2": 0.664523385675689,
+    "n": 184
+  },
+  "points": [
+    {
+      "code": "GNQ",
+      "name": "Equatorial Guinea",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 9890.0,
+      "value": 55.908,
+      "predicted": 73.70105346990817,
+      "z": -3.582423102221331
+    },
+    {
+      "code": "SWZ",
+      "name": "Eswatini",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 3070.0,
+      "value": 51.598,
+      "predicted": 68.27789379808102,
+      "z": -3.3583014284704524
+    },
+    {
+      "code": "ZAF",
+      "name": "South Africa",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 6160.0,
+      "value": 55.888,
+      "predicted": 71.50625228110881,
+      "z": -3.1445523323352305
+    },
+    {
+      "code": "NGA",
+      "name": "Nigeria",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1470.0,
+      "value": 50.847,
+      "predicted": 64.86402991514191,
+      "z": -2.8221649464188916
+    },
+    {
+      "code": "LSO",
+      "name": "Lesotho",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1330.0,
+      "value": 50.826,
+      "predicted": 64.40006431172846,
+      "z": -2.732979005745946
+    },
+    {
+      "code": "CIV",
+      "name": "Cote d'Ivoire",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1200.0,
+      "value": 50.423,
+      "predicted": 63.92323937393022,
+      "z": -2.7181152184181707
+    },
+    {
+      "code": "TCD",
+      "name": "Chad",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 910.0,
+      "value": 50.233,
+      "predicted": 62.64083122903862,
+      "z": -2.498171621781825
+    },
+    {
+      "code": "CAF",
+      "name": "Central African Republic",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 470.0,
+      "value": 47.56,
+      "predicted": 59.57791152166654,
+      "z": -2.419665851534829
+    },
+    {
+      "code": "NAM",
+      "name": "Namibia",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 4400.0,
+      "value": 58.189,
+      "predicted": 69.94643863611017,
+      "z": -2.3672226840763884
+    },
+    {
+      "code": "BWA",
+      "name": "Botswana",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 5570.0,
+      "value": 59.868,
+      "predicted": 71.03951324831371,
+      "z": -2.2492534637303723
+    },
+    {
+      "code": "SLE",
+      "name": "Sierra Leone",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 420.0,
+      "value": 48.224,
+      "predicted": 59.0564875400844,
+      "z": -2.1809946046502455
+    },
+    {
+      "code": "AGO",
+      "name": "Angola",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 3240.0,
+      "value": 58.192,
+      "predicted": 68.52774310362325,
+      "z": -2.080980925261942
+    },
+    {
+      "code": "GAB",
+      "name": "Gabon",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 7750.0,
+      "value": 62.893,
+      "predicted": 72.5707034708213,
+      "z": -1.9484923455634782
+    },
+    {
+      "code": "CMR",
+      "name": "Cameroon",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1350.0,
+      "value": 55.424,
+      "predicted": 64.46925644806112,
+      "z": -1.8211565384127302
+    },
+    {
+      "code": "ZMB",
+      "name": "Zambia",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1320.0,
+      "value": 56.588,
+      "predicted": 64.36507707340563,
+      "z": -1.5658234615347302
+    },
+    {
+      "code": "ZWE",
+      "name": "Zimbabwe",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 490.0,
+      "value": 52.975,
+      "predicted": 59.77109726894312,
+      "z": -1.3683146573116411
+    },
+    {
+      "code": "KWT",
+      "name": "Kuwait",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 42060.0,
+      "value": 73.979,
+      "predicted": 80.41169378495805,
+      "z": -1.29514761835132
+    },
+    {
+      "code": "TTO",
+      "name": "Trinidad and Tobago",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 16460.0,
+      "value": 69.756,
+      "predicted": 76.06256535704995,
+      "z": -1.2697531353442857
+    },
+    {
+      "code": "MLI",
+      "name": "Mali",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 690.0,
+      "value": 55.249,
+      "predicted": 61.357863240287486,
+      "z": -1.2299481276402557
+    },
+    {
+      "code": "COG",
+      "name": "Congo, Rep.",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 2070.0,
+      "value": 60.473,
+      "predicted": 66.45079588648628,
+      "z": -1.2035592496998535
+    },
+    {
+      "code": "BMU",
+      "name": "Bermuda",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 110440.0,
+      "value": 79.2885365853658,
+      "predicted": 84.8869677356694,
+      "z": -1.1271785993877883
+    },
+    {
+      "code": "GNB",
+      "name": "Guinea-Bissau",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 570.0,
+      "value": 55.05,
+      "predicted": 60.4721718434475,
+      "z": -1.0916908505350864
+    },
+    {
+      "code": "QAT",
+      "name": "Qatar",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 66360.0,
+      "value": 77.301,
+      "predicted": 82.52560015072628,
+      "z": -1.0519121021855402
+    },
+    {
+      "code": "RUS",
+      "name": "Russian Federation",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 9980.0,
+      "value": 68.8412195121951,
+      "predicted": 73.74304880859256,
+      "z": -0.9869259677243141
+    },
+    {
+      "code": "MOZ",
+      "name": "Mozambique",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 460.0,
+      "value": 54.7,
+      "predicted": 59.478213333510936,
+      "z": -0.9620373401485586
+    },
+    {
+      "code": "GIN",
+      "name": "Guinea",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 620.0,
+      "value": 56.765,
+      "predicted": 60.86196327128132,
+      "z": -0.8248756120928012
+    },
+    {
+      "code": "KAZ",
+      "name": "Kazakhstan",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 7440.0,
+      "value": 68.2953658536585,
+      "predicted": 72.38146139632457,
+      "z": -0.8226875221100576
+    },
+    {
+      "code": "BFA",
+      "name": "Burkina Faso",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 570.0,
+      "value": 57.096,
+      "predicted": 60.4721718434475,
+      "z": -0.6797526927848827
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1250.0,
+      "value": 60.924,
+      "predicted": 64.11248144842696,
+      "z": -0.6419634280966281
+    },
+    {
+      "code": "ARE",
+      "name": "United Arab Emirates",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 34530.0,
+      "value": 76.344,
+      "predicted": 79.49719828622082,
+      "z": -0.6348595762692593
+    },
+    {
+      "code": "LBY",
+      "name": "Libya",
+      "region": "Middle East & North Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 12440.0,
+      "value": 71.643,
+      "predicted": 74.7644703036009,
+      "z": -0.6284715182489352
+    },
+    {
+      "code": "SAU",
+      "name": "Saudi Arabia",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 18750.0,
+      "value": 73.574,
+      "predicted": 76.66642556410685,
+      "z": -0.6226236998327498
+    },
+    {
+      "code": "UGA",
+      "name": "Uganda",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 540.0,
+      "value": 57.153,
+      "predicted": 60.221527718002235,
+      "z": -0.6178121481716887
+    },
+    {
+      "code": "DNK",
+      "name": "Denmark",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 61220.0,
+      "value": 79.1,
+      "predicted": 82.1518605315552,
+      "z": -0.6144564052196512
+    },
+    {
+      "code": "TKM",
+      "name": "Turkmenistan",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 4070.0,
+      "value": 66.657,
+      "predicted": 69.58502552996293,
+      "z": -0.589523676763682
+    },
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 88440.0,
+      "value": 80.9975609756098,
+      "predicted": 83.85713676489937,
+      "z": -0.5757421224765519
+    },
+    {
+      "code": "LUX",
+      "name": "Luxembourg",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 78440.0,
+      "value": 80.6317073170732,
+      "predicted": 83.30088702986014,
+      "z": -0.5374081004837086
+    },
+    {
+      "code": "BEN",
+      "name": "Benin",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 790.0,
+      "value": 59.319,
+      "predicted": 61.985276911203286,
+      "z": -0.5368236553533632
+    },
+    {
+      "code": "BRN",
+      "name": "Brunei Darussalam",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 33300.0,
+      "value": 76.719,
+      "predicted": 79.32905312288511,
+      "z": -0.525503653505112
+    },
+    {
+      "code": "BHS",
+      "name": "Bahamas, The",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 21660.0,
+      "value": 74.761,
+      "predicted": 77.3352467401348,
+      "z": -0.5182944573438897
+    },
+    {
+      "code": "USA",
+      "name": "United States",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 48950.0,
+      "value": 78.5414634146342,
+      "predicted": 81.11495287666732,
+      "z": -0.5181419882597676
+    },
+    {
+      "code": "SUR",
+      "name": "Suriname",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 7660.0,
+      "value": 70.335,
+      "predicted": 72.51655349282535,
+      "z": -0.4392302672864112
+    },
+    {
+      "code": "GUY",
+      "name": "Guyana",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 2950.0,
+      "value": 66.022,
+      "predicted": 68.09305388216131,
+      "z": -0.4169824637433694
+    },
+    {
+      "code": "TGO",
+      "name": "Togo",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 450.0,
+      "value": 57.465,
+      "predicted": 59.37632380186231,
+      "z": -0.38482268123327074
+    },
+    {
+      "code": "MWI",
+      "name": "Malawi",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 430.0,
+      "value": 57.263,
+      "predicted": 59.1655699158031,
+      "z": -0.3830601887130428
+    },
+    {
+      "code": "MRT",
+      "name": "Mauritania",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1130.0,
+      "value": 61.997,
+      "predicted": 63.64461037968298,
+      "z": -0.33172706964648946
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq",
+      "region": "Middle East & North Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 4430.0,
+      "value": 68.465,
+      "predicted": 69.97793900922676,
+      "z": -0.30461256512672774
+    },
+    {
+      "code": "SDN",
+      "name": "Sudan",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 1250.0,
+      "value": 62.62,
+      "predicted": 64.11248144842696,
+      "z": -0.3004936746536443
+    },
+    {
+      "code": "LTU",
+      "name": "Lithuania",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 12430.0,
+      "value": 73.2682926829268,
+      "predicted": 74.76074228806172,
+      "z": -0.3004872633794211
+    },
+    {
+      "code": "NER",
+      "name": "Niger",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 350.0,
+      "value": 56.838,
+      "predicted": 58.21128362394448,
+      "z": -0.2764945875445795
+    },
+    {
+      "code": "LVA",
+      "name": "Latvia",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 12620.0,
+      "value": 73.4829268292683,
+      "predicted": 74.83106695354486,
+      "z": -0.2714322381151599
+    },
+    {
+      "code": "FIN",
+      "name": "Finland",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 49330.0,
+      "value": 79.8707317073171,
+      "predicted": 81.15080163259773,
+      "z": -0.25772710010339184
+    },
+    {
+      "code": "SVK",
+      "name": "Slovak Republic",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 17240.0,
+      "value": 75.1121951219512,
+      "predicted": 76.27719798719227,
+      "z": -0.2345596940767886
+    },
+    {
+      "code": "PNG",
+      "name": "Papua New Guinea",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 1780.0,
+      "value": 64.634,
+      "predicted": 65.7510922382297,
+      "z": -0.2249134499772199
+    },
+    {
+      "code": "BLR",
+      "name": "Belarus",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 6080.0,
+      "value": 70.4048780487805,
+      "predicted": 71.44565289435988,
+      "z": -0.20954783603163168
+    },
+    {
+      "code": "CHE",
+      "name": "Switzerland",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 77360.0,
+      "value": 82.2463414634147,
+      "predicted": 83.23661578166124,
+      "z": -0.1993801458092956
+    },
+    {
+      "code": "BDI",
+      "name": "Burundi",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 210.0,
+      "value": 54.861,
+      "predicted": 55.843204800662164,
+      "z": -0.19775544287300872
+    },
+    {
+      "code": "GMB",
+      "name": "Gambia, The",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 580.0,
+      "value": 59.622,
+      "predicted": 60.552796259490535,
+      "z": -0.18740493468978892
+    },
+    {
+      "code": "KIR",
+      "name": "Kiribati",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 1990.0,
+      "value": 65.354,
+      "predicted": 66.26808112062339,
+      "z": -0.18403953707910023
+    },
+    {
+      "code": "COD",
+      "name": "Congo, Dem. Rep.",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 320.0,
+      "value": 56.907,
+      "predicted": 57.79586073709479,
+      "z": -0.17896170798402478
+    },
+    {
+      "code": "BRB",
+      "name": "Barbados",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 15740.0,
+      "value": 74.973,
+      "predicted": 75.85521609415663,
+      "z": -0.1776238868839003
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 47920.0,
+      "value": 80.1829268292683,
+      "predicted": 81.01636630413336,
+      "z": -0.16780328537253492
+    },
+    {
+      "code": "NLD",
+      "name": "Netherlands",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 53530.0,
+      "value": 80.7024390243902,
+      "predicted": 81.52959100236436,
+      "z": -0.16653737144970998
+    },
+    {
+      "code": "OMN",
+      "name": "Oman",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 18170.0,
+      "value": 75.694,
+      "predicted": 76.52076046530834,
+      "z": -0.1664585449559214
+    },
+    {
+      "code": "VEN",
+      "name": "Venezuela, RB",
+      "region": "Latin America & Caribbean",
+      "income_group": null,
+      "gni_percap": 11570.0,
+      "value": 73.625,
+      "predicted": 74.4283685733827,
+      "z": -0.1617488612481304
+    },
+    {
+      "code": "HUN",
+      "name": "Hungary",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 13100.0,
+      "value": 74.2073170731707,
+      "predicted": 75.00411797878257,
+      "z": -0.16042653819718777
+    },
+    {
+      "code": "DEU",
+      "name": "Germany",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 44790.0,
+      "value": 79.9878048780488,
+      "predicted": 80.70322791049452,
+      "z": -0.14404205571737433
+    },
+    {
+      "code": "BHR",
+      "name": "Bahrain",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 18970.0,
+      "value": 76.056,
+      "predicted": 76.72050216648371,
+      "z": -0.13378973523084903
+    },
+    {
+      "code": "SYC",
+      "name": "Seychelles",
+      "region": "Sub-Saharan Africa",
+      "income_group": "High income",
+      "gni_percap": 10190.0,
+      "value": 73.1975609756098,
+      "predicted": 73.83958331169596,
+      "z": -0.12926368443881242
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 49610.0,
+      "value": 80.5804878048781,
+      "predicted": 81.17704023873739,
+      "z": -0.12010885171329011
+    },
+    {
+      "code": "TLS",
+      "name": "Timor-Leste",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 2810.0,
+      "value": 67.313,
+      "predicted": 67.86765872985143,
+      "z": -0.11167404465056728
+    },
+    {
+      "code": "TZA",
+      "name": "Tanzania",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 690.0,
+      "value": 60.893,
+      "predicted": 61.357863240287486,
+      "z": -0.09359477361183458
+    },
+    {
+      "code": "YEM",
+      "name": "Yemen, Rep.",
+      "region": "Middle East & North Africa",
+      "income_group": "Low income",
+      "gni_percap": 1180.0,
+      "value": 63.508,
+      "predicted": 63.84532515210244,
+      "z": -0.0679164720038523
+    },
+    {
+      "code": "COM",
+      "name": "Comoros",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 790.0,
+      "value": 61.862,
+      "predicted": 61.985276911203286,
+      "z": -0.024820363486907537
+    },
+    {
+      "code": "SWE",
+      "name": "Sweden",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 53900.0,
+      "value": 81.4512195121951,
+      "predicted": 81.5615233862252,
+      "z": -0.022208394262302086
+    },
+    {
+      "code": "EST",
+      "name": "Estonia",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 14540.0,
+      "value": 75.4292682926829,
+      "predicted": 75.48758996981613,
+      "z": -0.011742387211709714
+    },
+    {
+      "code": "KEN",
+      "name": "Kenya",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 980.0,
+      "value": 62.936,
+      "predicted": 62.98438000836535,
+      "z": -0.009740748542501412
+    },
+    {
+      "code": "IRL",
+      "name": "Ireland",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 44760.0,
+      "value": 80.7439024390244,
+      "predicted": 80.70012185538793,
+      "z": 0.008814708195716656
+    },
+    {
+      "code": "GBR",
+      "name": "United Kingdom",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 41380.0,
+      "value": 80.4024390243902,
+      "predicted": 80.33613278302963,
+      "z": 0.013349985783685544
+    },
+    {
+      "code": "AZE",
+      "name": "Azerbaijan",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 5410.0,
+      "value": 70.987,
+      "predicted": 70.90439877870114,
+      "z": 0.016630789310739132
+    },
+    {
+      "code": "MUS",
+      "name": "Mauritius",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 8250.0,
+      "value": 72.9673170731707,
+      "predicted": 72.86053453352338,
+      "z": 0.021499414790914658
+    },
+    {
+      "code": "FJI",
+      "name": "Fiji",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 3650.0,
+      "value": 69.267,
+      "predicted": 69.08011492456573,
+      "z": 0.03762712301339254
+    },
+    {
+      "code": "TUR",
+      "name": "Turkey",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 10430.0,
+      "value": 74.154,
+      "predicted": 73.94750175424477,
+      "z": 0.0415760053446045
+    },
+    {
+      "code": "HTI",
+      "name": "Haiti",
+      "region": "Latin America & Caribbean",
+      "income_group": "Lower middle income",
+      "gni_percap": 650.0,
+      "value": 61.296,
+      "predicted": 61.081017584039984,
+      "z": 0.043284193733753876
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 9610.0,
+      "value": 73.838,
+      "predicted": 73.56791402373455,
+      "z": 0.054378650780526776
+    },
+    {
+      "code": "BLZ",
+      "name": "Belize",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 3910.0,
+      "value": 69.676,
+      "predicted": 69.39910438990817,
+      "z": 0.05574969086527353
+    },
+    {
+      "code": "CYP",
+      "name": "Cyprus",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 31330.0,
+      "value": 79.43,
+      "predicted": 79.04635683762486,
+      "z": 0.07724206135986582
+    },
+    {
+      "code": "ROU",
+      "name": "Romania",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 8640.0,
+      "value": 73.4585365853659,
+      "predicted": 73.07465867569115,
+      "z": 0.07728932498163237
+    },
+    {
+      "code": "GRD",
+      "name": "Grenada",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 7050.0,
+      "value": 72.618,
+      "predicted": 72.13185563734643,
+      "z": 0.09787947856899254
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 44370.0,
+      "value": 81.1975609756098,
+      "predicted": 80.65955260828534,
+      "z": 0.1083216889979662
+    },
+    {
+      "code": "BOL",
+      "name": "Bolivia",
+      "region": "Latin America & Caribbean",
+      "income_group": "Lower middle income",
+      "gni_percap": 1810.0,
+      "value": 66.408,
+      "predicted": 65.82857237727492,
+      "z": 0.11666097138560712
+    },
+    {
+      "code": "FSM",
+      "name": "Micronesia, Fed. Sts.",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 2880.0,
+      "value": 68.582,
+      "predicted": 67.98172602949236,
+      "z": 0.12085813956809219
+    },
+    {
+      "code": "CZE",
+      "name": "Czech Republic",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 19210.0,
+      "value": 77.4243902439025,
+      "predicted": 76.77878417550247,
+      "z": 0.12998522700345214
+    },
+    {
+      "code": "IDN",
+      "name": "Indonesia",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 2520.0,
+      "value": 68.15,
+      "predicted": 67.36270292570542,
+      "z": 0.15851305297509305
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 46550.0,
+      "value": 81.6951219512195,
+      "predicted": 80.88190089568931,
+      "z": 0.16373254323498887
+    },
+    {
+      "code": "SGP",
+      "name": "Singapore",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 44790.0,
+      "value": 81.5414634146342,
+      "predicted": 80.70322791049452,
+      "z": 0.16876890974394654
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1050.0,
+      "value": 64.177,
+      "predicted": 63.30421627014328,
+      "z": 0.1757247907094505
+    },
+    {
+      "code": "ATG",
+      "name": "Antigua and Barbuda",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 11800.0,
+      "value": 75.412,
+      "predicted": 74.51961936100577,
+      "z": 0.17967039904166202
+    },
+    {
+      "code": "VCT",
+      "name": "St. Vincent and the Grenadines",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 6030.0,
+      "value": 72.327,
+      "predicted": 71.40737202387496,
+      "z": 0.18515633152517202
+    },
+    {
+      "code": "PHL",
+      "name": "Philippines",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 2470.0,
+      "value": 68.32,
+      "predicted": 67.26979827182396,
+      "z": 0.21144582852928617
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 43790.0,
+      "value": 81.6634146341463,
+      "predicted": 80.59855452989365,
+      "z": 0.2143971210203001
+    },
+    {
+      "code": "MNG",
+      "name": "Mongolia",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 2000.0,
+      "value": 67.383,
+      "predicted": 66.29131819721255,
+      "z": 0.2197973561533169
+    },
+    {
+      "code": "XKX",
+      "name": "Kosovo",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 3420.0,
+      "value": 69.9,
+      "predicted": 68.77838722906851,
+      "z": 0.22582360633754822
+    },
+    {
+      "code": "HRV",
+      "name": "Croatia",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 13790.0,
+      "value": 76.4756097560976,
+      "predicted": 75.24207970490437,
+      "z": 0.24835684106454364
+    },
+    {
+      "code": "LAO",
+      "name": "Lao PDR",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 1000.0,
+      "value": 64.357,
+      "predicted": 63.078035457790314,
+      "z": 0.2575045441572308
+    },
+    {
+      "code": "MYS",
+      "name": "Malaysia",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 8290.0,
+      "value": 74.21,
+      "predicted": 72.88295676380503,
+      "z": 0.267184626575282
+    },
+    {
+      "code": "POL",
+      "name": "Poland",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 12770.0,
+      "value": 76.2463414634146,
+      "predicted": 74.88584254639078,
+      "z": 0.2739205364124842
+    },
+    {
+      "code": "AFG",
+      "name": "Afghanistan",
+      "region": "South Asia",
+      "income_group": "Low income",
+      "gni_percap": 500.0,
+      "value": 61.226,
+      "predicted": 59.86475271836808,
+      "z": 0.27407121086897795
+    },
+    {
+      "code": "PRT",
+      "name": "Portugal",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 22960.0,
+      "value": 79.0268292682927,
+      "predicted": 77.60544975472635,
+      "z": 0.2861781321028381
+    },
+    {
+      "code": "BGR",
+      "name": "Bulgaria",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 6980.0,
+      "value": 73.5121951219512,
+      "predicted": 72.0855965086484,
+      "z": 0.28722893676097494
+    },
+    {
+      "code": "SVN",
+      "name": "Slovenia",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 24560.0,
+      "value": 79.4219512195122,
+      "predicted": 77.91774201634772,
+      "z": 0.3028549208321021
+    },
+    {
+      "code": "BTN",
+      "name": "Bhutan",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 1970.0,
+      "value": 67.79,
+      "predicted": 66.22125459042462,
+      "z": 0.3158485307915819
+    },
+    {
+      "code": "PAK",
+      "name": "Pakistan",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 1080.0,
+      "value": 65.134,
+      "predicted": 63.43481045742446,
+      "z": 0.34211193051660926
+    },
+    {
+      "code": "NZL",
+      "name": "New Zealand",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 29770.0,
+      "value": 80.7024390243902,
+      "predicted": 78.80958433766415,
+      "z": 0.3811041410257934
+    },
+    {
+      "code": "MAC",
+      "name": "Macao SAR, China",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 45690.0,
+      "value": 82.704,
+      "predicted": 80.79545483303957,
+      "z": 0.38426323561130754
+    },
+    {
+      "code": "GRC",
+      "name": "Greece",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 27660.0,
+      "value": 80.3878048780488,
+      "predicted": 78.46878978774185,
+      "z": 0.38637123215830227
+    },
+    {
+      "code": "DOM",
+      "name": "Dominican Republic",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 5230.0,
+      "value": 72.702,
+      "predicted": 70.74753387435354,
+      "z": 0.3935088832766303
+    },
+    {
+      "code": "STP",
+      "name": "Sao Tome and Principe",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1170.0,
+      "value": 65.875,
+      "predicted": 63.80587140695645,
+      "z": 0.41659482930920594
+    },
+    {
+      "code": "UKR",
+      "name": "Ukraine",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 2990.0,
+      "value": 70.2653658536586,
+      "predicted": 68.15548966866393,
+      "z": 0.4247988801210814
+    },
+    {
+      "code": "LCA",
+      "name": "St. Lucia",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 7390.0,
+      "value": 74.465,
+      "predicted": 72.35020175614429,
+      "z": 0.4257898790749236
+    },
+    {
+      "code": "ITA",
+      "name": "Italy",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 37690.0,
+      "value": 82.0365853658537,
+      "predicted": 79.9031369886907,
+      "z": 0.4295448651728683
+    },
+    {
+      "code": "ISL",
+      "name": "Iceland",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 36530.0,
+      "value": 81.8975609756097,
+      "predicted": 79.75821780442668,
+      "z": 0.43073171296804186
+    },
+    {
+      "code": "PRI",
+      "name": "Puerto Rico",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 16920.0,
+      "value": 78.4081707317073,
+      "predicted": 76.19034229290858,
+      "z": 0.4465338031694812
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 9170.0,
+      "value": 75.595,
+      "predicted": 73.35064888435898,
+      "z": 0.451873833783862
+    },
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 43440.0,
+      "value": 82.8426829268293,
+      "predicted": 80.5613532417404,
+      "z": 0.4593190360197333
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 5540.0,
+      "value": 73.325,
+      "predicted": 71.01447743369408,
+      "z": 0.46519668103828815
+    },
+    {
+      "code": "IRN",
+      "name": "Iran, Islamic Rep.",
+      "region": "Middle East & North Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 6140.0,
+      "value": 73.932,
+      "predicted": 71.49117653750326,
+      "z": 0.4914312417079098
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 32130.0,
+      "value": 81.6268292682927,
+      "predicted": 79.16324388887921,
+      "z": 0.4960140873196151
+    },
+    {
+      "code": "IND",
+      "name": "India",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 1220.0,
+      "value": 66.625,
+      "predicted": 63.99986569824365,
+      "z": 0.528540072391193
+    },
+    {
+      "code": "URY",
+      "name": "Uruguay",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 10390.0,
+      "value": 76.588,
+      "predicted": 73.92968890976098,
+      "z": 0.5352198305180828
+    },
+    {
+      "code": "RWA",
+      "name": "Rwanda",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 560.0,
+      "value": 63.14,
+      "predicted": 60.390120372730074,
+      "z": 0.5536560839161263
+    },
+    {
+      "code": "MMR",
+      "name": "Myanmar",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 860.0,
+      "value": 65.178,
+      "predicted": 62.37885265522533,
+      "z": 0.5635755623058918
+    },
+    {
+      "code": "ISR",
+      "name": "Israel",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 29580.0,
+      "value": 81.6024390243903,
+      "predicted": 78.77990270150879,
+      "z": 0.568284659350367
+    },
+    {
+      "code": "KOR",
+      "name": "Korea, Rep.",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 21260.0,
+      "value": 80.1170731707317,
+      "predicted": 77.24883627796021,
+      "z": 0.5774859343105869
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 8930.0,
+      "value": 76.096,
+      "predicted": 73.22770367893162,
+      "z": 0.5774978995027377
+    },
+    {
+      "code": "LBR",
+      "name": "Liberia",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 250.0,
+      "value": 59.631,
+      "predicted": 56.65146997894585,
+      "z": 0.5998935033404093
+    },
+    {
+      "code": "ETH",
+      "name": "Ethiopia",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 380.0,
+      "value": 61.625,
+      "predicted": 58.59252193667094,
+      "z": 0.610553972055563
+    },
+    {
+      "code": "VUT",
+      "name": "Vanuatu",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 2690.0,
+      "value": 70.721,
+      "predicted": 67.66533773148302,
+      "z": 0.6152218404690607
+    },
+    {
+      "code": "SRB",
+      "name": "Serbia",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 5850.0,
+      "value": 74.3365853658537,
+      "predicted": 71.26688287643756,
+      "z": 0.6180486746487287
+    },
+    {
+      "code": "SLV",
+      "name": "El Salvador",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 3370.0,
+      "value": 71.902,
+      "predicted": 68.71011225310548,
+      "z": 0.6426492464326403
+    },
+    {
+      "code": "TON",
+      "name": "Tonga",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 3560.0,
+      "value": 72.173,
+      "predicted": 68.96437497765194,
+      "z": 0.6460191009859578
+    },
+    {
+      "code": "MNE",
+      "name": "Montenegro",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 6920.0,
+      "value": 75.28,
+      "predicted": 72.0455750767145,
+      "z": 0.6512136091298034
+    },
+    {
+      "code": "ERI",
+      "name": "Eritrea",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 410.0,
+      "value": 62.181,
+      "predicted": 58.944776421979896,
+      "z": 0.6515757472127944
+    },
+    {
+      "code": "CPV",
+      "name": "Cabo Verde",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 3330.0,
+      "value": 71.941,
+      "predicted": 68.65475891398177,
+      "z": 0.661646187144372
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt, Arab Rep.",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 2330.0,
+      "value": 70.357,
+      "predicted": 66.9993006382047,
+      "z": 0.6760334747688141
+    },
+    {
+      "code": "HKG",
+      "name": "Hong Kong SAR, China",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 33620.0,
+      "value": 82.9780487804878,
+      "predicted": 79.37338854339839,
+      "z": 0.7257561570782142
+    },
+    {
+      "code": "MDA",
+      "name": "Moldova",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 1820.0,
+      "value": 69.616,
+      "predicted": 65.85411396846085,
+      "z": 0.7574117309376666
+    },
+    {
+      "code": "PER",
+      "name": "Peru",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 4360.0,
+      "value": 73.681,
+      "predicted": 69.90410238686191,
+      "z": 0.7604341372273951
+    },
+    {
+      "code": "THA",
+      "name": "Thailand",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 4580.0,
+      "value": 73.923,
+      "predicted": 70.13230800251115,
+      "z": 0.7632114750948195
+    },
+    {
+      "code": "GTM",
+      "name": "Guatemala",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 2700.0,
+      "value": 71.494,
+      "predicted": 67.68253918748334,
+      "z": 0.7673930329644234
+    },
+    {
+      "code": "PRY",
+      "name": "Paraguay",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 2930.0,
+      "value": 72.285,
+      "predicted": 68.06151779406068,
+      "z": 0.8503487190642298
+    },
+    {
+      "code": "MLT",
+      "name": "Malta",
+      "region": "Middle East & North Africa",
+      "income_group": "High income",
+      "gni_percap": 20530.0,
+      "value": 81.3975609756098,
+      "predicted": 77.08686121988556,
+      "z": 0.8679089520954557
+    },
+    {
+      "code": "MDG",
+      "name": "Madagascar",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Low income",
+      "gni_percap": 420.0,
+      "value": 63.388,
+      "predicted": 59.0564875400844,
+      "z": 0.8720993465345503
+    },
+    {
+      "code": "CHL",
+      "name": "Chile",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 10780.0,
+      "value": 78.454,
+      "predicted": 74.1005119167441,
+      "z": 0.876523881135828
+    },
+    {
+      "code": "MKD",
+      "name": "Macedonia, FYR",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 4700.0,
+      "value": 74.632,
+      "predicted": 70.25220573056988,
+      "z": 0.88182032388756
+    },
+    {
+      "code": "GEO",
+      "name": "Georgia",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 3000.0,
+      "value": 72.649,
+      "predicted": 68.17096810398911,
+      "z": 0.901599320424918
+    },
+    {
+      "code": "ARM",
+      "name": "Armenia",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 3470.0,
+      "value": 73.331,
+      "predicted": 68.84567124145032,
+      "z": 0.9030684583093693
+    },
+    {
+      "code": "JOR",
+      "name": "Jordan",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 3470.0,
+      "value": 73.412,
+      "predicted": 68.84567124145032,
+      "z": 0.9193768604490408
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "region": "Latin America & Caribbean",
+      "income_group": "High income",
+      "gni_percap": 7150.0,
+      "value": 76.828,
+      "predicted": 72.19714949241873,
+      "z": 0.932367559584374
+    },
+    {
+      "code": "WSM",
+      "name": "Samoa",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 3200.0,
+      "value": 73.122,
+      "predicted": 68.47015494599813,
+      "z": 0.9365945658284118
+    },
+    {
+      "code": "DZA",
+      "name": "Algeria",
+      "region": "Middle East & North Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 4460.0,
+      "value": 74.676,
+      "predicted": 70.00922677978039,
+      "z": 0.9396001774072613
+    },
+    {
+      "code": "MDV",
+      "name": "Maldives",
+      "region": "South Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 5980.0,
+      "value": 76.112,
+      "predicted": 71.36877240808617,
+      "z": 0.9549933704804102
+    },
+    {
+      "code": "KHM",
+      "name": "Cambodia",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 750.0,
+      "value": 66.555,
+      "predicted": 61.74440262514464,
+      "z": 0.9685574879158805
+    },
+    {
+      "code": "JAM",
+      "name": "Jamaica",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 4370.0,
+      "value": 74.883,
+      "predicted": 69.91472275135378,
+      "z": 1.000304485337037
+    },
+    {
+      "code": "ECU",
+      "name": "Ecuador",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 4410.0,
+      "value": 75.046,
+      "predicted": 69.9569625613407,
+      "z": 1.0246181364629197
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 4130.0,
+      "value": 74.793,
+      "predicted": 69.65286752715994,
+      "z": 1.0349055236821798
+    },
+    {
+      "code": "CHN",
+      "name": "China",
+      "region": "East Asia & Pacific",
+      "income_group": "Upper middle income",
+      "gni_percap": 4340.0,
+      "value": 75.236,
+      "predicted": 69.88278838576107,
+      "z": 1.077806515355124
+    },
+    {
+      "code": "LBN",
+      "name": "Lebanon",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 8540.0,
+      "value": 78.43,
+      "predicted": 73.02069081272339,
+      "z": 1.0891011052336201
+    },
+    {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 4930.0,
+      "value": 75.905,
+      "predicted": 70.47368731588777,
+      "z": 1.093531251837004
+    },
+    {
+      "code": "PSE",
+      "name": "West Bank and Gaza",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 2310.0,
+      "value": 72.444,
+      "predicted": 66.95933670904091,
+      "z": 1.1042727722179189
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "region": "Europe & Central Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 1340.0,
+      "value": 70.005,
+      "predicted": 64.4347894708996,
+      "z": 1.121496707545654
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "region": "Middle East & North Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 2930.0,
+      "value": 73.999,
+      "predicted": 68.06151779406068,
+      "z": 1.1954425618715852
+    },
+    {
+      "code": "SLB",
+      "name": "Solomon Islands",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 900.0,
+      "value": 68.572,
+      "predicted": 62.58960654128455,
+      "z": 1.2044849170675056
+    },
+    {
+      "code": "CRI",
+      "name": "Costa Rica",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 7230.0,
+      "value": 78.756,
+      "predicted": 72.2487304092484,
+      "z": 1.3101625841633153
+    },
+    {
+      "code": "HND",
+      "name": "Honduras",
+      "region": "Latin America & Caribbean",
+      "income_group": "Lower middle income",
+      "gni_percap": 1760.0,
+      "value": 72.446,
+      "predicted": 65.6987099060513,
+      "z": 1.3584879037670714
+    },
+    {
+      "code": "ALB",
+      "name": "Albania",
+      "region": "Europe & Central Asia",
+      "income_group": "Upper middle income",
+      "gni_percap": 4360.0,
+      "value": 76.652,
+      "predicted": 69.90410238686191,
+      "z": 1.3586102206466801
+    },
+    {
+      "code": "KGZ",
+      "name": "Kyrgyz Republic",
+      "region": "Europe & Central Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 850.0,
+      "value": 69.3,
+      "predicted": 62.32463230528421,
+      "z": 1.4044086597221461
+    },
+    {
+      "code": "TJK",
+      "name": "Tajikistan",
+      "region": "Europe & Central Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 910.0,
+      "value": 69.644,
+      "predicted": 62.64083122903862,
+      "z": 1.4100060810965773
+    },
+    {
+      "code": "LKA",
+      "name": "Sri Lanka",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 2420.0,
+      "value": 74.352,
+      "predicted": 67.17499359616335,
+      "z": 1.4450062542316187
+    },
+    {
+      "code": "NPL",
+      "name": "Nepal",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 540.0,
+      "value": 67.914,
+      "predicted": 60.221527718002235,
+      "z": 1.5487892768282845
+    },
+    {
+      "code": "CUB",
+      "name": "Cuba",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 5560.0,
+      "value": 78.959,
+      "predicted": 71.03118299077454,
+      "z": 1.5961731836564381
+    },
+    {
+      "code": "BGD",
+      "name": "Bangladesh",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 780.0,
+      "value": 70.198,
+      "predicted": 61.92622150017989,
+      "z": 1.6654258047574004
+    },
+    {
+      "code": "NIC",
+      "name": "Nicaragua",
+      "region": "Latin America & Caribbean",
+      "income_group": "Lower middle income",
+      "gni_percap": 1530.0,
+      "value": 73.699,
+      "predicted": 65.04948612820068,
+      "z": 1.7414784016538838
+    },
+    {
+      "code": "VNM",
+      "name": "Vietnam",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 1250.0,
+      "value": 75.117,
+      "predicted": 64.11248144842696,
+      "z": 2.215631035710139
+    }
+  ],
+  "peers": [
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 43440.0,
+      "value": 82.8426829268293,
+      "predicted": 80.5613532417404,
+      "z": 0.4593190360197333
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 43790.0,
+      "value": 81.6634146341463,
+      "predicted": 80.59855452989365,
+      "z": 0.2143971210203001
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 44370.0,
+      "value": 81.1975609756098,
+      "predicted": 80.65955260828534,
+      "z": 0.1083216889979662
+    },
+    {
+      "code": "GBR",
+      "name": "United Kingdom",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 41380.0,
+      "value": 80.4024390243902,
+      "predicted": 80.33613278302963,
+      "z": 0.013349985783685544
+    },
+    {
+      "code": "DEU",
+      "name": "Germany",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 44790.0,
+      "value": 79.9878048780488,
+      "predicted": 80.70322791049452,
+      "z": -0.14404205571737433
+    },
+    {
+      "code": "USA",
+      "name": "United States",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 48950.0,
+      "value": 78.5414634146342,
+      "predicted": 81.11495287666732,
+      "z": -0.5181419882597676
+    }
+  ],
+  "best_outliers": [
+    {
+      "code": "LKA",
+      "name": "Sri Lanka",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 2420.0,
+      "value": 74.352,
+      "predicted": 67.17499359616335,
+      "z": 1.4450062542316187
+    },
+    {
+      "code": "NPL",
+      "name": "Nepal",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 540.0,
+      "value": 67.914,
+      "predicted": 60.221527718002235,
+      "z": 1.5487892768282845
+    },
+    {
+      "code": "CUB",
+      "name": "Cuba",
+      "region": "Latin America & Caribbean",
+      "income_group": "Upper middle income",
+      "gni_percap": 5560.0,
+      "value": 78.959,
+      "predicted": 71.03118299077454,
+      "z": 1.5961731836564381
+    },
+    {
+      "code": "BGD",
+      "name": "Bangladesh",
+      "region": "South Asia",
+      "income_group": "Lower middle income",
+      "gni_percap": 780.0,
+      "value": 70.198,
+      "predicted": 61.92622150017989,
+      "z": 1.6654258047574004
+    },
+    {
+      "code": "NIC",
+      "name": "Nicaragua",
+      "region": "Latin America & Caribbean",
+      "income_group": "Lower middle income",
+      "gni_percap": 1530.0,
+      "value": 73.699,
+      "predicted": 65.04948612820068,
+      "z": 1.7414784016538838
+    },
+    {
+      "code": "VNM",
+      "name": "Vietnam",
+      "region": "East Asia & Pacific",
+      "income_group": "Lower middle income",
+      "gni_percap": 1250.0,
+      "value": 75.117,
+      "predicted": 64.11248144842696,
+      "z": 2.215631035710139
+    }
+  ],
+  "worst_outliers": [
+    {
+      "code": "GNQ",
+      "name": "Equatorial Guinea",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 9890.0,
+      "value": 55.908,
+      "predicted": 73.70105346990817,
+      "z": -3.582423102221331
+    },
+    {
+      "code": "SWZ",
+      "name": "Eswatini",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 3070.0,
+      "value": 51.598,
+      "predicted": 68.27789379808102,
+      "z": -3.3583014284704524
+    },
+    {
+      "code": "ZAF",
+      "name": "South Africa",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Upper middle income",
+      "gni_percap": 6160.0,
+      "value": 55.888,
+      "predicted": 71.50625228110881,
+      "z": -3.1445523323352305
+    },
+    {
+      "code": "NGA",
+      "name": "Nigeria",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1470.0,
+      "value": 50.847,
+      "predicted": 64.86402991514191,
+      "z": -2.8221649464188916
+    },
+    {
+      "code": "LSO",
+      "name": "Lesotho",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1330.0,
+      "value": 50.826,
+      "predicted": 64.40006431172846,
+      "z": -2.732979005745946
+    },
+    {
+      "code": "CIV",
+      "name": "Cote d'Ivoire",
+      "region": "Sub-Saharan Africa",
+      "income_group": "Lower middle income",
+      "gni_percap": 1200.0,
+      "value": 50.423,
+      "predicted": 63.92323937393022,
+      "z": -2.7181152184181707
+    }
+  ],
+  "similar_income_top": [
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 43440.0,
+      "value": 82.8426829268293,
+      "predicted": 80.5613532417404,
+      "z": 0.4593190360197333
+    },
+    {
+      "code": "ITA",
+      "name": "Italy",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 37690.0,
+      "value": 82.0365853658537,
+      "predicted": 79.9031369886907,
+      "z": 0.4295448651728683
+    },
+    {
+      "code": "MAC",
+      "name": "Macao SAR, China",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 45690.0,
+      "value": 82.704,
+      "predicted": 80.79545483303957,
+      "z": 0.38426323561130754
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 43790.0,
+      "value": 81.6634146341463,
+      "predicted": 80.59855452989365,
+      "z": 0.2143971210203001
+    },
+    {
+      "code": "SGP",
+      "name": "Singapore",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 44790.0,
+      "value": 81.5414634146342,
+      "predicted": 80.70322791049452,
+      "z": 0.16876890974394654
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "region": "East Asia & Pacific",
+      "income_group": "High income",
+      "gni_percap": 46550.0,
+      "value": 81.6951219512195,
+      "predicted": 80.88190089568931,
+      "z": 0.16373254323498887
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "region": "North America",
+      "income_group": "High income",
+      "gni_percap": 44370.0,
+      "value": 81.1975609756098,
+      "predicted": 80.65955260828534,
+      "z": 0.1083216889979662
+    },
+    {
+      "code": "GBR",
+      "name": "United Kingdom",
+      "region": "Europe & Central Asia",
+      "income_group": "High income",
+      "gni_percap": 41380.0,
+      "value": 80.4024390243902,
+      "predicted": 80.33613278302963,
+      "z": 0.013349985783685544
+    }
+  ],
+  "trend_highlights": [
+    {
+      "code": "BRN",
+      "name": "Brunei Darussalam",
+      "series": [
+        {
+          "year": 2006,
+          "value": 76.455
+        },
+        {
+          "year": 2007,
+          "value": 76.577
+        },
+        {
+          "year": 2008,
+          "value": 76.656
+        },
+        {
+          "year": 2009,
+          "value": 76.699
+        },
+        {
+          "year": 2010,
+          "value": 76.719
+        },
+        {
+          "year": 2011,
+          "value": 76.734
+        },
+        {
+          "year": 2012,
+          "value": 76.764
+        },
+        {
+          "year": 2013,
+          "value": 76.823
+        },
+        {
+          "year": 2014,
+          "value": 76.917
+        },
+        {
+          "year": 2015,
+          "value": 77.046
+        }
+      ],
+      "start": 76.455,
+      "end": 77.046,
+      "delta": 0.5910000000000082
+    },
+    {
+      "code": "BWA",
+      "name": "Botswana",
+      "series": [
+        {
+          "year": 2006,
+          "value": 53.695
+        },
+        {
+          "year": 2007,
+          "value": 55.312
+        },
+        {
+          "year": 2008,
+          "value": 56.919
+        },
+        {
+          "year": 2009,
+          "value": 58.45
+        },
+        {
+          "year": 2010,
+          "value": 59.868
+        },
+        {
+          "year": 2011,
+          "value": 61.179
+        },
+        {
+          "year": 2012,
+          "value": 62.425
+        },
+        {
+          "year": 2013,
+          "value": 63.63
+        },
+        {
+          "year": 2014,
+          "value": 64.78
+        },
+        {
+          "year": 2015,
+          "value": 65.846
+        }
+      ],
+      "start": 53.695,
+      "end": 65.846,
+      "delta": 12.151000000000003
+    },
+    {
+      "code": "CPV",
+      "name": "Cabo Verde",
+      "series": [
+        {
+          "year": 2006,
+          "value": 71.842
+        },
+        {
+          "year": 2007,
+          "value": 71.869
+        },
+        {
+          "year": 2008,
+          "value": 71.881
+        },
+        {
+          "year": 2009,
+          "value": 71.899
+        },
+        {
+          "year": 2010,
+          "value": 71.941
+        },
+        {
+          "year": 2011,
+          "value": 72.019
+        },
+        {
+          "year": 2012,
+          "value": 72.127
+        },
+        {
+          "year": 2013,
+          "value": 72.259
+        },
+        {
+          "year": 2014,
+          "value": 72.418
+        },
+        {
+          "year": 2015,
+          "value": 72.599
+        }
+      ],
+      "start": 71.842,
+      "end": 72.599,
+      "delta": 0.757000000000005
+    },
+    {
+      "code": "GEO",
+      "name": "Georgia",
+      "series": [
+        {
+          "year": 2006,
+          "value": 72.73
+        },
+        {
+          "year": 2007,
+          "value": 72.704
+        },
+        {
+          "year": 2008,
+          "value": 72.673
+        },
+        {
+          "year": 2009,
+          "value": 72.65
+        },
+        {
+          "year": 2010,
+          "value": 72.649
+        },
+        {
+          "year": 2011,
+          "value": 72.68
+        },
+        {
+          "year": 2012,
+          "value": 72.742
+        },
+        {
+          "year": 2013,
+          "value": 72.832
+        },
+        {
+          "year": 2014,
+          "value": 72.951
+        },
+        {
+          "year": 2015,
+          "value": 73.096
+        }
+      ],
+      "start": 72.73,
+      "end": 73.096,
+      "delta": 0.36599999999999966
+    },
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "series": [
+        {
+          "year": 2006,
+          "value": 82.3219512195122
+        },
+        {
+          "year": 2007,
+          "value": 82.5070731707317
+        },
+        {
+          "year": 2008,
+          "value": 82.5875609756098
+        },
+        {
+          "year": 2009,
+          "value": 82.9314634146342
+        },
+        {
+          "year": 2010,
+          "value": 82.8426829268293
+        },
+        {
+          "year": 2011,
+          "value": 82.5912195121951
+        },
+        {
+          "year": 2012,
+          "value": 83.0960975609756
+        },
+        {
+          "year": 2013,
+          "value": 83.3319512195122
+        },
+        {
+          "year": 2014,
+          "value": 83.5878048780488
+        },
+        {
+          "year": 2015,
+          "value": 83.7939024390244
+        }
+      ],
+      "start": 82.3219512195122,
+      "end": 83.7939024390244,
+      "delta": 1.4719512195121922
+    },
+    {
+      "code": "LBY",
+      "name": "Libya",
+      "series": [
+        {
+          "year": 2006,
+          "value": 71.521
+        },
+        {
+          "year": 2007,
+          "value": 71.629
+        },
+        {
+          "year": 2008,
+          "value": 71.681
+        },
+        {
+          "year": 2009,
+          "value": 71.679
+        },
+        {
+          "year": 2010,
+          "value": 71.643
+        },
+        {
+          "year": 2011,
+          "value": 71.598
+        },
+        {
+          "year": 2012,
+          "value": 71.574
+        },
+        {
+          "year": 2013,
+          "value": 71.592
+        },
+        {
+          "year": 2014,
+          "value": 71.659
+        },
+        {
+          "year": 2015,
+          "value": 71.776
+        }
+      ],
+      "start": 71.521,
+      "end": 71.776,
+      "delta": 0.25499999999999545
+    },
+    {
+      "code": "MWI",
+      "name": "Malawi",
+      "series": [
+        {
+          "year": 2006,
+          "value": 51.163
+        },
+        {
+          "year": 2007,
+          "value": 52.63
+        },
+        {
+          "year": 2008,
+          "value": 54.177
+        },
+        {
+          "year": 2009,
+          "value": 55.745
+        },
+        {
+          "year": 2010,
+          "value": 57.263
+        },
+        {
+          "year": 2011,
+          "value": 58.667
+        },
+        {
+          "year": 2012,
+          "value": 59.927
+        },
+        {
+          "year": 2013,
+          "value": 61.02
+        },
+        {
+          "year": 2014,
+          "value": 61.932
+        },
+        {
+          "year": 2015,
+          "value": 62.661
+        }
+      ],
+      "start": 51.163,
+      "end": 62.661,
+      "delta": 11.498000000000005
+    },
+    {
+      "code": "NAM",
+      "name": "Namibia",
+      "series": [
+        {
+          "year": 2006,
+          "value": 53.983
+        },
+        {
+          "year": 2007,
+          "value": 54.712
+        },
+        {
+          "year": 2008,
+          "value": 55.697
+        },
+        {
+          "year": 2009,
+          "value": 56.883
+        },
+        {
+          "year": 2010,
+          "value": 58.189
+        },
+        {
+          "year": 2011,
+          "value": 59.527
+        },
+        {
+          "year": 2012,
+          "value": 60.815
+        },
+        {
+          "year": 2013,
+          "value": 61.982
+        },
+        {
+          "year": 2014,
+          "value": 62.981
+        },
+        {
+          "year": 2015,
+          "value": 63.782
+        }
+      ],
+      "start": 53.983,
+      "end": 63.782,
+      "delta": 9.799
+    },
+    {
+      "code": "SWZ",
+      "name": "Eswatini",
+      "series": [
+        {
+          "year": 2006,
+          "value": 46.846
+        },
+        {
+          "year": 2007,
+          "value": 47.805
+        },
+        {
+          "year": 2008,
+          "value": 48.969
+        },
+        {
+          "year": 2009,
+          "value": 50.26
+        },
+        {
+          "year": 2010,
+          "value": 51.598
+        },
+        {
+          "year": 2011,
+          "value": 52.912
+        },
+        {
+          "year": 2012,
+          "value": 54.158
+        },
+        {
+          "year": 2013,
+          "value": 55.296
+        },
+        {
+          "year": 2014,
+          "value": 56.287
+        },
+        {
+          "year": 2015,
+          "value": 57.107
+        }
+      ],
+      "start": 46.846,
+      "end": 57.107,
+      "delta": 10.261000000000003
+    },
+    {
+      "code": "SYR",
+      "name": "Syrian Arab Republic",
+      "series": [
+        {
+          "year": 2006,
+          "value": 74.412
+        },
+        {
+          "year": 2007,
+          "value": 74.152
+        },
+        {
+          "year": 2008,
+          "value": 73.648
+        },
+        {
+          "year": 2009,
+          "value": 72.939
+        },
+        {
+          "year": 2010,
+          "value": 72.108
+        },
+        {
+          "year": 2011,
+          "value": 71.27
+        },
+        {
+          "year": 2012,
+          "value": 70.549
+        },
+        {
+          "year": 2013,
+          "value": 70.046
+        },
+        {
+          "year": 2014,
+          "value": 69.817
+        },
+        {
+          "year": 2015,
+          "value": 69.904
+        }
+      ],
+      "start": 74.412,
+      "end": 69.904,
+      "delta": -4.50800000000001
+    },
+    {
+      "code": "USA",
+      "name": "United States",
+      "series": [
+        {
+          "year": 2006,
+          "value": 77.6878048780488
+        },
+        {
+          "year": 2007,
+          "value": 77.9878048780488
+        },
+        {
+          "year": 2008,
+          "value": 78.0390243902439
+        },
+        {
+          "year": 2009,
+          "value": 78.390243902439
+        },
+        {
+          "year": 2010,
+          "value": 78.5414634146342
+        },
+        {
+          "year": 2011,
+          "value": 78.6414634146341
+        },
+        {
+          "year": 2012,
+          "value": 78.7414634146342
+        },
+        {
+          "year": 2013,
+          "value": 78.7414634146342
+        },
+        {
+          "year": 2014,
+          "value": 78.8414634146341
+        },
+        {
+          "year": 2015,
+          "value": 78.690243902439
+        }
+      ],
+      "start": 77.6878048780488,
+      "end": 78.690243902439,
+      "delta": 1.002439024390199
+    },
+    {
+      "code": "VIR",
+      "name": "Virgin Islands (U.S.)",
+      "series": [
+        {
+          "year": 2006,
+          "value": 78.4756097560976
+        },
+        {
+          "year": 2007,
+          "value": 76.8609756097561
+        },
+        {
+          "year": 2008,
+          "value": 77.2634146341463
+        },
+        {
+          "year": 2009,
+          "value": 77.6146341463415
+        },
+        {
+          "year": 2010,
+          "value": 77.9658536585366
+        },
+        {
+          "year": 2011,
+          "value": 78.4170731707317
+        },
+        {
+          "year": 2012,
+          "value": 78.6682926829268
+        },
+        {
+          "year": 2013,
+          "value": 78.8682926829268
+        },
+        {
+          "year": 2014,
+          "value": 78.9682926829268
+        },
+        {
+          "year": 2015,
+          "value": 79.1682926829268
+        }
+      ],
+      "start": 78.4756097560976,
+      "end": 79.1682926829268,
+      "delta": 0.6926829268292067
+    },
+    {
+      "code": "VNM",
+      "name": "Vietnam",
+      "series": [
+        {
+          "year": 2006,
+          "value": 74.438
+        },
+        {
+          "year": 2007,
+          "value": 74.609
+        },
+        {
+          "year": 2008,
+          "value": 74.777
+        },
+        {
+          "year": 2009,
+          "value": 74.946
+        },
+        {
+          "year": 2010,
+          "value": 75.117
+        },
+        {
+          "year": 2011,
+          "value": 75.294
+        },
+        {
+          "year": 2012,
+          "value": 75.476
+        },
+        {
+          "year": 2013,
+          "value": 75.663
+        },
+        {
+          "year": 2014,
+          "value": 75.855
+        },
+        {
+          "year": 2015,
+          "value": 76.052
+        }
+      ],
+      "start": 74.438,
+      "end": 76.052,
+      "delta": 1.6140000000000043
+    },
+    {
+      "code": "ZMB",
+      "name": "Zambia",
+      "series": [
+        {
+          "year": 2006,
+          "value": 50.929
+        },
+        {
+          "year": 2007,
+          "value": 52.313
+        },
+        {
+          "year": 2008,
+          "value": 53.749
+        },
+        {
+          "year": 2009,
+          "value": 55.194
+        },
+        {
+          "year": 2010,
+          "value": 56.588
+        },
+        {
+          "year": 2011,
+          "value": 57.872
+        },
+        {
+          "year": 2012,
+          "value": 59.011
+        },
+        {
+          "year": 2013,
+          "value": 59.982
+        },
+        {
+          "year": 2014,
+          "value": 60.775
+        },
+        {
+          "year": 2015,
+          "value": 61.397
+        }
+      ],
+      "start": 50.929,
+      "end": 61.397,
+      "delta": 10.467999999999996
+    },
+    {
+      "code": "ZWE",
+      "name": "Zimbabwe",
+      "series": [
+        {
+          "year": 2006,
+          "value": 46.344
+        },
+        {
+          "year": 2007,
+          "value": 47.719
+        },
+        {
+          "year": 2008,
+          "value": 49.337
+        },
+        {
+          "year": 2009,
+          "value": 51.122
+        },
+        {
+          "year": 2010,
+          "value": 52.975
+        },
+        {
+          "year": 2011,
+          "value": 54.8
+        },
+        {
+          "year": 2012,
+          "value": 56.516
+        },
+        {
+          "year": 2013,
+          "value": 58.053
+        },
+        {
+          "year": 2014,
+          "value": 59.36
+        },
+        {
+          "year": 2015,
+          "value": 60.398
+        }
+      ],
+      "start": 46.344,
+      "end": 60.398,
+      "delta": 14.054000000000002
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "Chapter 1",
+      "title": "Wealth predicts a lot, but not everything.",
+      "body": "Each country is a dot. The x-axis is income per person, and the y-axis is life expectancy. The line is the wealth expectation curve for 2010.",
+      "focus": "all"
+    },
+    {
+      "id": "usa",
+      "label": "Chapter 2",
+      "title": "The United States sits below its wealth expectation.",
+      "body": "In 2010, the U.S. life expectancy is below the model-predicted value for countries at a similar income level.",
+      "focus": "usa"
+    },
+    {
+      "id": "peers",
+      "label": "Chapter 3",
+      "title": "Several similarly wealthy countries sit higher on outcomes.",
+      "body": "Peer countries with comparable income levels tend to land above the U.S. on life expectancy in this snapshot.",
+      "focus": "peers"
+    },
+    {
+      "id": "outliers",
+      "label": "Chapter 4",
+      "title": "Some countries strongly overperform, others strongly underperform.",
+      "body": "Residual z-scores quantify how far countries sit above or below what their income predicts.",
+      "focus": "outliers"
+    },
+    {
+      "id": "trends",
+      "label": "Chapter 5",
+      "title": "Long-run trend gains are uneven across countries.",
+      "body": "From 2006 to 2015, country trajectories diverge widely. Progress is possible at many income levels.",
+      "focus": "trends"
+    }
+  ]
+}
